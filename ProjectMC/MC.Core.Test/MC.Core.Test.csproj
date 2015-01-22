@@ -64,7 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MC.Core\MC.Core\MC.Core.csproj">
+    <ProjectReference Include="..\MC.Core\MC.Core.csproj">
       <Project>{635ad3a8-1d8a-4883-a5f6-1f536db2858c}</Project>
       <Name>MC.Core</Name>
     </ProjectReference>

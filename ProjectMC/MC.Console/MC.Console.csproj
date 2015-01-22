@@ -112,7 +112,7 @@
       <Project>{ea8046ca-d7dd-4d16-9aab-2af9dd2a16ce}</Project>
       <Name>MC.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MC.Core\MC.Core\MC.Core.csproj">
+    <ProjectReference Include="..\MC.Core\MC.Core.csproj">
       <Project>{635ad3a8-1d8a-4883-a5f6-1f536db2858c}</Project>
       <Name>MC.Core</Name>
     </ProjectReference>

@@ -1,23 +1,9 @@
-using System;
-using System.Diagnostics;
-
-using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace MC.Apple
+namespace MC
 {
-	[Register("AppDelegate")]
-	class Program : UIApplicationDelegate
+	public class Application
 	{
-		private Game1 game;
-
-		public override void FinishedLaunching(UIApplication app)
-		{
-			// Fun begins..
-			game = new Game1();
-			game.Run();
-		}
-
 		// This is the main entry point of the application.
 		static void Main(string[] args)
 		{
@@ -26,6 +12,5 @@ namespace MC.Apple
 			UIApplication.Main(args, null, "AppDelegate");
 		}
 	}
-
 }
 

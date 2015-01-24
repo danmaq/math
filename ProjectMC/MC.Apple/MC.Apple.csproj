@@ -8,9 +8,9 @@
     <ProjectGuid>{9471883D-11D7-4498-BE5A-8B2ABB3D87BC}</ProjectGuid>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MC.Apple</RootNamespace>
+    <RootNamespace>MC</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>MCApple</AssemblyName>
+    <AssemblyName>MC</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,7 +72,7 @@
     <MtouchUseRefCounting>False</MtouchUseRefCounting>
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n />
-    <DocumentationFile>bin\iPhone\Debug\MCApple.XML</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Debug\MC.xml</DocumentationFile>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -84,7 +84,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Developer</CodesignKey>
-    <DocumentationFile>bin\iPhone\Release\MCApple.XML</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Release\MC.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
@@ -96,7 +96,7 @@
     <ConsolePause>False</ConsolePause>
     <CodesignKey>iPhone Distribution</CodesignKey>
     <BuildIpa>True</BuildIpa>
-    <DocumentationFile>bin\iPhone\Ad-Hoc\MCApple.XML</DocumentationFile>
+    <DocumentationFile>bin\iPhone\Ad-Hoc\MC.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
@@ -121,14 +121,14 @@
     <MtouchUseRefCounting>False</MtouchUseRefCounting>
     <MtouchOptimizePNGs>True</MtouchOptimizePNGs>
     <MtouchI18n>cjk</MtouchI18n>
-    <DocumentationFile>bin\iPhone\AppStore\MCApple.XML</DocumentationFile>
+    <DocumentationFile>bin\iPhone\AppStore\MC.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MC.Apple.Program</StartupObject>
+    <StartupObject>MC.Application</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhoneSimulator'">
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
@@ -139,24 +139,13 @@
   <ItemGroup>
     <Content Include="Content\fonts\MarkerFelt-22.xnb" />
     <None Include="Info.plist" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="AppDelegate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
-    <Content Include="GameThumbnail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MC.Common\MC.Common.csproj">
-      <Project>{ea8046ca-d7dd-4d16-9aab-2af9dd2a16ce}</Project>
-      <Name>MC.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MC.Core\MC.Core.csproj">
-      <Project>{635ad3a8-1d8a-4883-a5f6-1f536db2858c}</Project>
-      <Name>MC.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="box2d, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -187,6 +176,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MC.Game\MC.Game.csproj">
+      <Project>{70678476-dd69-43f0-955f-7b8fd73e3566}</Project>
+      <Name>MC.Game</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

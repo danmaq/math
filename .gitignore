@@ -1,5 +1,11 @@
 /ProjectMC/*.sln.ide
 /ProjectMC/*.suo
+/ProjectMC/MC.Android/*.user
+/ProjectMC/MC.Android/bin
+/ProjectMC/MC.Android/obj
+/ProjectMC/MC.Apple/*.user
+/ProjectMC/MC.Apple/bin
+/ProjectMC/MC.Apple/obj
 /ProjectMC/MC.Common/*.user
 /ProjectMC/MC.Common/bin
 /ProjectMC/MC.Common/obj

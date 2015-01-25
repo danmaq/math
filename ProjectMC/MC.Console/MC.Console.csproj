@@ -7,7 +7,7 @@
     <ProjectGuid>{F91BDB75-909A-4CAE-B8BC-75F634E252E9}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MC.Console</RootNamespace>
+    <RootNamespace>MC</RootNamespace>
     <AssemblyName>MC.Console</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -23,6 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://math.sc/</SupportUrl>
     <TargetCulture>ja-JP</TargetCulture>
     <ProductName>Project MC</ProductName>
     <PublisherName>danmaq DAYS PRODUCTION</PublisherName>
@@ -58,7 +59,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>MC.Console.Program</StartupObject>
+    <StartupObject>MC.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>

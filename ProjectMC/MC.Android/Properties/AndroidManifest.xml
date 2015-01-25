@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="MC.Android" android:versionCode="1" android:versionName="1.0">
-	<uses-sdk android:minSdkVersion="10" android:targetSdkVersion="10" />
-	<application android:label="MC.Android" android:icon="@drawable/Icon"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.danmaq.Math" android:versionName="1.0" android:installLocation="auto" android:versionCode="1">
+	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="17" />
+	<application android:label="Project MC" android:icon="@drawable/icon" android:debuggable="true"></application>
+	<uses-permission android:name="android.permission.SET_DEBUG_APP" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
 </manifest>

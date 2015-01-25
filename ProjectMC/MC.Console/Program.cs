@@ -1,7 +1,9 @@
-﻿namespace MC.Console
+﻿using System;
+
+namespace MC
 {
 	/// <summary>
-	/// エントリ ポイント クラス。
+	/// エントリ ポイントのためのクラス。
 	/// </summary>
 	static class Program
 	{
@@ -11,8 +13,8 @@
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:ローカライズされるパラメーターとしてリテラルを渡さない", MessageId = "System.Console.WriteLine(System.String)")]
 		private static void Main()
 		{
-			System.Console.WriteLine(@"何かキーを押すと終了します");
-			System.Console.Read();
+			Console.WriteLine(@"何かキーを押すと終了します");
+			Console.Read();
 		}
 	}
 }

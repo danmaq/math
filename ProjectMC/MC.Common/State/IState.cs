@@ -1,8 +1,11 @@
-﻿namespace MC.Common.State
+﻿using System.Diagnostics.Contracts;
+
+namespace MC.Common.State
 {
 	/// <summary>
 	/// Stateパターンにおける、状態に必要な要件を定義します。
 	/// </summary>
+	[ContractClass(typeof(IStateContract))]
 	public interface IState
 	{
 
@@ -10,7 +13,7 @@
 		/// 状態が開始した際の挙動を定義します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
-		void Prepare(IContext context);
+		void Begin(IContext context);
 
 		/// <summary>
 		/// 状態を実行した際の挙動を定義します。

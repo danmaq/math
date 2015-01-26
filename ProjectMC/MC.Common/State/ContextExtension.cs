@@ -9,35 +9,48 @@ namespace MC.Common.State
 	{
 
 		/// <summary>
+		/// 状態を実行します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
+		public static void Execute(this IContext context)
+		{
+			if (context == null)
+			{
+				throw new ArgumentNullException(nameof(context));
+			}
+			context.CurrentState.Execute(context: context);
+			context.CommitNextState();
+		}
+
+		/// <summary>
 		/// 状態が既定に戻り、外部から手を加えない限りこれ以上進展することがない状態に至っているかどうかを取得します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
 		/// <returns>状態が既定に戻り、外部から手を加えない限りこれ以上進展することがない状態である場合、true。</returns>
+		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		public static bool IsTerminate(this IContext context)
 		{
-			throw new NotImplementedException();
-		}
+			if (context == null)
+			{
+				throw new ArgumentNullException(nameof(context));
+			}
+			return context.CurrentState == NullState.Instance && context.NextState == null;
+        }
 
 		/// <summary>
-		/// 強制的に状態を既定に戻します。
-		/// 次回状態実行時に既定の状態に戻ります。
+		/// 強制的に現在の状態を既定に戻します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		public static void Terminate(this IContext context)
 		{
-			context.Terminate(immediately: true);
-		}
-
-		/// <summary>
-		/// 強制的に状態を既定に戻します。
-		/// </summary>
-		/// <param name="context">コンテキスト。</param>
-		/// <param name="immediately">
-		/// 即時実行するかどうか。この値が true である場合、状態が既定に戻るのを阻止できません。
-		/// </param>
-		public static void Terminate(this IContext context, bool immediately)
-		{
-			throw new NotImplementedException();
+			if (context == null)
+			{
+				throw new ArgumentNullException(nameof(context));
+			}
+			context.NextState = NullState.Instance;
+			context.CommitNextState();
 		}
 	}
 }

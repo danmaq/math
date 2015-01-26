@@ -1,5 +1,4 @@
-﻿using System;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using CocosSharp;
 
 namespace MC
@@ -29,6 +28,20 @@ namespace MC
 					BlendFunc = CCBlendFunc.AlphaBlend,
 				};
 			AddChild(label);
+			Schedule();
 		}
+
+		int x = 0;
+
+		public override void Update(float dt)
+		{
+			if (x++ % 60 == 0)
+			{
+				Debug.WriteLine(dt * x);
+			}
+			base.Update(dt);
+		}
+
+
 	}
 }

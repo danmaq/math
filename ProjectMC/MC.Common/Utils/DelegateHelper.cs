@@ -9,24 +9,19 @@ namespace MC.Common.Utils
 	{
 
 		/// <summary>何もしないアクション。</summary>
-		public static Action EmptyAction
-		{
-			get;
-		}
-		= () =>
-		{
-		};
+		public static Action EmptyAction =>
+			() =>
+			{
+			};
 
 		/// <summary>
 		/// 何もしないアクションを作成します。
 		/// </summary>
 		/// <typeparam name="T">引数の型。</typeparam>
 		/// <returns>何もしないアクション</returns>
-		public static Action<T> CreateEmptyAction<T>()
-		{
-			return x =>
+		public static Action<T> CreateEmptyAction<T>() =>
+			x =>
 			{
 			};
-		}
 	}
 }

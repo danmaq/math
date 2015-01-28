@@ -65,13 +65,7 @@ namespace MC.Common.State
 		}
 
 		/// <summary>データ コンテナを取得します。</summary>
-		public ServiceContainer Container
-		{
-			get
-			{
-				return container;
-            }
-		}
+		public ServiceContainer Container => container;
 
 		/// <summary>排他制御用オブジェクトを取得します。</summary>
 		private object SyncRoot

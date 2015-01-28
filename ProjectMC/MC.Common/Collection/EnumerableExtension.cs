@@ -18,9 +18,7 @@ namespace MC.Common.Collection
 		/// <param name="sequence">クエリ。</param>
 		/// <exception cref="ArgumentNullException">引数 が null である場合。</exception>
 		public static void ForEach<T>(this IEnumerable<T> sequence)
-		{
-			sequence.ForEach(callback: null);
-		}
+			=> sequence.ForEach(callback: null);
 
 		/// <summary>
 		/// 即座にクエリを評価し、その結果の要素一つ一つに対し、特定の処理を実行します。

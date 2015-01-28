@@ -20,11 +20,7 @@ namespace MC.Core.Data
 		/// 文字列情報を取得します。
 		/// </summary>
 		/// <returns>文字列情報。</returns>
-		public override string ToString()
-		{
-			return string.Format(
-				CultureInfo.CurrentCulture,
-				@"RequireResponseArgs Status:{0}", Status);
-		}
+		public override string ToString() =>
+			string.Format(CultureInfo.CurrentCulture, @"RequireResponseArgs Status:{0}", Status);
 	}
 }

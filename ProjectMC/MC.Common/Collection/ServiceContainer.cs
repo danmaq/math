@@ -14,13 +14,7 @@ namespace MC.Common.Collection
 	{
 
 		/// <summary>登録されたサービスの件数を取得します。</summary>
-		public int Count
-		{
-			get
-			{
-				return Container.Count;
-			}
-		}
+		public int Count => Container.Count;
 
 		/// <summary>コンテナ本体となる辞書を取得します。</summary>
 		private Dictionary<Type, object> Container
@@ -75,9 +69,7 @@ namespace MC.Common.Collection
 		/// <returns>登録したサービス。</returns>
 		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		public T AddService<T>(T instance) where T : class
-		{
-			return (T)AddService(serviceType: typeof(T), instance: instance);
-		}
+			=> (T)AddService(serviceType: typeof(T), instance: instance);
 
 		/// <summary>
 		/// サービスを削除します。
@@ -96,10 +88,7 @@ namespace MC.Common.Collection
 		/// <typeparam name="T">サービスの型。</typeparam>
 		/// <returns>サービスを削除できた場合、true。</returns>
 		[SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
-		public bool RemoveService<T>() where T : class
-		{
-			return RemoveService(typeof(T));
-		}
+		public bool RemoveService<T>() where T : class => RemoveService(typeof(T));
 
 		/// <summary>
 		/// サービスを取得します。
@@ -107,27 +96,19 @@ namespace MC.Common.Collection
 		/// <param name="serviceType">サービスの型。</param>
 		/// <returns>サービス インスタンス。存在しない場合、null。</returns>
 		public object GetService(Type serviceType)
-		{
-			return Container.ContainsKey(key: serviceType) ? Container[serviceType] : null;
-		}
+			=> Container.ContainsKey(key: serviceType) ? Container[serviceType] : null;
 
 		/// <summary>
 		/// サービスを取得します。
 		/// </summary>
 		/// <typeparam name="T">サービスの型。</typeparam>
 		/// <returns>サービス インスタンス。存在しない場合、null。</returns>
-		public T GetService<T>() where T : class
-		{
-			return (T)GetService(typeof(T));
-		}
+		public T GetService<T>() where T : class => (T)GetService(typeof(T));
 
 		/// <summary>
 		/// リソースを解放します。
 		/// </summary>
-		public void Dispose()
-		{
-			Clear();
-		}
+		public void Dispose() => Clear();
 
 		/// <summary>
 		/// サービスをすべて削除します。

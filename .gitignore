@@ -1,5 +1,7 @@
 /ProjectMC/*.sln.ide
+/ProjectMC/TestResults
 /ProjectMC/*.suo
+/ProjectMC/.vs/*
 /ProjectMC/MC.*/bin
 /ProjectMC/MC.*/obj
 /ProjectMC/MC.*/*.user

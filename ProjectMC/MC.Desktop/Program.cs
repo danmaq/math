@@ -13,10 +13,8 @@ namespace MC
 		/// </summary>
 		private static void Main()
 		{
-			using (
-				var app =
-					new CCApplication(
-						isFullScreen: false, mainWindowSizeInPixels: new CCSize(1366f, 768f)))
+			var size = Misc.DefaultResolution;
+			using (var app = new CCApplication(isFullScreen: false, mainWindowSizeInPixels: size))
 			{
 				app.ApplicationDelegate = new GameAppDelegate();
 				app.StartGame();

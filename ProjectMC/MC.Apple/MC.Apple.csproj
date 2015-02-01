@@ -137,6 +137,9 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <BundleResource Include="..\Content\**\*.*">
+      <Link>Content\%(RecursiveDir)%(FileName)%(Extension)</Link>
+    </BundleResource>
     <Content Include="Content\fonts\MarkerFelt-22.xnb" />
     <None Include="Info.plist" />
     <Compile Include="AppDelegate.cs" />

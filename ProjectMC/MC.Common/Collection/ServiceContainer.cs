@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using MC.Common.Properties;
 using MC.Common.Utils;
 
 namespace MC.Common.Collection
@@ -26,50 +25,19 @@ namespace MC.Common.Collection
 		/// <summary>
 		/// サービスを追加します。
 		/// </summary>
-		/// <param name="serviceType">サービスの型。</param>
-		/// <param name="instance">サービス インスタンス。</param>
-		/// <returns>登録したサービス。</returns>
-		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
-		/// <exception cref="ArgumentException">
-		/// <paramref name="instance" /> の型が、 <paramref name="serviceType"/> で指定した型と
-		/// 互換性がない場合。または <paramref name="serviceType"/> で指定した型が値型である場合。
-		/// </exception>
-		public object AddService(Type serviceType, object instance)
-		{
-			if (serviceType == null)
-			{
-				throw new ArgumentNullException(nameof(serviceType));
-			}
-			if (instance == null)
-			{
-				throw new ArgumentNullException(nameof(instance));
-			}
-			if (serviceType.IsValueType)
-			{
-				throw
-					new ArgumentException(
-						message: Resources.ServiceShouldNotValueType,
-						paramName: nameof(serviceType));
-			}
-			if (!serviceType.IsInstanceOfType(instance))
-			{
-				throw
-					new ArgumentException(
-						message: Resources.ServiceTypeIsImcompatible, paramName: nameof(instance));
-			}
-			Container.Add(serviceType, instance);
-			return instance;
-		}
-
-		/// <summary>
-		/// サービスを追加します。
-		/// </summary>
 		/// <typeparam name="T">サービスの型。</typeparam>
 		/// <param name="instance">サービス インスタンス。</param>
 		/// <returns>登録したサービス。</returns>
 		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		public T AddService<T>(T instance) where T : class
-			=> (T)AddService(serviceType: typeof(T), instance: instance);
+		{
+			if (instance == null)
+			{
+				throw new ArgumentNullException(nameof(instance));
+			}
+			Container.Add(typeof(T), instance);
+			return instance;
+		}
 
 		/// <summary>
 		/// サービスを削除します。

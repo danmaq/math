@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MC.Common.Properties {
+namespace MC.Properties {
     using System;
     using System.Reflection;
     
@@ -40,7 +40,7 @@ namespace MC.Common.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MC.Common.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MC.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -58,6 +58,24 @@ namespace MC.Common.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 768.
+        /// </summary>
+        internal static string DEFAULT_HEIGHT {
+            get {
+                return ResourceManager.GetString("DEFAULT_HEIGHT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 1366.
+        /// </summary>
+        internal static string DEFAULT_WIDTH {
+            get {
+                return ResourceManager.GetString("DEFAULT_WIDTH", resourceCulture);
             }
         }
     }

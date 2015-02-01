@@ -28,6 +28,17 @@ namespace MC
 					BlendFunc = CCBlendFunc.AlphaBlend,
 				};
 			AddChild(label);
+			var sprite =
+				new CCSprite("GameThumbnail")
+				{
+					Position = VisibleBoundsWorldspace.Center + new CCPoint(0f, 64f),
+					Color = CCColor3B.White,
+					AnchorPoint = CCPoint.AnchorMiddle,
+					IsAntialiased = true,
+					BlendFunc = CCBlendFunc.AlphaBlend,
+				};
+			Debug.WriteLine(sprite.Texture.PixelsWide);
+			AddChild(sprite);
 			Schedule();
 		}
 

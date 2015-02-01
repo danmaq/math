@@ -117,4 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="DEFAULT_HEIGHT" xml:space="preserve">
+    <value>768</value>
+    <comment>既定の解像度</comment>
+  </data>
+  <data name="DEFAULT_WIDTH" xml:space="preserve">
+    <value>1366</value>
+    <comment>既定の解像度</comment>
+  </data>
 </root>

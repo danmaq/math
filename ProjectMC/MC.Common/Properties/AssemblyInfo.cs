@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Reflection;
 using System.Resources;
-using System.Runtime.InteropServices;
 
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
@@ -30,4 +29,3 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyFileVersion("0.1.0.1")]
 
 [assembly: CLSCompliant(true)]
-[assembly: ComVisible(false)]

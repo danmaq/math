@@ -6,6 +6,9 @@
 	/// </summary>
 	public enum ScreenStatus
 	{
+		/// <summary>試験実装画面。</summary>
+		Test,
+
 		/// <summary>ゲーム開始画面。</summary>
 		Start,
 

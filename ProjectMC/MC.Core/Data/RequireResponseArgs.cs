@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace MC.Core.Data
@@ -8,6 +9,13 @@ namespace MC.Core.Data
 	/// </summary>
 	public sealed class RequireResponseArgs : EventArgs
 	{
+
+		/// <summary>選択肢を取得、または設定します。</summary>
+		public IEnumerable<string> Selection
+		{
+			get;
+			set;
+		}
 
 		/// <summary>現在の画面状態を取得、または設定します。</summary>
 		public ScreenStatus Status

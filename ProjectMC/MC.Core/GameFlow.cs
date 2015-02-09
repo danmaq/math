@@ -1,6 +1,10 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
 using MC.Common.State;
 using MC.Core.Data;
+using MC.Core.State;
 
 namespace MC.Core
 {
@@ -20,12 +24,26 @@ namespace MC.Core
 		public event EventHandler<RequireResponseArgs> RequireResponse;
 
 		/// <summary>
-		/// ゲームフローを開始します。
+		/// ゲームフローを初期化します。
 		/// </summary>
 		public GameFlow()
 		{
+		}
+
+		/// <summary>
+		/// ゲームフローを開始します。
+		/// </summary>
+		public IEnumerable Run()
+		{
 			context.Container.AddService(instance: this);
-			context.Execute();
+			context.NextState = LoginState.Instance;
+			Debug.WriteLine("Run");
+			while (!context.IsTerminate())
+			{
+				yield return null;
+				context.Execute();
+			}
+			context.Container.RemoveService(serviceType: typeof(GameFlow), dispose: false);
 		}
 
 		/// <summary>

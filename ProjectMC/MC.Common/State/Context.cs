@@ -100,14 +100,14 @@ namespace MC.Common.State
 		/// <returns>確定した状態。</returns>
 		public IState CommitNextState()
 		{
-			var next = NextState;
-			var result = CommitLock ? null : next;
+			var result = CommitLock ? null : NextState;
             if (result != null)
 			{
 				CommitLock = true;
-				next.Teardown(this);
+				result.Teardown(this);
 				PreviousState = CurrentState;
-				CurrentState = next;
+				CurrentState = result;
+				NextState = null;
 				CurrentState.Begin(this);
 				CommitLock = false;
 			}

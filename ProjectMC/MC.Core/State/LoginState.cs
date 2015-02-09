@@ -32,6 +32,7 @@ namespace MC.Core.State
 		/// <param name="context">コンテキスト。</param>
 		public void Execute(IContext context)
 		{
+			context.NextState = NullState.Instance;
 		}
 
 		/// <summary>

@@ -43,20 +43,16 @@ namespace MC.Common.Collection
 		/// サービスを削除します。
 		/// </summary>
 		/// <param name="serviceType">サービスの型。</param>
+		/// <param name="dispose">自動的に Dispose するかどうか。</param>
 		/// <returns>サービスを削除できた場合、true。</returns>
-		public bool RemoveService(Type serviceType)
+		public bool RemoveService(Type serviceType, bool dispose)
 		{
-			Disposable.Dispose(GetService(serviceType: serviceType));
+			if (dispose)
+			{
+				Disposable.Dispose(GetService(serviceType: serviceType));
+			}
 			return Container.Remove(key: serviceType);
 		}
-
-		/// <summary>
-		/// サービスを削除します。
-		/// </summary>
-		/// <typeparam name="T">サービスの型。</typeparam>
-		/// <returns>サービスを削除できた場合、true。</returns>
-		[SuppressMessage("Microsoft.Design", "CA1004:GenericMethodsShouldProvideTypeParameter")]
-		public bool RemoveService<T>() where T : class => RemoveService(typeof(T));
 
 		/// <summary>
 		/// サービスを取得します。

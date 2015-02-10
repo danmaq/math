@@ -1,4 +1,5 @@
 ﻿using MC.Common.State;
+using MC.Core.Data;
 
 namespace MC.Core.State
 {
@@ -33,6 +34,18 @@ namespace MC.Core.State
 		public void Execute(IContext context)
 		{
 			context.NextState = NullState.Instance;
+			var args =
+				new RequireResponseArgs()
+				{
+					Status = ScreenStatus.Test,
+					Selection = new string[] { "ほげ", "ふが", "ぴよ", "EXIT" },
+				};
+			var flow = context.Container.GetService<GameFlow>();
+			if (flow != null)
+			{
+
+
+			}
 		}
 
 		/// <summary>

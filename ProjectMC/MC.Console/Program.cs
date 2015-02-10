@@ -24,5 +24,17 @@ namespace MC
 			Console.WriteLine(@"何かキーを押すと終了します");
 			Console.Read();
 		}
+
+		/// <summary>選択された番号。</summary>
+		static int select;
+
+		private static void KeyInput()
+		{
+			if (Console.KeyAvailable)
+			{
+				var c = Convert.ToChar(Console.Read()).ToString();
+				int.TryParse(s: c, result: out select);
+			}
+		}
 	}
 }

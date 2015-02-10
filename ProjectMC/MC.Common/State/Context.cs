@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using MC.Common.Collection;
 
 namespace MC.Common.State
@@ -122,6 +123,19 @@ namespace MC.Common.State
 			Dispose(disposing: true);
 			GC.SuppressFinalize(obj: this);
 		}
+
+		/// <summary>
+		/// オブジェクトの文字列表現を取得します。
+		/// </summary>
+		/// <returns>文字列表現。</returns>
+		public override string ToString()
+			=>
+				string.Format(
+					CultureInfo.CurrentCulture,
+					@"{0} Prev:{1}, Current:{2}, Next:{3}",
+					PreviousState,
+					CurrentState,
+					NextState);
 
 		/// <summary>
 		/// リソースを解放します。

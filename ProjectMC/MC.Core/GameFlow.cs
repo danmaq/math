@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.State;
@@ -37,7 +35,6 @@ namespace MC.Core
 		{
 			context.Container.AddService(instance: this);
 			context.NextState = LoginState.Instance;
-			Debug.WriteLine("Run");
 			while (!context.IsTerminate())
 			{
 				yield return null;

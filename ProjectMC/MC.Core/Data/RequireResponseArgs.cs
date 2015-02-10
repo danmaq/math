@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 
 namespace MC.Core.Data
 {
@@ -29,6 +30,10 @@ namespace MC.Core.Data
 		/// </summary>
 		/// <returns>文字列情報。</returns>
 		public override string ToString() =>
-			string.Format(CultureInfo.CurrentCulture, @"RequireResponseArgs Status:{0}", Status);
+			string.Format(
+				CultureInfo.CurrentCulture,
+				@"RequireResponseArgs Status:{0}, Selecton: {1}",
+				Status,
+				Selection.Aggregate(seed: string.Empty, func: (a, s) => a + s.ToString()));
 	}
 }

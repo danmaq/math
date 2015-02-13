@@ -1,37 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MC.Common.Events;
+using MC.Common.State;
+using MC.Core.Data;
 
 namespace MC.Input
 {
+	/// <summary>
+	/// キー入力管理クラス。
+	/// </summary>
 	sealed class KeyManager
 	{
 
-		public event EventHandler<EventArgs<char>> InputedCharacter;
-
-		public event EventHandler<EventArgs<int>> InputedNumber;
-
-		/// <summary>入力された文字を取得します。</summary>
-		public char Character
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>入力された数値を取得します。</summary>
-		public int Number
-		{
-			get;
-			private set;
-		}
-
-		public bool AllowCharacter
+		/// <summary>選択肢を取得、または設定します。</summary>
+		private IReadOnlyCollection<Selection> Selection
 		{
 			get;
 			set;
+		}
+
+		/// <summary>入力された値を取得します。</summary>
+		public int Selected
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>入力された文字列を取得します。</summary>
+		public string Inputed
+		{
+			get;
+			private set;
+		}
+
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="selection"></param>
+		public void Prompt(IReadOnlyCollection<string> selection)
+		{
 		}
 
 	}

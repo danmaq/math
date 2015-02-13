@@ -19,7 +19,7 @@ namespace MC
 			{
 				flow.RequireResponse += (sender, e) => Console.WriteLine(e);
 				var enumerable = flow.Run();
-				enumerable.ForEach();
+				enumerable.ForEach(_ => KeyInput());
 			}
 			Console.WriteLine(@"何かキーを押すと終了します");
 			Console.Read();
@@ -28,9 +28,11 @@ namespace MC
 		/// <summary>選択された番号。</summary>
 		static int select;
 
+		static bool allowString;
+
 		private static void KeyInput()
 		{
-			if (Console.KeyAvailable)
+			if (!allowString && Console.KeyAvailable)
 			{
 				var c = Convert.ToChar(Console.Read()).ToString();
 				int.TryParse(s: c, result: out select);

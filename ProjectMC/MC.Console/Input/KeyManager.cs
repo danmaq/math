@@ -28,6 +28,7 @@ namespace MC.Input
 			private set;
 		}
 
+		/// <summary>入力された数値を取得します。</summary>
 		public bool AllowCharacter
 		{
 			get;

@@ -133,6 +133,7 @@ namespace MC.Common.State
 				string.Format(
 					CultureInfo.CurrentCulture,
 					@"{0} Prev:{1}, Current:{2}, Next:{3}",
+					nameof(Context),
 					PreviousState,
 					CurrentState,
 					NextState);

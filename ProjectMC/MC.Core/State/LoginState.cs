@@ -35,16 +35,20 @@ namespace MC.Core.State
 		{
 			context.NextState = NullState.Instance;
 			var args =
-				new RequireResponseArgs()
+				new RequireSelectArgs()
 				{
-					Status = ScreenStatus.Test,
-					Selection = new string[] { "ほげ", "ふが", "ぴよ", "EXIT" },
+					Expires = 10,
+					Selections =
+						new Selection[]
+						{
+							new Selection() { Description = @"ほげ" },
+							new Selection() { Description = @"ふが" },
+						},
 				};
 			var flow = context.Container.GetService<GameFlow>();
 			if (flow != null)
 			{
-
-
+				flow.DispatchRequireResponse(args: args);
 			}
 		}
 

@@ -54,6 +54,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\IOHelper.cs" />
+    <Compile Include="Data\RequireSelectArgs.cs" />
+    <Compile Include="Data\RequireTextArgs.cs" />
+    <Compile Include="Data\Selection.cs" />
     <Compile Include="GameFlow.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Linq;
 
@@ -12,7 +12,7 @@ namespace MC.Core.Data
 	{
 
 		/// <summary>選択肢を取得します。</summary>
-		public IReadOnlyCollection<Selection> Selections
+		public ReadOnlyCollection<Selection> Selections
 		{
 			get;
 			internal set;

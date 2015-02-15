@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using MC.Common.Events;
-using MC.Common.State;
+using System.Collections.ObjectModel;
+using System.Linq;
+using MC.Common.Collection;
 using MC.Core.Data;
+using MC.Properties;
 
 namespace MC.Input
 {
@@ -13,17 +14,10 @@ namespace MC.Input
 	{
 
 		/// <summary>選択肢を取得、または設定します。</summary>
-		private IReadOnlyCollection<Selection> Selection
+		private ReadOnlyCollection<Selection> Selection
 		{
 			get;
 			set;
-		}
-
-		/// <summary>入力された値を取得します。</summary>
-		public int Selected
-		{
-			get;
-			private set;
 		}
 
 		/// <summary>入力された文字列を取得します。</summary>
@@ -33,14 +27,77 @@ namespace MC.Input
 			private set;
 		}
 
-
 		/// <summary>
-		/// 
+		/// 入力を要求します。
 		/// </summary>
-		/// <param name="selection"></param>
-		public void Prompt(IReadOnlyCollection<string> selection)
+		/// <param name="selection">選択肢。</param>
+		public void Prompt(ReadOnlyCollection<Selection> selection)
 		{
+			if ((Selection = selection) == null)
+			{
+				Console.WriteLine(Resources.MESSAGE_INPUT);
+				Inputed = Console.ReadLine();
+			}
+			else
+			{
+				Console.WriteLine(Resources.MESSAGE_SELECT);
+				selection
+					.Select((s, i) => string.Format(@"{0}: {1}", i, s.Description))
+					.ForEach<string>(Console.WriteLine);
+			}
 		}
 
+		/// <summary>
+		/// 入力をチェックします。
+		/// </summary>
+		public void PeekInput()
+		{
+			if (Console.KeyAvailable)
+			{
+				var readed = Console.Read();
+				if (Selection != null)
+				{
+					var index = ToIndex(readed);
+					var select = TryGetSelection(index);
+					if (select.HasValue)
+					{
+						Selection = null;
+						Console.WriteLine(index);
+						select.Value.Select();
+					}
+				}
+			}
+		}
+
+		/// <summary>
+		/// 入力値からインデックスを取得します。
+		/// 範囲外の値を得ることもあるので、必ず使用前に検証を行ってください。
+		/// </summary>
+		/// <param name="readed">入力値。</param>
+		/// <returns>インデックス。<paramref name="readed"/> が正しくない場合、負数値。</returns>
+		public int ToIndex(int readed)
+		{
+			var str = Convert.ToChar(value: readed).ToString();
+            int index;
+			int.TryParse(s: str, result: out index);
+			return int.TryParse(s: str, result: out index) ? index : int.MinValue;
+		}
+
+		/// <summary>
+		/// 入力値から選択肢を取得します。
+		/// </summary>
+		/// <param name="index">インデックス。</param>
+		/// <returns>選択肢。インデックスが正しくない場合、null。</returns>
+		/// <exception cref="InvalidOperationException">
+		/// 選択肢が存在しない状態で、この関数を呼び出した場合。
+		/// </exception>
+		private Selection? TryGetSelection(int index)
+		{
+			if (Selection == null)
+			{
+				throw new InvalidOperationException(@"選択肢が存在しません。");
+			}
+			return index >= 0 && index < Selection.Count ? (Selection?)Selection[index] : null;
+		}
 	}
 }

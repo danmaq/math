@@ -1,4 +1,5 @@
-﻿using MC.Common.State;
+﻿using System.Collections.ObjectModel;
+using MC.Common.State;
 using MC.Core.Data;
 
 namespace MC.Core.State
@@ -25,6 +26,24 @@ namespace MC.Core.State
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
+			var selection =
+				new Selection[]
+				{
+					new Selection() { Description = @"ほげ" },
+					new Selection() { Description = @"ふが" },
+				};
+			var args =
+				new RequireSelectArgs()
+				{
+					Description = @"ぴよぷよ",
+					Expires = 10,
+					Selections = new ReadOnlyCollection<Selection>(selection),
+				};
+			var flow = context.Container.GetService<GameFlow>();
+			if (flow != null)
+			{
+				flow.DispatchRequireResponse(args: args);
+			}
 		}
 
 		/// <summary>
@@ -33,23 +52,6 @@ namespace MC.Core.State
 		/// <param name="context">コンテキスト。</param>
 		public void Execute(IContext context)
 		{
-			context.NextState = NullState.Instance;
-			var args =
-				new RequireSelectArgs()
-				{
-					Expires = 10,
-					Selections =
-						new Selection[]
-						{
-							new Selection() { Description = @"ほげ" },
-							new Selection() { Description = @"ふが" },
-						},
-				};
-			var flow = context.Container.GetService<GameFlow>();
-			if (flow != null)
-			{
-				flow.DispatchRequireResponse(args: args);
-			}
 		}
 
 		/// <summary>

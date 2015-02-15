@@ -49,13 +49,6 @@ namespace MC.Core
 		}
 
 		/// <summary>
-		/// レスポンスを受けます。
-		/// </summary>
-		public void Response()
-		{
-		}
-
-		/// <summary>
 		/// リソースを解放します。
 		/// </summary>
 		public void Dispose()

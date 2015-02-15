@@ -1,6 +1,9 @@
 ﻿using System;
+using MC.Common.Collection;
 using MC.Core;
-using MC.Common.Collection.EnumerableExtension;
+using MC.Core.Data;
+using MC.Input;
+using MC.Properties;
 
 namespace MC
 {
@@ -9,33 +12,51 @@ namespace MC
 	/// </summary>
 	static class Program
 	{
+
+		/// <summary>入力管理オブジェクトを取得します。</summary>
+		private static KeyManager KeyManager
+		{
+			get;
+		}
+		= new KeyManager();
+
 		/// <summary>
 		/// エントリ ポイント。
 		/// </summary>
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Globalization", "CA1303:ローカライズされるパラメーターとしてリテラルを渡さない", MessageId = "System.Console.WriteLine(System.String)")]
 		private static void Main()
 		{
+			Console.WriteLine(Resources.MESSAGE_START);
 			using (var flow = new GameFlow())
 			{
-				flow.RequireResponse += (sender, e) => Console.WriteLine(e);
+				flow.RequireResponse += OnPrompt;
 				var enumerable = flow.Run();
-				enumerable.ForEach(_ => KeyInput());
+				enumerable.ForEach(_ => KeyManager.PeekInput());
 			}
-			Console.WriteLine(@"何かキーを押すと終了します");
+			Console.WriteLine(Resources.MESSAGE_EXITED);
 			Console.Read();
 		}
 
-		/// <summary>選択された番号。</summary>
-		static int select;
-
-		static bool allowString;
-
-		private static void KeyInput()
+		/// <summary>
+		/// 入力を要求された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">呼び出し元。</param>
+		/// <param name="args">イベント情報。</param>
+		private static void OnPrompt(object sender, RequireResponseArgs args)
 		{
-			if (!allowString && Console.KeyAvailable)
+			Console.WriteLine(args.Description);
+			var select = args as RequireSelectArgs;
+			if (select == null)
 			{
-				var c = Convert.ToChar(Console.Read()).ToString();
-				int.TryParse(s: c, result: out select);
+				KeyManager.Prompt(null);
+				var text = args as RequireTextArgs;
+				if (text != null)
+				{
+					text.Response(KeyManager.Inputed);
+				}
+			}
+			else
+			{
+				KeyManager.Prompt(select.Selections);
 			}
 		}
 	}

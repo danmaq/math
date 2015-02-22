@@ -2,6 +2,9 @@
 /ProjectMC/TestResults
 /ProjectMC/*.suo
 /ProjectMC/.vs/*
+/ProjectMC/BDD/bin
+/ProjectMC/BDD/obj
+/ProjectMC/BDD/*.user
 /ProjectMC/MC.*/bin
 /ProjectMC/MC.*/obj
 /ProjectMC/MC.*/*.user

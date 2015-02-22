@@ -4,6 +4,8 @@ using MC.Core;
 using MC.Core.Data;
 using MC.Input;
 using MC.Properties;
+using BDD;
+using System.Linq;
 
 namespace MC
 {
@@ -26,12 +28,16 @@ namespace MC
 		private static void Main()
 		{
 			Console.WriteLine(Resources.MESSAGE_START);
+			var xx = from x in Enumerable.Range(1, 10)
+					select x;
+			/*
 			using (var flow = new GameFlow())
 			{
 				flow.RequireResponse += OnPrompt;
 				var enumerable = flow.Run();
 				enumerable.ForEach(_ => KeyManager.PeekInput());
 			}
+			*/
 			Console.WriteLine(Resources.MESSAGE_EXITED);
 			Console.Read();
 		}

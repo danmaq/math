@@ -15,6 +15,14 @@ namespace MC.Common.Utils
 		/// <summary>
 		/// 初期化します。
 		/// </summary>
+		public Disposable()
+			: this(_ => DelegateHelper.EmptyAction())
+		{
+		}
+
+		/// <summary>
+		/// 初期化します。
+		/// </summary>
 		/// <param name="dispose">Dispose() メソッドに対応して呼び出されるコールバック。</param>
 		public Disposable(Action dispose)
 			: this(_ => (dispose ?? DelegateHelper.EmptyAction)())

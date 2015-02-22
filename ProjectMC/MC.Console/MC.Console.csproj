@@ -128,6 +128,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BDD\BDD.csproj">
+      <Project>{5798f5a1-4560-43f1-9681-c2e75de328c3}</Project>
+      <Name>BDD</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MC.Common\MC.Common.csproj">
       <Project>{ea8046ca-d7dd-4d16-9aab-2af9dd2a16ce}</Project>
       <Name>MC.Common</Name>

@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDDTables.cs" />
-    <Compile Include="BDDTablesExtension.cs" />
+    <Compile Include="TestTables.cs" />
+    <Compile Include="TestTablesExtension.cs" />
     <Compile Include="BDDType.cs" />
     <Compile Include="GivenExtension.cs" />
     <Compile Include="Given.cs" />

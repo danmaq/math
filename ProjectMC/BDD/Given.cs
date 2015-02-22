@@ -2,6 +2,7 @@
 
 namespace BDD
 {
+
 	sealed class Given<T> : IGiven
 	{
 
@@ -11,7 +12,7 @@ namespace BDD
 		/// <param name="container"></param>
 		/// <param name="tables">テスト テーブル。</param>
 		/// <param name="firstTask">最初のタスク。</param>
-		public Given(T container, BDDTables<T> tables, Action<T> firstTask)
+		public Given(T container, TestTables<T> tables, Action<T> firstTask)
 		{
 			Container = container;
 			Tables = tables;
@@ -21,7 +22,7 @@ namespace BDD
 		/// <summary>
 		/// テスト テーブルを取得、または設定します。
 		/// </summary>
-		private BDDTables<T> Tables
+		private TestTables<T> Tables
 		{
 			get;
 			set;

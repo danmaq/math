@@ -6,7 +6,8 @@ namespace BDD
 	/// <summary>
 	/// テスト関数テーブル。
 	/// </summary>
-	public sealed class BDDTables<T>
+	/// <typeparam name="T">コンテナの型。</typeparam>
+	public sealed class TestTables<T>
 	{
 
 		/// <summary>
@@ -14,8 +15,14 @@ namespace BDD
 		/// </summary>
 		/// <param name="initializer">コンテナ初期化関数。</param>
 		/// <param name="testTable"></param>
-		public BDDTables(Func<T> initializer, IDictionary<Tuple<string, BDDType>, Action<T>> testTable)
+		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
+		public TestTables(
+			Func<T> initializer, IDictionary<Tuple<string, BDDType>, Action<T>> testTable)
 		{
+			if (initializer == null)
+			{
+				throw new ArgumentNullException(nameof(initializer));
+			}
 			if (testTable == null)
 			{
 				throw new ArgumentNullException(nameof(testTable));

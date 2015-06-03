@@ -10,11 +10,9 @@ namespace MC.Core.Data
 	public struct Selection
 	{
 
-		public Selection()
-		{
-			Select = DelegateHelper.EmptyAction;
-			Description = string.Empty;
-		}
+		/// <summary>既定のデータ。</summary>
+		public static readonly Selection Default =
+			new Selection() { Select = DelegateHelper.EmptyAction, Description = string.Empty };
 
 		/// <summary>選択用コールバック。</summary>
 		public Action Select
@@ -29,6 +27,19 @@ namespace MC.Core.Data
 			get;
 			internal set;
 		}
+
+		/// <summary>
+		/// データの一部、または全部を改変して複製します。
+		/// </summary>
+		/// <param name="select"></param>
+		/// <param name="description"></param>
+		/// <returns></returns>
+		public Selection CopyTo(Action select = null, string description = null) =>
+			new Selection()
+			{
+				Select = select ?? Select,
+				Description = description ?? Description
+			};
 
 		/// <summary>
 		/// 値の文字列表現を取得します。

@@ -2,7 +2,7 @@
 using MC.Common.State;
 using MC.Core.Data;
 
-namespace MC.Core.State
+namespace MC.Core.State.Game
 {
 	sealed class LoginState : IState
 	{
@@ -26,11 +26,12 @@ namespace MC.Core.State
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
+			/*
 			var selection =
 				new Selection[]
 				{
-					new Selection() { Description = @"ほげ" },
-					new Selection() { Description = @"ふが" },
+					Selection.Default.CopyTo(description: @"ほげ"),
+					Selection.Default.CopyTo(description: @"ふが"),
 				};
 			var args =
 				new RequireSelectArgs()
@@ -44,6 +45,7 @@ namespace MC.Core.State
 			{
 				flow.DispatchRequireResponse(args: args);
 			}
+			*/
 		}
 
 		/// <summary>
@@ -52,6 +54,7 @@ namespace MC.Core.State
 		/// <param name="context">コンテキスト。</param>
 		public void Execute(IContext context)
 		{
+			context.NextState = TitleState.Instance;
 		}
 
 		/// <summary>

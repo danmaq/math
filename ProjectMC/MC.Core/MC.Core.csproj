@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\IOHelper.cs" />
+    <Compile Include="Data\RequireAlertArgs.cs" />
     <Compile Include="Data\RequireSelectArgs.cs" />
     <Compile Include="Data\RequireTextArgs.cs" />
     <Compile Include="Data\Selection.cs" />
@@ -62,7 +63,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\ScreenStatus.cs" />
     <Compile Include="Data\RequireResponseArgs.cs" />
-    <Compile Include="State\LoginState.cs" />
+    <Compile Include="State\Game\LoginState.cs" />
+    <Compile Include="State\Game\TitleState.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

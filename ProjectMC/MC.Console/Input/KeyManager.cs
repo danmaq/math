@@ -48,6 +48,15 @@ namespace MC.Input
 		}
 
 		/// <summary>
+		/// Enter 入力を要求します。
+		/// </summary>
+		public void Enter()
+		{
+			Console.WriteLine(Resources.MESSAGE_ENTER);
+			Console.ReadKey();
+		}
+
+		/// <summary>
 		/// 入力をチェックします。
 		/// </summary>
 		public void PeekInput()
@@ -57,15 +66,27 @@ namespace MC.Input
 				var readed = Console.Read();
 				if (Selection != null)
 				{
-					var index = ToIndex(readed);
-					var select = TryGetSelection(index);
-					if (select.HasValue)
-					{
-						Selection = null;
-						Console.WriteLine(index);
-						select.Value.Select();
-					}
+					PeekInput(readed);
 				}
+			}
+		}
+
+		/// <summary>
+		/// 入力をチェックします。
+		/// </summary>
+		/// <param name="readed">入力値。</param>
+		/// <exception cref="InvalidOperationException">
+		/// 選択肢が存在しない状態で、この関数を呼び出した場合。
+		/// </exception>
+		private void PeekInput(int readed)
+		{
+			var index = ToIndex(readed);
+			var select = TryGetSelection(index);
+			if (select.HasValue)
+			{
+				Selection = null;
+				Console.WriteLine(index);
+				select.Value.Select();
 			}
 		}
 

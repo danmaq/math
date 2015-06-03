@@ -11,28 +11,33 @@
     <AssemblyName>MC.Console</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
-    <PublishUrl>publish\</PublishUrl>
+    <PublishUrl>ftp://danmaq00001%40danmaq.com/sub/lab/mcc/</PublishUrl>
     <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>Days</UpdateIntervalUnits>
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://lab.danmaq.com/mcc/</InstallUrl>
+    <UpdateUrl>http://lab.danmaq.com/mcc/</UpdateUrl>
     <SupportUrl>http://math.sc/</SupportUrl>
     <TargetCulture>ja-JP</TargetCulture>
     <ProductName>Project MC</ProductName>
     <PublisherName>danmaq DAYS PRODUCTION</PublisherName>
     <SuiteName>Project MC</SuiteName>
-    <ApplicationRevision>1</ApplicationRevision>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>index.html</WebPage>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>0.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -88,6 +93,7 @@
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Input\KeyManager.cs" />
+    <Compile Include="Input\PromptManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -128,10 +134,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BDD\BDD.csproj">
-      <Project>{5798f5a1-4560-43f1-9681-c2e75de328c3}</Project>
-      <Name>BDD</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MC.Common\MC.Common.csproj">
       <Project>{ea8046ca-d7dd-4d16-9aab-2af9dd2a16ce}</Project>
       <Name>MC.Common</Name>

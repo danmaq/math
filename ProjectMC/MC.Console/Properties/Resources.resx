@@ -117,8 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MESSAGE_ENTER" xml:space="preserve">
+    <value>表示を確認の上、何かキーを押してください。</value>
+  </data>
   <data name="MESSAGE_EXITED" xml:space="preserve">
-    <value>何かキーを押すと終了します。</value>
+    <value>終了します。</value>
   </data>
   <data name="MESSAGE_INPUT" xml:space="preserve">
     <value>入力してください。</value>

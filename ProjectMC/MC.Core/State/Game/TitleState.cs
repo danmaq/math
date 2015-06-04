@@ -32,6 +32,10 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Execute(IContext context)
 		{
+			var flow = context.Container.GetService<GameFlow>();
+			if (flow != null)
+			{
+			}
 		}
 
 		/// <summary>

@@ -62,6 +62,24 @@ namespace MC.Core.Properties {
         }
         
         /// <summary>
+        ///   もののかぞえかた に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MENU_AREA_TEMP {
+            get {
+                return ResourceManager.GetString("MENU_AREA_TEMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   戻る に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MENU_GENERIC_BACK {
+            get {
+                return ResourceManager.GetString("MENU_GENERIC_BACK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   終了 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MENU_HOME_EXIT {
@@ -85,6 +103,24 @@ namespace MC.Core.Properties {
         internal static string MENU_HOME_WORLD {
             get {
                 return ResourceManager.GetString("MENU_HOME_WORLD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   学園A(仮) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MENU_MAP_SCHOOL {
+            get {
+                return ResourceManager.GetString("MENU_MAP_SCHOOL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   受ける授業を選択してください に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_AREA {
+            get {
+                return ResourceManager.GetString("MESSAGE_AREA", resourceCulture);
             }
         }
         
@@ -116,7 +152,7 @@ namespace MC.Core.Properties {
         }
         
         /// <summary>
-        ///   そいえば俺はニートだった。残念！ に類似しているローカライズされた文字列を検索します。
+        ///   向かう学園を選択してください。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MESSAGE_WORLD {
             get {

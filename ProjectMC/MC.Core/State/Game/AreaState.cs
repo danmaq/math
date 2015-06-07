@@ -7,14 +7,14 @@ using MC.Core.Properties;
 namespace MC.Core.State.Game
 {
 	/// <summary>
-	/// ホーム画面 シーン。
+	/// エリア選択シーン。
 	/// </summary>
-	class HomeState : IState
+	class AreaState : IState
 	{
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
-		private HomeState()
+		private AreaState()
 		{
 		}
 
@@ -23,7 +23,7 @@ namespace MC.Core.State.Game
 		{
 			get;
 		}
-		= new HomeState();
+		= new AreaState();
 
 		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
@@ -37,7 +37,7 @@ namespace MC.Core.State.Game
 				var args =
 					new RequireSelectArgs()
 					{
-						Description = Resources.MESSAGE_HOME,
+						Description = Resources.MESSAGE_AREA,
 						Selections = CreateSelection(context)
 					};
 				flow.DispatchRequireResponse(args);
@@ -72,13 +72,10 @@ namespace MC.Core.State.Game
 				{
 					Selection.Default.CopyTo(
 						select: () => context.NextState = WorldState.Instance,
-						description: Resources.MENU_HOME_WORLD),
+						description: Resources.MENU_AREA_TEMP),
 					Selection.Default.CopyTo(
-						select: () => context.NextState = PreferenceState.Instance,
-                        description: Resources.MENU_HOME_PREFERENCE),
-					Selection.Default.CopyTo(
-						select: () => context.Terminate(),
-						description: Resources.MENU_HOME_EXIT),
+						select: () => context.NextState = WorldState.Instance,
+						description: Resources.MENU_GENERIC_BACK),
 				};
 			return new ReadOnlyCollection<Selection>(selection);
 		}

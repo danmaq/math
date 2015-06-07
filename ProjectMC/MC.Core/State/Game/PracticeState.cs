@@ -1,20 +1,28 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Properties;
 
 namespace MC.Core.State.Game
 {
-	/// <summary>
-	/// ワールドマップ シーン。
-	/// </summary>
-	class WorldState : IState
+	class PracticeState : IState
 	{
+
+		private class Director
+		{
+			public IEnumerable<IReadOnlyList<Selection>> Collection
+			{
+				get;
+				set;
+			}
+		}
+
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
-		private WorldState()
+		private PracticeState()
 		{
 		}
 
@@ -23,7 +31,7 @@ namespace MC.Core.State.Game
 		{
 			get;
 		}
-		= new WorldState();
+		= new PracticeState();
 
 		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
@@ -34,13 +42,6 @@ namespace MC.Core.State.Game
 			var flow = context.Container.GetService<GameFlow>();
 			if (flow != null)
 			{
-				var args =
-					new RequireSelectArgs()
-					{
-						Description = Resources.MESSAGE_WORLD,
-						Selections = CreateSelection(context)
-					};
-				flow.DispatchRequireResponse(args);
 			}
 		}
 
@@ -58,26 +59,6 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Teardown(IContext context)
 		{
-		}
-
-		/// <summary>
-		/// 選択肢を取得します。
-		/// </summary>
-		/// <param name="context">コンテキスト。</param>
-		/// <returns>選択肢。</returns>
-		private static IReadOnlyList<Selection> CreateSelection(IContext context)
-		{
-			var selection =
-				new Selection[]
-				{
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = HomeState.Instance,
-						description: Resources.MENU_GENERIC_BACK),
-				};
-			return new ReadOnlyCollection<Selection>(selection);
 		}
 	}
 }

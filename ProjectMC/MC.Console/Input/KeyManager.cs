@@ -42,7 +42,7 @@ namespace MC.Input
 			{
 				Console.WriteLine(Resources.MESSAGE_SELECT);
 				selection
-					.Select((s, i) => string.Format(@"{0}: {1}", i, s.Description))
+					.Select((s, i) => string.Format(@"{0}: {1}", i + 1, s.Description))
 					.ForEach<string>(Console.WriteLine);
 			}
 		}
@@ -118,7 +118,7 @@ namespace MC.Input
 			{
 				throw new InvalidOperationException(@"選択肢が存在しません。");
 			}
-			return index >= 0 && index < Selection.Count ? (Selection?)Selection[index] : null;
+			return index > 0 && index <= Selection.Count ? Selection[index - 1] : (Selection?)null;
 		}
 	}
 }

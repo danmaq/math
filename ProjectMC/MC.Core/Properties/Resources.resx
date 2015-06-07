@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MENU_AREA_TEMP" xml:space="preserve">
+    <value>もののかぞえかた</value>
+  </data>
+  <data name="MENU_GENERIC_BACK" xml:space="preserve">
+    <value>戻る</value>
+  </data>
   <data name="MENU_HOME_EXIT" xml:space="preserve">
     <value>終了</value>
   </data>
@@ -125,6 +131,12 @@
   </data>
   <data name="MENU_HOME_WORLD" xml:space="preserve">
     <value>通学</value>
+  </data>
+  <data name="MENU_MAP_SCHOOL" xml:space="preserve">
+    <value>学園A(仮)</value>
+  </data>
+  <data name="MESSAGE_AREA" xml:space="preserve">
+    <value>受ける授業を選択してください</value>
   </data>
   <data name="MESSAGE_HOME" xml:space="preserve">
     <value>ホーム メニュー</value>
@@ -136,6 +148,6 @@
     <value>MATH.SC を開始します。</value>
   </data>
   <data name="MESSAGE_WORLD" xml:space="preserve">
-    <value>そいえば俺はニートだった。残念！</value>
+    <value>向かう学園を選択してください。</value>
   </data>
 </root>

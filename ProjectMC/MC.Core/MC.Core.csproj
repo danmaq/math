@@ -68,9 +68,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="State\Game\AreaState.cs" />
     <Compile Include="State\Game\HomeState.cs" />
     <Compile Include="State\Game\LoginState.cs" />
     <Compile Include="State\Game\PreferenceState.cs" />
+    <Compile Include="State\Game\PracticeState.cs" />
     <Compile Include="State\Game\TitleState.cs" />
     <Compile Include="State\Game\WorldState.cs" />
   </ItemGroup>

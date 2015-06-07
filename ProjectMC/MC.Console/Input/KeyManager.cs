@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using System.Linq;
 using MC.Common.Collection;
 using MC.Core.Data;
@@ -14,7 +14,7 @@ namespace MC.Input
 	{
 
 		/// <summary>選択肢を取得、または設定します。</summary>
-		private ReadOnlyCollection<Selection> Selection
+		private IReadOnlyList<Selection> Selection
 		{
 			get;
 			set;
@@ -31,7 +31,7 @@ namespace MC.Input
 		/// 入力を要求します。
 		/// </summary>
 		/// <param name="selection">選択肢。</param>
-		public void Prompt(ReadOnlyCollection<Selection> selection)
+		public void Prompt(IReadOnlyList<Selection> selection)
 		{
 			if ((Selection = selection) == null)
 			{
@@ -63,10 +63,10 @@ namespace MC.Input
 		{
 			if (Console.KeyAvailable)
 			{
-				var readed = Console.Read();
+				var readed = (int)(Console.ReadKey(true).Key);
 				if (Selection != null)
 				{
-					PeekInput(readed);
+					PeekInput(readed >= 96 ? readed - 48 : readed);
 				}
 			}
 		}

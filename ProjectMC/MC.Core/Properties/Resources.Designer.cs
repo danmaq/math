@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MC.Common.Properties {
+namespace MC.Core.Properties {
     using System;
     using System.Reflection;
     
@@ -40,7 +40,7 @@ namespace MC.Common.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MC.Common.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MC.Core.Properties.Resources", typeof(Resources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -58,6 +58,69 @@ namespace MC.Common.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   終了 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MENU_HOME_EXIT {
+            get {
+                return ResourceManager.GetString("MENU_HOME_EXIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   設定 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MENU_HOME_PREFERENCE {
+            get {
+                return ResourceManager.GetString("MENU_HOME_PREFERENCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   通学 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MENU_HOME_WORLD {
+            get {
+                return ResourceManager.GetString("MENU_HOME_WORLD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ホーム メニュー に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_HOME {
+            get {
+                return ResourceManager.GetString("MESSAGE_HOME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   設定項目はありません。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_PREFERENCE {
+            get {
+                return ResourceManager.GetString("MESSAGE_PREFERENCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MATH.SC を開始します。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_START {
+            get {
+                return ResourceManager.GetString("MESSAGE_START", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   そいえば俺はニートだった。残念！ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_WORLD {
+            get {
+                return ResourceManager.GetString("MESSAGE_WORLD", resourceCulture);
             }
         }
     }

@@ -63,10 +63,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\ScreenStatus.cs" />
     <Compile Include="Data\RequireResponseArgs.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="State\Game\HomeState.cs" />
     <Compile Include="State\Game\LoginState.cs" />
+    <Compile Include="State\Game\PreferenceState.cs" />
     <Compile Include="State\Game\TitleState.cs" />
+    <Compile Include="State\Game\WorldState.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

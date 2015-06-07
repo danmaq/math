@@ -117,16 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="MESSAGE_ENTER" xml:space="preserve">
-    <value>表示を確認の上、何かキーを押してください。</value>
+  <data name="MENU_HOME_EXIT" xml:space="preserve">
+    <value>終了</value>
   </data>
-  <data name="MESSAGE_EXITED" xml:space="preserve">
-    <value>終了します。</value>
+  <data name="MENU_HOME_PREFERENCE" xml:space="preserve">
+    <value>設定</value>
   </data>
-  <data name="MESSAGE_INPUT" xml:space="preserve">
-    <value>入力してください。</value>
+  <data name="MENU_HOME_WORLD" xml:space="preserve">
+    <value>通学</value>
   </data>
-  <data name="MESSAGE_SELECT" xml:space="preserve">
-    <value>選択したい数字のキーを押してください。</value>
+  <data name="MESSAGE_HOME" xml:space="preserve">
+    <value>ホーム メニュー</value>
+  </data>
+  <data name="MESSAGE_PREFERENCE" xml:space="preserve">
+    <value>設定項目はありません。</value>
+  </data>
+  <data name="MESSAGE_START" xml:space="preserve">
+    <value>MATH.SC を開始します。</value>
+  </data>
+  <data name="MESSAGE_WORLD" xml:space="preserve">
+    <value>そいえば俺はニートだった。残念！</value>
   </data>
 </root>

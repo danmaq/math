@@ -1,7 +1,12 @@
 ﻿using MC.Common.State;
+using MC.Core.Data;
+using MC.Core.Properties;
 
 namespace MC.Core.State.Game
 {
+	/// <summary>
+	/// タイトル シーン。
+	/// </summary>
 	class TitleState : IState
 	{
 		/// <summary>
@@ -24,6 +29,17 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
+			var flow = context.Container.GetService<GameFlow>();
+			if (flow != null)
+			{
+				var args =
+					new RequireAlertArgs()
+					{
+						Description = Resources.MESSAGE_START,
+						Response = () => context.NextState = HomeState.Instance
+					};
+				flow.DispatchRequireResponse(args);
+			}
 		}
 
 		/// <summary>
@@ -32,10 +48,6 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Execute(IContext context)
 		{
-			var flow = context.Container.GetService<GameFlow>();
-			if (flow != null)
-			{
-			}
 		}
 
 		/// <summary>

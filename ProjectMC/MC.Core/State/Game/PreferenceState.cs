@@ -1,13 +1,18 @@
 ﻿using MC.Common.State;
+using MC.Core.Data;
+using MC.Core.Properties;
 
 namespace MC.Core.State.Game
 {
-	sealed class LoginState : IState
+	/// <summary>
+	/// 設定画面シーン。
+	/// </summary>
+	class PreferenceState : IState
 	{
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
-		private LoginState()
+		private PreferenceState()
 		{
 		}
 
@@ -16,7 +21,7 @@ namespace MC.Core.State.Game
 		{
 			get;
 		}
-		= new LoginState();
+		= new PreferenceState();
 
 		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
@@ -24,7 +29,17 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
-			context.NextState = TitleState.Instance;
+			var flow = context.Container.GetService<GameFlow>();
+			if (flow != null)
+			{
+				var args =
+					new RequireAlertArgs()
+					{
+						Description = Resources.MESSAGE_PREFERENCE,
+						Response = () => context.NextState = HomeState.Instance
+					};
+				flow.DispatchRequireResponse(args);
+			}
 		}
 
 		/// <summary>

@@ -88,20 +88,11 @@ namespace MC.Properties {
         }
         
         /// <summary>
-        ///   選んでください。 に類似しているローカライズされた文字列を検索します。
+        ///   選択したい数字のキーを押してください。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MESSAGE_SELECT {
             get {
                 return ResourceManager.GetString("MESSAGE_SELECT", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Project MC を起動します... に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string MESSAGE_START {
-            get {
-                return ResourceManager.GetString("MESSAGE_START", resourceCulture);
             }
         }
     }

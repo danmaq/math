@@ -24,7 +24,6 @@ namespace MC
 		/// </summary>
 		private static void Main()
 		{
-			Console.WriteLine(Resources.MESSAGE_START);
 			using (var flow = new GameFlow())
 			{
 				flow.RequireResponse += OnPrompt;

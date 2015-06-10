@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MC.Common.Data
 {
+	/// <summary>
+	/// 問題生成クラス。
+	/// </summary>
 	public sealed class QuestionGenerator
 	{
 
@@ -25,6 +28,10 @@ namespace MC.Common.Data
 		{
 		}
 
+		/// <summary>
+		/// エリア 1-1 の問題を作成します。
+		/// </summary>
+		/// <returns>問題集。</returns>
 		public IEnumerable<QuestionData> GetQuestion1_1()
 		{
 			var result = new List<QuestionData>();
@@ -32,7 +39,7 @@ namespace MC.Common.Data
 
 			for (int i = 10; --i >= 0;)
 			{
-				var item = new QuestionData() { };
+				var item = new QuestionData() { Question = question };
 				result.Add(item);
 			}
 			return result;

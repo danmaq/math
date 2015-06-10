@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using MC.Core.Data;
 
 namespace MC.Input
@@ -31,6 +32,7 @@ namespace MC.Input
 		/// 入力を要求された際に呼び出されます。
 		/// </summary>
 		/// <param name="args">イベント情報。</param>
+		[SuppressMessage("Microsoft.Performance", "CA1822:MarkMembersAsStatic")]
 		public void Prompt(RequireAlertArgs args)
 		{
 			if (args != null)

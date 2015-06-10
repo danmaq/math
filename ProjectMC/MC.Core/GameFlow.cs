@@ -10,7 +10,7 @@ namespace MC.Core
 	/// <summary>
 	/// ゲーム全体のフローを管理するクラス。
 	/// </summary>
-	public sealed class GameFlow : IDisposable
+	public sealed class GameFlow : IGameFlow
 	{
 
 		/// <summary>ゲームの状態を保持するコンテキスト。</summary>
@@ -34,18 +34,29 @@ namespace MC.Core
 		}
 
 		/// <summary>
+		/// インスタンスを取得します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>ゲームフロー インスタンス。登録されていない場合、null オブジェクト。</returns>
+		public static IGameFlow GetService(IContext context)
+		{
+			var result = context.Container.GetService<IGameFlow>();
+			return result ?? EmptyGameFlow.Instance;
+		}
+
+		/// <summary>
 		/// ゲームフローを開始します。
 		/// </summary>
 		public IEnumerable Run()
 		{
-			context.Container.AddService(instance: this);
+			context.Container.AddService<IGameFlow>(instance: this);
 			context.NextState = LoginState.Instance;
 			while (!context.IsTerminate())
 			{
 				yield return null;
 				context.Execute();
 			}
-			context.Container.RemoveService(serviceType: typeof(GameFlow), dispose: false);
+			context.Container.RemoveService(serviceType: typeof(IGameFlow), dispose: false);
 		}
 
 		/// <summary>
@@ -78,8 +89,6 @@ namespace MC.Core
 		/// 入力タイムアウト イベントを発火させます。
 		/// </summary>
 		internal void DispatchTimeout()
-		{
-			Timeout(this, EventArgs.Empty);
-		}
+			=> Timeout(this, EventArgs.Empty);
 	}
 }

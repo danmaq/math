@@ -1,5 +1,5 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Globalization;
 
 namespace MC.Common.Data
 {
@@ -16,7 +16,7 @@ namespace MC.Common.Data
 		public string Question
 		{
 			get;
-			private set;
+			internal set;
 		}
 
 		/// <summary>
@@ -25,16 +25,29 @@ namespace MC.Common.Data
 		public IEnumerable<string> Answers
 		{
 			get;
-			private set;
+			internal set;
 		}
 
 		/// <summary>
 		/// 有効期限。
 		/// </summary>
-		public int expires
+		public int Expires
 		{
 			get;
-			private set;
+			internal set;
 		}
+
+		/// <summary>
+		/// 値の文字列表現を取得します。
+		/// </summary>
+		/// <returns>値の文字列表現。</returns>
+		public override string ToString() =>
+			string.Format(
+				CultureInfo.CurrentCulture,
+				@"{0} Question:{1}, Expires:{2}, Answers:{3}",
+				nameof(QuestionData),
+				Question,
+				Expires,
+				Answers);
 	}
 }

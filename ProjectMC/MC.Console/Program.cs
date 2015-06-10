@@ -31,7 +31,7 @@ namespace MC
 				enumerable.ForEach(_ => PromptManager.KeyManager.PeekInput());
 			}
 			Console.WriteLine(Resources.MESSAGE_EXITED);
-			PromptManager.KeyManager.Enter();
+			KeyManager.Enter();
 		}
 
 		/// <summary>

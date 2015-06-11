@@ -25,10 +25,10 @@ namespace MC.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int UserData {
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool UserData {
             get {
-                return ((int)(this["UserData"]));
+                return ((bool)(this["UserData"]));
             }
             set {
                 this["UserData"] = value;

@@ -95,7 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IOWrapper.cs" />
     <Compile Include="KeyManager.cs" />
+    <Compile Include="LocalUserData.cs" />
     <Compile Include="PromptManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

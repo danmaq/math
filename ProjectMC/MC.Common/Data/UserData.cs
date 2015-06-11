@@ -5,7 +5,7 @@ using System.Globalization;
 namespace MC.Common.Data
 {
 	/// <summary>
-	/// ユーザ アカウント。
+	/// ユーザ アカウント情報。
 	/// </summary>
 	public struct UserData
 	{

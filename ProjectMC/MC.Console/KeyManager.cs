@@ -6,7 +6,7 @@ using MC.Common.Collection;
 using MC.Core.Data;
 using MC.Properties;
 
-namespace MC.Input
+namespace MC
 {
 	/// <summary>
 	/// キー入力管理クラス。

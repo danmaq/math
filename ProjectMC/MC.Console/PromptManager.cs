@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using MC.Core.Data;
 
-namespace MC.Input
+namespace MC
 {
 	/// <summary>
 	/// プロンプト制御クラス。

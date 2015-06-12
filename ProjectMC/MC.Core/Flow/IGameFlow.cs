@@ -16,5 +16,5 @@ namespace MC.Core.Flow
 
 		/// <summary>入力タイムアウト時に発火するイベント。</summary>
 		event EventHandler Timeout;
-    }
+	}
 }

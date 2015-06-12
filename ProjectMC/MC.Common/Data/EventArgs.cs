@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Globalization;
 
-namespace MC.Common.Events
+namespace MC.Common.Data
 {
 
 	/// <summary>

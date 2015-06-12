@@ -2,7 +2,6 @@
 using MC.Common.Collection;
 using MC.Core.Data;
 using MC.Core.Flow;
-using MC.Input;
 using MC.Properties;
 
 namespace MC
@@ -39,9 +38,7 @@ namespace MC
 		/// </summary>
 		/// <param name="sender">呼び出し元。</param>
 		/// <param name="args">イベント情報。</param>
-		private static void OnPrompt(object sender, RequireResponseArgs args)
-		{
+		private static void OnPrompt(object sender, RequireResponseArgs args) =>
 			PromptManager.Prompt(args);
-		}
 	}
 }

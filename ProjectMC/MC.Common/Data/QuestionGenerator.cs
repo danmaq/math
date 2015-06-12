@@ -32,7 +32,7 @@ namespace MC.Common.Data
 		/// エリア 1-1 の問題を作成します。
 		/// </summary>
 		/// <returns>問題集。</returns>
-		public IEnumerable<QuestionData> GetQuestion1_1()
+		public IEnumerable<QuestionData> GetQuestion0101()
 		{
 			var list =
 				new string[][]

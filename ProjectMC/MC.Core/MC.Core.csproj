@@ -53,14 +53,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\IOHelper.cs" />
     <Compile Include="Data\RequireAlertArgs.cs" />
     <Compile Include="Data\RequireSelectArgs.cs" />
     <Compile Include="Data\RequireTextArgs.cs" />
     <Compile Include="Data\Selection.cs" />
     <Compile Include="Flow\EmptyGameFlow.cs" />
-    <Compile Include="Flow\GameFlow.cs" />
     <Compile Include="Flow\GameFlowExtension.cs" />
+    <Compile Include="Flow\GameFlow.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Flow\IGameFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

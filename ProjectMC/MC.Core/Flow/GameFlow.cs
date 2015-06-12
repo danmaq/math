@@ -40,8 +40,7 @@ namespace MC.Core.Flow
 		/// <returns>ゲームフロー インスタンス。登録されていない場合、null オブジェクト。</returns>
 		public static IGameFlow GetService(IContext context)
 		{
-			var result = context.Container.GetService<IGameFlow>();
-			return result ?? EmptyGameFlow.Instance;
+			return context?.Container.GetService<IGameFlow>() ?? EmptyGameFlow.Instance;
 		}
 
 		/// <summary>

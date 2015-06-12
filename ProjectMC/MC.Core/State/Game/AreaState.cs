@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics.CodeAnalysis;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
@@ -30,6 +31,7 @@ namespace MC.Core.State.Game
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Begin(IContext context)
 		{
 			var flow = GameFlow.GetService(context);
@@ -46,6 +48,7 @@ namespace MC.Core.State.Game
 		/// 状態が実行された際に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Execute(IContext context)
 		{
 		}
@@ -54,6 +57,7 @@ namespace MC.Core.State.Game
 		/// 他の状態に移行する直前に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Teardown(IContext context)
 		{
 		}

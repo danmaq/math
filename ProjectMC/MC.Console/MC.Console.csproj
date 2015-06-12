@@ -28,12 +28,12 @@
     <UpdateUrl>http://lab.danmaq.com/mcc/</UpdateUrl>
     <SupportUrl>http://math.sc/</SupportUrl>
     <TargetCulture>ja-JP</TargetCulture>
-    <ProductName>Project MC%28Console%29</ProductName>
+    <ProductName>MATH.SC%28Console%29</ProductName>
     <PublisherName>danmaq DAYS PRODUCTION</PublisherName>
-    <SuiteName>Project MC%28Console%29</SuiteName>
+    <SuiteName>MATH.SC%28Console%29</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>

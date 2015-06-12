@@ -5,7 +5,7 @@ using MC.Common.Utils;
 using MC.Core.Data;
 using MC.Core.State.Game;
 
-namespace MC.Core
+namespace MC.Core.Flow
 {
 	/// <summary>
 	/// ゲーム全体のフローを管理するクラス。

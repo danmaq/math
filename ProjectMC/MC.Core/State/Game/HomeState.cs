@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using MC.Common.State;
 using MC.Core.Data;
+using MC.Core.Flow;
 using MC.Core.Properties;
 
 namespace MC.Core.State.Game
@@ -31,17 +32,14 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
-			var flow = context.Container.GetService<GameFlow>();
-			if (flow != null)
-			{
-				var args =
-					new RequireSelectArgs()
-					{
-						Description = Resources.MESSAGE_HOME,
-						Selections = CreateSelection(context)
-					};
-				flow.DispatchRequireResponse(args);
-			}
+			var flow = GameFlow.GetService(context);
+			var args =
+				new RequireSelectArgs()
+				{
+					Description = Resources.MESSAGE_HOME,
+					Selections = CreateSelection(context)
+				};
+			flow.DispatchRequireResponse(args);
 		}
 
 		/// <summary>

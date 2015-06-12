@@ -1,7 +1,7 @@
 ﻿using System;
 using MC.Core.Data;
 
-namespace MC.Core
+namespace MC.Core.Flow
 {
 	/// <summary>
 	/// ゲーム全体のフローを管理するクラスに必要な要件。
@@ -16,5 +16,5 @@ namespace MC.Core
 
 		/// <summary>入力タイムアウト時に発火するイベント。</summary>
 		event EventHandler Timeout;
-	}
+    }
 }

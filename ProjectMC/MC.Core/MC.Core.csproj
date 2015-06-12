@@ -58,10 +58,11 @@
     <Compile Include="Data\RequireSelectArgs.cs" />
     <Compile Include="Data\RequireTextArgs.cs" />
     <Compile Include="Data\Selection.cs" />
-    <Compile Include="EmptyGameFlow.cs" />
-    <Compile Include="GameFlow.cs" />
+    <Compile Include="Flow\EmptyGameFlow.cs" />
+    <Compile Include="Flow\GameFlow.cs" />
+    <Compile Include="Flow\GameFlowExtension.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IGameFlow.cs" />
+    <Compile Include="Flow\IGameFlow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\ScreenStatus.cs" />
     <Compile Include="Data\RequireResponseArgs.cs" />

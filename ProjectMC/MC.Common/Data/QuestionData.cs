@@ -13,7 +13,16 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 問題。
 		/// </summary>
-		public string Question
+		public string Caption
+		{
+			get;
+			internal set;
+		}
+
+		/// <summary>
+		/// 問題。
+		/// </summary>
+		public string Description
 		{
 			get;
 			internal set;
@@ -44,9 +53,10 @@ namespace MC.Common.Data
 		public override string ToString() =>
 			string.Format(
 				CultureInfo.CurrentCulture,
-				@"{0} Question:{1}, Expires:{2}, Answers:{3}",
+				@"{0} Caption:{1}, Description:{2} Expires:{3}, Answers:{4}",
 				nameof(QuestionData),
-				Question,
+				Caption,
+				Description,
 				Expires,
 				Answers);
 	}

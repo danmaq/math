@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
+using MC.Core.Flow;
 using MC.Core.Properties;
 
 namespace MC.Core.State.Game
@@ -39,10 +40,7 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
-			var flow = context.Container.GetService<GameFlow>();
-			if (flow != null)
-			{
-			}
+			var flow = GameFlow.GetService(context);
 		}
 
 		/// <summary>

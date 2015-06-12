@@ -1,7 +1,7 @@
 ﻿using System;
 using MC.Core.Data;
 
-namespace MC.Core
+namespace MC.Core.Flow
 {
 	/// <summary>
 	/// 空のゲームフロー クラス。

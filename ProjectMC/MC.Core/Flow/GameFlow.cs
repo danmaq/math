@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using MC.Common.State;
 using MC.Common.Utils;
 using MC.Core.Data;
@@ -12,6 +13,8 @@ namespace MC.Core.Flow
 	/// </summary>
 	public sealed class GameFlow : IGameFlow
 	{
+		/// <summary>コンテキスト一覧。</summary>
+		private readonly ICollection<IContext> contextCollection = new List<IContext>();
 
 		/// <summary>ゲームの状態を保持するコンテキスト。</summary>
 		private Context context = new Context();

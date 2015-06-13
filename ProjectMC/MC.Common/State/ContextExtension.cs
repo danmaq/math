@@ -40,6 +40,7 @@ namespace MC.Common.State
 
 		/// <summary>
 		/// 強制的に現在の状態を既定に戻します。
+		/// コンテナもリセットしたい場合、Disposeしてください。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
 		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>

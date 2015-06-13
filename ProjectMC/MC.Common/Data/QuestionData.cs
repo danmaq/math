@@ -11,6 +11,15 @@ namespace MC.Common.Data
 	{
 
 		/// <summary>
+		/// 問題管理番号。
+		/// </summary>
+		public int UniqueId
+		{
+			get;
+			internal set;
+		}
+
+		/// <summary>
 		/// 問題。
 		/// </summary>
 		public string Caption

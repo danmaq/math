@@ -70,6 +70,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Server\API.cs" />
+    <Compile Include="Server\IConnector.cs" />
+    <Compile Include="Server\MockConnector.cs" />
     <Compile Include="State\Game\AreaState.cs" />
     <Compile Include="State\Game\HomeState.cs" />
     <Compile Include="State\Game\LoginState.cs" />

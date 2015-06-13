@@ -52,6 +52,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collection\ContextCollection.cs" />
     <Compile Include="Collection\EnumerableExtension.cs" />
     <Compile Include="Collection\ServiceContainer.cs" />
     <Compile Include="Data\Constants.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="State\NullState.cs" />
     <Compile Include="Utils\DelegateHelper.cs" />
     <Compile Include="Utils\Disposable.cs" />
+    <Compile Include="Utils\StringHelper.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

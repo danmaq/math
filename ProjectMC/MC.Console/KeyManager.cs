@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using MC.Common.Collection;
+using MC.Common.Utils;
 using MC.Core.Data;
 using MC.Properties;
 
@@ -43,7 +44,7 @@ namespace MC
 			{
 				Console.WriteLine(Resources.MESSAGE_SELECT);
 				selection
-					.Select((s, i) => string.Format(CultureInfo.CurrentCulture, @"{0}: {1}", i + 1, s.Description))
+					.Select((s, i) => ((IFormattable)$@"{i + 1}: {s.Description}").Format())
 					.ForEach<string>(Console.WriteLine);
 			}
 		}

@@ -29,10 +29,10 @@ namespace MC.Common.Data
 		}
 
 		/// <summary>
-		/// エリア 1-1 の問題を作成します。
+		/// エリア 1-2 の問題を作成します。
 		/// </summary>
 		/// <returns>問題集。</returns>
-		public IEnumerable<QuestionData> GetQuestion0101()
+		public IEnumerable<QuestionData> GetQuestion0102()
 		{
 			var list =
 				new string[][]
@@ -53,8 +53,20 @@ namespace MC.Common.Data
 			var rnd = new Random();
 			for (int i = 10; --i >= 0;)
 			{
-				var value = rnd.Next(1, 9);
-				var item = new QuestionData() { Caption = question, Description = new string('●', 10) };
+				var answer = rnd.Next(0, 4);
+                var answers =
+					Enumerable
+						.Repeat<Func<int>>(() => rnd.Next(1, 9), 4)
+						.Select(f => f())
+						.ToArray();
+				var item = new QuestionData()
+				{
+					UniqueId = rnd.Next(),
+					Caption = question,
+					Description = new string('●', answers[answer]),
+					Expires = Constants.ExpiresPractice,
+					Answers = null
+				};
 				result.Add(item);
 			}
 			return result;

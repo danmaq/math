@@ -89,27 +89,5 @@ namespace MC.Common.Utils
 			}
 			return list[random.Next(count)];
 		}
-
-		/// <summary>
-		/// 一覧からランダムに取得します。
-		/// </summary>
-		/// <typeparam name="T">一覧の型。</typeparam>
-		/// <param name="list">一覧。</param>
-		/// <returns>値。</returns>
-		/// <exception cref="ArgumentNullException">一覧が null である場合。</exception>
-		/// <exception cref="ArgumentOutOfRangeException">一覧が空である場合。</exception>
-		public static T GetRandomItem<T>(this IList<T> list)
-		{
-			if (list == null)
-			{
-				throw new ArgumentNullException(nameof(list));
-			}
-			var count = list.Count;
-			if (count == 0)
-			{
-				throw new ArgumentOutOfRangeException(nameof(list));
-			}
-			return list[random.Next(count)];
-		}
 	}
 }

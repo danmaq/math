@@ -11,5 +11,6 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Question\QuestionGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Question\QuestionResources.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Question\QuestionStore.cs" />
   </ItemGroup>
 </Project>

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NUM0_0" xml:space="preserve">
+    <value>れい</value>
+  </data>
+  <data name="NUM0_1" xml:space="preserve">
+    <value>ゼロ</value>
+  </data>
+  <data name="NUM0_2" xml:space="preserve">
+    <value>零</value>
+  </data>
+  <data name="NUM0_3" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="NUM0_4" xml:space="preserve">
+    <value>ZERO</value>
+  </data>
+  <data name="NUM1_0" xml:space="preserve">
+    <value>いち</value>
+  </data>
+  <data name="NUM1_1" xml:space="preserve">
+    <value>ひとつ</value>
+  </data>
+  <data name="NUM1_2" xml:space="preserve">
+    <value>一</value>
+  </data>
+  <data name="NUM1_3" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="NUM2_0" xml:space="preserve">
+    <value>に</value>
+  </data>
+  <data name="NUM2_1" xml:space="preserve">
+    <value>ふたつ</value>
+  </data>
+  <data name="NUM2_2" xml:space="preserve">
+    <value>二</value>
+  </data>
+  <data name="NUM2_3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="NUM3_0" xml:space="preserve">
+    <value>さん</value>
+  </data>
+  <data name="NUM3_1" xml:space="preserve">
+    <value>みっつ</value>
+  </data>
+  <data name="NUM3_2" xml:space="preserve">
+    <value>三</value>
+  </data>
+  <data name="NUM3_3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="NUM4_0" xml:space="preserve">
+    <value>し</value>
+  </data>
+  <data name="NUM4_1" xml:space="preserve">
+    <value>よっつ</value>
+  </data>
+  <data name="NUM4_2" xml:space="preserve">
+    <value>よん</value>
+  </data>
+  <data name="NUM4_3" xml:space="preserve">
+    <value>四</value>
+  </data>
+  <data name="NUM4_4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="NUM5_0" xml:space="preserve">
+    <value>ご</value>
+  </data>
+  <data name="NUM5_1" xml:space="preserve">
+    <value>いつつ</value>
+  </data>
+  <data name="NUM5_2" xml:space="preserve">
+    <value>五</value>
+  </data>
+  <data name="NUM5_3" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="NUM6_0" xml:space="preserve">
+    <value>ろく</value>
+  </data>
+  <data name="NUM6_1" xml:space="preserve">
+    <value>むっつ</value>
+  </data>
+  <data name="NUM6_2" xml:space="preserve">
+    <value>六</value>
+  </data>
+  <data name="NUM6_3" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="NUM7_0" xml:space="preserve">
+    <value>なな</value>
+  </data>
+  <data name="NUM7_1" xml:space="preserve">
+    <value>ななつ</value>
+  </data>
+  <data name="NUM7_2" xml:space="preserve">
+    <value>しち</value>
+  </data>
+  <data name="NUM7_3" xml:space="preserve">
+    <value>七</value>
+  </data>
+  <data name="NUM7_4" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="NUM8_0" xml:space="preserve">
+    <value>はち</value>
+  </data>
+  <data name="NUM8_1" xml:space="preserve">
+    <value>やっつ</value>
+  </data>
+  <data name="NUM8_2" xml:space="preserve">
+    <value>八</value>
+  </data>
+  <data name="NUM8_3" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="NUM9_0" xml:space="preserve">
+    <value>きゅう</value>
+  </data>
+  <data name="NUM9_1" xml:space="preserve">
+    <value>ここのつ</value>
+  </data>
+  <data name="NUM9_2" xml:space="preserve">
+    <value>九</value>
+  </data>
+  <data name="NUM9_3" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="NUMA_0" xml:space="preserve">
+    <value>じゅう</value>
+  </data>
+  <data name="NUMA_1" xml:space="preserve">
+    <value>とお</value>
+  </data>
+  <data name="NUMA_2" xml:space="preserve">
+    <value>十</value>
+  </data>
+  <data name="NUMB_0" xml:space="preserve">
+    <value>いっぱい</value>
+  </data>
+  <data name="NUMB_1" xml:space="preserve">
+    <value>たくさん</value>
+  </data>
+  <data name="NUMB_2" xml:space="preserve">
+    <value>指足りない</value>
+  </data>
+  <data name="QUESTION1_1_1" xml:space="preserve">
+    <value>このすうじはなんて読みますか？</value>
+  </data>
+  <data name="QUESTION1_1_2" xml:space="preserve">
+    <value>これはどのすうじですか？</value>
+  </data>
+  <data name="QUESTION1_2" xml:space="preserve">
+    <value>いくつありますか？</value>
+  </data>
+</root>

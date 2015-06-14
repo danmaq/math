@@ -16,7 +16,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\EventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\IIOWrapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\UserData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\ContextExtension.cs" />
@@ -26,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)State\NullState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DelegateHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Disposable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\EnumerableHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\StringHelper.cs" />
   </ItemGroup>
 </Project>

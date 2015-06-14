@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
 using System.Linq;
 using MC.Common.Collection;
-using MC.Common.Utils;
 using MC.Core.Data;
 using MC.Properties;
 
@@ -44,7 +42,7 @@ namespace MC
 			{
 				Console.WriteLine(Resources.MESSAGE_SELECT);
 				selection
-					.Select((s, i) => ((IFormattable)$@"{i + 1}: {s.Description}").Format())
+					.Select((s, i) => $@"{i + 1}: {s.Description}")
 					.ForEach<string>(Console.WriteLine);
 			}
 		}

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f3bf2b94-38c6-42f3-aba5-1ed790335558</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MC.Core</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Data\RequireAlertArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\RequireResponseArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\RequireSelectArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\RequireTextArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\ScreenStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Selection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Flow\EmptyGameFlow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Flow\GameFlow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Flow\GameFlowContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Flow\GameFlowExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Flow\IGameFlow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Server\API.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Server\IConnector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Server\MockConnector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\AreaState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\HomeState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\LoginState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\PracticeState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\PreferenceState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\TitleState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Game\WorldState.cs" />
+  </ItemGroup>
+</Project>

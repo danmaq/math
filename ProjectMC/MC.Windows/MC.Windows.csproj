@@ -142,12 +142,6 @@
     <Content Include="Assets\StoreLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MC.Game\MC.Game.csproj">
-      <Project>{70678476-dd69-43f0-955f-7b8fd73e3566}</Project>
-      <Name>MC.Game</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="box2d, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\CocosSharp.Windows8.1.3.1.0\lib\netcore\box2d.dll</HintPath>
@@ -169,6 +163,16 @@
       <HintPath>..\packages\CocosSharp.Windows8.1.3.1.0\lib\netcore\MonoGame.Framework.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MC.Resources\MC.Res.csproj">
+      <Project>{f0b0bc6e-d4ab-4b1a-9937-80798b243c78}</Project>
+      <Name>MC.Res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="..\MC.Common\MC.Common.projitems" Label="Shared" />
+  <Import Project="..\MC.Core\MC.Core.projitems" Label="Shared" />
+  <Import Project="..\MC.Game\MC.Game.projitems" Label="Shared" />
+  <Import Project="..\MC.MockServer\MC.MockServer.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

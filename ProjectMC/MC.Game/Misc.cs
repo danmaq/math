@@ -1,5 +1,5 @@
 ﻿using CocosSharp;
-using MC.Properties;
+using MC.Res.Properties;
 
 namespace MC
 {

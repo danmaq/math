@@ -29,7 +29,7 @@ namespace MC.Common.State
 		/// <param name="context">コンテキスト。</param>
 		/// <returns>状態が既定に戻り、外部から手を加えない限りこれ以上進展することがない状態である場合、true。</returns>
 		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
-		public static bool IsTerminate(this IContext context)
+		public static bool IsTerminated(this IContext context)
 		{
 			if (context == null)
 			{
@@ -52,6 +52,21 @@ namespace MC.Common.State
 			}
 			context.NextState = NullState.Instance;
 			context.CommitNextState();
+		}
+
+		/// <summary>
+		/// 状態が既定に戻り、外部から手を加えない限りこれ以上進展することがない状態に至っている場合、コンテキストのリソースを解放します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>解放が成功した場合、true。</returns>
+		public static bool DisposeIfTerminated(this IContext context)
+		{
+			var result = context.IsTerminated();
+			if (result)
+			{
+				context.Dispose();
+			}
+            return result;
 		}
 	}
 }

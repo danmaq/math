@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using MC.Common.State;
-using MC.Common.Utils;
 
 namespace MC.Common.Collection
 {
-	public sealed class ContextCollection
+	/// <summary>
+	/// コンテキストのコレクション。
+	/// コンテキストが不活化すると、自動的に削除・解放されます。
+	/// </summary>
+	public sealed class ContextCollection : IDisposable
 	{
 
 		/// <summary>本体。</summary>
@@ -16,7 +17,8 @@ namespace MC.Common.Collection
 		/// <summary>
 		/// コンテキストを追加します。
 		/// </summary>
-		/// <param name="context"></param>
+		/// <param name="context">コンテキスト。</param>
+		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		public void Add(IContext context)
 		{
 			if (context == null)
@@ -26,26 +28,27 @@ namespace MC.Common.Collection
 			body.Add(context);
 		}
 
+		/// <summary>
+		/// リソースを解放します。
+		/// </summary>
+		public void Dispose()
+		{
+			body.ForEach(c => c.Dispose());
+			body.Clear();
+		}
+
+		/// <summary>
+		/// コンテキスト一括実行のための列挙子を取得します。
+		/// </summary>
+		/// <returns>列挙子。実行すると活性的なコンテキストの数を取得します。</returns>
 		public IEnumerable<int> Run()
 		{
-			var count = 0;
-			do
+			while (true)
 			{
-				Func<IContext, bool> shredder =
-					c =>
-					{
-						var result = c.IsTerminate();
-						if (result)
-						{
-							c.Dispose();
-						}
-						return result;
-					};
 				body.ForEach(c => c.Execute());
-				body.RemoveAll(c => c.IsTerminate());
-				yield return (count = body.Count);
+				body.RemoveAll(c => c.DisposeIfTerminated());
+				yield return body.Count;
 			}
-			while (count > 0);
         }
 	}
 }

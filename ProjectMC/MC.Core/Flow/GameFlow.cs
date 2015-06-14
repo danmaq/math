@@ -1,10 +1,9 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
+using MC.Common.Collection;
 using MC.Common.State;
 using MC.Common.Utils;
 using MC.Core.Data;
-using MC.Core.State.Game;
 
 namespace MC.Core.Flow
 {
@@ -13,11 +12,9 @@ namespace MC.Core.Flow
 	/// </summary>
 	public sealed class GameFlow : IGameFlow
 	{
-		/// <summary>コンテキスト一覧。</summary>
-		private readonly ICollection<IContext> contextCollection = new List<IContext>();
 
-		/// <summary>ゲームの状態を保持するコンテキスト。</summary>
-		private Context context = new Context();
+		/// <summary>コンテキストのコレクション。</summary>
+		private readonly ContextCollection contextCollection = new ContextCollection();
 
 		/// <summary>
 		/// レスポンスを要求する際に発火するイベント。
@@ -30,48 +27,34 @@ namespace MC.Core.Flow
 		public event EventHandler Timeout = DelegateHelper.EmptyHandler;
 
 		/// <summary>
-		/// ゲームフローを初期化します。
-		/// </summary>
-		public GameFlow()
-		{
-		}
-
-		/// <summary>
 		/// インスタンスを取得します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
 		/// <returns>ゲームフロー インスタンス。登録されていない場合、null オブジェクト。</returns>
-		public static IGameFlow GetService(IContext context)
-		{
-			return context?.Container.GetService<IGameFlow>() ?? EmptyGameFlow.Instance;
-		}
+		public static IGameFlow GetService(IContext context) =>
+			context?.Container.GetService<IGameFlow>() ?? EmptyGameFlow.Instance;
 
 		/// <summary>
 		/// ゲームフローを開始します。
 		/// </summary>
 		public IEnumerable Run()
 		{
-			context.Container.AddService<IGameFlow>(instance: this);
-			context.NextState = LoginState.Instance;
-			while (!context.IsTerminate())
+			var contextEnumerable = contextCollection.Run();
+			contextCollection.Add(new GameFlowContext(this));
+            foreach (var count in contextCollection.Run())
 			{
 				yield return null;
-				context.Execute();
+				if (count == 0)
+				{
+					break;
+				}
 			}
-			context.Container.RemoveService(serviceType: typeof(IGameFlow), dispose: false);
 		}
 
 		/// <summary>
 		/// リソースを解放します。
 		/// </summary>
-		public void Dispose()
-		{
-			if (context != null)
-			{
-				context.Dispose();
-				context = null;
-			}
-		}
+		public void Dispose() => contextCollection.Dispose();
 
 		/// <summary>
 		/// 入力要求イベントを発火させます。

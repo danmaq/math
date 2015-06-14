@@ -140,16 +140,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MC.Common\MC.Common.csproj">
-      <Project>{ea8046ca-d7dd-4d16-9aab-2af9dd2a16ce}</Project>
-      <Name>MC.Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MC.Core\MC.Core.csproj">
-      <Project>{635ad3a8-1d8a-4883-a5f6-1f536db2858c}</Project>
-      <Name>MC.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -158,6 +148,15 @@
   <ItemGroup>
     <Content Include="MC_1.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MC.Resources\MC.Res.csproj">
+      <Project>{f0b0bc6e-d4ab-4b1a-9937-80798b243c78}</Project>
+      <Name>MC.Res</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="..\MC.Common\MC.Common.projitems" Label="Shared" />
+  <Import Project="..\MC.Core\MC.Core.projitems" Label="Shared" />
+  <Import Project="..\MC.MockServer\MC.MockServer.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

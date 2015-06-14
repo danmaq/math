@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>a1734de7-b1e2-47e3-b70c-f3223191c4cc</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>MC.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Collection\ContextCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collection\EnumerableExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collection\ServiceContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\EventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\IIOWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\UserData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\Context.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\ContextExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\IContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\IState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\IStateContract.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)State\NullState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\DelegateHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Disposable.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\StringHelper.cs" />
+  </ItemGroup>
+</Project>

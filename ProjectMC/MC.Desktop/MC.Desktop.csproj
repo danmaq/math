@@ -184,9 +184,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MC.Game\MC.Game.csproj">
-      <Project>{70678476-dd69-43f0-955f-7b8fd73e3566}</Project>
-      <Name>MC.Game</Name>
+    <ProjectReference Include="..\MC.Resources\MC.Res.csproj">
+      <Project>{f0b0bc6e-d4ab-4b1a-9937-80798b243c78}</Project>
+      <Name>MC.Res</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +196,10 @@
     </Content>
     <Content Include="MC_1.ico" />
   </ItemGroup>
+  <Import Project="..\MC.Common\MC.Common.projitems" Label="Shared" />
+  <Import Project="..\MC.Core\MC.Core.projitems" Label="Shared" />
+  <Import Project="..\MC.Game\MC.Game.projitems" Label="Shared" />
+  <Import Project="..\MC.MockServer\MC.MockServer.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

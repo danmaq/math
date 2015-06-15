@@ -177,6 +177,7 @@
       <HintPath>..\packages\CocosSharp.PCL.Shared.DX.1.3.0.0\lib\net40\SharpDX.XInput.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />

@@ -12,6 +12,9 @@ namespace MC.Common.Collection
 	public static class EnumerableExtension
 	{
 
+		/// <summary>疑似乱数ジェネレータ。</summary>
+		private static readonly Random random = new Random();
+
 		/// <summary>
 		/// 即座にクエリを評価します。
 		/// 評価結果が不要である際に使用します。
@@ -81,10 +84,50 @@ namespace MC.Common.Collection
 		/// <param name="sequence">コレクション。</param>
 		/// <returns>文字列情報。</returns>
 		public static string ToStringCollection<T>(this IEnumerable<T> sequence) =>
-			sequence.Aggregate<T, string>(
-				seed: null,
-				func:
-					(a, s) => a == null ?
-					s.ToString() : StringHelper.Format($@"{a}, {s.ToString()}"));
+			sequence.ToStringCollection(v => v.ToString());
+
+		/// <summary>
+		/// コレクションを文字列化します。
+		/// </summary>
+		/// <typeparam name="T">コレクションの型。</typeparam>
+		/// <param name="sequence">コレクション。</param>
+		/// <param name="generator">文字列生成関数。</param>
+		/// <returns>文字列情報。</returns>
+		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
+		public static string ToStringCollection<T>(this IEnumerable<T> sequence, Func<T, string> generator)
+		{
+			if (generator == null)
+			{
+				throw new ArgumentNullException(nameof(generator));
+			}
+			return
+				sequence.Aggregate<T, string>(
+					seed: null,
+					func:
+						(a, s) => a == null ?
+						s.ToString() : StringHelper.Format($@"{a}, {generator(s)}"));
+		}
+
+		/// <summary>
+		/// 一覧からランダムに取得します。
+		/// </summary>
+		/// <typeparam name="T">一覧の型。</typeparam>
+		/// <param name="list">一覧。</param>
+		/// <returns>値。</returns>
+		/// <exception cref="ArgumentNullException">一覧が null である場合。</exception>
+		/// <exception cref="ArgumentOutOfRangeException">一覧が空である場合。</exception>
+		public static T GetRandomItem<T>(this IReadOnlyList<T> list)
+		{
+			if (list == null)
+			{
+				throw new ArgumentNullException(nameof(list));
+			}
+			var count = list.Count;
+			if (count == 0)
+			{
+				throw new ArgumentOutOfRangeException(nameof(list));
+			}
+			return list[random.Next(count)];
+		}
 	}
 }

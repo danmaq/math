@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using MC.Common.Utils;
 
@@ -30,6 +31,15 @@ namespace MC.Common.Data
 
 		/// <summary>一言を取得または設定します。</summary>
 		public string Comment
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// 入学した学園一覧を取得します。
+		/// </summary>
+		public IList<CollegeMasterData> Admission
 		{
 			get;
 			set;

@@ -12,10 +12,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Collection\ContextCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collection\EnumerableExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collection\ServiceContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CardMasterData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\CollegeMasterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\EventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\IIOWrapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\SubjectMasterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\UserData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Context.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\ContextExtension.cs" />

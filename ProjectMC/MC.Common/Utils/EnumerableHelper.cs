@@ -11,11 +11,6 @@ namespace MC.Common.Utils
 	public static class EnumerableHelper
 	{
 
-		// TODO: EnumerableExtension と合併する
-
-		/// <summary>疑似乱数ジェネレータ。</summary>
-		private static readonly Random random = new Random();
-
 		/// <summary>
 		/// 一定個数の値を生成します。
 		/// </summary>
@@ -71,27 +66,5 @@ namespace MC.Common.Utils
 		public static IEnumerable<T> GenerateUnique<T>(int count, Func<T> generator) =>
 			Generate(
 				count: count, generator: generator, predicate: (v, l) => l.All(i => !v.Equals(i)));
-
-		/// <summary>
-		/// 一覧からランダムに取得します。
-		/// </summary>
-		/// <typeparam name="T">一覧の型。</typeparam>
-		/// <param name="list">一覧。</param>
-		/// <returns>値。</returns>
-		/// <exception cref="ArgumentNullException">一覧が null である場合。</exception>
-		/// <exception cref="ArgumentOutOfRangeException">一覧が空である場合。</exception>
-		public static T GetRandomItem<T>(this IReadOnlyList<T> list)
-		{
-			if (list == null)
-			{
-				throw new ArgumentNullException(nameof(list));
-			}
-			var count = list.Count;
-			if (count == 0)
-			{
-				throw new ArgumentOutOfRangeException(nameof(list));
-			}
-			return list[random.Next(count)];
-		}
 	}
 }

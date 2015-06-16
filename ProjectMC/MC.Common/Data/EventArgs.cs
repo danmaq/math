@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Globalization;
+using MC.Common.Utils;
 
 namespace MC.Common.Data
 {
@@ -22,13 +22,7 @@ namespace MC.Common.Data
 		/// オブジェクトの文字列表現を取得します。
 		/// </summary>
 		/// <returns>文字列表現。</returns>
-		public override string ToString()
-			=>
-				string.Format(
-					CultureInfo.CurrentCulture,
-					@"{0}({1}) Data:{2}",
-					nameof(EventArgs),
-					nameof(T),
-					Data);
+		public override string ToString() =>
+			StringHelper.Format($@"{nameof(EventArgs)}({nameof(T)}) {Data}");
 	}
 }

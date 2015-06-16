@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using MC.Common.Data;
 using MC.Common.Utils;
@@ -9,7 +11,7 @@ namespace MC.MockServer.Question
 	/// <summary>
 	/// 問題生成クラス。
 	/// </summary>
-	public sealed class QuestionGenerator
+	public static class QuestionGenerator
 	{
 		/// <summary>最大選択数。</summary>
 		private const int MaxSelection = 4;
@@ -23,7 +25,8 @@ namespace MC.MockServer.Question
 		/// <param name="selection">選択肢の数。</param>
 		/// <param name="count">問題数。</param>
 		/// <returns>問題と解答番号の組。</returns>
-		public IEnumerable<Tuple<QuestionData, int>> Create0101(int selection, int count)
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
+		public static IEnumerable<Tuple<QuestionData, int>> Create0101(int selection, int count)
 		{
 			if (count <= 0)
 			{
@@ -33,7 +36,7 @@ namespace MC.MockServer.Question
 			while (--count >= 0)
 			{
 				yield return funcs.GetRandomItem()(selection);
-            }
+			}
 		}
 
 		/// <summary>
@@ -41,11 +44,11 @@ namespace MC.MockServer.Question
 		/// </summary>
 		/// <param name="selection">選択肢の数。</param>
 		/// <returns>問題と解答番号の組。</returns>
-		private Tuple<QuestionData, int> Create01011(int selection) =>
+		private static Tuple<QuestionData, int> Create01011(int selection) =>
 			Create0101Common(
 				selection: selection,
 				question: Res.Properties.Resources.QUESTION1_1_1,
-				getDesc: t => t.Item1.ToString(),
+				getDesc: t => t.Item1.ToString(CultureInfo.CurrentCulture),
 				getAnswer: t => t.Item2);
 
 
@@ -54,12 +57,12 @@ namespace MC.MockServer.Question
 		/// </summary>
 		/// <param name="selection">選択肢の数。</param>
 		/// <returns>問題と解答番号の組。</returns>
-		private Tuple<QuestionData, int> Create01012(int selection) =>
+		private static Tuple<QuestionData, int> Create01012(int selection) =>
 			Create0101Common(
 				selection: selection,
 				question: Res.Properties.Resources.QUESTION1_1_2,
 				getDesc: t => t.Item2,
-				getAnswer: t => t.Item1.ToString());
+				getAnswer: t => t.Item1.ToString(CultureInfo.CurrentCulture));
 
 		/// <summary>
 		/// ステージ 1-1 問題を生成します。
@@ -69,7 +72,7 @@ namespace MC.MockServer.Question
 		/// <param name="getDesc">問題を抽出する関数。</param>
 		/// <param name="getAnswer">回答を抽出する関数。</param>
 		/// <returns>問題と解答番号の組。</returns>
-		private Tuple<QuestionData, int> Create0101Common(
+		private static Tuple<QuestionData, int> Create0101Common(
 			int selection,
 			string question,
 			Func<Tuple<int, string>, string> getDesc,

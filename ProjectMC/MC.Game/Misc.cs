@@ -1,4 +1,5 @@
-﻿using CocosSharp;
+﻿using System.Globalization;
+using CocosSharp;
 using MC.Res.Properties;
 
 namespace MC
@@ -17,8 +18,10 @@ namespace MC
 		=
 			new CCSize()
 			{
-                Width = int.Parse(s: Resources.DEFAULT_WIDTH),
-				Height = int.Parse(s: Resources.DEFAULT_HEIGHT),
+				Width =
+					int.Parse(s: Resources.DEFAULT_WIDTH, provider: CultureInfo.InvariantCulture),
+				Height =
+					int.Parse(s: Resources.DEFAULT_HEIGHT, provider: CultureInfo.InvariantCulture),
 			};
 
 	}

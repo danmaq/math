@@ -20,9 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Flow\GameFlowContext.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Flow\GameFlowExtension.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Flow\IGameFlow.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Server\API.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Server\IConnector.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Server\MockConnector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Server\Api.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Game\AreaState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Game\HomeState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Game\LoginState.cs" />

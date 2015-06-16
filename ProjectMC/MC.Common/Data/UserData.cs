@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
+using MC.Common.Utils;
 
 namespace MC.Common.Data
 {
@@ -56,13 +56,8 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			string.Format(
-				CultureInfo.CurrentCulture,
-				@"{0} UID:{1}, Name:{2}, Comment:{3}",
-				nameof(UserData),
-				UserId,
-				Name,
-				Comment);
+			StringHelper.Format(
+				$@"{nameof(UserData)} UID:{UserId}, Name:{Name}, Comment:{Comment}");
 
 		/// <summary>
 		/// ハッシュコードを取得します。

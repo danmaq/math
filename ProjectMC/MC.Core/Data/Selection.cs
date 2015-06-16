@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
 using MC.Common.Utils;
 
 namespace MC.Core.Data
@@ -30,12 +29,27 @@ namespace MC.Core.Data
 		}
 
 		/// <summary>
+		/// 値同士が等しいかどうかを判定します。
+		/// </summary>
+		/// <param name="valueA">値。</param>
+		/// <param name="valueB">値。</param>
+		/// <returns>値同士が等しい場合、true。</returns>
+		public static bool operator ==(Selection valueA, Selection valueB) => valueA.Equals(valueB);
+
+		/// <summary>
+		/// 値同士が等しくないかどうかを判定します。
+		/// </summary>
+		/// <param name="valueA">値。</param>
+		/// <param name="valueB">値。</param>
+		/// <returns>値同士が等しくない場合、true。</returns>
+		public static bool operator !=(Selection valueA, Selection valueB) => !valueA.Equals(valueB);
+
+		/// <summary>
 		/// 値の文字列表現を取得します。
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			string.Format(
-				CultureInfo.CurrentCulture, @"{0} Desc:{1}", nameof(Selection), Description);
+			StringHelper.Format($@"{nameof(Selection)} Description:{Description}, Callback:{Select}");
 
 		/// <summary>
 		/// ハッシュコードを取得します。

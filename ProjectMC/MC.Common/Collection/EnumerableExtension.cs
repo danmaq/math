@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using MC.Common.Utils;
 
 namespace MC.Common.Collection
@@ -72,5 +73,18 @@ namespace MC.Common.Collection
 				c(i);
 			}
 		}
+
+		/// <summary>
+		/// コレクションを文字列化します。
+		/// </summary>
+		/// <typeparam name="T">コレクションの型。</typeparam>
+		/// <param name="sequence">コレクション。</param>
+		/// <returns>文字列情報。</returns>
+		public static string ToStringCollection<T>(this IEnumerable<T> sequence) =>
+			sequence.Aggregate<T, string>(
+				seed: null,
+				func:
+					(a, s) => a == null ?
+					s.ToString() : StringHelper.Format($@"{a}, {s.ToString()}"));
 	}
 }

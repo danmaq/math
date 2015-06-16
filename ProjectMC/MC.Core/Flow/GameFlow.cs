@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using MC.Common.Collection;
 using MC.Common.State;
 using MC.Common.Utils;
@@ -37,11 +38,12 @@ namespace MC.Core.Flow
 		/// <summary>
 		/// ゲームフローを開始します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
 		public IEnumerable Run()
 		{
 			var contextEnumerable = contextCollection.Run();
 			contextCollection.Add(new GameFlowContext(this));
-            foreach (var count in contextCollection.Run())
+			foreach (var count in contextCollection.Run())
 			{
 				yield return null;
 				if (count == 0)

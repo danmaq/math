@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 
 namespace MC.Common.Utils
@@ -9,6 +10,8 @@ namespace MC.Common.Utils
 	/// </summary>
 	public static class EnumerableHelper
 	{
+
+		// TODO: EnumerableExtension と合併する
 
 		/// <summary>疑似乱数ジェネレータ。</summary>
 		private static readonly Random random = new Random();
@@ -22,6 +25,7 @@ namespace MC.Common.Utils
 		/// <param name="predicate">値を検証する関数。</param>
 		/// <returns>値の一覧を生成するシーケンス。</returns>
 		/// <exception cref="ArgumentNullException">各関数が null である場合。</exception>
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
 		public static IEnumerable<T> Generate<T>(int count, Func<T> generator, Func<T, IEnumerable<T>, bool> predicate)
 		{
 			if (generator == null)

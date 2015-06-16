@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+using MC.Common.Collection;
+using MC.Common.Utils;
 
 namespace MC.Core.Data
 {
@@ -30,14 +30,7 @@ namespace MC.Core.Data
 		/// </summary>
 		/// <returns>文字列情報。</returns>
 		public override string ToString() =>
-			string.Format(
-				CultureInfo.CurrentCulture,
-				@"{0}, Desc:{1}, Expires: {2} Selecton: {3}",
-				nameof(RequireSelectArgs),
-				Description,
-				Expires,
-				Selections.Aggregate(
-					seed: string.Empty,
-					func: (a, s) => string.Format(@"{0}, {1}", a, s.ToString())));
-	}
+			StringHelper.Format(
+				$@"{nameof(RequireSelectArgs)} Description:{Description} Expires: {Description} Selecton: {Selections.ToStringCollection()}");
+    }
 }

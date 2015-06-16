@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using MC.Common.Collection;
+using MC.Common.Utils;
 using MC.Core.Data;
 using MC.Properties;
 
@@ -42,7 +43,7 @@ namespace MC
 			{
 				Console.WriteLine(Resources.MESSAGE_SELECT);
 				selection
-					.Select((s, i) => $@"{i + 1}: {s.Description}")
+					.Select((s, i) => StringHelper.Format($@"{i + 1}: {s.Description}"))
 					.ForEach<string>(Console.WriteLine);
 			}
 		}

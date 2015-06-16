@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using MC.Common.Utils;
 
 namespace MC.Core.Data
@@ -29,10 +28,6 @@ namespace MC.Core.Data
 		/// </summary>
 		/// <returns>文字列情報。</returns>
 		public override string ToString() =>
-			string.Format(
-				CultureInfo.CurrentCulture,
-				@"{0}, Desc:{1}",
-				nameof(RequireSelectArgs),
-				Description);
+			StringHelper.Format($@"{nameof(RequireSelectArgs)} Description:{Description}");
 	}
 }

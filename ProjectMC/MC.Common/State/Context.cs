@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Globalization;
 using MC.Common.Collection;
+using MC.Common.Utils;
 
 namespace MC.Common.State
 {
@@ -128,15 +128,9 @@ namespace MC.Common.State
 		/// オブジェクトの文字列表現を取得します。
 		/// </summary>
 		/// <returns>文字列表現。</returns>
-		public override string ToString()
-			=>
-				string.Format(
-					CultureInfo.CurrentCulture,
-					@"{0} Prev:{1}, Current:{2}, Next:{3}",
-					nameof(Context),
-					PreviousState,
-					CurrentState,
-					NextState);
+		public override string ToString() =>
+			StringHelper.Format(
+				$@"{nameof(Context)} Prev:{PreviousState}, Current:{CurrentState}, Next:{NextState}");
 
 		/// <summary>
 		/// リソースを解放します。

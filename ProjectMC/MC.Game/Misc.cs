@@ -7,7 +7,7 @@ namespace MC
 	/// <summary>
 	/// 雑多な関数群クラス。
 	/// </summary>
-	public static class Misc
+	static class Misc
 	{
 
 		/// <summary>既定の解像度を取得します。</summary>

@@ -9,6 +9,7 @@
     <Import_RootNamespace>MC.MockServer</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)MasterStore.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MockMessageHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Question\QuestionGenerator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Question\QuestionResources.cs" />

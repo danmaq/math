@@ -7,7 +7,7 @@ namespace MC.Common.State
 	/// <summary>
 	/// Stateパターンにおける、コンテキストの実装。
 	/// </summary>
-	public class Context : IContext
+	class Context : IContext
 	{
 
 		/// <summary>状態の確定を抑制するかどうか。</summary>

@@ -6,7 +6,7 @@ namespace MC.Common.Utils
 	/// <summary>
 	/// Dispose() に対応してコールバックを発生させるためのクラス。
 	/// </summary>
-	public sealed class Disposable : IDisposable
+	sealed class Disposable : IDisposable
 	{
 
 		/// <summary>リソース解放関数。</summary>

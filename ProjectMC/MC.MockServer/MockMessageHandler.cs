@@ -10,7 +10,7 @@ namespace MC.MockServer
 	/// <summary>
 	/// モック サーバ用のメッセージ ハンドラ。
 	/// </summary>
-	public sealed class MockMessageHandler : HttpMessageHandler
+	sealed class MockMessageHandler : HttpMessageHandler
 	{
 		/// <summary>
 		/// 非同期操作として HTTP 要求を送信します。

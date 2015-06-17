@@ -8,7 +8,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 選択肢から選ぶことを要求するイベント データです。
 	/// </summary>
-	public sealed class RequireSelectArgs : RequireResponseArgs
+	sealed class RequireSelectArgs : RequireResponseArgs
 	{
 
 		/// <summary>選択肢を取得します。</summary>

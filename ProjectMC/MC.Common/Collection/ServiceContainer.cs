@@ -8,7 +8,7 @@ namespace MC.Common.Collection
 	/// サービス コンテナ。
 	/// 任意の参照型を登録できます。
 	/// </summary>
-	public sealed class ServiceContainer : IServiceProvider, IDisposable
+	sealed class ServiceContainer : IServiceProvider, IDisposable
 	{
 
 		/// <summary>登録されたサービスの件数を取得します。</summary>

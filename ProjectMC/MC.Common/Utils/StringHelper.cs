@@ -6,7 +6,7 @@ namespace MC.Common.Utils
 	/// <summary>
 	/// 文字列関係のヘルパ クラス。
 	/// </summary>
-	public static class StringHelper
+	static class StringHelper
 	{
 		/// <summary>
 		/// 文字列を整形します。

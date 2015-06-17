@@ -8,7 +8,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 学園マスタの単票データ。
 	/// </summary>
-	public struct CollegeMasterData
+	struct CollegeMasterData
 	{
 		/// <summary>
 		/// コンストラクタ。
@@ -16,16 +16,19 @@ namespace MC.Common.Data
 		/// <param name="id">教科 ID。</param>
 		/// <param name="name">教科名。</param>
 		/// <param name="description">解説。</param>
+		/// <param name="enabled">有効かどうか。</param>
 		/// <param name="requires">受講に必要な教科一覧。</param>
 		public CollegeMasterData(
 			int id,
 			string name,
 			string description,
+			bool enabled,
 			IReadOnlyCollection<SubjectMasterData> requires)
 		{
 			CollegeId = id;
-			Name = name;
-			Description = description;
+			Name = name ?? string.Empty;
+			Description = description ?? string.Empty;
+			Enabled = enabled;
 			Requires =
 				requires ?? new ReadOnlyCollection<SubjectMasterData>(new SubjectMasterData[0]);
 		}
@@ -52,6 +55,15 @@ namespace MC.Common.Data
 		/// 解説を取得します。
 		/// </summary>
 		public string Description
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// 有効かどうかを取得します。
+		/// </summary>
+		public bool Enabled
 		{
 			get;
 			private set;
@@ -90,7 +102,7 @@ namespace MC.Common.Data
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
 			StringHelper.Format(
-				$@"{nameof(CollegeMasterData)} ID:{CollegeId}, Name:{Name}, Description:{Description}, Requires:{Requires.ToStringCollection(s => s.Name)}");
+				$@"{nameof(CollegeMasterData)} ID:{CollegeId}, Name:{Name}, Description:{Description}, Enabled:{Enabled}, Requires:{Requires.ToStringCollection(s => s.Name)}");
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -98,8 +110,9 @@ namespace MC.Common.Data
 		/// <returns>ハッシュコード。</returns>
 		public override int GetHashCode() =>
 			CollegeId.GetHashCode() ^
-			Name.GetHashCode() ^
-			Description.GetHashCode() ^
+			(Name ?? string.Empty).GetHashCode() ^
+			(Description ?? string.Empty).GetHashCode() ^
+			Enabled.GetHashCode() ^
 			Requires.GetHashCode();
 
 		/// <summary>
@@ -119,6 +132,7 @@ namespace MC.Common.Data
 			CollegeId == others.CollegeId &&
 			Name == others.Name &&
 			Description == others.Description &&
+			Enabled == others.Enabled &&
 			Requires == others.Requires;
 	}
 }

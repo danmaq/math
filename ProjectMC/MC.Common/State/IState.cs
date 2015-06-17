@@ -6,7 +6,7 @@ namespace MC.Common.State
 	/// Stateパターンにおける、状態に必要な要件を定義します。
 	/// </summary>
 	[ContractClass(typeof(IStateContract))]
-	public interface IState
+	interface IState
 	{
 
 		/// <summary>

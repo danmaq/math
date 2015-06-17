@@ -3,7 +3,7 @@
 	/// <summary>
 	/// 空の状態。
 	/// </summary>
-	public sealed class NullState : IState
+	sealed class NullState : IState
 	{
 		/// <summary>
 		/// コンストラクタ。

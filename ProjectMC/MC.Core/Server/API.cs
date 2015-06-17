@@ -11,7 +11,7 @@ namespace MC.Core.Server
 	/// <summary>
 	/// 各種API。
 	/// </summary>
-	public static class Api
+	static class Api
 	{
 
 		/// <summary>クライアント。</summary>

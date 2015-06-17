@@ -4,7 +4,7 @@
 	/// <summary>
 	/// 画面一覧。
 	/// </summary>
-	public enum ScreenStatus
+	enum ScreenStatus
 	{
 		/// <summary>試験実装画面。</summary>
 		Test,

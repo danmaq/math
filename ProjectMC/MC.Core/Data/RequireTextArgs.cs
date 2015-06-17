@@ -6,7 +6,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 文字列入力を要求するイベント データです。
 	/// </summary>
-	public sealed class RequireTextArgs : RequireResponseArgs
+	sealed class RequireTextArgs : RequireResponseArgs
 	{
 
 		/// <summary>レスポンス用コールバックを取得します。</summary>

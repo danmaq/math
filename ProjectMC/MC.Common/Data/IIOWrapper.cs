@@ -5,7 +5,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// I/O のラッパー。
 	/// </summary>
-	public interface IIOWrapper
+	interface IIOWrapper
 	{
 		/// <summary>エラー発生時に呼び出されるイベント。</summary>
 		event EventHandler<EventArgs<string>> Failed;

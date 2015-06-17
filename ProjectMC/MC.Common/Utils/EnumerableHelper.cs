@@ -8,7 +8,7 @@ namespace MC.Common.Utils
 	/// <summary>
 	/// LINQ 関係のヘルパ クラス。
 	/// </summary>
-	public static class EnumerableHelper
+	static class EnumerableHelper
 	{
 
 		/// <summary>

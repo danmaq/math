@@ -8,7 +8,7 @@ namespace MC
 	/// <summary>
 	/// 実質ゲームのメインとなるクラス。
 	/// </summary>
-	public sealed class GameAppDelegate : CCApplicationDelegate
+	sealed class GameAppDelegate : CCApplicationDelegate
 	{
 		/// <summary>
 		/// 起動完了直後に呼び出されます。

@@ -117,6 +117,150 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="COLLEGE_01_DESCRIPTION" xml:space="preserve">
+    <value>ステージ１：数の基本、足し算引き算の基本</value>
+  </data>
+  <data name="COLLEGE_01_NAME" xml:space="preserve">
+    <value>学園A</value>
+  </data>
+  <data name="COLLEGE_02_DESCRIPTION" xml:space="preserve">
+    <value>ステージ２：四則演算の基本</value>
+  </data>
+  <data name="COLLEGE_02_NAME" xml:space="preserve">
+    <value>学園B</value>
+  </data>
+  <data name="COLLEGE_03_DESCRIPTION" xml:space="preserve">
+    <value>ステージ３：色々な図形</value>
+  </data>
+  <data name="COLLEGE_03_NAME" xml:space="preserve">
+    <value>学園C</value>
+  </data>
+  <data name="COLLEGE_04_DESCRIPTION" xml:space="preserve">
+    <value>ステージ４：単位と測定</value>
+  </data>
+  <data name="COLLEGE_04_NAME" xml:space="preserve">
+    <value>学園D</value>
+  </data>
+  <data name="COLLEGE_05_DESCRIPTION" xml:space="preserve">
+    <value>ステージ５：分数、小数、負数、比</value>
+  </data>
+  <data name="COLLEGE_05_NAME" xml:space="preserve">
+    <value>学園E</value>
+  </data>
+  <data name="COLLEGE_06_DESCRIPTION" xml:space="preserve">
+    <value>ステージ６：幾何の基礎</value>
+  </data>
+  <data name="COLLEGE_06_NAME" xml:space="preserve">
+    <value>学園F</value>
+  </data>
+  <data name="COLLEGE_07_DESCRIPTION" xml:space="preserve">
+    <value>ステージ７：グラフ、数値処理</value>
+  </data>
+  <data name="COLLEGE_07_NAME" xml:space="preserve">
+    <value>学園G</value>
+  </data>
+  <data name="COLLEGE_08_DESCRIPTION" xml:space="preserve">
+    <value>ステージ８：文字式の基本、不等式、平方根</value>
+  </data>
+  <data name="COLLEGE_08_NAME" xml:space="preserve">
+    <value>学園H</value>
+  </data>
+  <data name="COLLEGE_09_DESCRIPTION" xml:space="preserve">
+    <value>ステージ９：グラフ、一次関数、因数分解</value>
+  </data>
+  <data name="COLLEGE_09_NAME" xml:space="preserve">
+    <value>学園I</value>
+  </data>
+  <data name="COLLEGE_10_DESCRIPTION" xml:space="preserve">
+    <value>ステージ10：二次関数</value>
+  </data>
+  <data name="COLLEGE_10_NAME" xml:space="preserve">
+    <value>学園J</value>
+  </data>
+  <data name="COLLEGE_11_DESCRIPTION" xml:space="preserve">
+    <value>ステージ11：三角比、三角関数</value>
+  </data>
+  <data name="COLLEGE_11_NAME" xml:space="preserve">
+    <value>学園K</value>
+  </data>
+  <data name="COLLEGE_12_DESCRIPTION" xml:space="preserve">
+    <value>ステージ12：集合、論理</value>
+  </data>
+  <data name="COLLEGE_12_NAME" xml:space="preserve">
+    <value>学園L</value>
+  </data>
+  <data name="COLLEGE_13_DESCRIPTION" xml:space="preserve">
+    <value>ステージ13：場合の数、確率</value>
+  </data>
+  <data name="COLLEGE_13_NAME" xml:space="preserve">
+    <value>学園M</value>
+  </data>
+  <data name="COLLEGE_14_DESCRIPTION" xml:space="preserve">
+    <value>ステージ14：指数、対数</value>
+  </data>
+  <data name="COLLEGE_14_NAME" xml:space="preserve">
+    <value>学園N</value>
+  </data>
+  <data name="COLLEGE_15_DESCRIPTION" xml:space="preserve">
+    <value>ステージ15：ベクトル</value>
+  </data>
+  <data name="COLLEGE_15_NAME" xml:space="preserve">
+    <value>学園O</value>
+  </data>
+  <data name="COLLEGE_16_DESCRIPTION" xml:space="preserve">
+    <value>ステージ16：二次曲線、さまざまな関数</value>
+  </data>
+  <data name="COLLEGE_16_NAME" xml:space="preserve">
+    <value>学園P</value>
+  </data>
+  <data name="COLLEGE_17_DESCRIPTION" xml:space="preserve">
+    <value>ステージ17：複素数、行列</value>
+  </data>
+  <data name="COLLEGE_17_NAME" xml:space="preserve">
+    <value>学園Q</value>
+  </data>
+  <data name="COLLEGE_18_DESCRIPTION" xml:space="preserve">
+    <value>ステージ18：極限、微分</value>
+  </data>
+  <data name="COLLEGE_18_NAME" xml:space="preserve">
+    <value>学園R</value>
+  </data>
+  <data name="COLLEGE_19_DESCRIPTION" xml:space="preserve">
+    <value>ステージ19：数列、積分</value>
+  </data>
+  <data name="COLLEGE_19_NAME" xml:space="preserve">
+    <value>学園S</value>
+  </data>
+  <data name="COLLEGE_20_DESCRIPTION" xml:space="preserve">
+    <value>ステージ20：統計</value>
+  </data>
+  <data name="COLLEGE_20_NAME" xml:space="preserve">
+    <value>学園T</value>
+  </data>
+  <data name="COLLEGE_21_DESCRIPTION" xml:space="preserve">
+    <value>ステージ21：微分方程式、積分、ラプラス変換</value>
+  </data>
+  <data name="COLLEGE_21_NAME" xml:space="preserve">
+    <value>学園U</value>
+  </data>
+  <data name="COLLEGE_22_DESCRIPTION" xml:space="preserve">
+    <value>ステージ22：ベクトル関数</value>
+  </data>
+  <data name="COLLEGE_22_NAME" xml:space="preserve">
+    <value>学園V</value>
+  </data>
+  <data name="COLLEGE_23_DESCRIPTION" xml:space="preserve">
+    <value>ステージ23：行列</value>
+  </data>
+  <data name="COLLEGE_23_NAME" xml:space="preserve">
+    <value>学園W</value>
+  </data>
+  <data name="COLLEGE_24_DESCRIPTION" xml:space="preserve">
+    <value>ステージ24：複素関数</value>
+  </data>
+  <data name="COLLEGE_24_NAME" xml:space="preserve">
+    <value>学園X</value>
+  </data>
   <data name="NUM0_0" xml:space="preserve">
     <value>れい</value>
   </data>
@@ -272,5 +416,2981 @@
   </data>
   <data name="QUESTION1_2" xml:space="preserve">
     <value>いくつありますか？</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_001" xml:space="preserve">
+    <value>10までの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_002" xml:space="preserve">
+    <value>数字と物の数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_003" xml:space="preserve">
+    <value>数字と順序</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_004" xml:space="preserve">
+    <value>０とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_005" xml:space="preserve">
+    <value>足し算の概念</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_006" xml:space="preserve">
+    <value>１桁の足し算（繰り上がり無し）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_007" xml:space="preserve">
+    <value>引き算の概念</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_008" xml:space="preserve">
+    <value>１桁の引き算（繰り下がり無し）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_009" xml:space="preserve">
+    <value>20までの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_010" xml:space="preserve">
+    <value>100までの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_011" xml:space="preserve">
+    <value>桁の考え方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_012" xml:space="preserve">
+    <value>１桁の足し算（繰り上がり有り）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_013" xml:space="preserve">
+    <value>繰り下がりの引き算（１９まで－１桁）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_014" xml:space="preserve">
+    <value>３つ以上の足し算引き算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_015" xml:space="preserve">
+    <value>２桁＋１桁の足し算（繰り上がり無し）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_016" xml:space="preserve">
+    <value>２桁＋１桁の足し算（繰り上がり有り）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_017" xml:space="preserve">
+    <value>２桁－１桁の引き算（繰り下がり無し）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_018" xml:space="preserve">
+    <value>２桁－１桁の引き算（繰り下がり有り）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_019" xml:space="preserve">
+    <value>1000までの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_020" xml:space="preserve">
+    <value>万までの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_01_021" xml:space="preserve">
+    <value>兆までの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_001" xml:space="preserve">
+    <value>掛け算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_002" xml:space="preserve">
+    <value>０を掛ける</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_003" xml:space="preserve">
+    <value>九九</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_004" xml:space="preserve">
+    <value>２桁×１桁（繰り上がり無し）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_005" xml:space="preserve">
+    <value>割り算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_006" xml:space="preserve">
+    <value>０を割る</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_007" xml:space="preserve">
+    <value>余りのある割り算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_008" xml:space="preserve">
+    <value>割り算の答えと余り</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_009" xml:space="preserve">
+    <value>計算の順番</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_010" xml:space="preserve">
+    <value>括弧の使い方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_011" xml:space="preserve">
+    <value>交換法則、結合法則、分配法則</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_012" xml:space="preserve">
+    <value>2桁＋２桁の足し算（解２桁）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_013" xml:space="preserve">
+    <value>３桁以上の足し算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_014" xml:space="preserve">
+    <value>二段階繰り上がる足し算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_015" xml:space="preserve">
+    <value>２桁-２桁の引き算（解２桁）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_016" xml:space="preserve">
+    <value>３桁以上の引き算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_017" xml:space="preserve">
+    <value>二段階繰り下がる引き算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_018" xml:space="preserve">
+    <value>２桁×１桁（繰り上がり有り)</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_019" xml:space="preserve">
+    <value>二段階繰り上がる掛け算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_020" xml:space="preserve">
+    <value>２桁を掛ける掛け算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_021" xml:space="preserve">
+    <value>２桁÷１桁（繰り下がり無し）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_022" xml:space="preserve">
+    <value>２桁÷１桁（繰り下がり有り）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_02_023" xml:space="preserve">
+    <value>２桁で割る割り算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_001" xml:space="preserve">
+    <value>三角形、四角形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_002" xml:space="preserve">
+    <value>頂点、辺</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_003" xml:space="preserve">
+    <value>角</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_004" xml:space="preserve">
+    <value>直角</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_005" xml:space="preserve">
+    <value>直角三角形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_006" xml:space="preserve">
+    <value>二等辺三角形、正三角形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_007" xml:space="preserve">
+    <value>長方形、正方形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_008" xml:space="preserve">
+    <value>多角形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_009" xml:space="preserve">
+    <value>正多角形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_010" xml:space="preserve">
+    <value>円とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_011" xml:space="preserve">
+    <value>半径、直径</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_012" xml:space="preserve">
+    <value>扇形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_013" xml:space="preserve">
+    <value>球とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_014" xml:space="preserve">
+    <value>直線、線分、半直線</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_015" xml:space="preserve">
+    <value>平行</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_016" xml:space="preserve">
+    <value>垂直</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_017" xml:space="preserve">
+    <value>台形、平行四辺形、ひし形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_018" xml:space="preserve">
+    <value>面</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_019" xml:space="preserve">
+    <value>直方体と立方体</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_020" xml:space="preserve">
+    <value>角柱、円柱</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_021" xml:space="preserve">
+    <value>角錐、円錐</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_022" xml:space="preserve">
+    <value>正多面体</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_03_023" xml:space="preserve">
+    <value>平面</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_001" xml:space="preserve">
+    <value>長さを表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_002" xml:space="preserve">
+    <value>長さの単位</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_003" xml:space="preserve">
+    <value>面積を表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_004" xml:space="preserve">
+    <value>面積の単位</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_005" xml:space="preserve">
+    <value>かさを表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_006" xml:space="preserve">
+    <value>かさの単位</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_007" xml:space="preserve">
+    <value>時刻を表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_008" xml:space="preserve">
+    <value>時間を表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_009" xml:space="preserve">
+    <value>重さを表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_010" xml:space="preserve">
+    <value>重さの単位</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_011" xml:space="preserve">
+    <value>単位量当たりの数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_012" xml:space="preserve">
+    <value>速さ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_013" xml:space="preserve">
+    <value>角度を表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_014" xml:space="preserve">
+    <value>三角形の内角の和</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_015" xml:space="preserve">
+    <value>多角形の内角の和</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_016" xml:space="preserve">
+    <value>長方形、正方形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_017" xml:space="preserve">
+    <value>直角三角形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_018" xml:space="preserve">
+    <value>三角形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_019" xml:space="preserve">
+    <value>平行四辺形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_020" xml:space="preserve">
+    <value>台形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_021" xml:space="preserve">
+    <value>ひし形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_022" xml:space="preserve">
+    <value>円周率と円周</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_023" xml:space="preserve">
+    <value>円の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_024" xml:space="preserve">
+    <value>扇形の面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_025" xml:space="preserve">
+    <value>球の表面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_026" xml:space="preserve">
+    <value>体積を表す数字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_027" xml:space="preserve">
+    <value>体積の単位</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_028" xml:space="preserve">
+    <value>直方体と立方体の体積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_029" xml:space="preserve">
+    <value>柱の体積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_030" xml:space="preserve">
+    <value>錐の体積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_031" xml:space="preserve">
+    <value>球の体積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_04_032" xml:space="preserve">
+    <value>相似図形の面積、体積比</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_001" xml:space="preserve">
+    <value>～分の１</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_002" xml:space="preserve">
+    <value>分数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_003" xml:space="preserve">
+    <value>仮分数、帯分数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_004" xml:space="preserve">
+    <value>約数、倍数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_005" xml:space="preserve">
+    <value>偶数と奇数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_006" xml:space="preserve">
+    <value>公約数、公倍数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_007" xml:space="preserve">
+    <value>最大公約数、最小公倍数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_008" xml:space="preserve">
+    <value>素数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_009" xml:space="preserve">
+    <value>逆数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_010" xml:space="preserve">
+    <value>分数の足し算引き算（分母同じ）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_011" xml:space="preserve">
+    <value>分数の掛け算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_012" xml:space="preserve">
+    <value>分数の割り算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_013" xml:space="preserve">
+    <value>小数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_014" xml:space="preserve">
+    <value>小数の足し算引き算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_015" xml:space="preserve">
+    <value>小数×整数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_016" xml:space="preserve">
+    <value>小数×小数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_017" xml:space="preserve">
+    <value>小数÷整数（割りきれる）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_018" xml:space="preserve">
+    <value>小数÷整数（割りきれない）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_019" xml:space="preserve">
+    <value>小数÷小数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_020" xml:space="preserve">
+    <value>負の数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_021" xml:space="preserve">
+    <value>負の数を含む足し算引き算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_022" xml:space="preserve">
+    <value>負の数を含む掛け算割り算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_023" xml:space="preserve">
+    <value>絶対値</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_024" xml:space="preserve">
+    <value>整数、自然数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_025" xml:space="preserve">
+    <value>約分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_026" xml:space="preserve">
+    <value>通分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_027" xml:space="preserve">
+    <value>分数の足し算引き算（分母違う）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_028" xml:space="preserve">
+    <value>小数⇔分数の変形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_029" xml:space="preserve">
+    <value>比</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_030" xml:space="preserve">
+    <value>比の使い方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_031" xml:space="preserve">
+    <value>比の変形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_032" xml:space="preserve">
+    <value>内項と外項</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_05_033" xml:space="preserve">
+    <value>小数分数の混合計算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_001" xml:space="preserve">
+    <value>展開図（直方体と立方体）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_002" xml:space="preserve">
+    <value>展開図（柱）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_003" xml:space="preserve">
+    <value>展開図（錐）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_004" xml:space="preserve">
+    <value>弧、弦</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_005" xml:space="preserve">
+    <value>円周角</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_006" xml:space="preserve">
+    <value>線対称、点対称</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_007" xml:space="preserve">
+    <value>図形の移動</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_008" xml:space="preserve">
+    <value>角の記号</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_009" xml:space="preserve">
+    <value>平行、垂直の記号</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_010" xml:space="preserve">
+    <value>合同</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_011" xml:space="preserve">
+    <value>三角形の合同条件</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_012" xml:space="preserve">
+    <value>二等辺三角形、正三角形の性質</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_013" xml:space="preserve">
+    <value>平行四辺形、ひし形の性質</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_014" xml:space="preserve">
+    <value>円の接線</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_015" xml:space="preserve">
+    <value>対頂角、同位角、錯角</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_016" xml:space="preserve">
+    <value>相似</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_017" xml:space="preserve">
+    <value>三角形の相似条件</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_018" xml:space="preserve">
+    <value>相似と平行</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_019" xml:space="preserve">
+    <value>内分、外分点の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_06_020" xml:space="preserve">
+    <value>重心とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_001" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_002" xml:space="preserve">
+    <value>棒グラフ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_003" xml:space="preserve">
+    <value>折れ線グラフ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_004" xml:space="preserve">
+    <value>度数分布表</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_005" xml:space="preserve">
+    <value>ヒストグラム</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_006" xml:space="preserve">
+    <value>割合</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_007" xml:space="preserve">
+    <value>割分厘、パーセント</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_008" xml:space="preserve">
+    <value>相対分布表</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_009" xml:space="preserve">
+    <value>数直線</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_010" xml:space="preserve">
+    <value>比例</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_011" xml:space="preserve">
+    <value>反比例</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_012" xml:space="preserve">
+    <value>場合の数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_013" xml:space="preserve">
+    <value>樹形図</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_014" xml:space="preserve">
+    <value>確率</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_015" xml:space="preserve">
+    <value>概数の作り方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_07_016" xml:space="preserve">
+    <value>平均</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_001" xml:space="preserve">
+    <value>文字への代入（数値）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_002" xml:space="preserve">
+    <value>文字の積の書き方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_003" xml:space="preserve">
+    <value>ｘ、ｙの関係式と表</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_004" xml:space="preserve">
+    <value>変数の加減</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_005" xml:space="preserve">
+    <value>数式の展開 数字×括弧</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_006" xml:space="preserve">
+    <value>累乗の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_007" xml:space="preserve">
+    <value>累乗の乗除</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_008" xml:space="preserve">
+    <value>変数の乗除</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_009" xml:space="preserve">
+    <value>数式の展開　括弧×括弧</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_010" xml:space="preserve">
+    <value>展開公式類</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_011" xml:space="preserve">
+    <value>方程式を解く（直感）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_012" xml:space="preserve">
+    <value>等式と同値変形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_013" xml:space="preserve">
+    <value>等式の移項</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_014" xml:space="preserve">
+    <value>不等式の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_015" xml:space="preserve">
+    <value>文字と不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_016" xml:space="preserve">
+    <value>一次不等式　加減</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_017" xml:space="preserve">
+    <value>不等式と乗除</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_018" xml:space="preserve">
+    <value>一次不等式　乗除</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_019" xml:space="preserve">
+    <value>平方根の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_020" xml:space="preserve">
+    <value>平方根の和差</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_021" xml:space="preserve">
+    <value>平方根の乗除</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_022" xml:space="preserve">
+    <value>平方根のくくり出し</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_08_023" xml:space="preserve">
+    <value>平方根 分母の有理化</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_001" xml:space="preserve">
+    <value>ｘｙ平面と位置</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_002" xml:space="preserve">
+    <value>数式とグラフ 打点</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_003" xml:space="preserve">
+    <value>１次関数のグラフ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_004" xml:space="preserve">
+    <value>ピタゴラスの定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_005" xml:space="preserve">
+    <value>グラフ上の２点間距離</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_006" xml:space="preserve">
+    <value>文字への代入（文字式）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_007" xml:space="preserve">
+    <value>連立方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_008" xml:space="preserve">
+    <value>絶対値を外す</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_009" xml:space="preserve">
+    <value>絶対値入り不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_010" xml:space="preserve">
+    <value>因数分解 公式逆利用</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_011" xml:space="preserve">
+    <value>因数分解 くくり出し</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_012" xml:space="preserve">
+    <value>因数分解　単純２次式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_013" xml:space="preserve">
+    <value>因数分解  ２文字</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_014" xml:space="preserve">
+    <value>因数分解 たすき掛け 基本</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_015" xml:space="preserve">
+    <value>因数分解 たすき掛け 応用</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_016" xml:space="preserve">
+    <value>１次関数 ｘ軸との交点</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_017" xml:space="preserve">
+    <value>１次関数、傾きとy切片</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_018" xml:space="preserve">
+    <value>方程式の解とｘ軸との交点 一次式ｘ範囲あり</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_019" xml:space="preserve">
+    <value>２直線の平行垂直</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_020" xml:space="preserve">
+    <value>直線の方程式 通る点と傾き</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_021" xml:space="preserve">
+    <value>グラフ交点と連立方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_022" xml:space="preserve">
+    <value>直線の方程式 ２点を通る</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_09_023" xml:space="preserve">
+    <value>連立不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_001" xml:space="preserve">
+    <value>２次関数 グラフに打点</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_002" xml:space="preserve">
+    <value>２次関数 ２乗の係数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_003" xml:space="preserve">
+    <value>２次関数 標準形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_004" xml:space="preserve">
+    <value>二次関数 平方完成</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_005" xml:space="preserve">
+    <value>二次式の解の公式（実数解）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_006" xml:space="preserve">
+    <value>判別式と解の数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_007" xml:space="preserve">
+    <value>解とｘ軸交点 ２次式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_008" xml:space="preserve">
+    <value>二次関数 因数分解形</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_009" xml:space="preserve">
+    <value>方程式の解とｘ軸との交点 二次式ｘ範囲あり</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_010" xml:space="preserve">
+    <value>二次関数の平行移動</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_011" xml:space="preserve">
+    <value>二次関数の最大最小　ｘ条件なし</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_012" xml:space="preserve">
+    <value>二次関数の最大最小　ｘ範囲あり</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_013" xml:space="preserve">
+    <value>二次関数の最大最小　ｘ範囲が変数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_014" xml:space="preserve">
+    <value>二次不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_015" xml:space="preserve">
+    <value>３次以上の関数とグラフ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_10_016" xml:space="preserve">
+    <value>恒等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_001" xml:space="preserve">
+    <value>三角比の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_002" xml:space="preserve">
+    <value>基本の三角比</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_003" xml:space="preserve">
+    <value>三角比の相互関係</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_004" xml:space="preserve">
+    <value>単位円と三角比</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_005" xml:space="preserve">
+    <value>一般角</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_006" xml:space="preserve">
+    <value>三角比の一般化</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_007" xml:space="preserve">
+    <value>鈍角の三角比関係</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_008" xml:space="preserve">
+    <value>三角形の面積公式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_009" xml:space="preserve">
+    <value>正弦定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_010" xml:space="preserve">
+    <value>余弦定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_011" xml:space="preserve">
+    <value>ラジアンの定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_012" xml:space="preserve">
+    <value>基本の三角関数（rad)</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_013" xml:space="preserve">
+    <value>三角関数の加法定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_014" xml:space="preserve">
+    <value>三角方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_015" xml:space="preserve">
+    <value>三角不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_016" xml:space="preserve">
+    <value>三角関数のグラフ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_017" xml:space="preserve">
+    <value>三角関数の平行移動</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_11_018" xml:space="preserve">
+    <value>三角関数の拡大縮小</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_001" xml:space="preserve">
+    <value>集合とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_002" xml:space="preserve">
+    <value>要素とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_003" xml:space="preserve">
+    <value>共通部分、和集合とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_004" xml:space="preserve">
+    <value>全体集合と補集合</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_005" xml:space="preserve">
+    <value>部分集合とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_006" xml:space="preserve">
+    <value>ベン図の応用</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_007" xml:space="preserve">
+    <value>必要条件と十分条件</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_008" xml:space="preserve">
+    <value>「ならば」の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_009" xml:space="preserve">
+    <value>逆裏対偶</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_010" xml:space="preserve">
+    <value>真とは、偽とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_011" xml:space="preserve">
+    <value>反例の定義と使い方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_012" xml:space="preserve">
+    <value>対偶証明法</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_12_013" xml:space="preserve">
+    <value>背理法</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_001" xml:space="preserve">
+    <value>階乗</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_002" xml:space="preserve">
+    <value>場合の数の和の法則</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_003" xml:space="preserve">
+    <value>場合の数の積の法則</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_004" xml:space="preserve">
+    <value>場合の数の余事象</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_005" xml:space="preserve">
+    <value>場合の数の加法定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_006" xml:space="preserve">
+    <value>順列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_007" xml:space="preserve">
+    <value>円順列、じゅず順列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_008" xml:space="preserve">
+    <value>同じ物がある順列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_009" xml:space="preserve">
+    <value>組み合わせ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_010" xml:space="preserve">
+    <value>確率の積の法則</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_011" xml:space="preserve">
+    <value>確率の余事象</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_012" xml:space="preserve">
+    <value>確率の和の法則</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_013" xml:space="preserve">
+    <value>確率の加法定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_014" xml:space="preserve">
+    <value>反復試行の確率</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_015" xml:space="preserve">
+    <value>期待値</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_13_016" xml:space="preserve">
+    <value>条件付き確率</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_001" xml:space="preserve">
+    <value>累乗の累乗</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_002" xml:space="preserve">
+    <value>累乗根</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_003" xml:space="preserve">
+    <value>分数の指数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_004" xml:space="preserve">
+    <value>ゼロの指数、負の指数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_005" xml:space="preserve">
+    <value>指数関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_006" xml:space="preserve">
+    <value>指数不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_007" xml:space="preserve">
+    <value>指数方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_008" xml:space="preserve">
+    <value>対数の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_009" xml:space="preserve">
+    <value>対数の和差</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_010" xml:space="preserve">
+    <value>対数の定数倍</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_011" xml:space="preserve">
+    <value>対数の底の変換</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_012" xml:space="preserve">
+    <value>対数方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_013" xml:space="preserve">
+    <value>対数関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_14_014" xml:space="preserve">
+    <value>対数不等式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_001" xml:space="preserve">
+    <value>ベクトルの定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_002" xml:space="preserve">
+    <value>ベクトルの成分表示</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_003" xml:space="preserve">
+    <value>ベクトルの和、差、実数倍</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_004" xml:space="preserve">
+    <value>位置ベクトル</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_005" xml:space="preserve">
+    <value>内分、外分点の計算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_006" xml:space="preserve">
+    <value>ベクトルと内分外分点</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_007" xml:space="preserve">
+    <value>直線のベクトル方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_008" xml:space="preserve">
+    <value>ベクトルの成分計算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_009" xml:space="preserve">
+    <value>ベクトルの大きさ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_010" xml:space="preserve">
+    <value>重心の座標</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_011" xml:space="preserve">
+    <value>ベクトルの重心</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_012" xml:space="preserve">
+    <value>ベクトルの平行</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_013" xml:space="preserve">
+    <value>ベクトルの内積 角度と定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_014" xml:space="preserve">
+    <value>ベクトルの内積 成分計算</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_15_015" xml:space="preserve">
+    <value>ベクトルの垂直</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_001" xml:space="preserve">
+    <value>円の方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_002" xml:space="preserve">
+    <value>楕円の方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_003" xml:space="preserve">
+    <value>双曲線の方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_004" xml:space="preserve">
+    <value>放物線の方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_005" xml:space="preserve">
+    <value>円の接線の方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_006" xml:space="preserve">
+    <value>二次曲線の接線</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_007" xml:space="preserve">
+    <value>不等式と領域（直線領域）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_008" xml:space="preserve">
+    <value>不等式と領域（円領域）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_009" xml:space="preserve">
+    <value>不等式と領域（連立不等式）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_010" xml:space="preserve">
+    <value>グラフ平行移動の一般化</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_011" xml:space="preserve">
+    <value>分数関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_012" xml:space="preserve">
+    <value>無理関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_013" xml:space="preserve">
+    <value>定義域、値域</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_014" xml:space="preserve">
+    <value>ｆ（ｘ）の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_015" xml:space="preserve">
+    <value>合成関数の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_016" xml:space="preserve">
+    <value>多項式の割り算と余り</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_017" xml:space="preserve">
+    <value>逆関数の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_16_018" xml:space="preserve">
+    <value>グラフ上の対称</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_001" xml:space="preserve">
+    <value>複素数の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_002" xml:space="preserve">
+    <value>複素数の加減</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_003" xml:space="preserve">
+    <value>複素数の積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_004" xml:space="preserve">
+    <value>共役複素数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_005" xml:space="preserve">
+    <value>二次関数の解の公式（複素数解）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_006" xml:space="preserve">
+    <value>数の分類</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_007" xml:space="preserve">
+    <value>複素数平面</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_008" xml:space="preserve">
+    <value>極座標</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_009" xml:space="preserve">
+    <value>３次元極座標</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_010" xml:space="preserve">
+    <value>複素数の極座標表示</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_011" xml:space="preserve">
+    <value>複素数の極座標表示と積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_012" xml:space="preserve">
+    <value>行列とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_013" xml:space="preserve">
+    <value>行列の加減、実数倍</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_014" xml:space="preserve">
+    <value>行列の積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_015" xml:space="preserve">
+    <value>ゼロ行列、単位行列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_016" xml:space="preserve">
+    <value>行列のゼロ因子</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_017" xml:space="preserve">
+    <value>逆行列の意味</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_018" xml:space="preserve">
+    <value>逆行列の公式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_019" xml:space="preserve">
+    <value>行列と連立方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_020" xml:space="preserve">
+    <value>ケーリーハミルトンの定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_021" xml:space="preserve">
+    <value>一次変換とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_022" xml:space="preserve">
+    <value>一次変換　変換行列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_023" xml:space="preserve">
+    <value>一次変換 図形との関連</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_17_024" xml:space="preserve">
+    <value>一次変換 回転</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_001" xml:space="preserve">
+    <value>累乗のくくり込み</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_002" xml:space="preserve">
+    <value>極限値 単純代入</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_003" xml:space="preserve">
+    <value>極限の計算 累乗</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_004" xml:space="preserve">
+    <value>極限の計算 ∞／∞</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_005" xml:space="preserve">
+    <value>極限の計算　０／０</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_006" xml:space="preserve">
+    <value>極限の計算 無理式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_007" xml:space="preserve">
+    <value>左右極限</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_008" xml:space="preserve">
+    <value>関数の連続の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_009" xml:space="preserve">
+    <value>平均変化率</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_010" xml:space="preserve">
+    <value>微分係数の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_011" xml:space="preserve">
+    <value>導関数の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_012" xml:space="preserve">
+    <value>増減表</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_013" xml:space="preserve">
+    <value>累乗の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_014" xml:space="preserve">
+    <value>三角関数の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_015" xml:space="preserve">
+    <value>対数関数の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_016" xml:space="preserve">
+    <value>指数関数の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_017" xml:space="preserve">
+    <value>接線,法線と導関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_018" xml:space="preserve">
+    <value>２曲線の接する条件</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_019" xml:space="preserve">
+    <value>積の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_020" xml:space="preserve">
+    <value>商の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_021" xml:space="preserve">
+    <value>媒介変数表示</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_022" xml:space="preserve">
+    <value>媒介変数関数の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_023" xml:space="preserve">
+    <value>合成関数の微分　多項式の累乗</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_024" xml:space="preserve">
+    <value>陰関数の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_18_025" xml:space="preserve">
+    <value>合成関数の微分 ３段階以上</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_001" xml:space="preserve">
+    <value>数列とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_002" xml:space="preserve">
+    <value>数列の項の書き方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_003" xml:space="preserve">
+    <value>階差数列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_004" xml:space="preserve">
+    <value>数学的帰納法</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_005" xml:space="preserve">
+    <value>Σの定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_006" xml:space="preserve">
+    <value>数列の和と数列の値</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_007" xml:space="preserve">
+    <value>Σ公式 ２乗まで</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_008" xml:space="preserve">
+    <value>等比数列の和</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_009" xml:space="preserve">
+    <value>不定積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_010" xml:space="preserve">
+    <value>三角関数の積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_011" xml:space="preserve">
+    <value>指数関数 の積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_012" xml:space="preserve">
+    <value>部分積分（不定積分）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_013" xml:space="preserve">
+    <value>定積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_014" xml:space="preserve">
+    <value>部分積分（定積分）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_015" xml:space="preserve">
+    <value>置換積分 一次式の関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_016" xml:space="preserve">
+    <value>定積分の置換積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_017" xml:space="preserve">
+    <value>無理関数の積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_018" xml:space="preserve">
+    <value>分数関数の積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_019" xml:space="preserve">
+    <value>部分分数分解による積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_020" xml:space="preserve">
+    <value>置換積分　ｄｘ／ｄｔを含む式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_021" xml:space="preserve">
+    <value>定積分と面積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_19_022" xml:space="preserve">
+    <value>極限と積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_001" xml:space="preserve">
+    <value>分散、不偏分散</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_002" xml:space="preserve">
+    <value>平均と分散の関係</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_003" xml:space="preserve">
+    <value>標準偏差</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_004" xml:space="preserve">
+    <value>相対度数分布グラフ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_005" xml:space="preserve">
+    <value>確率分布表</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_006" xml:space="preserve">
+    <value>確率密度関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_007" xml:space="preserve">
+    <value>確率密度関数の平均</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_008" xml:space="preserve">
+    <value>確率密度関数の分散</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_009" xml:space="preserve">
+    <value>標準正規分布</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_010" xml:space="preserve">
+    <value>正規分布</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_011" xml:space="preserve">
+    <value>二項分布</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_012" xml:space="preserve">
+    <value>χ２分布</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_013" xml:space="preserve">
+    <value>F分布</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_014" xml:space="preserve">
+    <value>ｔ分布</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_015" xml:space="preserve">
+    <value>母平均の推定（母分散既知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_016" xml:space="preserve">
+    <value>母平均の推定（母分散未知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_017" xml:space="preserve">
+    <value>母比率の推定</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_018" xml:space="preserve">
+    <value>母分散の推定（母平均既知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_019" xml:space="preserve">
+    <value>母分散の推定（母平均未知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_020" xml:space="preserve">
+    <value>検定の手順</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_021" xml:space="preserve">
+    <value>母平均の検定（母分散既知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_022" xml:space="preserve">
+    <value>母平均の検定（母分散未知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_023" xml:space="preserve">
+    <value>母分散の検定（母平均既知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_024" xml:space="preserve">
+    <value>母分散の検定（母平均未知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_025" xml:space="preserve">
+    <value>等分散の検定</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_026" xml:space="preserve">
+    <value>等平均の検定（母分散既知）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_027" xml:space="preserve">
+    <value>等平均の検定（母分散未知だが等しい）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_028" xml:space="preserve">
+    <value>共分散</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_029" xml:space="preserve">
+    <value>相関係数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_030" xml:space="preserve">
+    <value>回帰直線</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_031" xml:space="preserve">
+    <value>適合度検定</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_20_032" xml:space="preserve">
+    <value>独立性検定</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_001" xml:space="preserve">
+    <value>多変数関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_002" xml:space="preserve">
+    <value>偏微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_003" xml:space="preserve">
+    <value>全微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_004" xml:space="preserve">
+    <value>線積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_005" xml:space="preserve">
+    <value>周回積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_006" xml:space="preserve">
+    <value>面積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_007" xml:space="preserve">
+    <value>体積積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_008" xml:space="preserve">
+    <value>高階微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_009" xml:space="preserve">
+    <value>直接積分型微分方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_010" xml:space="preserve">
+    <value>変数分離型微分方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_011" xml:space="preserve">
+    <value>同次二階微分方程式（特性方程式２実解）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_012" xml:space="preserve">
+    <value>同次二階微分方程式（特性方程式重解）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_013" xml:space="preserve">
+    <value>同次二階微分方程式（特性方程式複素解）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_014" xml:space="preserve">
+    <value>非同次微分方程式と特解</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_015" xml:space="preserve">
+    <value>ラプラス変換の定義</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_016" xml:space="preserve">
+    <value>ラプラス変換と逆ラプラス変換の例</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_21_017" xml:space="preserve">
+    <value>ラプラス変換と微分方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_001" xml:space="preserve">
+    <value>ベクトルの外積（意味）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_002" xml:space="preserve">
+    <value>ベクトルの外積（成分計算）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_003" xml:space="preserve">
+    <value>スカラー関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_004" xml:space="preserve">
+    <value>ベクトル場</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_005" xml:space="preserve">
+    <value>勾配（grad)</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_006" xml:space="preserve">
+    <value>発散（div)</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_007" xml:space="preserve">
+    <value>回転（rot)</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_008" xml:space="preserve">
+    <value>ナブラ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_009" xml:space="preserve">
+    <value>ガウスの発散定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_010" xml:space="preserve">
+    <value>ベクトル場の線積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_22_011" xml:space="preserve">
+    <value>ストークスの定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_001" xml:space="preserve">
+    <value>行列の成分表示方法</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_002" xml:space="preserve">
+    <value>転置行列とは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_003" xml:space="preserve">
+    <value>行列式の書き方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_004" xml:space="preserve">
+    <value>２行２列の行列式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_005" xml:space="preserve">
+    <value>３行３列の行列式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_006" xml:space="preserve">
+    <value>転置行列と行列式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_007" xml:space="preserve">
+    <value>行列の積と行列式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_008" xml:space="preserve">
+    <value>行列式と行、列との関係</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_009" xml:space="preserve">
+    <value>行列式の次数下げ</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_010" xml:space="preserve">
+    <value>面積分の変数変換</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_011" xml:space="preserve">
+    <value>体積積分の変数変換</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_012" xml:space="preserve">
+    <value>余因子</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_013" xml:space="preserve">
+    <value>余因子展開</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_014" xml:space="preserve">
+    <value>余因子行列と逆行列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_015" xml:space="preserve">
+    <value>固有値、固有ベクトルとは</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_016" xml:space="preserve">
+    <value>固有値、固有ベクトルの求め方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_017" xml:space="preserve">
+    <value>随伴行列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_018" xml:space="preserve">
+    <value>正規直交基底（ベクトル）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_019" xml:space="preserve">
+    <value>直交行列、ユニタリ行列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_23_020" xml:space="preserve">
+    <value>対称行列、エルミート行列</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_001" xml:space="preserve">
+    <value>オイラーの公式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_002" xml:space="preserve">
+    <value>複素関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_003" xml:space="preserve">
+    <value>正則関数とコーシーリーマンの方程式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_004" xml:space="preserve">
+    <value>複素関数の積分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_005" xml:space="preserve">
+    <value>コーシーの積分定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_006" xml:space="preserve">
+    <value>コーシーの積分公式</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_007" xml:space="preserve">
+    <value>複素関数の微分</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_008" xml:space="preserve">
+    <value>複素関数のテーラー展開</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_009" xml:space="preserve">
+    <value>ローラン展開</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_010" xml:space="preserve">
+    <value>留数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_011" xml:space="preserve">
+    <value>留数定理</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_012" xml:space="preserve">
+    <value>ｍ位の極</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_013" xml:space="preserve">
+    <value>留数の求め方</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_014" xml:space="preserve">
+    <value>ラグランジュの未定係数法</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_015" xml:space="preserve">
+    <value>複素ベクトルの内積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_016" xml:space="preserve">
+    <value>フーリエ展開（一定領域）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_017" xml:space="preserve">
+    <value>フーリエ変換</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_018" xml:space="preserve">
+    <value>関数の内積</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_019" xml:space="preserve">
+    <value>正規直交基底（関数）</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_020" xml:space="preserve">
+    <value>汎関数</value>
+  </data>
+  <data name="SUBJECT_DESCRIPTION_24_021" xml:space="preserve">
+    <value>オイラー＝ラグランジュ方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_01_001" xml:space="preserve">
+    <value>10までの数</value>
+  </data>
+  <data name="SUBJECT_NAME_01_002" xml:space="preserve">
+    <value>数字と物の数</value>
+  </data>
+  <data name="SUBJECT_NAME_01_003" xml:space="preserve">
+    <value>数字と順序</value>
+  </data>
+  <data name="SUBJECT_NAME_01_004" xml:space="preserve">
+    <value>０とは</value>
+  </data>
+  <data name="SUBJECT_NAME_01_005" xml:space="preserve">
+    <value>足し算の概念</value>
+  </data>
+  <data name="SUBJECT_NAME_01_006" xml:space="preserve">
+    <value>１桁の足し算（繰り上がり無し）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_007" xml:space="preserve">
+    <value>引き算の概念</value>
+  </data>
+  <data name="SUBJECT_NAME_01_008" xml:space="preserve">
+    <value>１桁の引き算（繰り下がり無し）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_009" xml:space="preserve">
+    <value>20までの数</value>
+  </data>
+  <data name="SUBJECT_NAME_01_010" xml:space="preserve">
+    <value>100までの数</value>
+  </data>
+  <data name="SUBJECT_NAME_01_011" xml:space="preserve">
+    <value>桁の考え方</value>
+  </data>
+  <data name="SUBJECT_NAME_01_012" xml:space="preserve">
+    <value>１桁の足し算（繰り上がり有り）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_013" xml:space="preserve">
+    <value>繰り下がりの引き算（１９まで－１桁）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_014" xml:space="preserve">
+    <value>３つ以上の足し算引き算</value>
+  </data>
+  <data name="SUBJECT_NAME_01_015" xml:space="preserve">
+    <value>２桁＋１桁の足し算（繰り上がり無し）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_016" xml:space="preserve">
+    <value>２桁＋１桁の足し算（繰り上がり有り）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_017" xml:space="preserve">
+    <value>２桁－１桁の引き算（繰り下がり無し）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_018" xml:space="preserve">
+    <value>２桁－１桁の引き算（繰り下がり有り）</value>
+  </data>
+  <data name="SUBJECT_NAME_01_019" xml:space="preserve">
+    <value>1000までの数</value>
+  </data>
+  <data name="SUBJECT_NAME_01_020" xml:space="preserve">
+    <value>万までの数</value>
+  </data>
+  <data name="SUBJECT_NAME_01_021" xml:space="preserve">
+    <value>兆までの数</value>
+  </data>
+  <data name="SUBJECT_NAME_02_001" xml:space="preserve">
+    <value>掛け算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_002" xml:space="preserve">
+    <value>０を掛ける</value>
+  </data>
+  <data name="SUBJECT_NAME_02_003" xml:space="preserve">
+    <value>九九</value>
+  </data>
+  <data name="SUBJECT_NAME_02_004" xml:space="preserve">
+    <value>２桁×１桁（繰り上がり無し）</value>
+  </data>
+  <data name="SUBJECT_NAME_02_005" xml:space="preserve">
+    <value>割り算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_006" xml:space="preserve">
+    <value>０を割る</value>
+  </data>
+  <data name="SUBJECT_NAME_02_007" xml:space="preserve">
+    <value>余りのある割り算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_008" xml:space="preserve">
+    <value>割り算の答えと余り</value>
+  </data>
+  <data name="SUBJECT_NAME_02_009" xml:space="preserve">
+    <value>計算の順番</value>
+  </data>
+  <data name="SUBJECT_NAME_02_010" xml:space="preserve">
+    <value>括弧の使い方</value>
+  </data>
+  <data name="SUBJECT_NAME_02_011" xml:space="preserve">
+    <value>交換法則、結合法則、分配法則</value>
+  </data>
+  <data name="SUBJECT_NAME_02_012" xml:space="preserve">
+    <value>2桁＋２桁の足し算（解２桁）</value>
+  </data>
+  <data name="SUBJECT_NAME_02_013" xml:space="preserve">
+    <value>３桁以上の足し算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_014" xml:space="preserve">
+    <value>二段階繰り上がる足し算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_015" xml:space="preserve">
+    <value>２桁-２桁の引き算（解２桁）</value>
+  </data>
+  <data name="SUBJECT_NAME_02_016" xml:space="preserve">
+    <value>３桁以上の引き算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_017" xml:space="preserve">
+    <value>二段階繰り下がる引き算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_018" xml:space="preserve">
+    <value>２桁×１桁（繰り上がり有り)</value>
+  </data>
+  <data name="SUBJECT_NAME_02_019" xml:space="preserve">
+    <value>二段階繰り上がる掛け算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_020" xml:space="preserve">
+    <value>２桁を掛ける掛け算</value>
+  </data>
+  <data name="SUBJECT_NAME_02_021" xml:space="preserve">
+    <value>２桁÷１桁（繰り下がり無し）</value>
+  </data>
+  <data name="SUBJECT_NAME_02_022" xml:space="preserve">
+    <value>２桁÷１桁（繰り下がり有り）</value>
+  </data>
+  <data name="SUBJECT_NAME_02_023" xml:space="preserve">
+    <value>２桁で割る割り算</value>
+  </data>
+  <data name="SUBJECT_NAME_03_001" xml:space="preserve">
+    <value>三角形、四角形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_002" xml:space="preserve">
+    <value>頂点、辺</value>
+  </data>
+  <data name="SUBJECT_NAME_03_003" xml:space="preserve">
+    <value>角</value>
+  </data>
+  <data name="SUBJECT_NAME_03_004" xml:space="preserve">
+    <value>直角</value>
+  </data>
+  <data name="SUBJECT_NAME_03_005" xml:space="preserve">
+    <value>直角三角形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_006" xml:space="preserve">
+    <value>二等辺三角形、正三角形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_007" xml:space="preserve">
+    <value>長方形、正方形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_008" xml:space="preserve">
+    <value>多角形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_009" xml:space="preserve">
+    <value>正多角形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_010" xml:space="preserve">
+    <value>円とは</value>
+  </data>
+  <data name="SUBJECT_NAME_03_011" xml:space="preserve">
+    <value>半径、直径</value>
+  </data>
+  <data name="SUBJECT_NAME_03_012" xml:space="preserve">
+    <value>扇形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_013" xml:space="preserve">
+    <value>球とは</value>
+  </data>
+  <data name="SUBJECT_NAME_03_014" xml:space="preserve">
+    <value>直線、線分、半直線</value>
+  </data>
+  <data name="SUBJECT_NAME_03_015" xml:space="preserve">
+    <value>平行</value>
+  </data>
+  <data name="SUBJECT_NAME_03_016" xml:space="preserve">
+    <value>垂直</value>
+  </data>
+  <data name="SUBJECT_NAME_03_017" xml:space="preserve">
+    <value>台形、平行四辺形、ひし形</value>
+  </data>
+  <data name="SUBJECT_NAME_03_018" xml:space="preserve">
+    <value>面</value>
+  </data>
+  <data name="SUBJECT_NAME_03_019" xml:space="preserve">
+    <value>直方体と立方体</value>
+  </data>
+  <data name="SUBJECT_NAME_03_020" xml:space="preserve">
+    <value>角柱、円柱</value>
+  </data>
+  <data name="SUBJECT_NAME_03_021" xml:space="preserve">
+    <value>角錐、円錐</value>
+  </data>
+  <data name="SUBJECT_NAME_03_022" xml:space="preserve">
+    <value>正多面体</value>
+  </data>
+  <data name="SUBJECT_NAME_03_023" xml:space="preserve">
+    <value>平面</value>
+  </data>
+  <data name="SUBJECT_NAME_04_001" xml:space="preserve">
+    <value>長さを表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_002" xml:space="preserve">
+    <value>長さの単位</value>
+  </data>
+  <data name="SUBJECT_NAME_04_003" xml:space="preserve">
+    <value>面積を表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_004" xml:space="preserve">
+    <value>面積の単位</value>
+  </data>
+  <data name="SUBJECT_NAME_04_005" xml:space="preserve">
+    <value>かさを表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_006" xml:space="preserve">
+    <value>かさの単位</value>
+  </data>
+  <data name="SUBJECT_NAME_04_007" xml:space="preserve">
+    <value>時刻を表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_008" xml:space="preserve">
+    <value>時間を表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_009" xml:space="preserve">
+    <value>重さを表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_010" xml:space="preserve">
+    <value>重さの単位</value>
+  </data>
+  <data name="SUBJECT_NAME_04_011" xml:space="preserve">
+    <value>単位量当たりの数</value>
+  </data>
+  <data name="SUBJECT_NAME_04_012" xml:space="preserve">
+    <value>速さ</value>
+  </data>
+  <data name="SUBJECT_NAME_04_013" xml:space="preserve">
+    <value>角度を表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_014" xml:space="preserve">
+    <value>三角形の内角の和</value>
+  </data>
+  <data name="SUBJECT_NAME_04_015" xml:space="preserve">
+    <value>多角形の内角の和</value>
+  </data>
+  <data name="SUBJECT_NAME_04_016" xml:space="preserve">
+    <value>長方形、正方形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_017" xml:space="preserve">
+    <value>直角三角形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_018" xml:space="preserve">
+    <value>三角形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_019" xml:space="preserve">
+    <value>平行四辺形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_020" xml:space="preserve">
+    <value>台形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_021" xml:space="preserve">
+    <value>ひし形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_022" xml:space="preserve">
+    <value>円周率と円周</value>
+  </data>
+  <data name="SUBJECT_NAME_04_023" xml:space="preserve">
+    <value>円の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_024" xml:space="preserve">
+    <value>扇形の面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_025" xml:space="preserve">
+    <value>球の表面積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_026" xml:space="preserve">
+    <value>体積を表す数字</value>
+  </data>
+  <data name="SUBJECT_NAME_04_027" xml:space="preserve">
+    <value>体積の単位</value>
+  </data>
+  <data name="SUBJECT_NAME_04_028" xml:space="preserve">
+    <value>直方体と立方体の体積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_029" xml:space="preserve">
+    <value>柱の体積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_030" xml:space="preserve">
+    <value>錐の体積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_031" xml:space="preserve">
+    <value>球の体積</value>
+  </data>
+  <data name="SUBJECT_NAME_04_032" xml:space="preserve">
+    <value>相似図形の面積、体積比</value>
+  </data>
+  <data name="SUBJECT_NAME_05_001" xml:space="preserve">
+    <value>～分の１</value>
+  </data>
+  <data name="SUBJECT_NAME_05_002" xml:space="preserve">
+    <value>分数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_003" xml:space="preserve">
+    <value>仮分数、帯分数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_004" xml:space="preserve">
+    <value>約数、倍数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_005" xml:space="preserve">
+    <value>偶数と奇数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_006" xml:space="preserve">
+    <value>公約数、公倍数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_007" xml:space="preserve">
+    <value>最大公約数、最小公倍数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_008" xml:space="preserve">
+    <value>素数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_009" xml:space="preserve">
+    <value>逆数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_010" xml:space="preserve">
+    <value>分数の足し算引き算（分母同じ）</value>
+  </data>
+  <data name="SUBJECT_NAME_05_011" xml:space="preserve">
+    <value>分数の掛け算</value>
+  </data>
+  <data name="SUBJECT_NAME_05_012" xml:space="preserve">
+    <value>分数の割り算</value>
+  </data>
+  <data name="SUBJECT_NAME_05_013" xml:space="preserve">
+    <value>小数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_014" xml:space="preserve">
+    <value>小数の足し算引き算</value>
+  </data>
+  <data name="SUBJECT_NAME_05_015" xml:space="preserve">
+    <value>小数×整数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_016" xml:space="preserve">
+    <value>小数×小数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_017" xml:space="preserve">
+    <value>小数÷整数（割りきれる）</value>
+  </data>
+  <data name="SUBJECT_NAME_05_018" xml:space="preserve">
+    <value>小数÷整数（割りきれない）</value>
+  </data>
+  <data name="SUBJECT_NAME_05_019" xml:space="preserve">
+    <value>小数÷小数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_020" xml:space="preserve">
+    <value>負の数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_021" xml:space="preserve">
+    <value>負の数を含む足し算引き算</value>
+  </data>
+  <data name="SUBJECT_NAME_05_022" xml:space="preserve">
+    <value>負の数を含む掛け算割り算</value>
+  </data>
+  <data name="SUBJECT_NAME_05_023" xml:space="preserve">
+    <value>絶対値</value>
+  </data>
+  <data name="SUBJECT_NAME_05_024" xml:space="preserve">
+    <value>整数、自然数</value>
+  </data>
+  <data name="SUBJECT_NAME_05_025" xml:space="preserve">
+    <value>約分</value>
+  </data>
+  <data name="SUBJECT_NAME_05_026" xml:space="preserve">
+    <value>通分</value>
+  </data>
+  <data name="SUBJECT_NAME_05_027" xml:space="preserve">
+    <value>分数の足し算引き算（分母違う）</value>
+  </data>
+  <data name="SUBJECT_NAME_05_028" xml:space="preserve">
+    <value>小数⇔分数の変形</value>
+  </data>
+  <data name="SUBJECT_NAME_05_029" xml:space="preserve">
+    <value>比</value>
+  </data>
+  <data name="SUBJECT_NAME_05_030" xml:space="preserve">
+    <value>比の使い方</value>
+  </data>
+  <data name="SUBJECT_NAME_05_031" xml:space="preserve">
+    <value>比の変形</value>
+  </data>
+  <data name="SUBJECT_NAME_05_032" xml:space="preserve">
+    <value>内項と外項</value>
+  </data>
+  <data name="SUBJECT_NAME_05_033" xml:space="preserve">
+    <value>小数分数の混合計算</value>
+  </data>
+  <data name="SUBJECT_NAME_06_001" xml:space="preserve">
+    <value>展開図（直方体と立方体）</value>
+  </data>
+  <data name="SUBJECT_NAME_06_002" xml:space="preserve">
+    <value>展開図（柱）</value>
+  </data>
+  <data name="SUBJECT_NAME_06_003" xml:space="preserve">
+    <value>展開図（錐）</value>
+  </data>
+  <data name="SUBJECT_NAME_06_004" xml:space="preserve">
+    <value>弧、弦</value>
+  </data>
+  <data name="SUBJECT_NAME_06_005" xml:space="preserve">
+    <value>円周角</value>
+  </data>
+  <data name="SUBJECT_NAME_06_006" xml:space="preserve">
+    <value>線対称、点対称</value>
+  </data>
+  <data name="SUBJECT_NAME_06_007" xml:space="preserve">
+    <value>図形の移動</value>
+  </data>
+  <data name="SUBJECT_NAME_06_008" xml:space="preserve">
+    <value>角の記号</value>
+  </data>
+  <data name="SUBJECT_NAME_06_009" xml:space="preserve">
+    <value>平行、垂直の記号</value>
+  </data>
+  <data name="SUBJECT_NAME_06_010" xml:space="preserve">
+    <value>合同</value>
+  </data>
+  <data name="SUBJECT_NAME_06_011" xml:space="preserve">
+    <value>三角形の合同条件</value>
+  </data>
+  <data name="SUBJECT_NAME_06_012" xml:space="preserve">
+    <value>二等辺三角形、正三角形の性質</value>
+  </data>
+  <data name="SUBJECT_NAME_06_013" xml:space="preserve">
+    <value>平行四辺形、ひし形の性質</value>
+  </data>
+  <data name="SUBJECT_NAME_06_014" xml:space="preserve">
+    <value>円の接線</value>
+  </data>
+  <data name="SUBJECT_NAME_06_015" xml:space="preserve">
+    <value>対頂角、同位角、錯角</value>
+  </data>
+  <data name="SUBJECT_NAME_06_016" xml:space="preserve">
+    <value>相似</value>
+  </data>
+  <data name="SUBJECT_NAME_06_017" xml:space="preserve">
+    <value>三角形の相似条件</value>
+  </data>
+  <data name="SUBJECT_NAME_06_018" xml:space="preserve">
+    <value>相似と平行</value>
+  </data>
+  <data name="SUBJECT_NAME_06_019" xml:space="preserve">
+    <value>内分、外分点の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_06_020" xml:space="preserve">
+    <value>重心とは</value>
+  </data>
+  <data name="SUBJECT_NAME_07_001" xml:space="preserve">
+    <value>表</value>
+  </data>
+  <data name="SUBJECT_NAME_07_002" xml:space="preserve">
+    <value>棒グラフ</value>
+  </data>
+  <data name="SUBJECT_NAME_07_003" xml:space="preserve">
+    <value>折れ線グラフ</value>
+  </data>
+  <data name="SUBJECT_NAME_07_004" xml:space="preserve">
+    <value>度数分布表</value>
+  </data>
+  <data name="SUBJECT_NAME_07_005" xml:space="preserve">
+    <value>ヒストグラム</value>
+  </data>
+  <data name="SUBJECT_NAME_07_006" xml:space="preserve">
+    <value>割合</value>
+  </data>
+  <data name="SUBJECT_NAME_07_007" xml:space="preserve">
+    <value>割分厘、パーセント</value>
+  </data>
+  <data name="SUBJECT_NAME_07_008" xml:space="preserve">
+    <value>相対分布表</value>
+  </data>
+  <data name="SUBJECT_NAME_07_009" xml:space="preserve">
+    <value>数直線</value>
+  </data>
+  <data name="SUBJECT_NAME_07_010" xml:space="preserve">
+    <value>比例</value>
+  </data>
+  <data name="SUBJECT_NAME_07_011" xml:space="preserve">
+    <value>反比例</value>
+  </data>
+  <data name="SUBJECT_NAME_07_012" xml:space="preserve">
+    <value>場合の数</value>
+  </data>
+  <data name="SUBJECT_NAME_07_013" xml:space="preserve">
+    <value>樹形図</value>
+  </data>
+  <data name="SUBJECT_NAME_07_014" xml:space="preserve">
+    <value>確率</value>
+  </data>
+  <data name="SUBJECT_NAME_07_015" xml:space="preserve">
+    <value>概数の作り方</value>
+  </data>
+  <data name="SUBJECT_NAME_07_016" xml:space="preserve">
+    <value>平均</value>
+  </data>
+  <data name="SUBJECT_NAME_08_001" xml:space="preserve">
+    <value>文字への代入（数値）</value>
+  </data>
+  <data name="SUBJECT_NAME_08_002" xml:space="preserve">
+    <value>文字の積の書き方</value>
+  </data>
+  <data name="SUBJECT_NAME_08_003" xml:space="preserve">
+    <value>ｘ、ｙの関係式と表</value>
+  </data>
+  <data name="SUBJECT_NAME_08_004" xml:space="preserve">
+    <value>変数の加減</value>
+  </data>
+  <data name="SUBJECT_NAME_08_005" xml:space="preserve">
+    <value>数式の展開 数字×括弧</value>
+  </data>
+  <data name="SUBJECT_NAME_08_006" xml:space="preserve">
+    <value>累乗の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_08_007" xml:space="preserve">
+    <value>累乗の乗除</value>
+  </data>
+  <data name="SUBJECT_NAME_08_008" xml:space="preserve">
+    <value>変数の乗除</value>
+  </data>
+  <data name="SUBJECT_NAME_08_009" xml:space="preserve">
+    <value>数式の展開　括弧×括弧</value>
+  </data>
+  <data name="SUBJECT_NAME_08_010" xml:space="preserve">
+    <value>展開公式類</value>
+  </data>
+  <data name="SUBJECT_NAME_08_011" xml:space="preserve">
+    <value>方程式を解く（直感）</value>
+  </data>
+  <data name="SUBJECT_NAME_08_012" xml:space="preserve">
+    <value>等式と同値変形</value>
+  </data>
+  <data name="SUBJECT_NAME_08_013" xml:space="preserve">
+    <value>等式の移項</value>
+  </data>
+  <data name="SUBJECT_NAME_08_014" xml:space="preserve">
+    <value>不等式の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_08_015" xml:space="preserve">
+    <value>文字と不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_08_016" xml:space="preserve">
+    <value>一次不等式　加減</value>
+  </data>
+  <data name="SUBJECT_NAME_08_017" xml:space="preserve">
+    <value>不等式と乗除</value>
+  </data>
+  <data name="SUBJECT_NAME_08_018" xml:space="preserve">
+    <value>一次不等式　乗除</value>
+  </data>
+  <data name="SUBJECT_NAME_08_019" xml:space="preserve">
+    <value>平方根の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_08_020" xml:space="preserve">
+    <value>平方根の和差</value>
+  </data>
+  <data name="SUBJECT_NAME_08_021" xml:space="preserve">
+    <value>平方根の乗除</value>
+  </data>
+  <data name="SUBJECT_NAME_08_022" xml:space="preserve">
+    <value>平方根のくくり出し</value>
+  </data>
+  <data name="SUBJECT_NAME_08_023" xml:space="preserve">
+    <value>平方根 分母の有理化</value>
+  </data>
+  <data name="SUBJECT_NAME_09_001" xml:space="preserve">
+    <value>ｘｙ平面と位置</value>
+  </data>
+  <data name="SUBJECT_NAME_09_002" xml:space="preserve">
+    <value>数式とグラフ 打点</value>
+  </data>
+  <data name="SUBJECT_NAME_09_003" xml:space="preserve">
+    <value>１次関数のグラフ</value>
+  </data>
+  <data name="SUBJECT_NAME_09_004" xml:space="preserve">
+    <value>ピタゴラスの定理</value>
+  </data>
+  <data name="SUBJECT_NAME_09_005" xml:space="preserve">
+    <value>グラフ上の２点間距離</value>
+  </data>
+  <data name="SUBJECT_NAME_09_006" xml:space="preserve">
+    <value>文字への代入（文字式）</value>
+  </data>
+  <data name="SUBJECT_NAME_09_007" xml:space="preserve">
+    <value>連立方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_09_008" xml:space="preserve">
+    <value>絶対値を外す</value>
+  </data>
+  <data name="SUBJECT_NAME_09_009" xml:space="preserve">
+    <value>絶対値入り不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_09_010" xml:space="preserve">
+    <value>因数分解 公式逆利用</value>
+  </data>
+  <data name="SUBJECT_NAME_09_011" xml:space="preserve">
+    <value>因数分解 くくり出し</value>
+  </data>
+  <data name="SUBJECT_NAME_09_012" xml:space="preserve">
+    <value>因数分解　単純２次式</value>
+  </data>
+  <data name="SUBJECT_NAME_09_013" xml:space="preserve">
+    <value>因数分解  ２文字</value>
+  </data>
+  <data name="SUBJECT_NAME_09_014" xml:space="preserve">
+    <value>因数分解 たすき掛け 基本</value>
+  </data>
+  <data name="SUBJECT_NAME_09_015" xml:space="preserve">
+    <value>因数分解 たすき掛け 応用</value>
+  </data>
+  <data name="SUBJECT_NAME_09_016" xml:space="preserve">
+    <value>１次関数 ｘ軸との交点</value>
+  </data>
+  <data name="SUBJECT_NAME_09_017" xml:space="preserve">
+    <value>１次関数、傾きとy切片</value>
+  </data>
+  <data name="SUBJECT_NAME_09_018" xml:space="preserve">
+    <value>方程式の解とｘ軸との交点 一次式ｘ範囲あり</value>
+  </data>
+  <data name="SUBJECT_NAME_09_019" xml:space="preserve">
+    <value>２直線の平行垂直</value>
+  </data>
+  <data name="SUBJECT_NAME_09_020" xml:space="preserve">
+    <value>直線の方程式 通る点と傾き</value>
+  </data>
+  <data name="SUBJECT_NAME_09_021" xml:space="preserve">
+    <value>グラフ交点と連立方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_09_022" xml:space="preserve">
+    <value>直線の方程式 ２点を通る</value>
+  </data>
+  <data name="SUBJECT_NAME_09_023" xml:space="preserve">
+    <value>連立不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_10_001" xml:space="preserve">
+    <value>２次関数 グラフに打点</value>
+  </data>
+  <data name="SUBJECT_NAME_10_002" xml:space="preserve">
+    <value>２次関数 ２乗の係数</value>
+  </data>
+  <data name="SUBJECT_NAME_10_003" xml:space="preserve">
+    <value>２次関数 標準形</value>
+  </data>
+  <data name="SUBJECT_NAME_10_004" xml:space="preserve">
+    <value>二次関数 平方完成</value>
+  </data>
+  <data name="SUBJECT_NAME_10_005" xml:space="preserve">
+    <value>二次式の解の公式（実数解）</value>
+  </data>
+  <data name="SUBJECT_NAME_10_006" xml:space="preserve">
+    <value>判別式と解の数</value>
+  </data>
+  <data name="SUBJECT_NAME_10_007" xml:space="preserve">
+    <value>解とｘ軸交点 ２次式</value>
+  </data>
+  <data name="SUBJECT_NAME_10_008" xml:space="preserve">
+    <value>二次関数 因数分解形</value>
+  </data>
+  <data name="SUBJECT_NAME_10_009" xml:space="preserve">
+    <value>方程式の解とｘ軸との交点 二次式ｘ範囲あり</value>
+  </data>
+  <data name="SUBJECT_NAME_10_010" xml:space="preserve">
+    <value>二次関数の平行移動</value>
+  </data>
+  <data name="SUBJECT_NAME_10_011" xml:space="preserve">
+    <value>二次関数の最大最小　ｘ条件なし</value>
+  </data>
+  <data name="SUBJECT_NAME_10_012" xml:space="preserve">
+    <value>二次関数の最大最小　ｘ範囲あり</value>
+  </data>
+  <data name="SUBJECT_NAME_10_013" xml:space="preserve">
+    <value>二次関数の最大最小　ｘ範囲が変数</value>
+  </data>
+  <data name="SUBJECT_NAME_10_014" xml:space="preserve">
+    <value>二次不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_10_015" xml:space="preserve">
+    <value>３次以上の関数とグラフ</value>
+  </data>
+  <data name="SUBJECT_NAME_10_016" xml:space="preserve">
+    <value>恒等式</value>
+  </data>
+  <data name="SUBJECT_NAME_11_001" xml:space="preserve">
+    <value>三角比の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_11_002" xml:space="preserve">
+    <value>基本の三角比</value>
+  </data>
+  <data name="SUBJECT_NAME_11_003" xml:space="preserve">
+    <value>三角比の相互関係</value>
+  </data>
+  <data name="SUBJECT_NAME_11_004" xml:space="preserve">
+    <value>単位円と三角比</value>
+  </data>
+  <data name="SUBJECT_NAME_11_005" xml:space="preserve">
+    <value>一般角</value>
+  </data>
+  <data name="SUBJECT_NAME_11_006" xml:space="preserve">
+    <value>三角比の一般化</value>
+  </data>
+  <data name="SUBJECT_NAME_11_007" xml:space="preserve">
+    <value>鈍角の三角比関係</value>
+  </data>
+  <data name="SUBJECT_NAME_11_008" xml:space="preserve">
+    <value>三角形の面積公式</value>
+  </data>
+  <data name="SUBJECT_NAME_11_009" xml:space="preserve">
+    <value>正弦定理</value>
+  </data>
+  <data name="SUBJECT_NAME_11_010" xml:space="preserve">
+    <value>余弦定理</value>
+  </data>
+  <data name="SUBJECT_NAME_11_011" xml:space="preserve">
+    <value>ラジアンの定義</value>
+  </data>
+  <data name="SUBJECT_NAME_11_012" xml:space="preserve">
+    <value>基本の三角関数（rad)</value>
+  </data>
+  <data name="SUBJECT_NAME_11_013" xml:space="preserve">
+    <value>三角関数の加法定理</value>
+  </data>
+  <data name="SUBJECT_NAME_11_014" xml:space="preserve">
+    <value>三角方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_11_015" xml:space="preserve">
+    <value>三角不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_11_016" xml:space="preserve">
+    <value>三角関数のグラフ</value>
+  </data>
+  <data name="SUBJECT_NAME_11_017" xml:space="preserve">
+    <value>三角関数の平行移動</value>
+  </data>
+  <data name="SUBJECT_NAME_11_018" xml:space="preserve">
+    <value>三角関数の拡大縮小</value>
+  </data>
+  <data name="SUBJECT_NAME_12_001" xml:space="preserve">
+    <value>集合とは</value>
+  </data>
+  <data name="SUBJECT_NAME_12_002" xml:space="preserve">
+    <value>要素とは</value>
+  </data>
+  <data name="SUBJECT_NAME_12_003" xml:space="preserve">
+    <value>共通部分、和集合とは</value>
+  </data>
+  <data name="SUBJECT_NAME_12_004" xml:space="preserve">
+    <value>全体集合と補集合</value>
+  </data>
+  <data name="SUBJECT_NAME_12_005" xml:space="preserve">
+    <value>部分集合とは</value>
+  </data>
+  <data name="SUBJECT_NAME_12_006" xml:space="preserve">
+    <value>ベン図の応用</value>
+  </data>
+  <data name="SUBJECT_NAME_12_007" xml:space="preserve">
+    <value>必要条件と十分条件</value>
+  </data>
+  <data name="SUBJECT_NAME_12_008" xml:space="preserve">
+    <value>「ならば」の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_12_009" xml:space="preserve">
+    <value>逆裏対偶</value>
+  </data>
+  <data name="SUBJECT_NAME_12_010" xml:space="preserve">
+    <value>真とは、偽とは</value>
+  </data>
+  <data name="SUBJECT_NAME_12_011" xml:space="preserve">
+    <value>反例の定義と使い方</value>
+  </data>
+  <data name="SUBJECT_NAME_12_012" xml:space="preserve">
+    <value>対偶証明法</value>
+  </data>
+  <data name="SUBJECT_NAME_12_013" xml:space="preserve">
+    <value>背理法</value>
+  </data>
+  <data name="SUBJECT_NAME_13_001" xml:space="preserve">
+    <value>階乗</value>
+  </data>
+  <data name="SUBJECT_NAME_13_002" xml:space="preserve">
+    <value>場合の数の和の法則</value>
+  </data>
+  <data name="SUBJECT_NAME_13_003" xml:space="preserve">
+    <value>場合の数の積の法則</value>
+  </data>
+  <data name="SUBJECT_NAME_13_004" xml:space="preserve">
+    <value>場合の数の余事象</value>
+  </data>
+  <data name="SUBJECT_NAME_13_005" xml:space="preserve">
+    <value>場合の数の加法定理</value>
+  </data>
+  <data name="SUBJECT_NAME_13_006" xml:space="preserve">
+    <value>順列</value>
+  </data>
+  <data name="SUBJECT_NAME_13_007" xml:space="preserve">
+    <value>円順列、じゅず順列</value>
+  </data>
+  <data name="SUBJECT_NAME_13_008" xml:space="preserve">
+    <value>同じ物がある順列</value>
+  </data>
+  <data name="SUBJECT_NAME_13_009" xml:space="preserve">
+    <value>組み合わせ</value>
+  </data>
+  <data name="SUBJECT_NAME_13_010" xml:space="preserve">
+    <value>確率の積の法則</value>
+  </data>
+  <data name="SUBJECT_NAME_13_011" xml:space="preserve">
+    <value>確率の余事象</value>
+  </data>
+  <data name="SUBJECT_NAME_13_012" xml:space="preserve">
+    <value>確率の和の法則</value>
+  </data>
+  <data name="SUBJECT_NAME_13_013" xml:space="preserve">
+    <value>確率の加法定理</value>
+  </data>
+  <data name="SUBJECT_NAME_13_014" xml:space="preserve">
+    <value>反復試行の確率</value>
+  </data>
+  <data name="SUBJECT_NAME_13_015" xml:space="preserve">
+    <value>期待値</value>
+  </data>
+  <data name="SUBJECT_NAME_13_016" xml:space="preserve">
+    <value>条件付き確率</value>
+  </data>
+  <data name="SUBJECT_NAME_14_001" xml:space="preserve">
+    <value>累乗の累乗</value>
+  </data>
+  <data name="SUBJECT_NAME_14_002" xml:space="preserve">
+    <value>累乗根</value>
+  </data>
+  <data name="SUBJECT_NAME_14_003" xml:space="preserve">
+    <value>分数の指数</value>
+  </data>
+  <data name="SUBJECT_NAME_14_004" xml:space="preserve">
+    <value>ゼロの指数、負の指数</value>
+  </data>
+  <data name="SUBJECT_NAME_14_005" xml:space="preserve">
+    <value>指数関数</value>
+  </data>
+  <data name="SUBJECT_NAME_14_006" xml:space="preserve">
+    <value>指数不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_14_007" xml:space="preserve">
+    <value>指数方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_14_008" xml:space="preserve">
+    <value>対数の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_14_009" xml:space="preserve">
+    <value>対数の和差</value>
+  </data>
+  <data name="SUBJECT_NAME_14_010" xml:space="preserve">
+    <value>対数の定数倍</value>
+  </data>
+  <data name="SUBJECT_NAME_14_011" xml:space="preserve">
+    <value>対数の底の変換</value>
+  </data>
+  <data name="SUBJECT_NAME_14_012" xml:space="preserve">
+    <value>対数方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_14_013" xml:space="preserve">
+    <value>対数関数</value>
+  </data>
+  <data name="SUBJECT_NAME_14_014" xml:space="preserve">
+    <value>対数不等式</value>
+  </data>
+  <data name="SUBJECT_NAME_15_001" xml:space="preserve">
+    <value>ベクトルの定義</value>
+  </data>
+  <data name="SUBJECT_NAME_15_002" xml:space="preserve">
+    <value>ベクトルの成分表示</value>
+  </data>
+  <data name="SUBJECT_NAME_15_003" xml:space="preserve">
+    <value>ベクトルの和、差、実数倍</value>
+  </data>
+  <data name="SUBJECT_NAME_15_004" xml:space="preserve">
+    <value>位置ベクトル</value>
+  </data>
+  <data name="SUBJECT_NAME_15_005" xml:space="preserve">
+    <value>内分、外分点の計算</value>
+  </data>
+  <data name="SUBJECT_NAME_15_006" xml:space="preserve">
+    <value>ベクトルと内分外分点</value>
+  </data>
+  <data name="SUBJECT_NAME_15_007" xml:space="preserve">
+    <value>直線のベクトル方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_15_008" xml:space="preserve">
+    <value>ベクトルの成分計算</value>
+  </data>
+  <data name="SUBJECT_NAME_15_009" xml:space="preserve">
+    <value>ベクトルの大きさ</value>
+  </data>
+  <data name="SUBJECT_NAME_15_010" xml:space="preserve">
+    <value>重心の座標</value>
+  </data>
+  <data name="SUBJECT_NAME_15_011" xml:space="preserve">
+    <value>ベクトルの重心</value>
+  </data>
+  <data name="SUBJECT_NAME_15_012" xml:space="preserve">
+    <value>ベクトルの平行</value>
+  </data>
+  <data name="SUBJECT_NAME_15_013" xml:space="preserve">
+    <value>ベクトルの内積 角度と定義</value>
+  </data>
+  <data name="SUBJECT_NAME_15_014" xml:space="preserve">
+    <value>ベクトルの内積 成分計算</value>
+  </data>
+  <data name="SUBJECT_NAME_15_015" xml:space="preserve">
+    <value>ベクトルの垂直</value>
+  </data>
+  <data name="SUBJECT_NAME_16_001" xml:space="preserve">
+    <value>円の方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_16_002" xml:space="preserve">
+    <value>楕円の方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_16_003" xml:space="preserve">
+    <value>双曲線の方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_16_004" xml:space="preserve">
+    <value>放物線の方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_16_005" xml:space="preserve">
+    <value>円の接線の方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_16_006" xml:space="preserve">
+    <value>二次曲線の接線</value>
+  </data>
+  <data name="SUBJECT_NAME_16_007" xml:space="preserve">
+    <value>不等式と領域（直線領域）</value>
+  </data>
+  <data name="SUBJECT_NAME_16_008" xml:space="preserve">
+    <value>不等式と領域（円領域）</value>
+  </data>
+  <data name="SUBJECT_NAME_16_009" xml:space="preserve">
+    <value>不等式と領域（連立不等式）</value>
+  </data>
+  <data name="SUBJECT_NAME_16_010" xml:space="preserve">
+    <value>グラフ平行移動の一般化</value>
+  </data>
+  <data name="SUBJECT_NAME_16_011" xml:space="preserve">
+    <value>分数関数</value>
+  </data>
+  <data name="SUBJECT_NAME_16_012" xml:space="preserve">
+    <value>無理関数</value>
+  </data>
+  <data name="SUBJECT_NAME_16_013" xml:space="preserve">
+    <value>定義域、値域</value>
+  </data>
+  <data name="SUBJECT_NAME_16_014" xml:space="preserve">
+    <value>ｆ（ｘ）の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_16_015" xml:space="preserve">
+    <value>合成関数の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_16_016" xml:space="preserve">
+    <value>多項式の割り算と余り</value>
+  </data>
+  <data name="SUBJECT_NAME_16_017" xml:space="preserve">
+    <value>逆関数の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_16_018" xml:space="preserve">
+    <value>グラフ上の対称</value>
+  </data>
+  <data name="SUBJECT_NAME_17_001" xml:space="preserve">
+    <value>複素数の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_17_002" xml:space="preserve">
+    <value>複素数の加減</value>
+  </data>
+  <data name="SUBJECT_NAME_17_003" xml:space="preserve">
+    <value>複素数の積</value>
+  </data>
+  <data name="SUBJECT_NAME_17_004" xml:space="preserve">
+    <value>共役複素数</value>
+  </data>
+  <data name="SUBJECT_NAME_17_005" xml:space="preserve">
+    <value>二次関数の解の公式（複素数解）</value>
+  </data>
+  <data name="SUBJECT_NAME_17_006" xml:space="preserve">
+    <value>数の分類</value>
+  </data>
+  <data name="SUBJECT_NAME_17_007" xml:space="preserve">
+    <value>複素数平面</value>
+  </data>
+  <data name="SUBJECT_NAME_17_008" xml:space="preserve">
+    <value>極座標</value>
+  </data>
+  <data name="SUBJECT_NAME_17_009" xml:space="preserve">
+    <value>３次元極座標</value>
+  </data>
+  <data name="SUBJECT_NAME_17_010" xml:space="preserve">
+    <value>複素数の極座標表示</value>
+  </data>
+  <data name="SUBJECT_NAME_17_011" xml:space="preserve">
+    <value>複素数の極座標表示と積</value>
+  </data>
+  <data name="SUBJECT_NAME_17_012" xml:space="preserve">
+    <value>行列とは</value>
+  </data>
+  <data name="SUBJECT_NAME_17_013" xml:space="preserve">
+    <value>行列の加減、実数倍</value>
+  </data>
+  <data name="SUBJECT_NAME_17_014" xml:space="preserve">
+    <value>行列の積</value>
+  </data>
+  <data name="SUBJECT_NAME_17_015" xml:space="preserve">
+    <value>ゼロ行列、単位行列</value>
+  </data>
+  <data name="SUBJECT_NAME_17_016" xml:space="preserve">
+    <value>行列のゼロ因子</value>
+  </data>
+  <data name="SUBJECT_NAME_17_017" xml:space="preserve">
+    <value>逆行列の意味</value>
+  </data>
+  <data name="SUBJECT_NAME_17_018" xml:space="preserve">
+    <value>逆行列の公式</value>
+  </data>
+  <data name="SUBJECT_NAME_17_019" xml:space="preserve">
+    <value>行列と連立方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_17_020" xml:space="preserve">
+    <value>ケーリーハミルトンの定理</value>
+  </data>
+  <data name="SUBJECT_NAME_17_021" xml:space="preserve">
+    <value>一次変換とは</value>
+  </data>
+  <data name="SUBJECT_NAME_17_022" xml:space="preserve">
+    <value>一次変換　変換行列</value>
+  </data>
+  <data name="SUBJECT_NAME_17_023" xml:space="preserve">
+    <value>一次変換 図形との関連</value>
+  </data>
+  <data name="SUBJECT_NAME_17_024" xml:space="preserve">
+    <value>一次変換 回転</value>
+  </data>
+  <data name="SUBJECT_NAME_18_001" xml:space="preserve">
+    <value>累乗のくくり込み</value>
+  </data>
+  <data name="SUBJECT_NAME_18_002" xml:space="preserve">
+    <value>極限値 単純代入</value>
+  </data>
+  <data name="SUBJECT_NAME_18_003" xml:space="preserve">
+    <value>極限の計算 累乗</value>
+  </data>
+  <data name="SUBJECT_NAME_18_004" xml:space="preserve">
+    <value>極限の計算 ∞／∞</value>
+  </data>
+  <data name="SUBJECT_NAME_18_005" xml:space="preserve">
+    <value>極限の計算　０／０</value>
+  </data>
+  <data name="SUBJECT_NAME_18_006" xml:space="preserve">
+    <value>極限の計算 無理式</value>
+  </data>
+  <data name="SUBJECT_NAME_18_007" xml:space="preserve">
+    <value>左右極限</value>
+  </data>
+  <data name="SUBJECT_NAME_18_008" xml:space="preserve">
+    <value>関数の連続の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_18_009" xml:space="preserve">
+    <value>平均変化率</value>
+  </data>
+  <data name="SUBJECT_NAME_18_010" xml:space="preserve">
+    <value>微分係数の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_18_011" xml:space="preserve">
+    <value>導関数の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_18_012" xml:space="preserve">
+    <value>増減表</value>
+  </data>
+  <data name="SUBJECT_NAME_18_013" xml:space="preserve">
+    <value>累乗の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_014" xml:space="preserve">
+    <value>三角関数の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_015" xml:space="preserve">
+    <value>対数関数の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_016" xml:space="preserve">
+    <value>指数関数の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_017" xml:space="preserve">
+    <value>接線,法線と導関数</value>
+  </data>
+  <data name="SUBJECT_NAME_18_018" xml:space="preserve">
+    <value>２曲線の接する条件</value>
+  </data>
+  <data name="SUBJECT_NAME_18_019" xml:space="preserve">
+    <value>積の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_020" xml:space="preserve">
+    <value>商の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_021" xml:space="preserve">
+    <value>媒介変数表示</value>
+  </data>
+  <data name="SUBJECT_NAME_18_022" xml:space="preserve">
+    <value>媒介変数関数の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_023" xml:space="preserve">
+    <value>合成関数の微分　多項式の累乗</value>
+  </data>
+  <data name="SUBJECT_NAME_18_024" xml:space="preserve">
+    <value>陰関数の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_18_025" xml:space="preserve">
+    <value>合成関数の微分 ３段階以上</value>
+  </data>
+  <data name="SUBJECT_NAME_19_001" xml:space="preserve">
+    <value>数列とは</value>
+  </data>
+  <data name="SUBJECT_NAME_19_002" xml:space="preserve">
+    <value>数列の項の書き方</value>
+  </data>
+  <data name="SUBJECT_NAME_19_003" xml:space="preserve">
+    <value>階差数列</value>
+  </data>
+  <data name="SUBJECT_NAME_19_004" xml:space="preserve">
+    <value>数学的帰納法</value>
+  </data>
+  <data name="SUBJECT_NAME_19_005" xml:space="preserve">
+    <value>Σの定義</value>
+  </data>
+  <data name="SUBJECT_NAME_19_006" xml:space="preserve">
+    <value>数列の和と数列の値</value>
+  </data>
+  <data name="SUBJECT_NAME_19_007" xml:space="preserve">
+    <value>Σ公式 ２乗まで</value>
+  </data>
+  <data name="SUBJECT_NAME_19_008" xml:space="preserve">
+    <value>等比数列の和</value>
+  </data>
+  <data name="SUBJECT_NAME_19_009" xml:space="preserve">
+    <value>不定積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_010" xml:space="preserve">
+    <value>三角関数の積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_011" xml:space="preserve">
+    <value>指数関数 の積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_012" xml:space="preserve">
+    <value>部分積分（不定積分）</value>
+  </data>
+  <data name="SUBJECT_NAME_19_013" xml:space="preserve">
+    <value>定積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_014" xml:space="preserve">
+    <value>部分積分（定積分）</value>
+  </data>
+  <data name="SUBJECT_NAME_19_015" xml:space="preserve">
+    <value>置換積分 一次式の関数</value>
+  </data>
+  <data name="SUBJECT_NAME_19_016" xml:space="preserve">
+    <value>定積分の置換積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_017" xml:space="preserve">
+    <value>無理関数の積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_018" xml:space="preserve">
+    <value>分数関数の積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_019" xml:space="preserve">
+    <value>部分分数分解による積分</value>
+  </data>
+  <data name="SUBJECT_NAME_19_020" xml:space="preserve">
+    <value>置換積分　ｄｘ／ｄｔを含む式</value>
+  </data>
+  <data name="SUBJECT_NAME_19_021" xml:space="preserve">
+    <value>定積分と面積</value>
+  </data>
+  <data name="SUBJECT_NAME_19_022" xml:space="preserve">
+    <value>極限と積分</value>
+  </data>
+  <data name="SUBJECT_NAME_20_001" xml:space="preserve">
+    <value>分散、不偏分散</value>
+  </data>
+  <data name="SUBJECT_NAME_20_002" xml:space="preserve">
+    <value>平均と分散の関係</value>
+  </data>
+  <data name="SUBJECT_NAME_20_003" xml:space="preserve">
+    <value>標準偏差</value>
+  </data>
+  <data name="SUBJECT_NAME_20_004" xml:space="preserve">
+    <value>相対度数分布グラフ</value>
+  </data>
+  <data name="SUBJECT_NAME_20_005" xml:space="preserve">
+    <value>確率分布表</value>
+  </data>
+  <data name="SUBJECT_NAME_20_006" xml:space="preserve">
+    <value>確率密度関数</value>
+  </data>
+  <data name="SUBJECT_NAME_20_007" xml:space="preserve">
+    <value>確率密度関数の平均</value>
+  </data>
+  <data name="SUBJECT_NAME_20_008" xml:space="preserve">
+    <value>確率密度関数の分散</value>
+  </data>
+  <data name="SUBJECT_NAME_20_009" xml:space="preserve">
+    <value>標準正規分布</value>
+  </data>
+  <data name="SUBJECT_NAME_20_010" xml:space="preserve">
+    <value>正規分布</value>
+  </data>
+  <data name="SUBJECT_NAME_20_011" xml:space="preserve">
+    <value>二項分布</value>
+  </data>
+  <data name="SUBJECT_NAME_20_012" xml:space="preserve">
+    <value>χ２分布</value>
+  </data>
+  <data name="SUBJECT_NAME_20_013" xml:space="preserve">
+    <value>F分布</value>
+  </data>
+  <data name="SUBJECT_NAME_20_014" xml:space="preserve">
+    <value>ｔ分布</value>
+  </data>
+  <data name="SUBJECT_NAME_20_015" xml:space="preserve">
+    <value>母平均の推定（母分散既知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_016" xml:space="preserve">
+    <value>母平均の推定（母分散未知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_017" xml:space="preserve">
+    <value>母比率の推定</value>
+  </data>
+  <data name="SUBJECT_NAME_20_018" xml:space="preserve">
+    <value>母分散の推定（母平均既知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_019" xml:space="preserve">
+    <value>母分散の推定（母平均未知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_020" xml:space="preserve">
+    <value>検定の手順</value>
+  </data>
+  <data name="SUBJECT_NAME_20_021" xml:space="preserve">
+    <value>母平均の検定（母分散既知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_022" xml:space="preserve">
+    <value>母平均の検定（母分散未知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_023" xml:space="preserve">
+    <value>母分散の検定（母平均既知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_024" xml:space="preserve">
+    <value>母分散の検定（母平均未知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_025" xml:space="preserve">
+    <value>等分散の検定</value>
+  </data>
+  <data name="SUBJECT_NAME_20_026" xml:space="preserve">
+    <value>等平均の検定（母分散既知）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_027" xml:space="preserve">
+    <value>等平均の検定（母分散未知だが等しい）</value>
+  </data>
+  <data name="SUBJECT_NAME_20_028" xml:space="preserve">
+    <value>共分散</value>
+  </data>
+  <data name="SUBJECT_NAME_20_029" xml:space="preserve">
+    <value>相関係数</value>
+  </data>
+  <data name="SUBJECT_NAME_20_030" xml:space="preserve">
+    <value>回帰直線</value>
+  </data>
+  <data name="SUBJECT_NAME_20_031" xml:space="preserve">
+    <value>適合度検定</value>
+  </data>
+  <data name="SUBJECT_NAME_20_032" xml:space="preserve">
+    <value>独立性検定</value>
+  </data>
+  <data name="SUBJECT_NAME_21_001" xml:space="preserve">
+    <value>多変数関数</value>
+  </data>
+  <data name="SUBJECT_NAME_21_002" xml:space="preserve">
+    <value>偏微分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_003" xml:space="preserve">
+    <value>全微分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_004" xml:space="preserve">
+    <value>線積分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_005" xml:space="preserve">
+    <value>周回積分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_006" xml:space="preserve">
+    <value>面積分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_007" xml:space="preserve">
+    <value>体積積分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_008" xml:space="preserve">
+    <value>高階微分</value>
+  </data>
+  <data name="SUBJECT_NAME_21_009" xml:space="preserve">
+    <value>直接積分型微分方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_21_010" xml:space="preserve">
+    <value>変数分離型微分方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_21_011" xml:space="preserve">
+    <value>同次二階微分方程式（特性方程式２実解）</value>
+  </data>
+  <data name="SUBJECT_NAME_21_012" xml:space="preserve">
+    <value>同次二階微分方程式（特性方程式重解）</value>
+  </data>
+  <data name="SUBJECT_NAME_21_013" xml:space="preserve">
+    <value>同次二階微分方程式（特性方程式複素解）</value>
+  </data>
+  <data name="SUBJECT_NAME_21_014" xml:space="preserve">
+    <value>非同次微分方程式と特解</value>
+  </data>
+  <data name="SUBJECT_NAME_21_015" xml:space="preserve">
+    <value>ラプラス変換の定義</value>
+  </data>
+  <data name="SUBJECT_NAME_21_016" xml:space="preserve">
+    <value>ラプラス変換と逆ラプラス変換の例</value>
+  </data>
+  <data name="SUBJECT_NAME_21_017" xml:space="preserve">
+    <value>ラプラス変換と微分方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_22_001" xml:space="preserve">
+    <value>ベクトルの外積（意味）</value>
+  </data>
+  <data name="SUBJECT_NAME_22_002" xml:space="preserve">
+    <value>ベクトルの外積（成分計算）</value>
+  </data>
+  <data name="SUBJECT_NAME_22_003" xml:space="preserve">
+    <value>スカラー関数</value>
+  </data>
+  <data name="SUBJECT_NAME_22_004" xml:space="preserve">
+    <value>ベクトル場</value>
+  </data>
+  <data name="SUBJECT_NAME_22_005" xml:space="preserve">
+    <value>勾配（grad)</value>
+  </data>
+  <data name="SUBJECT_NAME_22_006" xml:space="preserve">
+    <value>発散（div)</value>
+  </data>
+  <data name="SUBJECT_NAME_22_007" xml:space="preserve">
+    <value>回転（rot)</value>
+  </data>
+  <data name="SUBJECT_NAME_22_008" xml:space="preserve">
+    <value>ナブラ</value>
+  </data>
+  <data name="SUBJECT_NAME_22_009" xml:space="preserve">
+    <value>ガウスの発散定理</value>
+  </data>
+  <data name="SUBJECT_NAME_22_010" xml:space="preserve">
+    <value>ベクトル場の線積分</value>
+  </data>
+  <data name="SUBJECT_NAME_22_011" xml:space="preserve">
+    <value>ストークスの定理</value>
+  </data>
+  <data name="SUBJECT_NAME_23_001" xml:space="preserve">
+    <value>行列の成分表示方法</value>
+  </data>
+  <data name="SUBJECT_NAME_23_002" xml:space="preserve">
+    <value>転置行列とは</value>
+  </data>
+  <data name="SUBJECT_NAME_23_003" xml:space="preserve">
+    <value>行列式の書き方</value>
+  </data>
+  <data name="SUBJECT_NAME_23_004" xml:space="preserve">
+    <value>２行２列の行列式</value>
+  </data>
+  <data name="SUBJECT_NAME_23_005" xml:space="preserve">
+    <value>３行３列の行列式</value>
+  </data>
+  <data name="SUBJECT_NAME_23_006" xml:space="preserve">
+    <value>転置行列と行列式</value>
+  </data>
+  <data name="SUBJECT_NAME_23_007" xml:space="preserve">
+    <value>行列の積と行列式</value>
+  </data>
+  <data name="SUBJECT_NAME_23_008" xml:space="preserve">
+    <value>行列式と行、列との関係</value>
+  </data>
+  <data name="SUBJECT_NAME_23_009" xml:space="preserve">
+    <value>行列式の次数下げ</value>
+  </data>
+  <data name="SUBJECT_NAME_23_010" xml:space="preserve">
+    <value>面積分の変数変換</value>
+  </data>
+  <data name="SUBJECT_NAME_23_011" xml:space="preserve">
+    <value>体積積分の変数変換</value>
+  </data>
+  <data name="SUBJECT_NAME_23_012" xml:space="preserve">
+    <value>余因子</value>
+  </data>
+  <data name="SUBJECT_NAME_23_013" xml:space="preserve">
+    <value>余因子展開</value>
+  </data>
+  <data name="SUBJECT_NAME_23_014" xml:space="preserve">
+    <value>余因子行列と逆行列</value>
+  </data>
+  <data name="SUBJECT_NAME_23_015" xml:space="preserve">
+    <value>固有値、固有ベクトルとは</value>
+  </data>
+  <data name="SUBJECT_NAME_23_016" xml:space="preserve">
+    <value>固有値、固有ベクトルの求め方</value>
+  </data>
+  <data name="SUBJECT_NAME_23_017" xml:space="preserve">
+    <value>随伴行列</value>
+  </data>
+  <data name="SUBJECT_NAME_23_018" xml:space="preserve">
+    <value>正規直交基底（ベクトル）</value>
+  </data>
+  <data name="SUBJECT_NAME_23_019" xml:space="preserve">
+    <value>直交行列、ユニタリ行列</value>
+  </data>
+  <data name="SUBJECT_NAME_23_020" xml:space="preserve">
+    <value>対称行列、エルミート行列</value>
+  </data>
+  <data name="SUBJECT_NAME_24_001" xml:space="preserve">
+    <value>オイラーの公式</value>
+  </data>
+  <data name="SUBJECT_NAME_24_002" xml:space="preserve">
+    <value>複素関数</value>
+  </data>
+  <data name="SUBJECT_NAME_24_003" xml:space="preserve">
+    <value>正則関数とコーシーリーマンの方程式</value>
+  </data>
+  <data name="SUBJECT_NAME_24_004" xml:space="preserve">
+    <value>複素関数の積分</value>
+  </data>
+  <data name="SUBJECT_NAME_24_005" xml:space="preserve">
+    <value>コーシーの積分定理</value>
+  </data>
+  <data name="SUBJECT_NAME_24_006" xml:space="preserve">
+    <value>コーシーの積分公式</value>
+  </data>
+  <data name="SUBJECT_NAME_24_007" xml:space="preserve">
+    <value>複素関数の微分</value>
+  </data>
+  <data name="SUBJECT_NAME_24_008" xml:space="preserve">
+    <value>複素関数のテーラー展開</value>
+  </data>
+  <data name="SUBJECT_NAME_24_009" xml:space="preserve">
+    <value>ローラン展開</value>
+  </data>
+  <data name="SUBJECT_NAME_24_010" xml:space="preserve">
+    <value>留数</value>
+  </data>
+  <data name="SUBJECT_NAME_24_011" xml:space="preserve">
+    <value>留数定理</value>
+  </data>
+  <data name="SUBJECT_NAME_24_012" xml:space="preserve">
+    <value>ｍ位の極</value>
+  </data>
+  <data name="SUBJECT_NAME_24_013" xml:space="preserve">
+    <value>留数の求め方</value>
+  </data>
+  <data name="SUBJECT_NAME_24_014" xml:space="preserve">
+    <value>ラグランジュの未定係数法</value>
+  </data>
+  <data name="SUBJECT_NAME_24_015" xml:space="preserve">
+    <value>複素ベクトルの内積</value>
+  </data>
+  <data name="SUBJECT_NAME_24_016" xml:space="preserve">
+    <value>フーリエ展開（一定領域）</value>
+  </data>
+  <data name="SUBJECT_NAME_24_017" xml:space="preserve">
+    <value>フーリエ変換</value>
+  </data>
+  <data name="SUBJECT_NAME_24_018" xml:space="preserve">
+    <value>関数の内積</value>
+  </data>
+  <data name="SUBJECT_NAME_24_019" xml:space="preserve">
+    <value>正規直交基底（関数）</value>
+  </data>
+  <data name="SUBJECT_NAME_24_020" xml:space="preserve">
+    <value>汎関数</value>
+  </data>
+  <data name="SUBJECT_NAME_24_021" xml:space="preserve">
+    <value>オイラー＝ラグランジュ方程式</value>
   </data>
 </root>

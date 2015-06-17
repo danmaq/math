@@ -8,7 +8,7 @@ namespace MC.Common.Data
 	/// 値を持つ、イベント データ。
 	/// </summary>
 	/// <typeparam name="T">値の型。</typeparam>
-	public class EventArgs<T> : EventArgs
+	class EventArgs<T> : EventArgs
 	{
 
 		/// <summary>値を取得、または設定します。</summary>

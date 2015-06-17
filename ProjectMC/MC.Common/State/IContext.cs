@@ -6,7 +6,7 @@ namespace MC.Common.State
 	/// <summary>
 	/// Stateパターンにおける、コンテキストに必要な実装を定義します。
 	/// </summary>
-	public interface IContext : IDisposable
+	interface IContext : IDisposable
 	{
 		/// <summary>前回の状態を取得できます。</summary>
 		/// <remarks>この値は常に null 以外の値である必要があります。</remarks>

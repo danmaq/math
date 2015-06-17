@@ -6,13 +6,14 @@ using System.Linq;
 using MC.Common.Collection;
 using MC.Common.Data;
 using MC.Common.Utils;
+using MC.MockServer.Res.Properties;
 
 namespace MC.MockServer.Question
 {
 	/// <summary>
 	/// 問題生成クラス。
 	/// </summary>
-	public static class QuestionGenerator
+	static class QuestionGenerator
 	{
 		/// <summary>最大選択数。</summary>
 		private const int MaxSelection = 4;
@@ -48,7 +49,7 @@ namespace MC.MockServer.Question
 		private static Tuple<QuestionData, int> Create01011(int selection) =>
 			Create0101Common(
 				selection: selection,
-				question: Res.Properties.Resources.QUESTION1_1_1,
+				question: Resources.QUESTION1_1_1,
 				getDesc: t => t.Item1.ToString(CultureInfo.CurrentCulture),
 				getAnswer: t => t.Item2);
 
@@ -61,7 +62,7 @@ namespace MC.MockServer.Question
 		private static Tuple<QuestionData, int> Create01012(int selection) =>
 			Create0101Common(
 				selection: selection,
-				question: Res.Properties.Resources.QUESTION1_1_2,
+				question: Resources.QUESTION1_1_2,
 				getDesc: t => t.Item2,
 				getAnswer: t => t.Item1.ToString(CultureInfo.CurrentCulture));
 

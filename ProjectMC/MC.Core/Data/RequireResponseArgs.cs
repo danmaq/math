@@ -6,7 +6,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// レスポンスが必要な状態になった際のイベントと一緒に渡される引数クラスです。
 	/// </summary>
-	public abstract class RequireResponseArgs : EventArgs
+	abstract class RequireResponseArgs : EventArgs
 	{
 
 		/// <summary>解説文書を取得、または設定します。</summary>

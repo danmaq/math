@@ -8,7 +8,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 問題データ。
 	/// </summary>
-	public struct QuestionData
+	struct QuestionData
 	{
 
 		/// <summary>

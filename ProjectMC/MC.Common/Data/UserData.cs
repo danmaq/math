@@ -8,12 +8,18 @@ namespace MC.Common.Data
 	/// <summary>
 	/// ユーザ アカウント情報。
 	/// </summary>
-	public struct UserData
+	struct UserData
 	{
 
 		/// <summary>既定のデータ。</summary>
 		public static readonly UserData Default =
-			new UserData() { UserId = new Random().Next(), Name = @"danmaq", Comment = @"ぬるぽ" };
+			new UserData()
+			{
+				UserId = new Random().Next(),
+				Name = @"danmaq",
+				Comment = @"ぬるぽ",
+				Admission = new List<CollegeMasterData>(),
+			};
 
 		/// <summary>ユーザIDを取得または設定します。</summary>
 		public long UserId
@@ -42,7 +48,7 @@ namespace MC.Common.Data
 		public IList<CollegeMasterData> Admission
 		{
 			get;
-			set;
+			private set;
 		}
 
 		/// <summary>

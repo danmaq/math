@@ -7,7 +7,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 選択肢データ。
 	/// </summary>
-	public struct Selection
+	struct Selection
 	{
 
 		/// <summary>既定のデータ。</summary>

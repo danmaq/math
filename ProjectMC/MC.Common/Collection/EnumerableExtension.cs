@@ -9,7 +9,7 @@ namespace MC.Common.Collection
 	/// <summary>
 	/// 配列、リスト、クエリなどに対する拡張機能。
 	/// </summary>
-	public static class EnumerableExtension
+	static class EnumerableExtension
 	{
 
 		/// <summary>疑似乱数ジェネレータ。</summary>

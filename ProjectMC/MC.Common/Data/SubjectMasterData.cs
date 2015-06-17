@@ -8,7 +8,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 教科マスタの単票データ。
 	/// </summary>
-    public struct SubjectMasterData
+    struct SubjectMasterData
 	{
 		/// <summary>
 		/// コンストラクタ。
@@ -16,18 +16,21 @@ namespace MC.Common.Data
 		/// <param name="id">教科 ID。</param>
 		/// <param name="name">教科名。</param>
 		/// <param name="description">解説。</param>
+		/// <param name="enabled">有効かどうか。</param>
 		/// <param name="college">所属大学。</param>
 		/// <param name="requires">受講に必要な教科一覧。</param>
 		public SubjectMasterData(
 			int id,
 			string name,
 			string description,
+			bool enabled,
 			CollegeMasterData college,
 			IReadOnlyCollection<SubjectMasterData> requires)
 		{
 			SubjectId = id;
-			Name = name;
-			Description = description;
+			Name = name ?? string.Empty;
+			Description = description ?? string.Empty;
+			Enabled = enabled;
 			College = college;
 			Requires =
 				requires ?? new ReadOnlyCollection<SubjectMasterData>(new SubjectMasterData[0]);
@@ -55,6 +58,15 @@ namespace MC.Common.Data
 		/// 解説を取得します。
 		/// </summary>
 		public string Description
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// 有効かどうかを取得します。
+		/// </summary>
+		public bool Enabled
 		{
 			get;
 			private set;
@@ -102,7 +114,7 @@ namespace MC.Common.Data
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
 			StringHelper.Format(
-				$@"{nameof(SubjectMasterData)} ID:{SubjectId}, Name:{Name}, Description:{Description}, College:{College.Name}, Requires:{Requires.ToStringCollection(s => s.Name)}");
+				$@"{nameof(SubjectMasterData)} ID:{SubjectId}, Name:{Name}, Description:{Description}, Enabled:{Enabled}, College:{College.Name}, Requires:{Requires.ToStringCollection(s => s.Name)}");
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -110,8 +122,9 @@ namespace MC.Common.Data
 		/// <returns>ハッシュコード。</returns>
 		public override int GetHashCode() =>
 			SubjectId.GetHashCode() ^
-			Name.GetHashCode() ^
-			Description.GetHashCode() ^
+			(Name ?? string.Empty).GetHashCode() ^
+			(Description ?? string.Empty).GetHashCode() ^
+			Enabled.GetHashCode() ^
 			College.GetHashCode() ^
 			Requires.GetHashCode();
 
@@ -132,6 +145,7 @@ namespace MC.Common.Data
 			SubjectId == others.SubjectId &&
 			Name == others.Name &&
 			Description == others.Description &&
+			Enabled == others.Enabled &&
 			College == others.College &&
 			Requires == others.Requires;
 	}

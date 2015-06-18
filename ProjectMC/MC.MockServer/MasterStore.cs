@@ -118,8 +118,40 @@ namespace MC.MockServer
 			var s0321 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_021, description: Resources.SUBJECT_DESCRIPTION_03_021, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0320 });
 			var s0322 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_022, description: Resources.SUBJECT_DESCRIPTION_03_022, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0319, s0309 });
 			var s0323 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_023, description: Resources.SUBJECT_DESCRIPTION_03_023, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0318 });
+			c[4] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_05_NAME, description: Resources.COLLEGE_05_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0220, s0223 });
 			c[3] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_04_NAME, description: Resources.COLLEGE_04_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0120, s0218, s0222, s0307 });
 			var s0401 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_001, description: Resources.SUBJECT_DESCRIPTION_04_001, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110 });
+			var s0402 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_002, description: Resources.SUBJECT_DESCRIPTION_04_002, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0401, s0119 });
+			var s0403 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_003, description: Resources.SUBJECT_DESCRIPTION_04_003, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110, s0307 });
+			var s0404 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_004, description: Resources.SUBJECT_DESCRIPTION_04_004, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0403, s0402, s0120 });
+			var s0405 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_005, description: Resources.SUBJECT_DESCRIPTION_04_005, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0119 });
+			var s0406 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_006, description: Resources.SUBJECT_DESCRIPTION_04_006, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0405 });
+			var s0407 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_007, description: Resources.SUBJECT_DESCRIPTION_04_007, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110 });
+			var s0408 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_008, description: Resources.SUBJECT_DESCRIPTION_04_008, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0407 });
+			var s0409 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_009, description: Resources.SUBJECT_DESCRIPTION_04_009, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110 });
+			var s0410 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_010, description: Resources.SUBJECT_DESCRIPTION_04_010, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0409, s0110 });
+			var s0411 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_011, description: Resources.SUBJECT_DESCRIPTION_04_011, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0222, s0402, s0404, s0410 });
+			var s0412 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_012, description: Resources.SUBJECT_DESCRIPTION_04_012, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0408, s0411 });
+			var s0413 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_013, description: Resources.SUBJECT_DESCRIPTION_04_013, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0304, s0119 });
+			var s0414 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_014, description: Resources.SUBJECT_DESCRIPTION_04_014, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0413, s0301 });
+			var s0415 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_015, description: Resources.SUBJECT_DESCRIPTION_04_015, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0413, s0308 });
+			var s0416 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_016, description: Resources.SUBJECT_DESCRIPTION_04_016, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0307, s0404, s0201 });
+			var s0417 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_017, description: Resources.SUBJECT_DESCRIPTION_04_017, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0404, s0305, s0221 });
+			var s0418 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_018, description: Resources.SUBJECT_DESCRIPTION_04_018, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0417 });
+			var s0419 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_019, description: Resources.SUBJECT_DESCRIPTION_04_019, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0416, s0317 });
+			var s0420 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_020, description: Resources.SUBJECT_DESCRIPTION_04_020, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0419, s0210, s0222 });
+			var s0421 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_021, description: Resources.SUBJECT_DESCRIPTION_04_021, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0419 });
+			var s0422 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_022, description: Resources.SUBJECT_DESCRIPTION_04_022, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0311, s0515 });
+			var s0423 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_023, description: Resources.SUBJECT_DESCRIPTION_04_023, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0416, s0422 });
+			var s0424 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_024, description: Resources.SUBJECT_DESCRIPTION_04_024, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0312, s0413, s0525 });
+			var s0425 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_025, description: Resources.SUBJECT_DESCRIPTION_04_025, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0423, s0313 });
+			var s0426 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_026, description: Resources.SUBJECT_DESCRIPTION_04_026, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0405, s0110, s0319 });
+			var s0427 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_027, description: Resources.SUBJECT_DESCRIPTION_04_027, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0426, s0120 });
+			var s0428 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_028, description: Resources.SUBJECT_DESCRIPTION_04_028, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0427, s0319, s0416 });
+			var s0429 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_029, description: Resources.SUBJECT_DESCRIPTION_04_029, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0320, s0428, s0423 });
+			var s0430 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_030, description: Resources.SUBJECT_DESCRIPTION_04_030, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0429, s0321 });
+			var s0431 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_031, description: Resources.SUBJECT_DESCRIPTION_04_031, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0313, s0428, s0423 });
+			var s0432 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_032, description: Resources.SUBJECT_DESCRIPTION_04_032, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0616, s0404, s0427 });
 
 			CollegeMaster = c;
 			SubjectMaster =
@@ -130,11 +162,14 @@ namespace MC.MockServer
 					s0121,
 					s0201, s0202, s0203, s0204, s0205, s0206, s0207, s0208, s0209, s0210,
 					s0211, s0212, s0213, s0214, s0215, s0216, s0217, s0218, s0219, s0220,
-					s0221, s0223, s0223,
+					s0221, s0222, s0223,
 					s0301, s0302, s0303, s0304, s0305, s0306, s0307, s0308, s0309, s0310,
 					s0311, s0312, s0313, s0314, s0315, s0316, s0317, s0318, s0319, s0320,
-					s0321, s0323, s0323,
-					s0401,
+					s0321, s0322, s0323,
+					s0401, s0402, s0403, s0404, s0405, s0406, s0407, s0408, s0409, s0410,
+					s0411, s0412, s0413, s0414, s0415, s0416, s0417, s0418, s0419, s0420,
+					s0421, s0422, s0423, s0424, s0425, s0426, s0427, s0428, s0429, s0430,
+					s0431, s0432,
 				};
         }
 	}

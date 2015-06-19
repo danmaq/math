@@ -118,7 +118,6 @@ namespace MC.MockServer
 			var s0321 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_021, description: Resources.SUBJECT_DESCRIPTION_03_021, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0320 });
 			var s0322 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_022, description: Resources.SUBJECT_DESCRIPTION_03_022, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0319, s0309 });
 			var s0323 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_023, description: Resources.SUBJECT_DESCRIPTION_03_023, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0318 });
-			c[4] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_05_NAME, description: Resources.COLLEGE_05_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0220, s0223 });
 			c[3] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_04_NAME, description: Resources.COLLEGE_04_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0120, s0218, s0222, s0307 });
 			var s0401 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_001, description: Resources.SUBJECT_DESCRIPTION_04_001, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110 });
 			var s0402 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_002, description: Resources.SUBJECT_DESCRIPTION_04_002, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0401, s0119 });
@@ -152,6 +151,27 @@ namespace MC.MockServer
 			var s0430 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_030, description: Resources.SUBJECT_DESCRIPTION_04_030, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0429, s0321 });
 			var s0431 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_031, description: Resources.SUBJECT_DESCRIPTION_04_031, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0313, s0428, s0423 });
 			var s0432 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_032, description: Resources.SUBJECT_DESCRIPTION_04_032, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0616, s0404, s0427 });
+			c[4] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_05_NAME, description: Resources.COLLEGE_05_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0220, s0223 });
+			var s0501 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_001, description: Resources.SUBJECT_DESCRIPTION_05_001, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0201 });
+			var s0502 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_002, description: Resources.SUBJECT_DESCRIPTION_05_002, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0501 });
+			var s0503 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_003, description: Resources.SUBJECT_DESCRIPTION_05_003, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0502 });
+			var s0504 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_004, description: Resources.SUBJECT_DESCRIPTION_05_004, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0205, s0203 });
+			var s0505 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_005, description: Resources.SUBJECT_DESCRIPTION_05_005, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0504 });
+			var s0506 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_006, description: Resources.SUBJECT_DESCRIPTION_05_006, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0504 });
+			var s0507 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_007, description: Resources.SUBJECT_DESCRIPTION_05_007, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0506 });
+			var s0508 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_008, description: Resources.SUBJECT_DESCRIPTION_05_008, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0504 });
+			var s0509 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_009, description: Resources.SUBJECT_DESCRIPTION_05_009, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0503 });
+			var s0510 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_010, description: Resources.SUBJECT_DESCRIPTION_05_010, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0503 });
+			var s0511 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_011, description: Resources.SUBJECT_DESCRIPTION_05_011, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0510 });
+			var s0512 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_012, description: Resources.SUBJECT_DESCRIPTION_05_012, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0511 });
+			var s0513 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_013, description: Resources.SUBJECT_DESCRIPTION_05_013, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0111, s0503 });
+			var s0514 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_014, description: Resources.SUBJECT_DESCRIPTION_05_014, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0513, s0212 });
+			var s0515 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_015, description: Resources.SUBJECT_DESCRIPTION_05_015, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0514, s0218 });
+			var s0516 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_016, description: Resources.SUBJECT_DESCRIPTION_05_016, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0515, s0220 });
+			var s0517 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_017, description: Resources.SUBJECT_DESCRIPTION_05_017, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0505, s0222 });
+			var s0518 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_018, description: Resources.SUBJECT_DESCRIPTION_05_018, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0517 });
+			var s0519 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_019, description: Resources.SUBJECT_DESCRIPTION_05_019, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0517, s0223 });
+			var s0520 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_020, description: Resources.SUBJECT_DESCRIPTION_05_020, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0107, s0104 });
 
 			CollegeMaster = c;
 			SubjectMaster =

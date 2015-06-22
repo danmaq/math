@@ -19,6 +19,7 @@ namespace MC.Common.Data
 				Name = @"danmaq",
 				Comment = @"ぬるぽ",
 				Admission = new List<CollegeMasterData>(),
+				Cleard = new List<Tuple<SubjectMasterData, int>>(),
 			};
 
 		/// <summary>ユーザIDを取得または設定します。</summary>
@@ -46,6 +47,15 @@ namespace MC.Common.Data
 		/// 入学した学園一覧を取得します。
 		/// </summary>
 		public IList<CollegeMasterData> Admission
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// 攻略した講義一覧を取得します。
+		/// </summary>
+		public IList<Tuple<SubjectMasterData, int>> Cleard
 		{
 			get;
 			private set;
@@ -106,13 +116,18 @@ namespace MC.Common.Data
 		/// <param name="comment">コメント。</param>
 		/// <returns>新しい値。</returns>
 		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
-		public UserData CopyTo(long? userid = null, string name = null, string comment = null) =>
-			new UserData()
-			{
-				UserId = userid ?? UserId,
-				Name = name ?? Name,
-				Comment = comment ?? Comment,
-			};
-
+		public UserData CopyTo(long? userid = null, string name = null, string comment = null)
+		{
+			var result = 
+				new UserData()
+				{
+					UserId = userid ?? UserId,
+					Name = name ?? Name,
+					Comment = comment ?? Comment,
+				};
+			((List<CollegeMasterData>)result.Admission).AddRange(Admission);
+			((List<Tuple<SubjectMasterData, int>>)result.Cleard).AddRange(Cleard);
+			return result;
+		}
 	}
 }

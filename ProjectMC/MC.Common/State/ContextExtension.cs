@@ -36,7 +36,7 @@ namespace MC.Common.State
 				throw new ArgumentNullException(nameof(context));
 			}
 			return context.CurrentState == NullState.Instance && context.NextState == null;
-        }
+		}
 
 		/// <summary>
 		/// 強制的に現在の状態を既定に戻します。
@@ -66,7 +66,7 @@ namespace MC.Common.State
 			{
 				context.Dispose();
 			}
-            return result;
+			return result;
 		}
 	}
 }

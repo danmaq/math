@@ -73,7 +73,7 @@ namespace MC.Core.State.Game
 						description: Resources.MENU_HOME_WORLD),
 					Selection.Default.CopyTo(
 						select: () => context.NextState = PreferenceState.Instance,
-                        description: Resources.MENU_HOME_PREFERENCE),
+						description: Resources.MENU_HOME_PREFERENCE),
 					Selection.Default.CopyTo(
 						select: () => context.Terminate(),
 						description: Resources.MENU_HOME_EXIT),

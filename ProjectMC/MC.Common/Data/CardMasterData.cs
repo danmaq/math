@@ -6,7 +6,7 @@ namespace MC.Common.Data
 	/// カード マスタの単票データ。
 	/// </summary>
 	struct CardMasterData
-    {
+	{
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>

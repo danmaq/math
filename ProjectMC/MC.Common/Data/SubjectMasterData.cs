@@ -8,7 +8,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 教科マスタの単票データ。
 	/// </summary>
-    struct SubjectMasterData
+	struct SubjectMasterData
 	{
 		/// <summary>
 		/// コンストラクタ。

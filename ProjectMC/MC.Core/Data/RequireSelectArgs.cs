@@ -32,5 +32,5 @@ namespace MC.Core.Data
 		public override string ToString() =>
 			StringHelper.Format(
 				$@"{nameof(RequireSelectArgs)} Description:{Description} Expires: {Description} Selecton: {Selections.ToStringCollection()}");
-    }
+	}
 }

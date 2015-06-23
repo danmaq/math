@@ -7,8 +7,8 @@ namespace MC.Core.Flow
 	/// <summary>
 	/// ゲームフロー専用コンテキスト。
 	/// </summary>
-    sealed class GameFlowContext : Context
-    {
+	sealed class GameFlowContext : Context
+	{
 
 		/// <summary>
 		/// コンストラクタ。

@@ -62,6 +62,15 @@ namespace MC.Common.Data
 		}
 
 		/// <summary>
+		/// 挑戦した講義一覧を取得します。
+		/// </summary>
+		public IList<Tuple<SubjectMasterData, int>> Tryed
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
 		/// 値同士が等しいかどうかを判定します。
 		/// </summary>
 		/// <param name="valueA">値。</param>

@@ -102,7 +102,7 @@ namespace MC.Common.State
 		public IState CommitNextState()
 		{
 			var result = CommitLock ? null : NextState;
-            if (result != null)
+			if (result != null)
 			{
 				CommitLock = true;
 				result.Teardown(this);

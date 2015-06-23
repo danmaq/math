@@ -18,7 +18,7 @@ namespace MC.Core.Flow
 			if (concrete != null)
 			{
 				concrete.DispatchRequireResponse(args);
-            }
+			}
 		}
 
 		/// <summary>

@@ -49,6 +49,6 @@ namespace MC.Common.Collection
 				body.RemoveAll(c => c.DisposeIfTerminated());
 				yield return body.Count;
 			}
-        }
+		}
 	}
 }

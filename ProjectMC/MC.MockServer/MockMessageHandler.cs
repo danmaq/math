@@ -26,6 +26,7 @@ namespace MC.MockServer
 			{
 				throw new ArgumentNullException(nameof(request));
 			}
+			Sleep();
 			var source = new TaskCompletionSource<HttpResponseMessage>();
 			var response = new HttpResponseMessage(HttpStatusCode.OK);
 			response.Content = new StringContent(@"Hello, world!");
@@ -33,6 +34,14 @@ namespace MC.MockServer
 			response.RequestMessage = request;
 			source.TrySetResult(response);
 			return source.Task;
+		}
+
+		/// <summary>
+		/// 通信遅延を再現するため、休眠します。
+		/// </summary>
+		private void Sleep()
+		{
+			Thread.Sleep(500);
 		}
 	}
 }

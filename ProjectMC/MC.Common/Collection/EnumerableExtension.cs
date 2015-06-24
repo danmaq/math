@@ -16,25 +16,6 @@ namespace MC.Common.Collection
 		private static readonly Random random = new Random();
 
 		/// <summary>
-		/// 即座にクエリを評価します。
-		/// 評価結果が不要である際に使用します。
-		/// </summary>
-		/// <param name="sequence">クエリ。</param>
-		/// <exception cref="ArgumentNullException">引数 が null である場合。</exception>
-		public static void ForEach(this IEnumerable sequence)
-			=> sequence.ForEach(callback: null);
-
-		/// <summary>
-		/// 即座にクエリを評価します。
-		/// 評価結果が不要である際に使用します。
-		/// </summary>
-		/// <typeparam name="T">シーケンスの型。</typeparam>
-		/// <param name="sequence">クエリ。</param>
-		/// <exception cref="ArgumentNullException">引数 が null である場合。</exception>
-		public static void ForEach<T>(this IEnumerable<T> sequence)
-			=> sequence.ForEach(callback: null);
-
-		/// <summary>
 		/// 即座にクエリを評価し、その結果の要素一つ一つに対し、特定の処理を実行します。
 		/// </summary>
 		/// <param name="sequence">クエリ。</param>

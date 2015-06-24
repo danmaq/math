@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using MC.Common.Collection;
 using MC.Common.Utils;
 
@@ -109,6 +110,6 @@ namespace MC.Common.Data
 			Caption == others.Caption &&
 			Description == others.Description &&
 			Expires == others.Expires &&
-			Answers == others.Answers;
+			Answers.SequenceEqual(others.Answers);
 	}
 }

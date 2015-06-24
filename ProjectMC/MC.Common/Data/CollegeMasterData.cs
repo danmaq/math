@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using MC.Common.Collection;
 using MC.Common.Utils;
 
@@ -133,6 +134,6 @@ namespace MC.Common.Data
 			Name == others.Name &&
 			Description == others.Description &&
 			Enabled == others.Enabled &&
-			Requires == others.Requires;
+			Requires.SequenceEqual(others.Requires);
 	}
 }

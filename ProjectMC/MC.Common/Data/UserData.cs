@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -115,7 +116,11 @@ namespace MC.Common.Data
 		/// <param name="others"></param>
 		/// <returns>値が等しい場合、true。</returns>
 		public bool Equals(UserData others) =>
-			UserId == others.UserId && Name == others.Name && Comment == others.Comment;
+			UserId == others.UserId &&
+			Name == others.Name &&
+			Comment == others.Comment &&
+			Admission.SequenceEqual(others.Admission) &&
+			Cleard.SequenceEqual(others.Cleard);
 
 		/// <summary>
 		/// データの一部、または全部を改変して複製します。

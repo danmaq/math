@@ -11,6 +11,7 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Collection\ContextCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collection\EnumerableExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collection\EnumerableHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collection\ServiceContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\CardMasterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\CollegeMasterData.cs" />
@@ -28,7 +29,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)State\NullState.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\DelegateHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\Disposable.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Utils\EnumerableHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\StringHelper.cs" />
   </ItemGroup>
 </Project>

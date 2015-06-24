@@ -27,28 +27,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MC.MockServer.Res", "MC.Moc
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		MC.Game\MC.Game.projitems*{e3ba8186-fe45-494a-bd79-8673a361857a}*SharedItemsImports = 4
-		MC.Core\MC.Core.projitems*{e3ba8186-fe45-494a-bd79-8673a361857a}*SharedItemsImports = 4
 		MC.Common\MC.Common.projitems*{e3ba8186-fe45-494a-bd79-8673a361857a}*SharedItemsImports = 4
 		MC.MockServer\MC.MockServer.projitems*{e3ba8186-fe45-494a-bd79-8673a361857a}*SharedItemsImports = 4
+		MC.Core\MC.Core.projitems*{e3ba8186-fe45-494a-bd79-8673a361857a}*SharedItemsImports = 4
+		MC.Game\MC.Game.projitems*{e3ba8186-fe45-494a-bd79-8673a361857a}*SharedItemsImports = 4
 		MC.Core\MC.Core.projitems*{f3bf2b94-38c6-42f3-aba5-1ed790335558}*SharedItemsImports = 13
 		MC.Common\MC.Common.projitems*{a1734de7-b1e2-47e3-b70c-f3223191c4cc}*SharedItemsImports = 13
-		MC.Game\MC.Game.projitems*{3d448852-71f9-471f-acd0-b4a8ac9a5208}*SharedItemsImports = 4
-		MC.Core\MC.Core.projitems*{3d448852-71f9-471f-acd0-b4a8ac9a5208}*SharedItemsImports = 4
 		MC.Common\MC.Common.projitems*{3d448852-71f9-471f-acd0-b4a8ac9a5208}*SharedItemsImports = 4
 		MC.MockServer\MC.MockServer.projitems*{3d448852-71f9-471f-acd0-b4a8ac9a5208}*SharedItemsImports = 4
+		MC.Core\MC.Core.projitems*{3d448852-71f9-471f-acd0-b4a8ac9a5208}*SharedItemsImports = 4
+		MC.Game\MC.Game.projitems*{3d448852-71f9-471f-acd0-b4a8ac9a5208}*SharedItemsImports = 4
 		MC.MockServer\MC.MockServer.projitems*{04d7a1d5-b8d9-4b9f-89f5-45bc05591c99}*SharedItemsImports = 13
-		MC.Game\MC.Game.projitems*{9471883d-11d7-4498-be5a-8b2abb3d87bc}*SharedItemsImports = 4
-		MC.Core\MC.Core.projitems*{9471883d-11d7-4498-be5a-8b2abb3d87bc}*SharedItemsImports = 4
 		MC.Common\MC.Common.projitems*{9471883d-11d7-4498-be5a-8b2abb3d87bc}*SharedItemsImports = 4
 		MC.MockServer\MC.MockServer.projitems*{9471883d-11d7-4498-be5a-8b2abb3d87bc}*SharedItemsImports = 4
-		MC.Core\MC.Core.projitems*{f91bdb75-909a-4cae-b8bc-75f634e252e9}*SharedItemsImports = 4
+		MC.Core\MC.Core.projitems*{9471883d-11d7-4498-be5a-8b2abb3d87bc}*SharedItemsImports = 4
+		MC.Game\MC.Game.projitems*{9471883d-11d7-4498-be5a-8b2abb3d87bc}*SharedItemsImports = 4
 		MC.Common\MC.Common.projitems*{f91bdb75-909a-4cae-b8bc-75f634e252e9}*SharedItemsImports = 4
 		MC.MockServer\MC.MockServer.projitems*{f91bdb75-909a-4cae-b8bc-75f634e252e9}*SharedItemsImports = 4
-		MC.Game\MC.Game.projitems*{d86ab7a9-b63c-493d-a911-5ac71be7c59c}*SharedItemsImports = 4
-		MC.Core\MC.Core.projitems*{d86ab7a9-b63c-493d-a911-5ac71be7c59c}*SharedItemsImports = 4
+		MC.Core\MC.Core.projitems*{f91bdb75-909a-4cae-b8bc-75f634e252e9}*SharedItemsImports = 4
 		MC.Common\MC.Common.projitems*{d86ab7a9-b63c-493d-a911-5ac71be7c59c}*SharedItemsImports = 4
 		MC.MockServer\MC.MockServer.projitems*{d86ab7a9-b63c-493d-a911-5ac71be7c59c}*SharedItemsImports = 4
+		MC.Core\MC.Core.projitems*{d86ab7a9-b63c-493d-a911-5ac71be7c59c}*SharedItemsImports = 4
+		MC.Game\MC.Game.projitems*{d86ab7a9-b63c-493d-a911-5ac71be7c59c}*SharedItemsImports = 4
 		MC.Game\MC.Game.projitems*{8f8d47aa-f470-4780-acdd-25c19bd21a59}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -636,8 +636,6 @@ namespace MC.MockServer
 			var s2117 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_017, description: Resources.SUBJECT_DESCRIPTION_21_017, enabled: true, college: c[20], requires: new SubjectMasterData[] { s2116, s2114 });
 			var s2419 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_24_019, description: Resources.SUBJECT_DESCRIPTION_24_019, enabled: true, college: c[23], requires: new SubjectMasterData[] { s2318, s2418 });
 
-
-
 			CollegeMaster = c;
 			SubjectMaster =
 				new SubjectMasterData[]

@@ -90,7 +90,7 @@ namespace MC.MockServer
 			var id = 0;
 			var emptySubject = new List<SubjectMasterData>().AsReadOnly();
 			var c = new CollegeMasterData[24];
-			c[0] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_01_NAME, description: Resources.COLLEGE_01_DESCRIPTION, enabled: true, requires: emptySubject);
+			c[0] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_01_NAME, description: Resources.COLLEGE_01_DESCRIPTION, enabled: true, full: true, requires: emptySubject);
 			var s0101 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_01_001, description: Resources.SUBJECT_DESCRIPTION_01_001, enabled: true, college: c[0], requires: emptySubject);
 			var s0102 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_01_002, description: Resources.SUBJECT_DESCRIPTION_01_002, enabled: true, college: c[0], requires: new SubjectMasterData[] { s0101 });
 			var s0103 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_01_003, description: Resources.SUBJECT_DESCRIPTION_01_003, enabled: true, college: c[0], requires: new SubjectMasterData[] { s0101 });
@@ -113,7 +113,7 @@ namespace MC.MockServer
 			var s0120 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_01_020, description: Resources.SUBJECT_DESCRIPTION_01_020, enabled: true, college: c[0], requires: new SubjectMasterData[] { s0119 });
 			var s0121 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_01_021, description: Resources.SUBJECT_DESCRIPTION_01_021, enabled: true, college: c[0], requires: new SubjectMasterData[] { s0120 });
 
-			c[1] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_02_NAME, description: Resources.COLLEGE_02_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0104, s0114, s0116, s0118, s0119 });
+			c[1] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_02_NAME, description: Resources.COLLEGE_02_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0104, s0114, s0116, s0118, s0119 });
 			var s0201 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_02_001, description: Resources.SUBJECT_DESCRIPTION_02_001, enabled: true, college: c[1], requires: new SubjectMasterData[] { s0116 });
 			var s0202 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_02_002, description: Resources.SUBJECT_DESCRIPTION_02_002, enabled: true, college: c[1], requires: new SubjectMasterData[] { s0104, s0201 });
 			var s0203 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_02_003, description: Resources.SUBJECT_DESCRIPTION_02_003, enabled: true, college: c[1], requires: new SubjectMasterData[] { s0201 });
@@ -138,7 +138,7 @@ namespace MC.MockServer
 			var s0222 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_02_022, description: Resources.SUBJECT_DESCRIPTION_02_022, enabled: true, college: c[1], requires: new SubjectMasterData[] { s0221 });
 			var s0223 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_02_023, description: Resources.SUBJECT_DESCRIPTION_02_023, enabled: true, college: c[1], requires: new SubjectMasterData[] { s0222 });
 
-			c[2] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_03_NAME, description: Resources.COLLEGE_03_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0102 });
+			c[2] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_03_NAME, description: Resources.COLLEGE_03_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0102 });
 			var s0301 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_001, description: Resources.SUBJECT_DESCRIPTION_03_001, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0102 });
 			var s0302 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_002, description: Resources.SUBJECT_DESCRIPTION_03_002, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0301 });
 			var s0303 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_003, description: Resources.SUBJECT_DESCRIPTION_03_003, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0301 });
@@ -163,7 +163,7 @@ namespace MC.MockServer
 			var s0322 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_022, description: Resources.SUBJECT_DESCRIPTION_03_022, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0319, s0309 });
 			var s0323 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_03_023, description: Resources.SUBJECT_DESCRIPTION_03_023, enabled: true, college: c[2], requires: new SubjectMasterData[] { s0318 });
 
-			c[4] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_05_NAME, description: Resources.COLLEGE_05_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0220, s0223 });
+			c[4] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_05_NAME, description: Resources.COLLEGE_05_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0220, s0223 });
 			var s0501 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_001, description: Resources.SUBJECT_DESCRIPTION_05_001, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0221 });
 			var s0502 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_002, description: Resources.SUBJECT_DESCRIPTION_05_002, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0501 });
 			var s0503 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_003, description: Resources.SUBJECT_DESCRIPTION_05_003, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0502 });
@@ -198,7 +198,7 @@ namespace MC.MockServer
 			var s0532 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_032, description: Resources.SUBJECT_DESCRIPTION_05_032, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0531 });
 			var s0533 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_05_033, description: Resources.SUBJECT_DESCRIPTION_05_033, enabled: true, college: c[4], requires: new SubjectMasterData[] { s0516, s0519, s0527, s0528 });
 
-			c[3] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_04_NAME, description: Resources.COLLEGE_04_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0120, s0218, s0222, s0307 });
+			c[3] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_04_NAME, description: Resources.COLLEGE_04_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0120, s0218, s0222, s0307 });
 			var s0401 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_001, description: Resources.SUBJECT_DESCRIPTION_04_001, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110 });
 			var s0402 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_002, description: Resources.SUBJECT_DESCRIPTION_04_002, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0401, s0119 });
 			var s0403 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_003, description: Resources.SUBJECT_DESCRIPTION_04_003, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0110, s0307 });
@@ -231,7 +231,7 @@ namespace MC.MockServer
 			var s0430 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_030, description: Resources.SUBJECT_DESCRIPTION_04_030, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0429, s0321 });
 			var s0431 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_031, description: Resources.SUBJECT_DESCRIPTION_04_031, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0313, s0428, s0423 });
 
-			c[5] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_06_NAME, description: Resources.COLLEGE_06_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0306, s0311, s0315, s0316, s0317, s0321, s0413, s0531 });
+			c[5] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_06_NAME, description: Resources.COLLEGE_06_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0306, s0311, s0315, s0316, s0317, s0321, s0413, s0531 });
 			var s0601 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_06_001, description: Resources.SUBJECT_DESCRIPTION_06_001, enabled: true, college: c[5], requires: new SubjectMasterData[] { s0319 });
 			var s0602 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_06_002, description: Resources.SUBJECT_DESCRIPTION_06_002, enabled: true, college: c[5], requires: new SubjectMasterData[] { s0320, s0601 });
 			var s0603 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_06_003, description: Resources.SUBJECT_DESCRIPTION_06_003, enabled: true, college: c[5], requires: new SubjectMasterData[] { s0321, s0602 });
@@ -255,7 +255,7 @@ namespace MC.MockServer
 
 			var s0432 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_04_032, description: Resources.SUBJECT_DESCRIPTION_04_032, enabled: true, college: c[3], requires: new SubjectMasterData[] { s0616, s0404, s0427 });
 
-			c[6] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_07_NAME, description: Resources.COLLEGE_07_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0121, s0222, s0502, s0513, s0520 });
+			c[6] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_07_NAME, description: Resources.COLLEGE_07_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0121, s0222, s0502, s0513, s0520 });
 			var s0701 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_07_001, description: Resources.SUBJECT_DESCRIPTION_07_001, enabled: true, college: c[6], requires: emptySubject);
 			var s0702 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_07_002, description: Resources.SUBJECT_DESCRIPTION_07_002, enabled: true, college: c[6], requires: new SubjectMasterData[] { s0701 });
 			var s0703 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_07_003, description: Resources.SUBJECT_DESCRIPTION_07_003, enabled: true, college: c[6], requires: new SubjectMasterData[] { s0702 });
@@ -273,7 +273,7 @@ namespace MC.MockServer
 			var s0715 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_07_015, description: Resources.SUBJECT_DESCRIPTION_07_015, enabled: true, college: c[6], requires: new SubjectMasterData[] { s0121 });
 			var s0716 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_07_016, description: Resources.SUBJECT_DESCRIPTION_07_016, enabled: true, college: c[6], requires: new SubjectMasterData[] { s0222 });
 
-			c[7] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_08_NAME, description: Resources.COLLEGE_08_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0121, s0222, s0502, s0513, s0520 });
+			c[7] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_08_NAME, description: Resources.COLLEGE_08_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0121, s0222, s0502, s0513, s0520 });
 			var s0801 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_08_001, description: Resources.SUBJECT_DESCRIPTION_08_001, enabled: true, college: c[7], requires: new SubjectMasterData[] { s0204 });
 			var s0802 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_08_002, description: Resources.SUBJECT_DESCRIPTION_08_002, enabled: true, college: c[7], requires: new SubjectMasterData[] { s0801 });
 			var s0803 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_08_003, description: Resources.SUBJECT_DESCRIPTION_08_003, enabled: true, college: c[7], requires: new SubjectMasterData[] { s0701, s0802 });
@@ -298,7 +298,7 @@ namespace MC.MockServer
 			var s0822 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_08_022, description: Resources.SUBJECT_DESCRIPTION_08_022, enabled: true, college: c[7], requires: new SubjectMasterData[] { s0821 });
 			var s0823 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_08_023, description: Resources.SUBJECT_DESCRIPTION_08_023, enabled: true, college: c[7], requires: new SubjectMasterData[] { s0810, s0821 });
 
-			c[8] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_09_NAME, description: Resources.COLLEGE_09_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0709, s0803, s0816, s0818 });
+			c[8] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_09_NAME, description: Resources.COLLEGE_09_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0709, s0803, s0816, s0818 });
 			var s0901 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_09_001, description: Resources.SUBJECT_DESCRIPTION_09_001, enabled: true, college: c[8], requires: new SubjectMasterData[] { s0709 });
 			var s0902 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_09_002, description: Resources.SUBJECT_DESCRIPTION_09_002, enabled: true, college: c[8], requires: new SubjectMasterData[] { s0803, s0901 });
 			var s0903 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_09_003, description: Resources.SUBJECT_DESCRIPTION_09_003, enabled: true, college: c[8], requires: new SubjectMasterData[] { s0902 });
@@ -323,7 +323,7 @@ namespace MC.MockServer
 			var s0922 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_09_022, description: Resources.SUBJECT_DESCRIPTION_09_022, enabled: true, college: c[8], requires: new SubjectMasterData[] { s0903, s0907 });
 			var s0923 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_09_023, description: Resources.SUBJECT_DESCRIPTION_09_023, enabled: true, college: c[8], requires: new SubjectMasterData[] { s0818, s0907 });
 
-			c[9] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_10_NAME, description: Resources.COLLEGE_10_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0808, s0816, s0822, s0914, s0916 });
+			c[9] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_10_NAME, description: Resources.COLLEGE_10_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0808, s0816, s0822, s0914, s0916 });
 			var s1001 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_10_001, description: Resources.SUBJECT_DESCRIPTION_10_001, enabled: true, college: c[9], requires: new SubjectMasterData[] { s0808, s0816 });
 			var s1002 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_10_002, description: Resources.SUBJECT_DESCRIPTION_10_002, enabled: true, college: c[9], requires: new SubjectMasterData[] { s1001 });
 			var s1003 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_10_003, description: Resources.SUBJECT_DESCRIPTION_10_003, enabled: true, college: c[9], requires: new SubjectMasterData[] { s1002 });
@@ -341,7 +341,7 @@ namespace MC.MockServer
 			var s1015 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_10_015, description: Resources.SUBJECT_DESCRIPTION_10_015, enabled: true, college: c[9], requires: new SubjectMasterData[] { s1001 });
 			var s1016 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_10_016, description: Resources.SUBJECT_DESCRIPTION_10_016, enabled: true, college: c[9], requires: new SubjectMasterData[] { s0911 });
 
-			c[10] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_11_NAME, description: Resources.COLLEGE_11_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0413, s0422, s0818, s0902, s0904 });
+			c[10] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_11_NAME, description: Resources.COLLEGE_11_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0413, s0422, s0818, s0902, s0904 });
 			var s1101 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_11_001, description: Resources.SUBJECT_DESCRIPTION_11_001, enabled: true, college: c[10], requires: new SubjectMasterData[] { s0808, s0413 });
 			var s1102 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_11_002, description: Resources.SUBJECT_DESCRIPTION_11_002, enabled: true, college: c[10], requires: new SubjectMasterData[] { s1101, s0904 });
 			var s1103 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_11_003, description: Resources.SUBJECT_DESCRIPTION_11_003, enabled: true, college: c[10], requires: new SubjectMasterData[] { s1101, s0904 });
@@ -361,7 +361,7 @@ namespace MC.MockServer
 			var s1117 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_11_017, description: Resources.SUBJECT_DESCRIPTION_11_017, enabled: true, college: c[10], requires: new SubjectMasterData[] { s1116 });
 			var s1118 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_11_018, description: Resources.SUBJECT_DESCRIPTION_11_018, enabled: true, college: c[10], requires: new SubjectMasterData[] { s1116 });
 
-			c[11] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_12_NAME, description: Resources.COLLEGE_12_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0808, s0815 });
+			c[11] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_12_NAME, description: Resources.COLLEGE_12_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0808, s0815 });
 			var s1201 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_12_001, description: Resources.SUBJECT_DESCRIPTION_12_001, enabled: true, college: c[11], requires: new SubjectMasterData[] { s0808 });
 			var s1202 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_12_002, description: Resources.SUBJECT_DESCRIPTION_12_002, enabled: true, college: c[11], requires: new SubjectMasterData[] { s1201 });
 			var s1203 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_12_003, description: Resources.SUBJECT_DESCRIPTION_12_003, enabled: true, college: c[11], requires: new SubjectMasterData[] { s0815, s1201 });
@@ -376,7 +376,7 @@ namespace MC.MockServer
 			var s1212 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_12_012, description: Resources.SUBJECT_DESCRIPTION_12_012, enabled: true, college: c[11], requires: new SubjectMasterData[] { s1210, s1209 });
 			var s1213 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_12_013, description: Resources.SUBJECT_DESCRIPTION_12_013, enabled: true, college: c[11], requires: new SubjectMasterData[] { s1212 });
 
-			c[12] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_13_NAME, description: Resources.COLLEGE_13_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0712, s0714, s0808, s1206 });
+			c[12] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_13_NAME, description: Resources.COLLEGE_13_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0712, s0714, s0808, s1206 });
 			var s1301 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_13_001, description: Resources.SUBJECT_DESCRIPTION_13_001, enabled: true, college: c[12], requires: new SubjectMasterData[] { s0220 });
 			var s1302 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_13_002, description: Resources.SUBJECT_DESCRIPTION_13_002, enabled: true, college: c[12], requires: new SubjectMasterData[] { s0712 });
 			var s1303 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_13_003, description: Resources.SUBJECT_DESCRIPTION_13_003, enabled: true, college: c[12], requires: new SubjectMasterData[] { s0712 });
@@ -394,7 +394,7 @@ namespace MC.MockServer
 			var s1315 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_13_015, description: Resources.SUBJECT_DESCRIPTION_13_015, enabled: true, college: c[12], requires: new SubjectMasterData[] { s0714 });
 			var s1316 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_13_016, description: Resources.SUBJECT_DESCRIPTION_13_016, enabled: true, college: c[12], requires: new SubjectMasterData[] { s1206, s0714 });
 
-			c[13] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_14_NAME, description: Resources.COLLEGE_14_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0818, s0902 });
+			c[13] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_14_NAME, description: Resources.COLLEGE_14_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0818, s0902 });
 			var s1401 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_14_001, description: Resources.SUBJECT_DESCRIPTION_14_001, enabled: true, college: c[13], requires: new SubjectMasterData[] { s0807 });
 			var s1402 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_14_002, description: Resources.SUBJECT_DESCRIPTION_14_002, enabled: true, college: c[13], requires: new SubjectMasterData[] { s0819 });
 			var s1403 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_14_003, description: Resources.SUBJECT_DESCRIPTION_14_003, enabled: true, college: c[13], requires: new SubjectMasterData[] { s1401, s1402 });
@@ -410,7 +410,7 @@ namespace MC.MockServer
 			var s1413 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_14_013, description: Resources.SUBJECT_DESCRIPTION_14_013, enabled: true, college: c[13], requires: new SubjectMasterData[] { s0902, s1408 });
 			var s1414 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_14_014, description: Resources.SUBJECT_DESCRIPTION_14_014, enabled: true, college: c[13], requires: new SubjectMasterData[] { s0818, s1413 });
 
-			c[14] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_15_NAME, description: Resources.COLLEGE_15_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0802, s0901 });
+			c[14] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_15_NAME, description: Resources.COLLEGE_15_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0802, s0901 });
 			var s1501 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_15_001, description: Resources.SUBJECT_DESCRIPTION_15_001, enabled: true, college: c[14], requires: emptySubject);
 			var s1502 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_15_002, description: Resources.SUBJECT_DESCRIPTION_15_002, enabled: true, college: c[14], requires: new SubjectMasterData[] { s0901, s1501 });
 			var s1503 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_15_003, description: Resources.SUBJECT_DESCRIPTION_15_003, enabled: true, college: c[14], requires: new SubjectMasterData[] { s0802, s1501 });
@@ -427,7 +427,7 @@ namespace MC.MockServer
 			var s1514 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_15_014, description: Resources.SUBJECT_DESCRIPTION_15_014, enabled: true, college: c[14], requires: new SubjectMasterData[] { s1508 });
 			var s1515 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_15_015, description: Resources.SUBJECT_DESCRIPTION_15_015, enabled: true, college: c[14], requires: new SubjectMasterData[] { s1513, s1514 });
 
-			c[15] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_16_NAME, description: Resources.COLLEGE_16_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0808, s0813, s0814, s0819, s0905, s0906 });
+			c[15] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_16_NAME, description: Resources.COLLEGE_16_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0808, s0813, s0814, s0819, s0905, s0906 });
 			var s1601 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_16_001, description: Resources.SUBJECT_DESCRIPTION_16_001, enabled: true, college: c[15], requires: new SubjectMasterData[] { s0905 });
 			var s1602 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_16_002, description: Resources.SUBJECT_DESCRIPTION_16_002, enabled: true, college: c[15], requires: new SubjectMasterData[] { s1601 });
 			var s1603 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_16_003, description: Resources.SUBJECT_DESCRIPTION_16_003, enabled: true, college: c[15], requires: new SubjectMasterData[] { s1601 });
@@ -447,7 +447,7 @@ namespace MC.MockServer
 			var s1617 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_16_017, description: Resources.SUBJECT_DESCRIPTION_16_017, enabled: true, college: c[15], requires: new SubjectMasterData[] { s0813, s0906 });
 			var s1618 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_16_018, description: Resources.SUBJECT_DESCRIPTION_16_018, enabled: true, college: c[15], requires: new SubjectMasterData[] { s0901 });
 
-			c[16] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_17_NAME, description: Resources.COLLEGE_17_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0809, s0820, s0822, s0901, s1113 });
+			c[16] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_17_NAME, description: Resources.COLLEGE_17_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0809, s0820, s0822, s0901, s1113 });
 			var s1701 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_17_001, description: Resources.SUBJECT_DESCRIPTION_17_001, enabled: true, college: c[16], requires: new SubjectMasterData[] { s0822 });
 			var s1702 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_17_002, description: Resources.SUBJECT_DESCRIPTION_17_002, enabled: true, college: c[16], requires: new SubjectMasterData[] { s0820, s1701 });
 			var s1703 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_17_003, description: Resources.SUBJECT_DESCRIPTION_17_003, enabled: true, college: c[16], requires: new SubjectMasterData[] { s0809, s1702 });
@@ -473,7 +473,7 @@ namespace MC.MockServer
 			var s1723 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_17_023, description: Resources.SUBJECT_DESCRIPTION_17_023, enabled: true, college: c[16], requires: new SubjectMasterData[] { s1618, s1721 });
 			var s1724 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_17_024, description: Resources.SUBJECT_DESCRIPTION_17_024, enabled: true, college: c[16], requires: new SubjectMasterData[] { s1106, s1723 });
 
-			c[17] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_18_NAME, description: Resources.COLLEGE_18_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0823, s0919, s0920, s0922, s1116, s1405, s1413, s1611 });
+			c[17] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_18_NAME, description: Resources.COLLEGE_18_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0823, s0919, s0920, s0922, s1116, s1405, s1413, s1611 });
 			var s1801 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_18_001, description: Resources.SUBJECT_DESCRIPTION_18_001, enabled: true, college: c[17], requires: new SubjectMasterData[] { s0806 });
 			var s1802 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_18_002, description: Resources.SUBJECT_DESCRIPTION_18_002, enabled: true, college: c[17], requires: new SubjectMasterData[] { s1611 });
 			var s1803 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_18_003, description: Resources.SUBJECT_DESCRIPTION_18_003, enabled: true, college: c[17], requires: new SubjectMasterData[] { s1801, s1802 });
@@ -500,7 +500,7 @@ namespace MC.MockServer
 			var s1824 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_18_024, description: Resources.SUBJECT_DESCRIPTION_18_024, enabled: true, college: c[17], requires: new SubjectMasterData[] { s1823 });
 			var s1825 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_18_025, description: Resources.SUBJECT_DESCRIPTION_18_025, enabled: true, college: c[17], requires: new SubjectMasterData[] { s1814, s1823 });
 
-			c[18] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_19_NAME, description: Resources.COLLEGE_19_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0110, s0808, s0812, s1812, s1814, s1815, s1816, s1819, s1822 });
+			c[18] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_19_NAME, description: Resources.COLLEGE_19_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0110, s0808, s0812, s1812, s1814, s1815, s1816, s1819, s1822 });
 			var s1901 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_19_001, description: Resources.SUBJECT_DESCRIPTION_19_001, enabled: true, college: c[18], requires: new SubjectMasterData[] { s0110 });
 			var s1902 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_19_002, description: Resources.SUBJECT_DESCRIPTION_19_002, enabled: true, college: c[18], requires: new SubjectMasterData[] { s0802, s1901 });
 			var s1903 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_19_003, description: Resources.SUBJECT_DESCRIPTION_19_003, enabled: true, college: c[18], requires: new SubjectMasterData[] { s1901 });
@@ -524,7 +524,7 @@ namespace MC.MockServer
 			var s1921 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_19_021, description: Resources.SUBJECT_DESCRIPTION_19_021, enabled: true, college: c[18], requires: new SubjectMasterData[] { s1913 });
 			var s1922 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_19_022, description: Resources.SUBJECT_DESCRIPTION_19_022, enabled: true, college: c[18], requires: new SubjectMasterData[] { s1905, s1921 });
 
-			c[19] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_20_NAME, description: Resources.COLLEGE_20_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s0705, s0708, s0714, s0716, s0819, s1913 });
+			c[19] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_20_NAME, description: Resources.COLLEGE_20_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s0705, s0708, s0714, s0716, s0819, s1913 });
 			var s2001 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_20_001, description: Resources.SUBJECT_DESCRIPTION_20_001, enabled: true, college: c[19], requires: new SubjectMasterData[] { s0704, s0806 });
 			var s2002 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_20_002, description: Resources.SUBJECT_DESCRIPTION_20_002, enabled: true, college: c[19], requires: new SubjectMasterData[] { s0716, s2001 });
 			var s2003 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_20_003, description: Resources.SUBJECT_DESCRIPTION_20_003, enabled: true, college: c[19], requires: new SubjectMasterData[] { s2001, s0819 });
@@ -558,7 +558,7 @@ namespace MC.MockServer
 			var s2031 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_20_031, description: Resources.SUBJECT_DESCRIPTION_20_031, enabled: true, college: c[19], requires: new SubjectMasterData[] { s2020, s2012 });
 			var s2032 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_20_032, description: Resources.SUBJECT_DESCRIPTION_20_032, enabled: true, college: c[19], requires: new SubjectMasterData[] { s2031 });
 
-			c[20] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_21_NAME, description: Resources.COLLEGE_21_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s1614, s1813, s1911, s1918, s1921 });
+			c[20] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_21_NAME, description: Resources.COLLEGE_21_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s1614, s1813, s1911, s1918, s1921 });
 			var s2101 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_001, description: Resources.SUBJECT_DESCRIPTION_21_001, enabled: true, college: c[20], requires: new SubjectMasterData[] { s1614 });
 			var s2102 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_002, description: Resources.SUBJECT_DESCRIPTION_21_002, enabled: true, college: c[20], requires: new SubjectMasterData[] { s1813, s1810, s2101 });
 			var s2103 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_003, description: Resources.SUBJECT_DESCRIPTION_21_003, enabled: true, college: c[20], requires: new SubjectMasterData[] { s2102 });
@@ -574,7 +574,7 @@ namespace MC.MockServer
 			var s2115 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_015, description: Resources.SUBJECT_DESCRIPTION_21_015, enabled: true, college: c[20], requires: new SubjectMasterData[] { s1914, s1911 });
 			var s2116 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_016, description: Resources.SUBJECT_DESCRIPTION_21_016, enabled: true, college: c[20], requires: new SubjectMasterData[] { s2115 });
 
-			c[21] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_22_NAME, description: Resources.COLLEGE_22_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s1514, s2102, s2105, s2107, s2108 });
+			c[21] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_22_NAME, description: Resources.COLLEGE_22_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s1514, s2102, s2105, s2107, s2108 });
 			var s2201 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_22_001, description: Resources.SUBJECT_DESCRIPTION_22_001, enabled: true, college: c[21], requires: new SubjectMasterData[] { s1102, s1501 });
 			var s2202 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_22_002, description: Resources.SUBJECT_DESCRIPTION_22_002, enabled: true, college: c[21], requires: new SubjectMasterData[] { s1502, s2201 });
 			var s2203 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_22_003, description: Resources.SUBJECT_DESCRIPTION_22_003, enabled: true, college: c[21], requires: new SubjectMasterData[] { s2101 });
@@ -587,7 +587,7 @@ namespace MC.MockServer
 			var s2210 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_22_010, description: Resources.SUBJECT_DESCRIPTION_22_010, enabled: true, college: c[21], requires: new SubjectMasterData[] { s2204, s2104, s1514 });
 			var s2211 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_22_011, description: Resources.SUBJECT_DESCRIPTION_22_011, enabled: true, college: c[21], requires: new SubjectMasterData[] { s2207, s2106, s2105, s2210 });
 
-			c[22] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_23_NAME, description: Resources.COLLEGE_23_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s1704, s1709, s1717 });
+			c[22] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_23_NAME, description: Resources.COLLEGE_23_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s1704, s1709, s1717 });
 			var s2301 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_23_001, description: Resources.SUBJECT_DESCRIPTION_23_001, enabled: true, college: c[22], requires: new SubjectMasterData[] { s1712 });
 			var s2302 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_23_002, description: Resources.SUBJECT_DESCRIPTION_23_002, enabled: true, college: c[22], requires: new SubjectMasterData[] { s2301 });
 			var s2303 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_23_003, description: Resources.SUBJECT_DESCRIPTION_23_003, enabled: true, college: c[22], requires: new SubjectMasterData[] { s1712 });
@@ -605,7 +605,7 @@ namespace MC.MockServer
 			var s2315 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_23_015, description: Resources.SUBJECT_DESCRIPTION_23_015, enabled: true, college: c[22], requires: new SubjectMasterData[] { s1502, s1714 });
 			var s2316 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_23_016, description: Resources.SUBJECT_DESCRIPTION_23_016, enabled: true, college: c[22], requires: new SubjectMasterData[] { s2315, s2304 });
 
-			c[23] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_24_NAME, description: Resources.COLLEGE_24_DESCRIPTION, enabled: true, requires: new SubjectMasterData[] { s1614, s1703, s1704, s1711, s1812, s2102, s2105, s2106, s1911 });
+			c[23] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_24_NAME, description: Resources.COLLEGE_24_DESCRIPTION, enabled: true, full: true, requires: new SubjectMasterData[] { s1614, s1703, s1704, s1711, s1812, s2102, s2105, s2106, s1911 });
 			var s2401 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_24_001, description: Resources.SUBJECT_DESCRIPTION_24_001, enabled: true, college: c[23], requires: new SubjectMasterData[] { s1711, s0807, s1703 });
 			var s2402 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_24_002, description: Resources.SUBJECT_DESCRIPTION_24_002, enabled: true, college: c[23], requires: new SubjectMasterData[] { s1614, s1703 });
 			var s2403 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_24_003, description: Resources.SUBJECT_DESCRIPTION_24_003, enabled: true, college: c[23], requires: new SubjectMasterData[] { s1811, s2102, s2402 });

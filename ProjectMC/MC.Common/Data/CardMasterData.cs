@@ -1,12 +1,10 @@
-﻿using System;
-using MC.Common.Utils;
+﻿using MC.Common.Utils;
 
 namespace MC.Common.Data
 {
 	/// <summary>
 	/// カード マスタの単票データ。
 	/// </summary>
-	[Serializable]
 	struct CardMasterData
 	{
 		/// <summary>

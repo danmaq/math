@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
-using MC.Common.Collection;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -10,31 +8,60 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 学園マスタの単票データ。
 	/// </summary>
-	[Serializable]
 	struct CollegeMasterData
 	{
+
+		/// <summary>学園名。</summary>
+		private string name;
+
+		/// <summary>解説。</summary>
+		private string description;
+
+		/// <summary>有効かどうか。</summary>
+		private bool enabled;
+
+		/// <summary>受講に必要な教科一覧。</summary>
+		private IReadOnlyCollection<SubjectMasterData> requires;
+
+		/// <summary>すべてのデータを読み込む関数。</summary>
+		private Action getFull;
+
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
-		/// <param name="id">教科 ID。</param>
-		/// <param name="name">教科名。</param>
+		/// <param name="id">学園 ID。</param>
+		public CollegeMasterData(int id)
+			: this()
+		{
+			CollegeId = id;
+			getFull = GetFull;
+		}
+
+		/// <summary>
+		/// コンストラクタ。
+		/// </summary>
+		/// <param name="id">学園 ID。</param>
+		/// <param name="name">学園名。</param>
 		/// <param name="description">解説。</param>
 		/// <param name="enabled">有効かどうか。</param>
+		/// <param name="full">すべてのデータが割り当てられているかどうか。</param>
 		/// <param name="requires">受講に必要な教科一覧。</param>
 		public CollegeMasterData(
 			int id,
 			string name,
 			string description,
 			bool enabled,
+			bool full,
 			IReadOnlyCollection<SubjectMasterData> requires)
+			: this()
 		{
 			CollegeId = id;
-			Name = name ?? string.Empty;
-			Description = description ?? string.Empty;
-			Enabled = enabled;
-			Requires =
-				requires ?? new ReadOnlyCollection<SubjectMasterData>(new SubjectMasterData[0]);
-		}
+			this.name = name ?? string.Empty;
+			this.description = description ?? string.Empty;
+			this.enabled = enabled;
+			this.requires = requires ?? new SubjectMasterData[0];
+			getFull = full ? DelegateHelper.EmptyAction : new Action(GetFull);
+        }
 
 		/// <summary>
 		/// IDを取得します。
@@ -50,8 +77,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public string Name
 		{
-			get;
-			private set;
+			get
+			{
+				getFull();
+                return name;
+			}
 		}
 
 		/// <summary>
@@ -59,8 +89,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public string Description
 		{
-			get;
-			private set;
+			get
+			{
+				getFull();
+				return description;
+			}
 		}
 
 		/// <summary>
@@ -68,8 +101,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public bool Enabled
 		{
-			get;
-			private set;
+			get
+			{
+				getFull();
+				return enabled;
+			}
 		}
 
 		/// <summary>
@@ -77,8 +113,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public IReadOnlyCollection<SubjectMasterData> Requires
 		{
-			get;
-			private set;
+			get
+			{
+				getFull();
+				return requires;
+			}
 		}
 
 		/// <summary>
@@ -104,19 +143,14 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(CollegeMasterData)} ID:{CollegeId}, Name:{Name}, Description:{Description}, Enabled:{Enabled}, Requires:{Requires.ToStringCollection(s => s.Name)}");
+			StringHelper.Format($@"{nameof(CollegeMasterData)} ID:{CollegeId}, Name:{name})");
 
 		/// <summary>
 		/// ハッシュコードを取得します。
 		/// </summary>
 		/// <returns>ハッシュコード。</returns>
 		public override int GetHashCode() =>
-			CollegeId.GetHashCode() ^
-			(Name ?? string.Empty).GetHashCode() ^
-			(Description ?? string.Empty).GetHashCode() ^
-			Enabled.GetHashCode() ^
-			Requires.GetHashCode();
+			CollegeId.GetHashCode();
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
@@ -132,10 +166,20 @@ namespace MC.Common.Data
 		/// <param name="others"></param>
 		/// <returns>値が等しい場合、true。</returns>
 		public bool Equals(CollegeMasterData others) =>
-			CollegeId == others.CollegeId &&
-			Name == others.Name &&
-			Description == others.Description &&
-			Enabled == others.Enabled &&
-			Requires.SequenceEqual(others.Requires);
+			CollegeId == others.CollegeId;
+
+		/// <summary>
+		/// すべてのデータを取得します。
+		/// </summary>
+		private void GetFull()
+		{
+			var self = this;
+			var master = MasterCache.Instance.CollegeMaster.First(c => self == c);
+			name = master.Name;
+			description = master.Description;
+			enabled = master.Enabled;
+			requires = master.Requires;
+			getFull = DelegateHelper.EmptyAction;
+		}
 	}
 }

@@ -9,7 +9,6 @@ namespace MC.Common.Data
 	/// <summary>
 	/// ユーザ アカウント情報。
 	/// </summary>
-	[Serializable]
 	struct UserData
 	{
 

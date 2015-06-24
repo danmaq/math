@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using MC.Common.Collection;
@@ -10,7 +9,6 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 教科マスタの単票データ。
 	/// </summary>
-	[Serializable]
 	struct SubjectMasterData
 	{
 		/// <summary>

@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\Constants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\EventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\IIOWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\MasterCache.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\SubjectMasterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\UserData.cs" />

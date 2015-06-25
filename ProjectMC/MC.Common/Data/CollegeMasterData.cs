@@ -121,6 +121,14 @@ namespace MC.Common.Data
 		}
 
 		/// <summary>
+		/// ID からマスタを仮作成します。
+		/// </summary>
+		/// <param name="id">ID。</param>
+		/// <returns>仮作成されたマスタ。</returns>
+		public static implicit operator CollegeMasterData(int id) =>
+			new CollegeMasterData(id);
+
+		/// <summary>
 		/// 値同士が等しいかどうかを判定します。
 		/// </summary>
 		/// <param name="valueA">値。</param>

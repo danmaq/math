@@ -24,7 +24,7 @@ namespace MC.Common.Data
 		private IReadOnlyCollection<SubjectMasterData> requires;
 
 		/// <summary>すべてのデータを読み込む関数。</summary>
-		private Action getFull;
+		private Action readFull;
 
 		/// <summary>
 		/// コンストラクタ。
@@ -34,7 +34,7 @@ namespace MC.Common.Data
 			: this()
 		{
 			CollegeId = id;
-			getFull = GetFull;
+			readFull = ReadFull;
 		}
 
 		/// <summary>
@@ -60,8 +60,8 @@ namespace MC.Common.Data
 			this.description = description ?? string.Empty;
 			this.enabled = enabled;
 			this.requires = requires ?? new SubjectMasterData[0];
-			getFull = full ? DelegateHelper.EmptyAction : new Action(GetFull);
-        }
+			readFull = full ? DelegateHelper.EmptyAction : new Action(ReadFull);
+		}
 
 		/// <summary>
 		/// IDを取得します。
@@ -79,8 +79,8 @@ namespace MC.Common.Data
 		{
 			get
 			{
-				getFull();
-                return name;
+				readFull();
+				return name;
 			}
 		}
 
@@ -91,7 +91,7 @@ namespace MC.Common.Data
 		{
 			get
 			{
-				getFull();
+				readFull();
 				return description;
 			}
 		}
@@ -103,7 +103,7 @@ namespace MC.Common.Data
 		{
 			get
 			{
-				getFull();
+				readFull();
 				return enabled;
 			}
 		}
@@ -115,7 +115,7 @@ namespace MC.Common.Data
 		{
 			get
 			{
-				getFull();
+				readFull();
 				return requires;
 			}
 		}
@@ -171,15 +171,22 @@ namespace MC.Common.Data
 		/// <summary>
 		/// すべてのデータを取得します。
 		/// </summary>
-		private void GetFull()
+		private void ReadFull()
 		{
 			var self = this;
-			var master = MasterCache.Instance.CollegeMaster.First(c => self == c);
-			name = master.Name;
-			description = master.Description;
-			enabled = master.Enabled;
-			requires = master.Requires;
-			getFull = DelegateHelper.EmptyAction;
+			try
+			{
+				var master = MasterCache.Instance.CollegeMaster.First(c => self == c);
+				name = master.Name;
+				description = master.Description;
+				enabled = master.Enabled;
+				requires = master.Requires;
+				readFull = DelegateHelper.EmptyAction;
+			}
+			catch
+			{
+				throw new InvalidOperationException();
+			}
 		}
 	}
 }

@@ -38,6 +38,5 @@ namespace MC.Common.Data
 			get;
 			private set;
 		}
-
 	}
 }

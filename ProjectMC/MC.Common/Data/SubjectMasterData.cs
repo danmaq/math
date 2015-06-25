@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using MC.Common.Collection;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -11,6 +10,36 @@ namespace MC.Common.Data
 	/// </summary>
 	struct SubjectMasterData
 	{
+
+		/// <summary>学園名。</summary>
+		private string name;
+
+		/// <summary>解説。</summary>
+		private string description;
+
+		/// <summary>有効かどうか。</summary>
+		private bool enabled;
+
+		/// <summary>所属学園。</summary>
+		private CollegeMasterData college;
+
+		/// <summary>受講に必要な教科一覧。</summary>
+		private IReadOnlyCollection<SubjectMasterData> requires;
+
+		/// <summary>すべてのデータを読み込む関数。</summary>
+		private Action readFull;
+
+		/// <summary>
+		/// コンストラクタ。
+		/// </summary>
+		/// <param name="id">教科 ID。</param>
+		public SubjectMasterData(int id)
+			: this()
+		{
+			SubjectId = id;
+			readFull = ReadFull;
+		}
+
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
@@ -18,23 +47,26 @@ namespace MC.Common.Data
 		/// <param name="name">教科名。</param>
 		/// <param name="description">解説。</param>
 		/// <param name="enabled">有効かどうか。</param>
-		/// <param name="college">所属大学。</param>
+		/// <param name="full">すべてのデータが割り当てられているかどうか。</param>
+		/// <param name="college">所属学園。</param>
 		/// <param name="requires">受講に必要な教科一覧。</param>
 		public SubjectMasterData(
 			int id,
 			string name,
 			string description,
 			bool enabled,
+			bool full,
 			CollegeMasterData college,
 			IReadOnlyCollection<SubjectMasterData> requires)
+			: this()
 		{
 			SubjectId = id;
-			Name = name ?? string.Empty;
-			Description = description ?? string.Empty;
-			Enabled = enabled;
-			College = college;
-			Requires =
-				requires ?? new ReadOnlyCollection<SubjectMasterData>(new SubjectMasterData[0]);
+			this.name = name ?? string.Empty;
+			this.description = description ?? string.Empty;
+			this.enabled = enabled;
+			this.college = college;
+			this.requires = requires ?? new SubjectMasterData[0];
+			readFull = full ? DelegateHelper.EmptyAction : new Action(ReadFull);
 		}
 
 		/// <summary>
@@ -51,8 +83,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public string Name
 		{
-			get;
-			private set;
+			get
+			{
+				readFull();
+				return name;
+			}
 		}
 
 		/// <summary>
@@ -60,8 +95,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public string Description
 		{
-			get;
-			private set;
+			get
+			{
+				readFull();
+				return description;
+			}
 		}
 
 		/// <summary>
@@ -69,8 +107,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public bool Enabled
 		{
-			get;
-			private set;
+			get
+			{
+				readFull();
+				return enabled;
+			}
 		}
 
 		/// <summary>
@@ -78,8 +119,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public CollegeMasterData College
 		{
-			get;
-			private set;
+			get
+			{
+				readFull();
+				return college;
+			}
 		}
 
 		/// <summary>
@@ -87,8 +131,11 @@ namespace MC.Common.Data
 		/// </summary>
 		public IReadOnlyCollection<SubjectMasterData> Requires
 		{
-			get;
-			private set;
+			get
+			{
+				readFull();
+				return requires;
+			}
 		}
 
 		/// <summary>
@@ -114,20 +161,14 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(SubjectMasterData)} ID:{SubjectId}, Name:{Name}, Description:{Description}, Enabled:{Enabled}, College:{College.Name}, Requires:{Requires.ToStringCollection(s => s.Name)}");
+			StringHelper.Format($@"{nameof(SubjectMasterData)} ID:{SubjectId}, Name:{name}");
 
 		/// <summary>
 		/// ハッシュコードを取得します。
 		/// </summary>
 		/// <returns>ハッシュコード。</returns>
 		public override int GetHashCode() =>
-			SubjectId.GetHashCode() ^
-			(Name ?? string.Empty).GetHashCode() ^
-			(Description ?? string.Empty).GetHashCode() ^
-			Enabled.GetHashCode() ^
-			College.GetHashCode() ^
-			Requires.GetHashCode();
+			SubjectId.GetHashCode();
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
@@ -143,11 +184,28 @@ namespace MC.Common.Data
 		/// <param name="others"></param>
 		/// <returns>値が等しい場合、true。</returns>
 		public bool Equals(SubjectMasterData others) =>
-			SubjectId == others.SubjectId &&
-			Name == others.Name &&
-			Description == others.Description &&
-			Enabled == others.Enabled &&
-			College == others.College &&
-			Requires.SequenceEqual(others.Requires);
+			SubjectId == others.SubjectId;
+
+		/// <summary>
+		/// すべてのデータを取得します。
+		/// </summary>
+		private void ReadFull()
+		{
+			var self = this;
+			try
+			{
+				var master = MasterCache.Instance.SubjectMaster.First(s => self == s);
+				name = master.Name;
+				description = master.Description;
+				enabled = master.Enabled;
+				college = master.college;
+				requires = master.Requires;
+				readFull = DelegateHelper.EmptyAction;
+			}
+			catch
+			{
+				throw new InvalidOperationException();
+			}
+		}
 	}
 }

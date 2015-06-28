@@ -126,6 +126,9 @@
   <data name="MESSAGE_INPUT" xml:space="preserve">
     <value>入力してください。</value>
   </data>
+  <data name="MESSAGE_LOADING" xml:space="preserve">
+    <value>通信中...</value>
+  </data>
   <data name="MESSAGE_SELECT" xml:space="preserve">
     <value>選択したい数字のキーを押してください。</value>
   </data>

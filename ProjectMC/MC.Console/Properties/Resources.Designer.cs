@@ -88,6 +88,15 @@ namespace MC.Properties {
         }
         
         /// <summary>
+        ///   通信中... に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_LOADING {
+            get {
+                return ResourceManager.GetString("MESSAGE_LOADING", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   選択したい数字のキーを押してください。 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MESSAGE_SELECT {

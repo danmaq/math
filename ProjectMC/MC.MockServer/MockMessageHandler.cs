@@ -1,9 +1,14 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using MC.Common.Utils;
 
 namespace MC.MockServer
 {
@@ -12,6 +17,13 @@ namespace MC.MockServer
 	/// </summary>
 	sealed class MockMessageHandler : HttpMessageHandler
 	{
+		/// <summary>API 一覧。</summary>
+		private readonly Dictionary<string, Func<string, string, object>> Apis =
+			new Dictionary<string, Func<string, string, object>>()
+			{
+				["/v1/master"] = (_, __) => MasterStore.Instance.Export(),
+			};
+
 		/// <summary>
 		/// 非同期操作として HTTP 要求を送信します。
 		/// </summary>
@@ -28,9 +40,15 @@ namespace MC.MockServer
 			}
 			Sleep();
 			var source = new TaskCompletionSource<HttpResponseMessage>();
-			var response = new HttpResponseMessage(HttpStatusCode.OK);
-			response.Content = new StringContent(@"Hello, world!");
-			response.ReasonPhrase = @"Mock Server.";
+			var result =
+				CallApi(
+					path: request.RequestUri.AbsolutePath,
+					method: request.Method.Method,
+					content: request.Content?.ReadAsStringAsync().Result);
+			var status = result.Item1 ? HttpStatusCode.OK : HttpStatusCode.BadRequest;
+            var response = new HttpResponseMessage(status);
+			response.Content = new StringContent(result.Item2);
+			response.ReasonPhrase = @"Mock Server V1.";
 			response.RequestMessage = request;
 			source.TrySetResult(response);
 			return source.Task;
@@ -42,6 +60,20 @@ namespace MC.MockServer
 		private void Sleep()
 		{
 			Thread.Sleep(500);
+		}
+
+		/// <summary>
+		/// API を呼び出します。
+		/// </summary>
+		/// <param name="path"></param>
+		/// <param name="method"></param>
+		/// <param name="content"></param>
+		/// <returns></returns>
+		private Tuple<bool, string> CallApi(string path, string method, string content)
+		{
+			Func<string, string, object> api;
+			var result = Apis.TryGetValue(path, out api);
+			return Tuple.Create(result, result ? StringHelper.ToJson(api(method, content)) : null);
 		}
 	}
 }

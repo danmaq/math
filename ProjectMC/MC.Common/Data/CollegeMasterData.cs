@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using MC.Common.Data.Serializable;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -147,6 +148,46 @@ namespace MC.Common.Data
 			!valueA.Equals(valueB);
 
 		/// <summary>
+		/// 値をインポートして、マスタを構成します。
+		/// </summary>
+		/// <param name="value">値。</param>
+		/// <returns>マスタ情報。</returns>
+		public static CollegeMasterData Import(College value)
+		{
+			var requires = value.RequireSubjects.Select(s => new SubjectMasterData(s)).ToArray();
+            return
+				new CollegeMasterData(
+					id: value.CollegeId,
+					name: value.Name,
+					description: value.Description,
+					enabled: value.Enabled,
+					full: true,
+					requires: requires);
+		}
+
+		/// <summary>
+		/// 値をエクスポートします。
+		/// </summary>
+		/// <returns>エクスポートされた値。</returns>
+		/// <exception cref="InvalidOperationException">完全読み込みされていないマスタをエクスポートすると、例外が発生します。</exception>
+		public College Export()
+		{
+			if (readFull != DelegateHelper.EmptyAction)
+			{
+				throw new InvalidOperationException();
+			}
+			return
+				new College()
+				{
+					CollegeId = CollegeId,
+					Name = name,
+					Description = description,
+					Enabled = enabled,
+					RequireSubjects = requires.Select(s => s.SubjectId).ToArray(),
+				};
+		}
+
+		/// <summary>
 		/// 値の文字列表現を取得します。
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
@@ -184,7 +225,7 @@ namespace MC.Common.Data
 			var self = this;
 			try
 			{
-				var master = MasterCache.Instance.CollegeMaster.First(c => self == c);
+				var master = MasterCache.CollegeMaster.First(c => self == c);
 				name = master.Name;
 				description = master.Description;
 				enabled = master.Enabled;

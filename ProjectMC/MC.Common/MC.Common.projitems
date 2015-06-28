@@ -20,6 +20,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\IIOWrapper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\MasterCache.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\QuestionData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\AllMaster.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\College.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\Subject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\SubjectMasterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\UserData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Context.cs" />

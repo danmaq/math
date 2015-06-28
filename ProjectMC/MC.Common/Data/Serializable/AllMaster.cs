@@ -1,46 +1,34 @@
-﻿using MC.Common.Utils;
+﻿using System.Linq;
+using System.Runtime.Serialization;
+using MC.Common.Collection;
+using MC.Common.Utils;
 
-namespace MC.Common.Data
+namespace MC.Common.Data.Serializable
 {
 	/// <summary>
-	/// カード マスタの単票データ。
+	/// すべてのマスタ。
 	/// </summary>
-	struct CardMasterData
-	{
+	[DataContract]
+	public struct AllMaster
+    {
 		/// <summary>
-		/// コンストラクタ。
+		/// 学園一覧を取得および設定します。
 		/// </summary>
-		/// <param name="name">キャラクタ名。</param>
-		/// <param name="comment">一言。</param>
-		/// <param name="college">所属大学。</param>
-		public CardMasterData(string name, string comment, CollegeMasterData college)
-		{
-			Name = name ?? string.Empty;
-			Comment = comment ?? string.Empty;
-			College = college;
-		}
-
-		/// <summary>ニックネームを取得または設定します。</summary>
-		public string Name
+		[DataMember]
+		public College[] College
 		{
 			get;
-			private set;
-		}
-
-		/// <summary>一言を取得または設定します。</summary>
-		public string Comment
-		{
-			get;
-			private set;
+			set;
 		}
 
 		/// <summary>
-		/// 所属学園を取得します。
+		/// 教科一覧を取得および設定します。
 		/// </summary>
-		public CollegeMasterData College
+		[DataMember]
+		public Subject[] Subject
 		{
 			get;
-			private set;
+			set;
 		}
 
 		/// <summary>
@@ -49,7 +37,7 @@ namespace MC.Common.Data
 		/// <param name="valueA">値。</param>
 		/// <param name="valueB">値。</param>
 		/// <returns>値同士が等しい場合、true。</returns>
-		public static bool operator ==(CardMasterData valueA, CardMasterData valueB) =>
+		public static bool operator ==(AllMaster valueA, AllMaster valueB) =>
 			valueA.Equals(valueB);
 
 		/// <summary>
@@ -58,7 +46,7 @@ namespace MC.Common.Data
 		/// <param name="valueA">値。</param>
 		/// <param name="valueB">値。</param>
 		/// <returns>値同士が等しくない場合、true。</returns>
-		public static bool operator !=(CardMasterData valueA, CardMasterData valueB) =>
+		public static bool operator !=(AllMaster valueA, AllMaster valueB) =>
 			!valueA.Equals(valueB);
 
 		/// <summary>
@@ -67,16 +55,15 @@ namespace MC.Common.Data
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
 			StringHelper.Format(
-				$@"{nameof(CardMasterData)} Name:{Name}, Comment:{Comment}, College:{College.Name}");
+				$@"{nameof(AllMaster)} College:[{College.ToStringCollection()}] Subject:[{Subject.ToStringCollection()}])");
 
 		/// <summary>
 		/// ハッシュコードを取得します。
 		/// </summary>
 		/// <returns>ハッシュコード。</returns>
 		public override int GetHashCode() =>
-			(Name ?? string.Empty).GetHashCode() ^
-			(Comment ?? string.Empty).GetHashCode() ^
-			College.GetHashCode();
+			College.Aggregate(seed: 0, func: (a, s) => a ^ s.GetHashCode()) ^
+			Subject.Aggregate(seed: 0, func: (a, s) => a ^ s.GetHashCode());
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
@@ -84,14 +71,15 @@ namespace MC.Common.Data
 		/// <param name="obj">検証対象の値。</param>
 		/// <returns>値が等しい場合、true。</returns>
 		public override bool Equals(object obj) =>
-			obj is CardMasterData ? Equals((CardMasterData)(obj)) : false;
+			obj is AllMaster ? Equals((AllMaster)(obj)) : false;
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
 		/// <param name="others"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(CardMasterData others) =>
-			Name == others.Name && Comment == others.Comment && College == others.College;
+		public bool Equals(AllMaster others) =>
+			College.SequenceEqual(others.College) &&
+			Subject.SequenceEqual(others.Subject);
 	}
 }

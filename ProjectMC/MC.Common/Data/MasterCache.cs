@@ -1,30 +1,26 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
+using MC.Core.Server;
 
 namespace MC.Common.Data
 {
 	sealed class MasterCache
 	{
-
 		/// <summary>
-		/// コンストラクタ。
+		/// すべてのマスタを読み込みます。
 		/// </summary>
-		private MasterCache()
+		public static async void DownloadAllMaster()
 		{
+			var all = await Api.LoadAllMaster();
+			CollegeMaster = all.College.Select(c => CollegeMasterData.Import(c)).ToArray();
+			SubjectMaster = all.Subject.Select(s => SubjectMasterData.Import(s)).ToArray();
+			Ready = true;
 		}
-
-		/// <summary>
-		/// シングルトン オブジェクト。
-		/// </summary>
-		public static MasterCache Instance
-		{
-			get;
-		}
-		= new MasterCache();
 
 		/// <summary>
 		/// 学園マスタを取得します。
 		/// </summary>
-		public IReadOnlyCollection<CollegeMasterData> CollegeMaster
+		public static IReadOnlyCollection<CollegeMasterData> CollegeMaster
 		{
 			get;
 			private set;
@@ -33,7 +29,16 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 講義マスタを取得します。
 		/// </summary>
-		public IReadOnlyCollection<SubjectMasterData> SubjectMaster
+		public static IReadOnlyCollection<SubjectMasterData> SubjectMaster
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
+		/// 準備が完了したかどうかを取得します。
+		/// </summary>
+		public static bool Ready
 		{
 			get;
 			private set;

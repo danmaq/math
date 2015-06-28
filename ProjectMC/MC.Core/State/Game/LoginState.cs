@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
+using MC.Common.Data;
 using MC.Common.State;
+using MC.Core.Server;
 
 namespace MC.Core.State.Game
 {
@@ -26,7 +28,8 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Begin(IContext context)
 		{
-			context.NextState = TitleState.Instance;
+			Api.Initialize();
+			MasterCache.DownloadAllMaster();
 		}
 
 		/// <summary>
@@ -36,6 +39,10 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Execute(IContext context)
 		{
+			if (MasterCache.Ready)
+			{
+				context.NextState = TitleState.Instance;
+			}
 		}
 
 		/// <summary>

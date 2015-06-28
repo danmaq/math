@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using MC.Common.Data;
+using MC.Common.Data.Serializable;
 using MC.MockServer.Res.Properties;
 
 namespace MC.MockServer
@@ -45,6 +46,17 @@ namespace MC.MockServer
 			get;
 			private set;
 		}
+
+		/// <summary>
+		/// マスタ全件をエクスポートします。
+		/// </summary>
+		/// <returns>マスタ全件。</returns>
+		public AllMaster Export() =>
+			new AllMaster()
+			{
+				College = CollegeMaster.Select(c => c.Export()).ToArray(),
+				Subject = SubjectMaster.Select(s => s.Export()).ToArray(),
+			};
 
 		/// <summary>
 		/// ユーザ情報から選択可能な学園を抽出するシーケンスを取得します。
@@ -636,7 +648,7 @@ namespace MC.MockServer
 			var s2117 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_21_017, description: Resources.SUBJECT_DESCRIPTION_21_017, enabled: true, full: true, college: c[20], requires: new SubjectMasterData[] { s2116, s2114 });
 			var s2419 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_24_019, description: Resources.SUBJECT_DESCRIPTION_24_019, enabled: true, full: true, college: c[23], requires: new SubjectMasterData[] { s2318, s2418 });
 
-			CollegeMaster = c;
+			CollegeMaster = c.OrderBy(x => x.CollegeId).ToArray();
 			SubjectMaster =
 				new SubjectMasterData[]
 				{
@@ -703,7 +715,8 @@ namespace MC.MockServer
 					s2401, s2402, s2403, s2404, s2405, s2406, s2407, s2408, s2409, s2410,
 					s2411, s2412, s2413, s2414, s2415, s2416, s2417, s2418, s2419, s2420,
 					s2421,
-				};
+				}
+					.OrderBy(s => s.SubjectId).ToArray();
 		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using MC.Common.Collection;
+using MC.Common.Data;
 using MC.Core.Data;
 using MC.Core.Flow;
 using MC.Properties;
@@ -23,6 +24,7 @@ namespace MC
 		/// </summary>
 		private static void Main()
 		{
+			Console.WriteLine(Resources.MESSAGE_LOADING);
 			using (var flow = new GameFlow())
 			{
 				flow.RequireResponse += OnPrompt;

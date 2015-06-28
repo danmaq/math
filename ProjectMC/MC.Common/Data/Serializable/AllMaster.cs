@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Runtime.Serialization;
 using MC.Common.Collection;
 using MC.Common.Utils;
@@ -10,11 +11,12 @@ namespace MC.Common.Data.Serializable
 	/// </summary>
 	[DataContract]
 	public struct AllMaster
-    {
+	{
 		/// <summary>
 		/// 学園一覧を取得および設定します。
 		/// </summary>
 		[DataMember]
+		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
 		public College[] College
 		{
 			get;
@@ -25,6 +27,7 @@ namespace MC.Common.Data.Serializable
 		/// 教科一覧を取得および設定します。
 		/// </summary>
 		[DataMember]
+		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
 		public Subject[] Subject
 		{
 			get;

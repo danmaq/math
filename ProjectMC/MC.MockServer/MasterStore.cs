@@ -59,43 +59,9 @@ namespace MC.MockServer
 			};
 
 		/// <summary>
-		/// ユーザ情報から選択可能な学園を抽出するシーケンスを取得します。
-		/// </summary>
-		/// <param name="user">ユーザ情報。</param>
-		/// <returns>学園一覧を抽出するシーケンス。</returns>
-		public IEnumerable<CollegeMasterData> AvailableCollege(UserData user) =>
-			(
-				from master in CollegeMaster
-				from cleard in user.Cleard
-				where
-					master.Requires.Count == 0 ||
-					(cleard.Item2 > 0 && master.Requires.Any(s => s == cleard.Item1))
-				select master)
-					.Concat(user.Admission)
-					.OrderBy(c => c.CollegeId)
-					.Distinct();
-
-		/// <summary>
-		/// ユーザ情報、学園情報から選択可能な講義をを抽出するシーケンスを取得します。
-		/// </summary>
-		/// <param name="user">ユーザ情報。</param>
-		/// <param name="college">学園情報。</param>
-		/// <returns>講義一覧を抽出するシーケンス。</returns>
-		public IEnumerable<SubjectMasterData> AvailableSubjects(
-			UserData user, CollegeMasterData college) =>
-			(
-				from master in SubjectMaster
-				from cleard in user.Cleard
-				where
-					master.Requires.Count == 0 ||
-					(cleard.Item2 > 0 && master.Requires.Any(s => s == cleard.Item1))
-				select master)
-					.OrderBy(s => s.SubjectId)
-					.Distinct();
-
-		/// <summary>
 		/// データを構築します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Maintainability", "CA1505:AvoidUnmaintainableCode")]
 		[SuppressMessage("Microsoft.Performance", "CA1809:AvoidExcessiveLocals")]
 		private void Setup()
 		{

@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Runtime.Serialization;
 using MC.Common.Collection;
 using MC.Common.Utils;
@@ -66,6 +67,7 @@ namespace MC.Common.Data.Serializable
 		/// 必要教科 ID を取得および設定します。
 		/// </summary>
 		[DataMember]
+		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
 		public int[] RequireSubjects
 		{
 			get;

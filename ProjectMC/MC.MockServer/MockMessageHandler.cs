@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using MC.Common.Utils;
@@ -23,6 +20,14 @@ namespace MC.MockServer
 			{
 				["/v1/master"] = (_, __) => MasterStore.Instance.Export(),
 			};
+
+		/// <summary>
+		/// 通信遅延を再現するため、休眠します。
+		/// </summary>
+		private static void Sleep()
+		{
+			Thread.Sleep(500);
+		}
 
 		/// <summary>
 		/// 非同期操作として HTTP 要求を送信します。
@@ -52,14 +57,6 @@ namespace MC.MockServer
 			response.RequestMessage = request;
 			source.TrySetResult(response);
 			return source.Task;
-		}
-
-		/// <summary>
-		/// 通信遅延を再現するため、休眠します。
-		/// </summary>
-		private void Sleep()
-		{
-			Thread.Sleep(500);
 		}
 
 		/// <summary>

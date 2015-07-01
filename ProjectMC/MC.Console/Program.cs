@@ -1,6 +1,5 @@
 ﻿using System;
 using MC.Common.Collection;
-using MC.Common.Data;
 using MC.Core.Data;
 using MC.Core.Flow;
 using MC.Properties;
@@ -12,7 +11,9 @@ namespace MC
 	/// </summary>
 	static class Program
 	{
-
+		/// <summary>
+		/// プロンプト管理クラスを取得します。
+		/// </summary>
 		static PromptManager PromptManager
 		{
 			get;
@@ -24,6 +25,8 @@ namespace MC
 		/// </summary>
 		private static void Main()
 		{
+			Console.WriteLine(Settings.Default.Storage);
+
 			Console.WriteLine(Resources.MESSAGE_LOADING);
 			using (var flow = new GameFlow())
 			{

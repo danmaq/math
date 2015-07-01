@@ -39,10 +39,7 @@ namespace MC.Common.Utils
 			{
 				serializer.WriteObject(stream: stream, graph: obj);
 				stream.Position = 0;
-				using (var reader = new StreamReader(stream))
-				{
-					body = reader.ReadToEnd();
-				}
+				body = new StreamReader(stream).ReadToEnd();
 			}
 			return body;
 		}

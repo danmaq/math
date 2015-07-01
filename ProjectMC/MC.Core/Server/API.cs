@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Net.Http;
-using System.Linq;
 using System.Threading.Tasks;
 using MC.Common.Data;
 using MC.Common.Utils;
 using MC.MockServer;
-using System.Runtime.Serialization.Json;
 using MC.Common.Data.Serializable;
-using System.IO;
 
 namespace MC.Core.Server
 {
@@ -30,7 +27,13 @@ namespace MC.Core.Server
 		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
 		public static bool Initialize()
 		{
-			return Initialize(new MockMessageHandler());
+			HttpMessageHandler handler =
+#if MOCK_SERVER
+				new MockMessageHandler();
+#else
+				null;
+#endif
+			return Initialize(handler);
 		}
 
 		/// <summary>

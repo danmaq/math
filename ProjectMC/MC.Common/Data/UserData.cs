@@ -27,21 +27,21 @@ namespace MC.Common.Data
 		public long UserId
 		{
 			get;
-			set;
+			private set;
 		}
 
 		/// <summary>ニックネームを取得または設定します。</summary>
 		public string Name
 		{
 			get;
-			set;
+			private set;
 		}
 
 		/// <summary>一言を取得または設定します。</summary>
 		public string Comment
 		{
 			get;
-			set;
+			private set;
 		}
 
 		/// <summary>

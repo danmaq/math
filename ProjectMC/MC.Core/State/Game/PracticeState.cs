@@ -42,7 +42,7 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Begin(IContext context)
 		{
-			var flow = GameFlow.GetService(context);
+			//var flow = GameFlow.GetService(context);
 		}
 
 		/// <summary>

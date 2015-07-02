@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using MC.Common.Utils;
+using MC.MockServer.Res.Properties;
 
 namespace MC.MockServer
 {
@@ -14,8 +15,12 @@ namespace MC.MockServer
 	/// </summary>
 	sealed class MockMessageHandler : HttpMessageHandler
 	{
+
+		/// <summary>並列動作を制限するためのセマフォ。</summary>
+		private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(initialCount: 1);
+
 		/// <summary>API 一覧。</summary>
-		private readonly Dictionary<string, Func<string, string, object>> Apis =
+		private static readonly Dictionary<string, Func<string, string, object>> Apis =
 			new Dictionary<string, Func<string, string, object>>()
 			{
 				["/v1/master"] = (_, __) => MasterStore.Instance.Export(),
@@ -37,26 +42,44 @@ namespace MC.MockServer
 		/// <returns>非同期操作を表すタスク オブジェクト。</returns>
 		/// <exception cref="ArgumentNullException"><paramref name="request"/> が null である場合。</exception>
 		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
-		protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+		protected override async Task<HttpResponseMessage> SendAsync(
+			HttpRequestMessage request, CancellationToken cancellationToken)
 		{
 			if (request == null)
 			{
 				throw new ArgumentNullException(nameof(request));
 			}
-			Sleep();
-			var source = new TaskCompletionSource<HttpResponseMessage>();
+			await semaphore.WaitAsync();
+            try
+			{
+				await Task.Factory.StartNew(Sleep);
+				return InnerProcess(request);
+			}
+			finally
+			{
+				semaphore.Release();
+			}
+		}
+
+		/// <summary>
+		/// API を呼び出し、レスポンスを作成します。
+		/// </summary>
+		/// <param name="request">リクエスト。</param>
+		/// <returns>レスポンス。</returns>
+		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
+		private static HttpResponseMessage InnerProcess(HttpRequestMessage request)
+		{
 			var result =
 				CallApi(
 					path: request.RequestUri.AbsolutePath,
 					method: request.Method.Method,
 					content: request.Content?.ReadAsStringAsync().Result);
 			var status = result.Item1 ? HttpStatusCode.OK : HttpStatusCode.BadRequest;
-            var response = new HttpResponseMessage(status);
+			var response = new HttpResponseMessage(status);
 			response.Content = new StringContent(result.Item2);
-			response.ReasonPhrase = @"Mock Server V1.";
+			response.ReasonPhrase = Resources.SERVER_NAME;
 			response.RequestMessage = request;
-			source.TrySetResult(response);
-			return source.Task;
+			return response;
 		}
 
 		/// <summary>
@@ -66,7 +89,7 @@ namespace MC.MockServer
 		/// <param name="method"></param>
 		/// <param name="content"></param>
 		/// <returns></returns>
-		private Tuple<bool, string> CallApi(string path, string method, string content)
+		private static Tuple<bool, string> CallApi(string path, string method, string content)
 		{
 			Func<string, string, object> api;
 			var result = Apis.TryGetValue(path, out api);

@@ -25,8 +25,6 @@ namespace MC
 		/// </summary>
 		private static void Main()
 		{
-			Console.WriteLine(Settings.Default.Storage);
-
 			Console.WriteLine(Resources.MESSAGE_LOADING);
 			using (var flow = new GameFlow())
 			{

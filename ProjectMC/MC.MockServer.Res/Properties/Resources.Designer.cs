@@ -961,6 +961,15 @@ namespace MC.MockServer.Res.Properties {
         }
         
         /// <summary>
+        ///   Mock-Server V1 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SERVER_NAME {
+            get {
+                return ResourceManager.GetString("SERVER_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   10までの数 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SUBJECT_DESCRIPTION_01_001 {

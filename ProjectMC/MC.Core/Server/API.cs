@@ -66,7 +66,7 @@ namespace MC.Core.Server
 		/// <param name="id">ユーザID。</param>
 		/// <returns>ユーザ情報。</returns>
 		/// <exception cref="InvalidOperationException">初期化されていない場合。</exception>
-		public static async Task<UserData> GetUser(int id)
+		public static async Task<UserData> GetUserAsync(int id)
 		{
 			CheckInitialized();
 			throw new NotImplementedException();
@@ -76,7 +76,7 @@ namespace MC.Core.Server
 		/// すべてのマスタ データを読み込みます。
 		/// </summary>
 		/// <returns>読み込み完了通知。必ず true を返します。</returns>
-		public static async Task<AllMaster> LoadAllMaster()
+		public static async Task<AllMaster> LoadAllMasterAsync()
 		{
 			CheckInitialized();
 			var response =
@@ -84,6 +84,7 @@ namespace MC.Core.Server
 					client.Request(
 						method: HttpMethod.Get, uri: entryPoint + @"master", content: null);
 			var body = await response.Content.ReadAsStringAsync();
+			response.Dispose();
 			return StringHelper.FromJson<AllMaster>(body);
 		}
 

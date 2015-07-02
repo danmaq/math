@@ -11,7 +11,7 @@ namespace MC.Common.Data
 		/// </summary>
 		public static async void DownloadAllMaster()
 		{
-			var all = await Api.LoadAllMaster();
+			var all = await Api.LoadAllMasterAsync();
 			CollegeMaster = all.College.Select(c => CollegeMasterData.Import(c)).ToArray();
 			SubjectMaster = all.Subject.Select(s => SubjectMasterData.Import(s)).ToArray();
 			Ready = true;

@@ -417,6 +417,9 @@
   <data name="QUESTION1_2" xml:space="preserve">
     <value>いくつありますか？</value>
   </data>
+  <data name="SERVER_NAME" xml:space="preserve">
+    <value>Mock-Server V1</value>
+  </data>
   <data name="SUBJECT_DESCRIPTION_01_001" xml:space="preserve">
     <value>10までの数</value>
   </data>

@@ -61,6 +61,15 @@ namespace MC.Res.Properties {
         }
         
         /// <summary>
+        ///   MATH.SC に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string APP_CODENAME {
+            get {
+                return ResourceManager.GetString("APP_CODENAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   768 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string DEFAULT_HEIGHT {
@@ -75,6 +84,15 @@ namespace MC.Res.Properties {
         public static string DEFAULT_WIDTH {
             get {
                 return ResourceManager.GetString("DEFAULT_WIDTH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   RESULT に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string FILE_DATA {
+            get {
+                return ResourceManager.GetString("FILE_DATA", resourceCulture);
             }
         }
         
@@ -174,6 +192,15 @@ namespace MC.Res.Properties {
         public static string MESSAGE_WORLD {
             get {
                 return ResourceManager.GetString("MESSAGE_WORLD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   SavedGame/{0}/AllPlayers/{1} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string PATH_DATA {
+            get {
+                return ResourceManager.GetString("PATH_DATA", resourceCulture);
             }
         }
     }

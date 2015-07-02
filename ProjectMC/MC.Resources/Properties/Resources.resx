@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="APP_CODENAME" xml:space="preserve">
+    <value>MATH.SC</value>
+  </data>
   <data name="DEFAULT_HEIGHT" xml:space="preserve">
     <value>768</value>
     <comment>既定の解像度</comment>
@@ -124,6 +127,9 @@
   <data name="DEFAULT_WIDTH" xml:space="preserve">
     <value>1366</value>
     <comment>既定の解像度</comment>
+  </data>
+  <data name="FILE_DATA" xml:space="preserve">
+    <value>RESULT</value>
   </data>
   <data name="MENU_AREA_TEMP" xml:space="preserve">
     <value>もののかぞえかた</value>
@@ -157,5 +163,8 @@
   </data>
   <data name="MESSAGE_WORLD" xml:space="preserve">
     <value>向かう学園を選択してください。</value>
+  </data>
+  <data name="PATH_DATA" xml:space="preserve">
+    <value>SavedGame/{0}/AllPlayers/{1}</value>
   </data>
 </root>

@@ -86,6 +86,49 @@ namespace MC.Common.Data
 		public static bool operator !=(UserData valueA, UserData valueB) => !valueA.Equals(valueB);
 
 		/// <summary>
+		/// 値をインポートして、マスタを構成します。
+		/// </summary>
+		/// <param name="value">値。</param>
+		/// <returns>マスタ情報。</returns>
+		public static UserData Import(User value)
+		{
+			var dic =
+				value.Tryed.ToDictionary(
+					keySelector: s => new SubjectMasterData(id: s.Key),
+					elementSelector: s => s.Value);
+			return
+				new UserData()
+				{
+					UserId = value.UserId,
+					Name = value.Name,
+					Comment = value.Comment,
+					Admission = value.Admission.Select(i => new CollegeMasterData(i)).ToList(),
+					Tryed = dic,
+				};
+		}
+
+		/// <summary>
+		/// 値をエクスポートします。
+		/// </summary>
+		/// <returns>エクスポートされた値。</returns>
+		/// <exception cref="InvalidOperationException">完全読み込みされていないマスタをエクスポートすると、例外が発生します。</exception>
+		public User Export()
+		{
+			var dic =
+				Tryed.ToDictionary(
+					keySelector: s => s.Key.SubjectId, elementSelector: s => s.Value);
+			return
+				new User()
+				{
+					UserId = UserId,
+					Name = Name,
+					Comment = Comment,
+					Admission = Admission.Select(m => m.CollegeId).ToArray(),
+					Tryed = dic,
+				};
+		}
+
+		/// <summary>
 		/// 値の文字列表現を取得します。
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>

@@ -144,8 +144,14 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <param name="id">ID。</param>
 		/// <returns>仮作成されたマスタ。</returns>
-		public static implicit operator SubjectMasterData(int id) =>
-			new SubjectMasterData(id);
+		public static implicit operator SubjectMasterData(int id) => new SubjectMasterData(id);
+
+		/// <summary>
+		/// マスタから ID を仮作成します。
+		/// </summary>
+		/// <param name="value">マスタ。</param>
+		/// <returns>ID。</returns>
+		public static implicit operator int(SubjectMasterData value) => value.SubjectId;
 
 		/// <summary>
 		/// 値同士が等しいかどうかを判定します。
@@ -170,19 +176,15 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <param name="value">値。</param>
 		/// <returns>マスタ情報。</returns>
-		public static SubjectMasterData Import(Subject value)
-		{
-			var requires = value.RequireSubjects.Select(s => new SubjectMasterData(s)).ToArray();
-			return
-				new SubjectMasterData(
-					id: value.SubjectId,
-					name: value.Name,
-					description: value.Description,
-					enabled: value.Enabled,
-					college: value.CollegeId,
-					full: true,
-					requires: requires);
-		}
+		public static SubjectMasterData Import(Subject value) =>
+			new SubjectMasterData(
+				id: value.SubjectId,
+				name: value.Name,
+				description: value.Description,
+				enabled: value.Enabled,
+				college: value.CollegeId,
+				full: true,
+				requires: value.RequireSubjects.Select(i => new SubjectMasterData(i)).ToArray());
 
 		/// <summary>
 		/// 値をエクスポートします。
@@ -203,7 +205,7 @@ namespace MC.Common.Data
 					Description = description,
 					Enabled = enabled,
 					CollegeId = College.CollegeId,
-					RequireSubjects = requires.Select(s => s.SubjectId).ToArray(),
+					RequireSubjects = requires.Select(m => m.SubjectId).ToArray(),
 				};
 		}
 

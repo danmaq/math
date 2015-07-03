@@ -61,7 +61,7 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		[DataMember]
 		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
-		public Dictionary<int, TryAndClear>[] Tryed
+		public Dictionary<int, TryAndClear> Tryed
 		{
 			get;
 			set;

@@ -24,6 +24,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\AllMaster.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\College.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\Subject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\TryAndClear.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Serializable\User.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\SubjectMasterData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\UserData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)State\Context.cs" />

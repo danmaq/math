@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.Serialization;
 using MC.Common.Collection;
@@ -10,7 +11,7 @@ namespace MC.Common.Data.Serializable
 	/// エクスポート可能な学園マスタの単票データ。
 	/// </summary>
 	[DataContract]
-	public struct College
+	public struct College : IEquatable<College>
 	{
 		/// <summary>
 		/// 学園 ID を取得および設定します。

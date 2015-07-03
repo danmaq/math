@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using MC.Common.Data.Serializable;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -20,24 +21,30 @@ namespace MC.Common.Data
 				Name = @"danmaq",
 				Comment = @"ぬるぽ",
 				Admission = new List<CollegeMasterData>(),
-				Cleard = new List<Tuple<SubjectMasterData, int>>(),
+				Tryed = new Dictionary<SubjectMasterData, TryAndClear>(),
 			};
 
-		/// <summary>ユーザIDを取得または設定します。</summary>
+		/// <summary>
+		/// ユーザIDを取得します。
+		/// </summary>
 		public long UserId
 		{
 			get;
 			private set;
 		}
 
-		/// <summary>ニックネームを取得または設定します。</summary>
+		/// <summary>
+		/// ニックネームを取得します。
+		/// </summary>
 		public string Name
 		{
 			get;
 			private set;
 		}
 
-		/// <summary>一言を取得または設定します。</summary>
+		/// <summary>
+		/// 一言を取得します。
+		/// </summary>
 		public string Comment
 		{
 			get;
@@ -54,18 +61,9 @@ namespace MC.Common.Data
 		}
 
 		/// <summary>
-		/// 攻略した講義一覧を取得します。
-		/// </summary>
-		public IList<Tuple<SubjectMasterData, int>> Cleard
-		{
-			get;
-			private set;
-		}
-
-		/// <summary>
 		/// 挑戦した講義一覧を取得します。
 		/// </summary>
-		public IList<Tuple<SubjectMasterData, int>> Tryed
+		public IDictionary<SubjectMasterData, TryAndClear> Tryed
 		{
 			get;
 			private set;
@@ -120,7 +118,7 @@ namespace MC.Common.Data
 			Name == others.Name &&
 			Comment == others.Comment &&
 			Admission.SequenceEqual(others.Admission) &&
-			Cleard.SequenceEqual(others.Cleard);
+			Tryed.SequenceEqual(others.Tryed);
 
 		/// <summary>
 		/// データの一部、または全部を改変して複製します。
@@ -140,7 +138,7 @@ namespace MC.Common.Data
 					Comment = comment ?? Comment,
 				};
 			((List<CollegeMasterData>)result.Admission).AddRange(Admission);
-			((List<Tuple<SubjectMasterData, int>>)result.Cleard).AddRange(Cleard);
+			result.Tryed = new Dictionary<SubjectMasterData, TryAndClear>(Tryed);
 			return result;
 		}
 	}

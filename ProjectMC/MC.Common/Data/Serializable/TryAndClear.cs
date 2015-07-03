@@ -1,39 +1,39 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using System.Runtime.Serialization;
-using MC.Common.Collection;
 using MC.Common.Utils;
 
 namespace MC.Common.Data.Serializable
 {
 	/// <summary>
-	/// すべてのマスタ。
+	/// 挑戦回数と攻略回数を保持するデータ。
 	/// </summary>
 	[DataContract]
-	public struct AllMaster : IEquatable<AllMaster>
+	public struct TryAndClear : IEquatable<TryAndClear>
 	{
 		/// <summary>
-		/// 学園一覧を取得および設定します。
+		/// 挑戦回数を取得および設定します。
 		/// </summary>
 		[DataMember]
-		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
-		public College[] College
+		public int Tryed
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 教科一覧を取得および設定します。
+		/// 攻略回数を取得および設定します。
 		/// </summary>
 		[DataMember]
-		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
-		public Subject[] Subject
+		public int Cleard
 		{
 			get;
 			set;
 		}
+
+		/// <summary>
+		/// 勝率を取得します。
+		/// </summary>
+		public float Percentage => Cleard / (float)Tryed;
 
 		/// <summary>
 		/// 値同士が等しいかどうかを判定します。
@@ -41,7 +41,7 @@ namespace MC.Common.Data.Serializable
 		/// <param name="valueA">値。</param>
 		/// <param name="valueB">値。</param>
 		/// <returns>値同士が等しい場合、true。</returns>
-		public static bool operator ==(AllMaster valueA, AllMaster valueB) =>
+		public static bool operator ==(TryAndClear valueA, TryAndClear valueB) =>
 			valueA.Equals(valueB);
 
 		/// <summary>
@@ -50,7 +50,7 @@ namespace MC.Common.Data.Serializable
 		/// <param name="valueA">値。</param>
 		/// <param name="valueB">値。</param>
 		/// <returns>値同士が等しくない場合、true。</returns>
-		public static bool operator !=(AllMaster valueA, AllMaster valueB) =>
+		public static bool operator !=(TryAndClear valueA, TryAndClear valueB) =>
 			!valueA.Equals(valueB);
 
 		/// <summary>
@@ -58,16 +58,13 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(AllMaster)} College:[{College.ToStringCollection()}] Subject:[{Subject.ToStringCollection()}])");
+			StringHelper.Format($@"{nameof(TryAndClear)} {Cleard}/{Tryed}");
 
 		/// <summary>
 		/// ハッシュコードを取得します。
 		/// </summary>
 		/// <returns>ハッシュコード。</returns>
-		public override int GetHashCode() =>
-			College.Aggregate(seed: 0, func: (a, s) => a ^ s.GetHashCode()) ^
-			Subject.Aggregate(seed: 0, func: (a, s) => a ^ s.GetHashCode());
+		public override int GetHashCode() => Tryed.GetHashCode() ^ Cleard.GetHashCode();
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
@@ -75,15 +72,13 @@ namespace MC.Common.Data.Serializable
 		/// <param name="obj">検証対象の値。</param>
 		/// <returns>値が等しい場合、true。</returns>
 		public override bool Equals(object obj) =>
-			obj is AllMaster ? Equals((AllMaster)(obj)) : false;
+			obj is TryAndClear ? Equals((TryAndClear)(obj)) : false;
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
 		/// <param name="others"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(AllMaster others) =>
-			College.SequenceEqual(others.College) &&
-			Subject.SequenceEqual(others.Subject);
+		public bool Equals(TryAndClear others) => Tryed == others.Tryed && Cleard == others.Cleard;
 	}
 }

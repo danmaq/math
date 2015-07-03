@@ -9,7 +9,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 学園マスタの単票データ。
 	/// </summary>
-	struct CollegeMasterData
+	struct CollegeMasterData : IEquatable<CollegeMasterData>
 	{
 
 		/// <summary>学園名。</summary>

@@ -28,16 +28,17 @@ namespace MC.Common.Data
 		/// 辞書を読み込みます。
 		/// </summary>
 		/// <param name="key">キー。</param>
-		/// <returns>値の文字列。</returns>
-		public static async Task<string> ReadAsync(string key)
+		/// <returns>値が存在するかどうか、および値の文字列の組。</returns>
+		public static async Task<Tuple<bool, string>> ReadAsync(string key)
 		{
+			// await できないので、LoadAsync()を呼ばずにコピペする
 			if (dictionary == null)
 			{
-				dictionary = await LoadAsync();
+				dictionary = await InnerLoadAsync();
 			}
-			string result;
-			dictionary.TryGetValue(key, out result);
-			return result;
+			string value;
+			var result = dictionary.TryGetValue(key, out value);
+			return Tuple.Create(result, value);
 		}
 
 		/// <summary>
@@ -54,8 +55,19 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 辞書を読み込みます。
 		/// </summary>
+		public static async void LoadAsync()
+		{
+			if (dictionary == null)
+			{
+				dictionary = await InnerLoadAsync();
+			}
+		}
+
+		/// <summary>
+		/// 辞書を読み込みます。
+		/// </summary>
 		/// <returns>辞書。</returns>
-		private static async Task<Dictionary<string, string>> LoadAsync()
+		private static async Task<Dictionary<string, string>> InnerLoadAsync()
 		{
 			await semaphore.WaitAsync();
 			try
@@ -75,13 +87,19 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 辞書を保存します。
 		/// </summary>
-		private static async Task SaveAsync()
+		/// <returns>例外が発生した場合、例外を返します。正常に終了した場合は null。</returns>
+		private static async Task<Exception> SaveAsync()
 		{
 			await semaphore.WaitAsync();
 			try
 			{
 				await Task.Factory.StartNew(InnerSave);
-            }
+				return null;
+			}
+			catch (Exception e)
+			{
+				return e;
+			}
 			finally
 			{
 				semaphore.Release();

@@ -27,10 +27,10 @@ namespace MC.Common.Collection
 			}
 			return (
 				from master in collegeMaster
-				from cleard in user.Cleard
+				from tryed in user.Tryed
 				where
 					master.Requires.Count == 0 ||
-					(cleard.Item2 > 0 && master.Requires.Any(s => s == cleard.Item1))
+					(tryed.Value.Cleard > 0 && master.Requires.Any(s => s == tryed.Key))
 				select master)
 					.Concat(user.Admission)
 					.OrderBy(c => c.CollegeId)
@@ -56,11 +56,11 @@ namespace MC.Common.Collection
 			}
 			return (
 				from master in subjectMaster
-				from cleard in user.Cleard
+				from tryed in user.Tryed
 				where
 					college == master.College &&
 					(master.Requires.Count == 0 ||
-						(cleard.Item2 > 0 && master.Requires.Any(s => s == cleard.Item1)))
+						(tryed.Value.Cleard > 0 && master.Requires.Any(s => s == tryed.Key)))
 				select master)
 					.OrderBy(s => s.SubjectId)
 					.Distinct();

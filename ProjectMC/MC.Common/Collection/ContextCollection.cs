@@ -8,7 +8,7 @@ namespace MC.Common.Collection
 	/// コンテキストのコレクション。
 	/// コンテキストが不活化すると、自動的に削除・解放されます。
 	/// </summary>
-	sealed class ContextCollection : IDisposable
+	public sealed class ContextCollection : IDisposable
 	{
 
 		/// <summary>本体。</summary>

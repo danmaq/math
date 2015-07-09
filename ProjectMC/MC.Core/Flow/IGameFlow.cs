@@ -6,7 +6,7 @@ namespace MC.Core.Flow
 	/// <summary>
 	/// ゲーム全体のフローを管理するクラスに必要な要件。
 	/// </summary>
-	interface IGameFlow : IDisposable
+	public interface IGameFlow : IDisposable
 	{
 		/// <summary>
 		/// レスポンスを要求する際に発火するイベント。

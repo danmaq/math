@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MC.Common.Utils;
 
 namespace MC.Core.Data
@@ -6,7 +7,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 文字列入力を要求するイベント データです。
 	/// </summary>
-	sealed class RequireTextArgs : RequireResponseArgs
+	public sealed class RequireTextArgs : RequireResponseArgs
 	{
 
 		/// <summary>レスポンス用コールバックを取得します。</summary>
@@ -28,6 +29,9 @@ namespace MC.Core.Data
 		/// </summary>
 		/// <returns>文字列情報。</returns>
 		public override string ToString() =>
-			StringHelper.Format($@"{nameof(RequireSelectArgs)} Description:{Description}");
+			StringHelper.CreateToString(
+				className: nameof(RequireTextArgs),
+				arguments:
+					new Dictionary<string, object>() { [nameof(Description)] = Description });
 	}
 }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using MC.MockServer.Res.Properties;
+using MC.MockServer.Properties;
 
 namespace MC.MockServer.Question
 {

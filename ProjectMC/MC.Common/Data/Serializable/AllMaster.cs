@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -58,8 +59,14 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(AllMaster)} College:[{College.ToStringCollection()}] Subject:[{Subject.ToStringCollection()}])");
+			StringHelper.CreateToString(
+				className: nameof(AllMaster),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(College)] = College.ToStringCollection(),
+						[nameof(Subject)] = Subject.ToStringCollection(),
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -80,10 +87,10 @@ namespace MC.Common.Data.Serializable
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(AllMaster others) =>
-			College.SequenceEqual(others.College) &&
-			Subject.SequenceEqual(others.Subject);
+		public bool Equals(AllMaster other) =>
+			College.SequenceEqual(other.College) &&
+			Subject.SequenceEqual(other.Subject);
 	}
 }

@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using MC.Common.Data;
 using MC.Common.Data.Serializable;
-using MC.MockServer.Res.Properties;
+using MC.MockServer.Properties;
 
 namespace MC.MockServer
 {
@@ -66,7 +66,7 @@ namespace MC.MockServer
 		private void Setup()
 		{
 			var id = 0;
-			var emptySubject = new List<SubjectMasterData>().AsReadOnly();
+			var emptySubject = new SubjectMasterData[0];
 			var c = new CollegeMasterData[24];
 			c[0] = new CollegeMasterData(id: id++, name: Resources.COLLEGE_01_NAME, description: Resources.COLLEGE_01_DESCRIPTION, enabled: true, full: true, requires: emptySubject);
 			var s0101 = new SubjectMasterData(id: id++, name: Resources.SUBJECT_NAME_01_001, description: Resources.SUBJECT_DESCRIPTION_01_001, enabled: true, full: true, college: c[0], requires: emptySubject);

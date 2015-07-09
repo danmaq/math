@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
-using MC.Res.Properties;
+using MC.Core.Properties;
 
 namespace MC.Core.State.Game
 {

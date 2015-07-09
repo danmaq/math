@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using MC.Common.Collection;
 using MC.Common.Utils;
@@ -42,8 +43,12 @@ namespace MC
 			else
 			{
 				Console.WriteLine(Resources.MESSAGE_SELECT);
-				selection
-					.Select((s, i) => StringHelper.Format($@"{i + 1}: {s.Description}"))
+				Func<Selection, int, string> selector =
+					(s, i) =>
+						string.Format(
+							CultureInfo.CurrentCulture, @"{0}: {1}", i + 1, s.Description);
+                selection
+					.Select(selector)
 					.ForEach<string>(Console.WriteLine);
 			}
 		}

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using MC.Common.Utils;
 
@@ -9,7 +10,7 @@ namespace MC.Common.Collection
 	/// <summary>
 	/// 配列、リスト、クエリなどに対する拡張機能。
 	/// </summary>
-	static class EnumerableExtension
+	public static class EnumerableExtension
 	{
 
 		/// <summary>疑似乱数ジェネレータ。</summary>
@@ -81,12 +82,12 @@ namespace MC.Common.Collection
 			{
 				throw new ArgumentNullException(nameof(generator));
 			}
-			return
-				sequence.Aggregate<T, string>(
-					seed: null,
-					func:
-						(a, s) => a == null ?
-						s.ToString() : StringHelper.Format($@"{a}, {generator(s)}"));
+			Func<string, T, string> func =
+				(a, s) =>
+					a == null ?
+					s.ToString() :
+					string.Format(CultureInfo.CurrentCulture, @"{0}, {1}", a, generator(s));
+			return sequence.Aggregate(seed: null, func: func);
 		}
 
 		/// <summary>

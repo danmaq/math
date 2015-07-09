@@ -5,7 +5,7 @@ namespace MC.Common.State
 	/// <summary>
 	/// State パターンにおけるコンテキストの拡張機能。
 	/// </summary>
-	static class ContextExtension
+	public static class ContextExtension
 	{
 
 		/// <summary>

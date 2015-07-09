@@ -29,7 +29,7 @@ namespace MC.Core.State.Game
 		public void Begin(IContext context)
 		{
 			Api.Initialize();
-			MasterCache.DownloadAllMaster();
+			MasterCache.DownloadAllMaster(Api.LoadAllMasterAsync);
 		}
 
 		/// <summary>

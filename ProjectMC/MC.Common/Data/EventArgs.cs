@@ -1,5 +1,5 @@
 ﻿using System;
-using MC.Common.Utils;
+using System.Globalization;
 
 namespace MC.Common.Data
 {
@@ -8,7 +8,7 @@ namespace MC.Common.Data
 	/// 値を持つ、イベント データ。
 	/// </summary>
 	/// <typeparam name="T">値の型。</typeparam>
-	class EventArgs<T> : EventArgs
+	public class EventArgs<T> : EventArgs
 	{
 
 		/// <summary>値を取得、または設定します。</summary>
@@ -23,6 +23,6 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format($@"{nameof(EventArgs)}({nameof(T)}) {Data}");
+			string.Format(CultureInfo.CurrentCulture, @"{0} {1}", nameof(EventArgs<T>), Data);
 	}
 }

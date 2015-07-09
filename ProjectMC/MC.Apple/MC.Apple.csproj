@@ -182,19 +182,5 @@
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MC.MockServer.Res\MC.MockServer.Res.csproj">
-      <Project>{31700eea-6a9e-4e2d-83b6-73b02ebce944}</Project>
-      <Name>MC.MockServer.Res</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MC.Resources\MC.Res.csproj">
-      <Project>{f0b0bc6e-d4ab-4b1a-9937-80798b243c78}</Project>
-      <Name>MC.Res</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <Import Project="..\MC.Common\MC.Common.projitems" Label="Shared" />
-  <Import Project="..\MC.Core\MC.Core.projitems" Label="Shared" />
-  <Import Project="..\MC.Game\MC.Game.projitems" Label="Shared" />
-  <Import Project="..\MC.MockServer\MC.MockServer.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

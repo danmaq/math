@@ -5,7 +5,7 @@ namespace MC.Common.Utils
 	/// <summary>
 	/// デリゲートのためのヘルパ関数群クラス。
 	/// </summary>
-	static class DelegateHelper
+	public static class DelegateHelper
 	{
 
 		/// <summary>何もしないアクション。</summary>

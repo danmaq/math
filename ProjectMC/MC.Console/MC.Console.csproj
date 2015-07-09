@@ -93,6 +93,12 @@
   <PropertyGroup>
     <ManifestTimestampUrl>http://timestamp.verisign.com/scripts/timstamp.dll</ManifestTimestampUrl>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\Content\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Net.Http" />
@@ -101,7 +107,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="KeyManager.cs" />
     <Compile Include="PromptManager.cs" />
     <Compile Include="Program.cs" />
@@ -113,6 +118,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\Content\key.snk">
+      <Link>key.snk</Link>
+    </None>
     <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
@@ -143,18 +151,15 @@
     <Content Include="MC_1.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MC.MockServer.Res\MC.MockServer.Res.csproj">
-      <Project>{31700eea-6a9e-4e2d-83b6-73b02ebce944}</Project>
-      <Name>MC.MockServer.Res</Name>
+    <ProjectReference Include="..\MC.Common\MC.Common.csproj">
+      <Project>{880b78ee-78c8-4de9-8090-7e0ef3fa39c9}</Project>
+      <Name>MC.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MC.Resources\MC.Res.csproj">
-      <Project>{f0b0bc6e-d4ab-4b1a-9937-80798b243c78}</Project>
-      <Name>MC.Res</Name>
+    <ProjectReference Include="..\MC.Core\MC.Core.csproj">
+      <Project>{9b741fdf-ce9d-4cf2-830c-912692843b60}</Project>
+      <Name>MC.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <Import Project="..\MC.Common\MC.Common.projitems" Label="Shared" />
-  <Import Project="..\MC.Core\MC.Core.projitems" Label="Shared" />
-  <Import Project="..\MC.MockServer\MC.MockServer.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,13 +1,12 @@
 /ProjectMC/*.sln.ide
-/ProjectMC/TestResults
 /ProjectMC/*.suo
 /ProjectMC/.vs/*
-/ProjectMC/BDD/bin
-/ProjectMC/BDD/obj
-/ProjectMC/BDD/*.user
+/ProjectMC/TestResults
+/ProjectMC/Content/Thumbs.db
 /ProjectMC/MC.*/bin
 /ProjectMC/MC.*/obj
 /ProjectMC/MC.*/*.user
+/ProjectMC/MC.Windows/Assets/Thumbs.db
 /ProjectMC/Web.*/bin
 /ProjectMC/Web.*/obj
 /ProjectMC/Web.*/*.user

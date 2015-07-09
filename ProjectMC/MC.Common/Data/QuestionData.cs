@@ -9,7 +9,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 問題データ。
 	/// </summary>
-	struct QuestionData
+	public struct QuestionData
 	{
 
 		/// <summary>
@@ -18,7 +18,7 @@ namespace MC.Common.Data
 		public int UniqueId
 		{
 			get;
-			internal set;
+			set;
 		}
 
 		/// <summary>
@@ -27,7 +27,7 @@ namespace MC.Common.Data
 		public string Caption
 		{
 			get;
-			internal set;
+			set;
 		}
 
 		/// <summary>
@@ -36,7 +36,7 @@ namespace MC.Common.Data
 		public string Description
 		{
 			get;
-			internal set;
+			set;
 		}
 
 		/// <summary>
@@ -45,7 +45,7 @@ namespace MC.Common.Data
 		public IEnumerable<string> Answers
 		{
 			get;
-			internal set;
+			set;
 		}
 
 		/// <summary>
@@ -54,7 +54,7 @@ namespace MC.Common.Data
 		public int Expires
 		{
 			get;
-			internal set;
+			set;
 		}
 
 		/// <summary>
@@ -80,8 +80,16 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(QuestionData)} Caption:{Caption}, Description:{Description} Expires:{Expires}, Answers:{Answers.ToStringCollection()}");
+			StringHelper.CreateToString(
+				className: nameof(QuestionData),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(Caption)] = Caption,
+						[nameof(Description)] = Description,
+						[nameof(Expires)] = Expires,
+						[nameof(Answers)] = Answers.ToStringCollection(),
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。

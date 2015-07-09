@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Globalization;
 using System.Runtime.Serialization;
-using MC.Common.Utils;
 
 namespace MC.Common.Data.Serializable
 {
@@ -58,7 +58,7 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format($@"{nameof(TryAndClear)} {Cleard}/{Tryed}");
+			string.Format(CultureInfo.CurrentCulture, @"{0} {1}/{2}", nameof(TryAndClear), Cleard, Tryed);
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -77,8 +77,8 @@ namespace MC.Common.Data.Serializable
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(TryAndClear others) => Tryed == others.Tryed && Cleard == others.Cleard;
+		public bool Equals(TryAndClear other) => Tryed == other.Tryed && Cleard == other.Cleard;
 	}
 }

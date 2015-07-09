@@ -1,17 +1,24 @@
-﻿using System.Linq;
+﻿using System;
 using System.Collections.Generic;
-using MC.Core.Server;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Threading.Tasks;
+using MC.Common.Data.Serializable;
 
 namespace MC.Common.Data
 {
-	sealed class MasterCache
+	/// <summary>
+	/// マスタ データのクライアント側キャッシュ。
+	/// </summary>
+	public static class MasterCache
 	{
 		/// <summary>
 		/// すべてのマスタを読み込みます。
 		/// </summary>
-		public static async void DownloadAllMaster()
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
+		public static async void DownloadAllMaster(Func<Task<AllMaster>> getMasterAsync)
 		{
-			var all = await Api.LoadAllMasterAsync();
+			var all = await getMasterAsync();
 			CollegeMaster = all.College.Select(c => CollegeMasterData.Import(c)).ToArray();
 			SubjectMaster = all.Subject.Select(s => SubjectMasterData.Import(s)).ToArray();
 			Ready = true;

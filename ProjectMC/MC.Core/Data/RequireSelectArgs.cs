@@ -8,7 +8,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 選択肢から選ぶことを要求するイベント データです。
 	/// </summary>
-	sealed class RequireSelectArgs : RequireResponseArgs
+	public sealed class RequireSelectArgs : RequireResponseArgs
 	{
 
 		/// <summary>選択肢を取得します。</summary>
@@ -30,7 +30,14 @@ namespace MC.Core.Data
 		/// </summary>
 		/// <returns>文字列情報。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(RequireSelectArgs)} Description:{Description} Expires: {Description} Selecton: {Selections.ToStringCollection()}");
+			StringHelper.CreateToString(
+				className: nameof(RequireSelectArgs),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(Description)] = Description,
+						[nameof(Expires)] = Expires,
+						[nameof(Selections)] = Selections.ToStringCollection(),
+					});
 	}
 }

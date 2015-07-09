@@ -8,7 +8,7 @@ namespace MC.Common.Collection
 	/// <summary>
 	/// 各種マスタの拡張機能。
 	/// </summary>
-	static class MasterExtension
+	public static class MasterExtension
 	{
 
 		/// <summary>

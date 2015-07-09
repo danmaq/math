@@ -6,7 +6,7 @@ namespace MC.Common.Collection
 	/// <summary>
 	/// キー/値ペアを生成するヘルパ クラス。
 	/// </summary>
-    static class KeyValuePair
+	public static class KeyValuePair
     {
 
 		/// <summary>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -87,8 +88,17 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(College)} ID:{CollegeId}, Name:{Name}, Description:{Description}, Enabled:{Enabled}, Require:[{RequireSubjects.ToStringCollection()}])");
+			StringHelper.CreateToString(
+				className: nameof(College),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(CollegeId)] = CollegeId,
+						[nameof(Name)] = Name,
+						[nameof(Description)] = Description,
+						[nameof(Enabled)] = Enabled,
+						[nameof(RequireSubjects)] = RequireSubjects.ToStringCollection(),
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -112,13 +122,13 @@ namespace MC.Common.Data.Serializable
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(College others) =>
-			CollegeId == others.CollegeId &&
-			Name == others.Name &&
-			Description == others.Description &&
-			Enabled == others.Enabled &&
-			RequireSubjects.SequenceEqual(others.RequireSubjects);
+		public bool Equals(College other) =>
+			CollegeId == other.CollegeId &&
+			Name == other.Name &&
+			Description == other.Description &&
+			Enabled == other.Enabled &&
+			RequireSubjects.SequenceEqual(other.RequireSubjects);
 	}
 }

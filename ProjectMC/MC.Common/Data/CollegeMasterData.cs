@@ -9,7 +9,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// 学園マスタの単票データ。
 	/// </summary>
-	struct CollegeMasterData : IEquatable<CollegeMasterData>
+	public struct CollegeMasterData : IEquatable<CollegeMasterData>
 	{
 
 		/// <summary>学園名。</summary>
@@ -195,7 +195,15 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format($@"{nameof(CollegeMasterData)} ID:{CollegeId}, Name:{name})");
+			StringHelper.CreateToString(
+				className: nameof(CollegeMasterData),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(CollegeId)] = CollegeId,
+						[nameof(name)] = name,
+						[nameof(description)] = description,
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -215,10 +223,10 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(CollegeMasterData others) =>
-			CollegeId == others.CollegeId;
+		public bool Equals(CollegeMasterData other) =>
+			CollegeId == other.CollegeId;
 
 		/// <summary>
 		/// すべてのデータを取得します。

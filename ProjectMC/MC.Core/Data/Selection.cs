@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using MC.Common.Utils;
 
@@ -7,7 +8,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 選択肢データ。
 	/// </summary>
-	struct Selection
+	public struct Selection
 	{
 
 		/// <summary>既定のデータ。</summary>
@@ -49,7 +50,10 @@ namespace MC.Core.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format($@"{nameof(Selection)} Description:{Description}, Callback:{Select}");
+			StringHelper.CreateToString(
+				className: nameof(Selection),
+				arguments:
+					new Dictionary<string, object>() { [nameof(Description)] = Description });
 
 		/// <summary>
 		/// ハッシュコードを取得します。

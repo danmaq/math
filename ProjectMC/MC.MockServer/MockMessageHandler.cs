@@ -6,14 +6,14 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using MC.Common.Utils;
-using MC.MockServer.Res.Properties;
+using MC.MockServer.Properties;
 
 namespace MC.MockServer
 {
 	/// <summary>
 	/// モック サーバ用のメッセージ ハンドラ。
 	/// </summary>
-	sealed class MockMessageHandler : HttpMessageHandler
+	public sealed class MockMessageHandler : HttpMessageHandler
 	{
 
 		/// <summary>並列動作を制限するためのセマフォ。</summary>
@@ -25,14 +25,6 @@ namespace MC.MockServer
 			{
 				["/v1/master"] = (_, __) => MasterStore.Instance.Export(),
 			};
-
-		/// <summary>
-		/// 通信遅延を再現するため、休眠します。
-		/// </summary>
-		private static void Sleep()
-		{
-			Thread.Sleep(500);
-		}
 
 		/// <summary>
 		/// 非同期操作として HTTP 要求を送信します。
@@ -52,7 +44,7 @@ namespace MC.MockServer
 			await semaphore.WaitAsync();
             try
 			{
-				await Task.Factory.StartNew(Sleep);
+				await Task.Delay(TimeSpan.FromMilliseconds(500));
 				return InnerProcess(request);
 			}
 			finally

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MC.Common.Collection;
 using MC.Common.Utils;
 
@@ -7,7 +8,7 @@ namespace MC.Common.State
 	/// <summary>
 	/// Stateパターンにおける、コンテキストの実装。
 	/// </summary>
-	class Context : IContext
+	public class Context : IContext
 	{
 
 		/// <summary>状態の確定を抑制するかどうか。</summary>
@@ -129,8 +130,15 @@ namespace MC.Common.State
 		/// </summary>
 		/// <returns>文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(Context)} Prev:{PreviousState}, Current:{CurrentState}, Next:{NextState}");
+			StringHelper.CreateToString(
+				className: nameof(Context),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(PreviousState)] = PreviousState,
+						[nameof(CurrentState)] = CurrentState,
+						[nameof(NextState)] = NextState,
+					});
 
 		/// <summary>
 		/// リソースを解放します。

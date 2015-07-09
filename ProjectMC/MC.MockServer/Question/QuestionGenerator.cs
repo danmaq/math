@@ -6,7 +6,7 @@ using System.Linq;
 using MC.Common.Collection;
 using MC.Common.Data;
 using MC.Common.Utils;
-using MC.MockServer.Res.Properties;
+using MC.MockServer.Properties;
 
 namespace MC.MockServer.Question
 {

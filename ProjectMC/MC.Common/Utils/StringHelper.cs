@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Json;
 using System.Text;
@@ -10,34 +13,40 @@ namespace MC.Common.Utils
 	/// <summary>
 	/// 文字列関係のヘルパ クラス。
 	/// </summary>
-	static class StringHelper
+	public static class StringHelper
 	{
 		/// <summary>
-		/// 文字列を整形します。
+		/// <c>ToString()</c> メソッド用の文字列を生成します。
 		/// </summary>
-		/// <param name="formattable">整形用文字列。</param>
-		/// <returns>文字列。</returns>
-		public static string Format(this FormattableString formattable) =>
-			formattable?.ToString(CultureInfo.CurrentCulture);
+		/// <param name="className">クラス名。</param>
+		/// <param name="arguments">引数名と値のペアリスト。</param>
+		/// <returns></returns>
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
+		public static string CreateToString(
+			object className, IEnumerable<KeyValuePair<string, object>> arguments) =>
+			arguments
+				.Select(
+					p => string.Format(CultureInfo.CurrentCulture, @" ({0}: {1})", p.Key, p.Value))
+				.Aggregate((className ?? "(Anonymous)").ToString(), (s, i) => s + i);
 
 		/// <summary>
 		/// オブジェクトを JSON 形式でシリアライズします。
 		/// </summary>
-		/// <param name="obj">オブジェクト。</param>
+		/// <param name="value">オブジェクト。</param>
 		/// <returns>JSON 文字列。</returns>
 		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		/// <exception cref="InvalidDataContractException">JSON 非対応の型である場合。</exception>
-		public static string ToJson(object obj)
+		public static string ToJson(object value)
 		{
-			if (obj == null)
+			if (value == null)
 			{
-				throw new ArgumentNullException(nameof(obj));
+				throw new ArgumentNullException(nameof(value));
 			}
-			var serializer = new DataContractJsonSerializer(obj.GetType());
+			var serializer = new DataContractJsonSerializer(value.GetType());
 			string body;
 			using (var stream = new MemoryStream())
 			{
-				serializer.WriteObject(stream: stream, graph: obj);
+				serializer.WriteObject(stream: stream, graph: value);
 				stream.Position = 0;
 				body = new StreamReader(stream).ReadToEnd();
 			}

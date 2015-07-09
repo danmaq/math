@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -6,7 +7,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// カード マスタの単票データ。
 	/// </summary>
-	struct CardMasterData : IEquatable<CardMasterData>
+	public struct CardMasterData : IEquatable<CardMasterData>
 	{
 		/// <summary>
 		/// コンストラクタ。
@@ -67,8 +68,15 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(CardMasterData)} Name:{Name}, Comment:{Comment}, College:{College.Name}");
+			StringHelper.CreateToString(
+				className: nameof(CardMasterData),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(Name)] = Name,
+						[nameof(Comment)] = Comment,
+						[nameof(College)] = College.CollegeId,
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -90,9 +98,9 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(CardMasterData others) =>
-			Name == others.Name && Comment == others.Comment && College == others.College;
+		public bool Equals(CardMasterData other) =>
+			Name == other.Name && Comment == other.Comment && College == other.College;
 	}
 }

@@ -4,7 +4,6 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using MC.Common.Data;
 using MC.Common.Utils;
-using MC.MockServer;
 using MC.Common.Data.Serializable;
 
 namespace MC.Core.Server
@@ -29,7 +28,7 @@ namespace MC.Core.Server
 		{
 			HttpMessageHandler handler =
 #if MOCK_SERVER
-				new MockMessageHandler();
+				new MockServer.MockMessageHandler();
 #else
 				null;
 #endif

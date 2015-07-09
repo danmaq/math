@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using MC.Common.Collection;
 using MC.Common.Data.Serializable;
 using MC.Common.Utils;
 
@@ -10,7 +11,7 @@ namespace MC.Common.Data
 	/// <summary>
 	/// ユーザ アカウント情報。
 	/// </summary>
-	struct UserData
+	public struct UserData
 	{
 
 		/// <summary>既定のデータ。</summary>
@@ -90,51 +91,54 @@ namespace MC.Common.Data
 		/// </summary>
 		/// <param name="value">値。</param>
 		/// <returns>マスタ情報。</returns>
-		public static UserData Import(User value)
-		{
-			var dic =
-				value.Tryed.ToDictionary(
-					keySelector: s => new SubjectMasterData(id: s.Key),
-					elementSelector: s => s.Value);
-			return
-				new UserData()
-				{
-					UserId = value.UserId,
-					Name = value.Name,
-					Comment = value.Comment,
-					Admission = value.Admission.Select(i => new CollegeMasterData(i)).ToList(),
-					Tryed = dic,
-				};
-		}
+		public static UserData Import(User value) =>
+			new UserData()
+			{
+				UserId = value.UserId,
+				Name = value.Name,
+				Comment = value.Comment,
+				Admission = value.Admission.Select(i => new CollegeMasterData(i)).ToList(),
+				Tryed =
+					value.Tryed.ToDictionary(
+						keySelector: s => new SubjectMasterData(id: s.Key),
+						elementSelector: s => s.Value),
+			};
 
 		/// <summary>
 		/// 値をエクスポートします。
 		/// </summary>
 		/// <returns>エクスポートされた値。</returns>
 		/// <exception cref="InvalidOperationException">完全読み込みされていないマスタをエクスポートすると、例外が発生します。</exception>
-		public User Export()
-		{
-			var dic =
-				Tryed.ToDictionary(
-					keySelector: s => s.Key.SubjectId, elementSelector: s => s.Value);
-			return
-				new User()
-				{
-					UserId = UserId,
-					Name = Name,
-					Comment = Comment,
-					Admission = Admission.Select(m => m.CollegeId).ToArray(),
-					Tryed = dic,
-				};
-		}
+		public User Export() =>
+			new User()
+			{
+				UserId = UserId,
+				Name = Name,
+				Comment = Comment,
+				Admission = Admission.Select(m => m.CollegeId).ToArray(),
+				Tryed =
+					Tryed
+						.ToDictionary(
+							keySelector: s => s.Key.SubjectId, elementSelector: s => s.Value)
+						.ToArray(),
+			};
 
 		/// <summary>
 		/// 値の文字列表現を取得します。
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(UserData)} UID:{UserId}, Name:{Name}, Comment:{Comment}");
+			StringHelper.CreateToString(
+				className: nameof(UserData),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(UserId)] = UserId,
+						[nameof(Name)] = Name,
+						[nameof(Comment)] = Comment,
+						[nameof(Admission)] = Admission.ToStringCollection(),
+						[nameof(Tryed)] = Tryed.ToStringCollection(),
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。

@@ -11,7 +11,7 @@ namespace MC.Core.Flow
 	/// <summary>
 	/// ゲーム全体のフローを管理するクラス。
 	/// </summary>
-	sealed class GameFlow : IGameFlow
+	public sealed class GameFlow : IGameFlow
 	{
 
 		/// <summary>コンテキストのコレクション。</summary>

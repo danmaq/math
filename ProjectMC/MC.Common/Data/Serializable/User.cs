@@ -61,7 +61,7 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		[DataMember]
 		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
-		public Dictionary<int, TryAndClear> Tryed
+		public KeyValuePair<int, TryAndClear>[] Tryed
 		{
 			get;
 			set;
@@ -90,9 +90,17 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
-			StringHelper.Format(
-				$@"{nameof(User)} ID:{UserId}, Name:{Name}, Comment:{Comment}, Admission:[{Admission.ToStringCollection()}], Tryed:[{Tryed.ToStringCollection()}])");
-
+			StringHelper.CreateToString(
+				className: nameof(User),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(UserId)] = UserId,
+						[nameof(Name)] = Name,
+						[nameof(Comment)] = Comment,
+						[nameof(Admission)] = Admission.ToStringCollection(),
+						[nameof(Tryed)] = Tryed.ToStringCollection(),
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。
@@ -116,13 +124,13 @@ namespace MC.Common.Data.Serializable
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(User others) =>
-			UserId == others.UserId &&
-			Name == others.Name &&
-			Comment == others.Comment &&
-			Admission.SequenceEqual(others.Admission) &&
-			Tryed.SequenceEqual(others.Tryed);
+		public bool Equals(User other) =>
+			UserId == other.UserId &&
+			Name == other.Name &&
+			Comment == other.Comment &&
+			Admission.SequenceEqual(other.Admission) &&
+			Tryed.SequenceEqual(other.Tryed);
 	}
 }

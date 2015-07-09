@@ -6,7 +6,7 @@ namespace MC.Core.Data
 	/// <summary>
 	/// 確認を要求するイベント データです。
 	/// </summary>
-	sealed class RequireAlertArgs : RequireResponseArgs
+	public sealed class RequireAlertArgs : RequireResponseArgs
 	{
 
 		/// <summary>レスポンス用コールバックを取得します。</summary>

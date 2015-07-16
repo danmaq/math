@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -21,16 +20,26 @@ namespace MC.Desktop
 			Icon = BitmapFrame.Create(asm.GetManifestResourceStream("MC.Desktop.MC_1.ico"));
 		}
 
-		private void ClickedCloseButton(object sender, RoutedEventArgs e)
-		{
-			Close();
-		}
+		/// <summary>
+		/// 閉じるボタン押下時に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedCloseButton(object sender, RoutedEventArgs e) => Close();
 
-		private void ClickedMinimizeButton(object sender, RoutedEventArgs e)
-		{
+		/// <summary>
+		/// 最小化ボタン押下時に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedMinimizeButton(object sender, RoutedEventArgs e) =>
 			WindowState = WindowState.Minimized;
-		}
 
+		/// <summary>
+		/// 最大化・復元ボタン押下時に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
 		private void ClickedMaximizeButton(object sender, RoutedEventArgs e)
 		{
 			var max = WindowState == WindowState.Maximized;

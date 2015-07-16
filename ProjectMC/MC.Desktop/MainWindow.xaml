@@ -23,6 +23,12 @@
             <Button Content="1" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMaximizeButton" />
             <Button Content="r" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedCloseButton" />
         </StackPanel>
+        <StackPanel Orientation="Horizontal"
+                    Margin="5"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top">
+            <Label Content="Version 0.0.0.0" FontSize="16" Opacity="0.2" />
+        </StackPanel>
         <Viewbox>
             <Grid>
                 <Canvas Name="logo2012_fw__u30DA_u30FC_u30B8_201"

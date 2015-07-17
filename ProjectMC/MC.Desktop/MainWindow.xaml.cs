@@ -18,6 +18,8 @@ namespace MC.Desktop
 			InitializeComponent();
 			var asm = Assembly.GetExecutingAssembly();
 			Icon = BitmapFrame.Create(asm.GetManifestResourceStream("MC.Desktop.MC_1.ico"));
+			Title = asm.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
+			Version.Content = Miscs.Format($"{Title} バージョン {asm.GetName().Version}");
 		}
 
 		/// <summary>

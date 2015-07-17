@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MC.Desktop"
         mc:Ignorable="d"
-        Title="MATH.SC" Height="480" Width="854" MinHeight="480" MinWidth="480" Background="White">
+        Height="480" Width="854"
+        MinHeight="480" MinWidth="480"
+        Background="White">
     <Window.Resources>
         <ResourceDictionary Source="ChromeStyle.xaml" />
     </Window.Resources>
@@ -27,10 +29,10 @@
                     Margin="5"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top">
-            <Label Content="Version 0.0.0.0" FontSize="16" Opacity="0.2" />
+            <Label Name="Version" Content="MATH.SC Version 0.0.0.0" FontSize="16" Opacity="0.2" />
         </StackPanel>
         <Viewbox>
-            <Grid>
+            <Grid Margin="100">
                 <Canvas Name="logo2012_fw__u30DA_u30FC_u30B8_201"
                     Width="300"
                     Height="100"

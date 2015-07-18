@@ -88,7 +88,7 @@ namespace MC.Desktop
 		{
 			var asm = Assembly.GetExecutingAssembly();
 			var title = asm.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
-			var icon = BitmapFrame.Create(asm.GetManifestResourceStream(@"MC.Desktop.MC_1.ico"));
+			var icon = BitmapFrame.Create(asm.GetManifestResourceStream(@"MC.Desktop.Resources.MC_1.ico"));
 			var titleCaption = Miscs.Format($@"{title} バージョン {asm.GetName().Version}");
             return new MainWindowData().CopyTo(title, icon, titleCaption);
 		}

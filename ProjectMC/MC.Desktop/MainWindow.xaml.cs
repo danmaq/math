@@ -1,11 +1,13 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Navigation;
 
 namespace MC.Desktop
 {
 	/// <summary>
 	/// MainWindow.xaml の相互作用ロジック
 	/// </summary>
-	public partial class MainWindow : Window
+	partial class MainWindow : Window
 	{
 		/// <summary>
 		/// コンストラクタ。
@@ -26,6 +28,29 @@ namespace MC.Desktop
 		/// 画面が最大化されているかどうかを取得します。
 		/// </summary>
 		private bool Maximized => WindowState == WindowState.Maximized;
+
+		/// <summary>
+		/// ページのナビゲーション サービスを取得します。
+		/// </summary>
+		private NavigationService Navigation => Frame.NavigationService;
+
+		/// <summary>
+		/// 画面状態が変化した際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void Window_StateChanged(object sender, EventArgs e) =>
+			DataContext = CurrentData.CopyTo(maximizeCaption: Maximized ? "2" : "1");
+
+		/// <summary>
+		/// メイン フレームの準備が完了した際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void Frame_Loaded(object sender, RoutedEventArgs e) =>
+			Navigation.Navigate(
+				new Uri(uriString: @"Pages/LogoPage.xaml", uriKind: UriKind.Relative));
+
 
 		/// <summary>
 		/// 閉じるボタン押下時に呼び出されます。
@@ -49,13 +74,5 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void ClickedMaximizeButton(object sender, RoutedEventArgs e) =>
 			WindowState = Maximized ? WindowState.Normal : WindowState.Maximized;
-
-		/// <summary>
-		/// 画面状態が変化した際に呼び出されます。
-		/// </summary>
-		/// <param name="sender">送信元。</param>
-		/// <param name="e">イベント情報。</param>
-		private void Window_StateChanged(object sender, System.EventArgs e) =>
-			DataContext = CurrentData.CopyTo(maximizeCaption: Maximized ? "2" : "1");
 	}
 }

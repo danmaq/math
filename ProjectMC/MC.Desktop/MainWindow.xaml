@@ -8,6 +8,8 @@
         Height="480" Width="854"
         MinHeight="480" MinWidth="480"
         Background="White"
+        Title="{Binding Title}"
+        Icon="{Binding Icon}"
         StateChanged="Window_StateChanged">
     <Window.Resources>
         <ResourceDictionary Source="ChromeStyle.xaml" />
@@ -22,19 +24,27 @@
                     Margin="5"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top">
-            <Button Content="0" Name="MinimizeButton" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMinimizeButton" />
-            <Button Content="1" Name="MaximizeButton" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMaximizeButton" />
-            <Button Content="r" Name="CloseButton" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedCloseButton" />
+            <Button Content="{Binding MinimizeCaption}"
+                    Style="{DynamicResource CaptionButtonStyleKey}"
+                    Click="ClickedMinimizeButton" />
+            <Button Content="{Binding MaximizeCaption}"
+                    Style="{DynamicResource CaptionButtonStyleKey}"
+                    Click="ClickedMaximizeButton" />
+            <Button Content="{Binding CloseCaption}"
+                    Style="{DynamicResource CaptionButtonStyleKey}"
+                    Click="ClickedCloseButton" />
         </StackPanel>
         <StackPanel Orientation="Horizontal"
                     Margin="5"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top">
-            <Label Name="Version" Content="MATH.SC Version 0.0.0.0" FontSize="16" Opacity="0.2" />
+            <Label Content="{Binding TitleCaption}" FontSize="16" Opacity="0.2" />
         </StackPanel>
         <Viewbox>
-            <Frame Name="Frame" />
+            <!--- メイン フレーム。 -->
             <!--
+            <Frame Name="Frame" />
+            -->
             <Grid Margin="100">
                 <Canvas Name="logo2012_fw__u30DA_u30FC_u30B8_201"
                     Width="300"
@@ -57,7 +67,6 @@
                     </Canvas>
                 </Canvas>
             </Grid>
-            -->
         </Viewbox>
     </Grid>
 </Window>

@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-using System.Windows;
-using System.Windows.Media.Imaging;
+﻿using System.Windows;
 
 namespace MC.Desktop
 {
@@ -15,11 +13,14 @@ namespace MC.Desktop
 		public MainWindow()
 		{
 			InitializeComponent();
-			var asm = Assembly.GetExecutingAssembly();
-			Icon = BitmapFrame.Create(asm.GetManifestResourceStream("MC.Desktop.MC_1.ico"));
-			Title = asm.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
-			Version.Content = Miscs.Format($"{Title} バージョン {asm.GetName().Version}");
-		}
+			DataContext = CurrentData;
+        }
+
+		/// <summary>
+		/// 既定のデータを取得します。
+		/// </summary>
+		private MainWindowData CurrentData =>
+			DataContext as MainWindowData ?? MainWindowData.Default;
 
 		/// <summary>
 		/// 画面が最大化されているかどうかを取得します。
@@ -55,6 +56,6 @@ namespace MC.Desktop
 		/// <param name="sender">送信元。</param>
 		/// <param name="e">イベント情報。</param>
 		private void Window_StateChanged(object sender, System.EventArgs e) =>
-			MaximizeButton.Content = Maximized ? "2" : "1";
+			DataContext = CurrentData.CopyTo(maximizeCaption: Maximized ? "2" : "1");
 	}
 }

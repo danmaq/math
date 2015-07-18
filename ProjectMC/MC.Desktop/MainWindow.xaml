@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Height="480" Width="854"
         MinHeight="480" MinWidth="480"
-        Background="White">
+        Background="White"
+        StateChanged="Window_StateChanged">
     <Window.Resources>
         <ResourceDictionary Source="ChromeStyle.xaml" />
     </Window.Resources>
@@ -21,9 +22,9 @@
                     Margin="5"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top">
-            <Button Content="0" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMinimizeButton" />
-            <Button Content="1" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMaximizeButton" />
-            <Button Content="r" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedCloseButton" />
+            <Button Content="0" Name="MinimizeButton" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMinimizeButton" />
+            <Button Content="1" Name="MaximizeButton" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedMaximizeButton" />
+            <Button Content="r" Name="CloseButton" Style="{DynamicResource CaptionButtonStyleKey}" Click="ClickedCloseButton" />
         </StackPanel>
         <StackPanel Orientation="Horizontal"
                     Margin="5"
@@ -32,6 +33,8 @@
             <Label Name="Version" Content="MATH.SC Version 0.0.0.0" FontSize="16" Opacity="0.2" />
         </StackPanel>
         <Viewbox>
+            <Frame Name="Frame" />
+            <!--
             <Grid Margin="100">
                 <Canvas Name="logo2012_fw__u30DA_u30FC_u30B8_201"
                     Width="300"
@@ -54,6 +57,7 @@
                     </Canvas>
                 </Canvas>
             </Grid>
+            -->
         </Viewbox>
     </Grid>
 </Window>

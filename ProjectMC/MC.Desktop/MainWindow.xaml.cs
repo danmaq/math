@@ -1,6 +1,5 @@
 ﻿using System.Reflection;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace MC.Desktop
@@ -23,6 +22,11 @@ namespace MC.Desktop
 		}
 
 		/// <summary>
+		/// 画面が最大化されているかどうかを取得します。
+		/// </summary>
+		private bool Maximized => WindowState == WindowState.Maximized;
+
+		/// <summary>
 		/// 閉じるボタン押下時に呼び出されます。
 		/// </summary>
 		/// <param name="sender">送信元。</param>
@@ -42,11 +46,15 @@ namespace MC.Desktop
 		/// </summary>
 		/// <param name="sender">送信元。</param>
 		/// <param name="e">イベント情報。</param>
-		private void ClickedMaximizeButton(object sender, RoutedEventArgs e)
-		{
-			var max = WindowState == WindowState.Maximized;
-			((Button)sender).Content = max ? "1" : "2";
-			WindowState = max ? WindowState.Normal : WindowState.Maximized;
-		}
+		private void ClickedMaximizeButton(object sender, RoutedEventArgs e) =>
+			WindowState = Maximized ? WindowState.Normal : WindowState.Maximized;
+
+		/// <summary>
+		/// 画面状態が変化した際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void Window_StateChanged(object sender, System.EventArgs e) =>
+			MaximizeButton.Content = Maximized ? "2" : "1";
 	}
 }

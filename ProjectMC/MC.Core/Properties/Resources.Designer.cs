@@ -89,6 +89,15 @@ namespace MC.Core.Properties {
         }
         
         /// <summary>
+        ///   多重起動はできません。アプリを終了します。 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string ERR_MUTEX {
+            get {
+                return ResourceManager.GetString("ERR_MUTEX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   RESULT に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string FILE_DATA {

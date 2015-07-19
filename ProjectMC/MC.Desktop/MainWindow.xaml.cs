@@ -19,6 +19,15 @@ namespace MC.Desktop
         }
 
 		/// <summary>
+		/// シングルトン オブジェクト。
+		/// </summary>
+		public static MainWindow Instance
+		{
+			get;
+			private set;
+		}
+
+		/// <summary>
 		/// 既定のデータを取得します。
 		/// </summary>
 		private MainWindowData CurrentData =>

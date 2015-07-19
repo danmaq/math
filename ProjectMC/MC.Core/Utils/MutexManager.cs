@@ -4,9 +4,17 @@ using MC.Core.Properties;
 
 namespace MC.Core.Utils
 {
+
+	/// <summary>
+	/// ミューテックス管理クラス。
+	/// この機能を使って多重起動を抑止します。
+	/// </summary>
 	public sealed class MutexManager : IDisposable
 	{
-
+		/// <summary>
+		/// コンストラクタ。
+		/// </summary>
+		/// <param name="id">アプリ名を示す固有のID。</param>
 		public MutexManager(string id)
 		{
 			var mutex = new Mutex(false, id);
@@ -18,11 +26,17 @@ namespace MC.Core.Utils
 			Mutex = mutex;
 		}
 
+		/// <summary>
+		/// ファイナライザ。
+		/// </summary>
 		~MutexManager()
 		{
 			Dispose(disposing: false);
 		}
 
+		/// <summary>
+		/// ミューテックス オブジェクトを取得します。
+		/// </summary>
 		public Mutex Mutex
 		{
 			get;
@@ -48,7 +62,9 @@ namespace MC.Core.Utils
 			{
 				if (Mutex != null)
 				{
-					Mutex.Close
+					Mutex.ReleaseMutex();
+					Mutex.Dispose();
+					Mutex = null;
 				}
 			}
 		}

@@ -199,6 +199,14 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MC.Common\MC.Common.csproj">
+      <Project>{880b78ee-78c8-4de9-8090-7e0ef3fa39c9}</Project>
+      <Name>MC.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MC.Core\MC.Core.csproj">
+      <Project>{9b741fdf-ce9d-4cf2-830c-912692843b60}</Project>
+      <Name>MC.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MC.Game\MC.Game.csproj">
       <Project>{e7296230-47af-4f6c-a1c2-0ce4e3d8c93c}</Project>
       <Name>MC.Game</Name>

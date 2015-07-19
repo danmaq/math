@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using MC.Core.Utils;
 
 namespace MC.Desktop
 {
@@ -7,5 +8,9 @@ namespace MC.Desktop
 	/// </summary>
 	partial class App : Application
 	{
+		/// <summary>
+		/// ミューテックス管理クラス。
+		/// </summary>
+		private MutexManager Mutex;
 	}
 }

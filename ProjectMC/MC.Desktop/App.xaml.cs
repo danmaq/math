@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Windows;
 using MC.Core.Utils;
 
@@ -41,7 +41,8 @@ namespace MC.Desktop
 		/// </summary>
 		/// <param name="sender">送信元。</param>
 		/// <param name="e">イベント情報。</param>
-		private void Application_Startup(object sender, StartupEventArgs e)
+		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
+		private void StartupHandler(object sender, StartupEventArgs e)
 		{
 			try
 			{
@@ -64,10 +65,7 @@ namespace MC.Desktop
 		/// </summary>
 		/// <param name="sender">送信元。</param>
 		/// <param name="e">イベント情報。</param>
-		private void Application_Exit(object sender, ExitEventArgs e)
-		{
-			ReleaseMutex();
-		}
+		private void ExitHandler(object sender, ExitEventArgs e) => ReleaseMutex();
 
 		/// <summary>
 		/// ミューテックスを解放します。

@@ -1,6 +1,8 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using MC.Common.Data;
 using MC.Common.State;
+using MC.Core.Properties;
 using MC.Core.Server;
 
 namespace MC.Core.State.Game
@@ -28,6 +30,7 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Begin(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(LoginState));
 			Api.Initialize();
 			MasterCache.DownloadAllMaster(Api.LoadAllMasterAsync);
 		}
@@ -52,6 +55,7 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Teardown(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(LoginState));
 		}
 	}
 }

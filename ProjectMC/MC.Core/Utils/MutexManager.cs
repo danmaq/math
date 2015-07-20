@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading;
 using MC.Core.Properties;
 
@@ -15,12 +16,14 @@ namespace MC.Core.Utils
 		/// コンストラクタ。
 		/// </summary>
 		/// <param name="id">アプリ名を示す固有のID。</param>
+		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
 		public MutexManager(string id)
 		{
 			var mutex = new Mutex(false, id);
 			if (!mutex.WaitOne(TimeSpan.Zero))
 			{
 				mutex.Dispose();
+				mutex = null;
 				throw new InvalidOperationException(Resources.ERR_MUTEX);
 			}
 			Mutex = mutex;

@@ -71,6 +71,24 @@ namespace MC.Core.Properties {
         }
         
         /// <summary>
+        ///   Started {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DEBUG_STARTED {
+            get {
+                return ResourceManager.GetString("DEBUG_STARTED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Terminated {0} に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string DEBUG_TERMINATED {
+            get {
+                return ResourceManager.GetString("DEBUG_TERMINATED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   768 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string DEFAULT_HEIGHT {

@@ -59,5 +59,23 @@ namespace MC.Desktop.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Pages/LogoPage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_LOGO {
+            get {
+                return ResourceManager.GetString("PAGE_LOGO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MC.Desktop.Res.MC_1.ico に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string RES_ICON {
+            get {
+                return ResourceManager.GetString("RES_ICON", resourceCulture);
+            }
+        }
     }
 }

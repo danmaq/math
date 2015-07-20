@@ -12,8 +12,8 @@
         Background="White"
         Title="{Binding Title}"
         Icon="{Binding Icon}"
-        StateChanged="Window_StateChanged"
-        Closed="Window_Closed">
+        StateChanged="ChangedWindowStateHandler"
+        Closed="ClosedWindowHandler">
     <Window.Resources>
         <ResourceDictionary Source="ChromeStyle.xaml" />
     </Window.Resources>
@@ -29,7 +29,7 @@
                    NavigationUIVisibility="Hidden"
                    HorizontalAlignment="Stretch"
                    VerticalAlignment="Stretch"
-                   Loaded="Frame_Loaded" />
+                   Loaded="FrameLoadedHandler" />
         </Viewbox>
         <!--- キャプション バー。 -->
         <StackPanel Orientation="Horizontal"
@@ -39,15 +39,15 @@
             <!--- 最小化ボタン。 -->
             <Button Content="{Binding MinimizeCaption}"
                     Style="{DynamicResource CaptionButtonStyleKey}"
-                    Click="ClickedMinimizeButton" />
+                    Click="ClickedMinimizeButtonHandler" />
             <!--- 最大化ボタン。 -->
             <Button Content="{Binding MaximizeCaption}"
                     Style="{DynamicResource CaptionButtonStyleKey}"
-                    Click="ClickedMaximizeButton" />
+                    Click="ClickedMaximizeButtonHandler" />
             <!--- 閉じるボタン。 -->
             <Button Content="{Binding CloseCaption}"
                     Style="{DynamicResource CaptionButtonStyleKey}"
-                    Click="ClickedCloseButton" />
+                    Click="ClickedCloseButtonHandler" />
         </StackPanel>
         <!--- タイトル ラベル。 -->
         <StackPanel Orientation="Horizontal"

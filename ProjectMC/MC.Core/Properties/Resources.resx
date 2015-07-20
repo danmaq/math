@@ -120,6 +120,12 @@
   <data name="APP_CODENAME" xml:space="preserve">
     <value>MATH.SC</value>
   </data>
+  <data name="DEBUG_STARTED" xml:space="preserve">
+    <value>Started {0}</value>
+  </data>
+  <data name="DEBUG_TERMINATED" xml:space="preserve">
+    <value>Terminated {0}</value>
+  </data>
   <data name="DEFAULT_HEIGHT" xml:space="preserve">
     <value>768</value>
     <comment>既定の解像度</comment>

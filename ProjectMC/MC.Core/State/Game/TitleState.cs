@@ -1,4 +1,5 @@
-﻿using MC.Common.State;
+﻿using System.Diagnostics;
+using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
 using MC.Core.Properties;
@@ -30,6 +31,7 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(TitleState));
 			var flow = GameFlow.GetService(context);
 			var args =
 				new RequireAlertArgs()
@@ -54,6 +56,7 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Teardown(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(TitleState));
 		}
 	}
 }

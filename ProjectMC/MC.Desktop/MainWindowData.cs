@@ -2,6 +2,7 @@
 using System.Reflection;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using MC.Desktop.Properties;
 
 namespace MC.Desktop
 {
@@ -88,8 +89,9 @@ namespace MC.Desktop
 		{
 			var asm = Assembly.GetExecutingAssembly();
 			var title = asm.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
-			var icon = BitmapFrame.Create(asm.GetManifestResourceStream(@"MC.Desktop.Resources.MC_1.ico"));
-			var titleCaption = Miscs.Format($@"{title} バージョン {asm.GetName().Version}");
+			var ver = asm.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version;
+			var icon = BitmapFrame.Create(asm.GetManifestResourceStream(Resources.RES_ICON));
+			var titleCaption = Miscs.Format($@"{title} バージョン {ver}");
             return new MainWindowData().CopyTo(title, icon, titleCaption);
 		}
 

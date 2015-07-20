@@ -38,10 +38,10 @@ namespace MC.Core.Flow
 		/// <summary>
 		/// ゲームフローを開始します。
 		/// </summary>
+		/// <returns>ゲームループ用のコルーチン。</returns>
 		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
 		public IEnumerable Run()
 		{
-			var contextEnumerable = contextCollection.Run();
 			contextCollection.Add(new GameFlowContext(this));
 			foreach (var count in contextCollection.Run())
 			{

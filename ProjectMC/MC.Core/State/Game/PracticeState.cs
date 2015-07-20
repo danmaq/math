@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
+using MC.Core.Properties;
 
 namespace MC.Core.State.Game
 {
@@ -42,6 +44,7 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Begin(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(PracticeState));
 			//var flow = GameFlow.GetService(context);
 		}
 
@@ -61,6 +64,7 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Teardown(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(PracticeState));
 		}
 	}
 }

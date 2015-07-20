@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
@@ -32,6 +33,7 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Begin(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(HomeState));
 			var flow = GameFlow.GetService(context);
 			var args =
 				new RequireSelectArgs()
@@ -56,6 +58,7 @@ namespace MC.Core.State.Game
 		/// <param name="context">コンテキスト。</param>
 		public void Teardown(IContext context)
 		{
+			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(HomeState));
 		}
 
 		/// <summary>

@@ -18,13 +18,24 @@ namespace MC.Core.Data
 		}
 
 		/// <summary>
+		/// ToString() メソッドに使う、クラス名を取得します。
+		/// </summary>
+		protected virtual string ClassName
+		{
+			get;
+		}
+		= nameof(RequireResponseArgs);
+
+		/// <summary>
+		/// ToString() メソッドに使う、引数一覧を取得します。
+		/// </summary>
+		protected virtual IEnumerable<KeyValuePair<string, object>> Arguments =>
+			new Dictionary<string, object>() {[nameof(Description)] = Description };
+
+		/// <summary>
 		/// 文字列情報を取得します。
 		/// </summary>
 		/// <returns>文字列情報。</returns>
-		public override string ToString() =>
-			StringHelper.CreateToString(
-				className: nameof(RequireResponseArgs),
-				arguments:
-					new Dictionary<string, object>() { [nameof(Description)] = Description });
+		public override string ToString() => StringHelper.CreateToString(ClassName, Arguments);
 	}
 }

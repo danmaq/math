@@ -16,5 +16,14 @@ namespace MC.Core.Data
 			internal set;
 		}
 		= DelegateHelper.EmptyAction;
+
+		/// <summary>
+		/// ToString() メソッドに使う、クラス名を取得します。
+		/// </summary>
+		protected override string ClassName
+		{
+			get;
+		}
+		= nameof(RequireAlertArgs);
 	}
 }

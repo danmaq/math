@@ -61,6 +61,15 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Pages/HomePage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_HOME {
+            get {
+                return ResourceManager.GetString("PAGE_HOME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pages/LogoPage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PAGE_LOGO {

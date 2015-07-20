@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections;
-using System.Diagnostics;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Navigation;
 using MC.Core.Data;
 using MC.Core.Flow;
+using MC.Desktop.Pages;
 
 namespace MC.Desktop
 {
@@ -69,6 +69,15 @@ namespace MC.Desktop
 		}
 
 		/// <summary>
+		/// ページ遷移を行います。
+		/// </summary>
+		/// <param name="path">XAML へのパス。</param>
+		public void Navigate(string path)
+		{
+			Navigation.Navigate(new Uri(uriString: path, uriKind: UriKind.Relative));
+		}
+
+		/// <summary>
 		/// リソースを解放します。
 		/// </summary>
 		/// <param name="disposing">マネージド リソースも解放するかどうか。</param>
@@ -117,8 +126,7 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void FrameLoadedHandler(object sender, RoutedEventArgs e)
 		{
-			Navigation.Navigate(
-				new Uri(uriString: Properties.Resources.PAGE_LOGO, uriKind: UriKind.Relative));
+			Navigate(Properties.Resources.PAGE_LOGO);
 			gameFlow = new GameFlow();
 			gameFlow.RequireResponse += GameRequireResponseHandler;
 			CompositionTarget.Rendering += CreateGameLoopHandler(gameFlow.Run());
@@ -131,11 +139,8 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void GameRequireResponseHandler(object sender, RequireResponseArgs e)
 		{
-			// TODO: ここから
-			Debug.WriteLine(sender);
-			MessageBox.Show(e.ToString(), @"表示テスト", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+			this.GetInteractive().RequireResponseArgs = e;
 		}
-
 
 		/// <summary>
 		/// ウィンドウが閉じられた際に呼び出されます。

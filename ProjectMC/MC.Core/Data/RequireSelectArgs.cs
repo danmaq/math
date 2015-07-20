@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using MC.Common.Collection;
-using MC.Common.Utils;
 
 namespace MC.Core.Data
 {
@@ -26,18 +25,23 @@ namespace MC.Core.Data
 		}
 
 		/// <summary>
-		/// 文字列情報を取得します。
+		/// ToString() メソッドに使う、クラス名を取得します。
 		/// </summary>
-		/// <returns>文字列情報。</returns>
-		public override string ToString() =>
-			StringHelper.CreateToString(
-				className: nameof(RequireSelectArgs),
-				arguments:
-					new Dictionary<string, object>()
-					{
-						[nameof(Description)] = Description,
-						[nameof(Expires)] = Expires,
-						[nameof(Selections)] = Selections.ToStringCollection(),
-					});
+		protected override string ClassName
+		{
+			get;
+		}
+		= nameof(RequireSelectArgs);
+
+		/// <summary>
+		/// ToString() メソッドに使う、引数一覧を取得します。
+		/// </summary>
+		protected override IEnumerable<KeyValuePair<string, object>> Arguments =>
+			new Dictionary<string, object>()
+			{
+				[nameof(Description)] = Description,
+				[nameof(Expires)] = Expires,
+				[nameof(Selections)] = Selections.ToStringCollection(),
+			};
 	}
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using MC.Common.Utils;
 
 namespace MC.Core.Data
@@ -25,13 +24,12 @@ namespace MC.Core.Data
 		} = _ => null;
 
 		/// <summary>
-		/// 文字列情報を取得します。
+		/// ToString() メソッドに使う、クラス名を取得します。
 		/// </summary>
-		/// <returns>文字列情報。</returns>
-		public override string ToString() =>
-			StringHelper.CreateToString(
-				className: nameof(RequireTextArgs),
-				arguments:
-					new Dictionary<string, object>() { [nameof(Description)] = Description });
+		protected override string ClassName
+		{
+			get;
+		}
+		= nameof(RequireTextArgs);
 	}
 }

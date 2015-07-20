@@ -27,6 +27,11 @@ namespace MC.Core.Utils
 		}
 
 		/// <summary>
+		/// エラーメッセージを取得します。
+		/// </summary>
+		public static string ErrorMessage => Resources.ERR_MUTEX;
+
+		/// <summary>
 		/// ファイナライザ。
 		/// </summary>
 		~MutexManager()

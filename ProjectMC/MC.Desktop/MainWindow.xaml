@@ -12,7 +12,8 @@
         Background="White"
         Title="{Binding Title}"
         Icon="{Binding Icon}"
-        StateChanged="Window_StateChanged">
+        StateChanged="Window_StateChanged"
+        Closed="Window_Closed">
     <Window.Resources>
         <ResourceDictionary Source="ChromeStyle.xaml" />
     </Window.Resources>

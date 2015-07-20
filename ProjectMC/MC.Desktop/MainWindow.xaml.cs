@@ -14,12 +14,14 @@ namespace MC.Desktop
 		/// </summary>
 		public MainWindow()
 		{
+			Instance = this;
 			InitializeComponent();
 			DataContext = CurrentData;
         }
 
 		/// <summary>
 		/// シングルトン オブジェクト。
+		/// ウィンドウが開かれている間のみ有効です。
 		/// </summary>
 		public static MainWindow Instance
 		{
@@ -60,7 +62,6 @@ namespace MC.Desktop
 			Navigation.Navigate(
 				new Uri(uriString: @"Pages/LogoPage.xaml", uriKind: UriKind.Relative));
 
-
 		/// <summary>
 		/// 閉じるボタン押下時に呼び出されます。
 		/// </summary>
@@ -83,5 +84,12 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void ClickedMaximizeButton(object sender, RoutedEventArgs e) =>
 			WindowState = Maximized ? WindowState.Normal : WindowState.Maximized;
+
+		/// <summary>
+		/// ウィンドウが閉じられた際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void Window_Closed(object sender, EventArgs e) => Instance = null;
 	}
 }

@@ -10,7 +10,7 @@
       Title="Logo">
     <Grid Margin="100">
         <Grid.Resources>
-            <ResourceDictionary Source="/presentationframework.AeroLite;component/themes/aerolite.normalcolor.xaml" />
+            <ResourceDictionary Source="/presentationframework.AeroLite,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,processorArchitecture=MSIL;component/themes/aerolite.normalcolor.xaml" />
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="10*" />

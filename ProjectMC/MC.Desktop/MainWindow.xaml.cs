@@ -72,10 +72,8 @@ namespace MC.Desktop
 		/// ページ遷移を行います。
 		/// </summary>
 		/// <param name="path">XAML へのパス。</param>
-		public void Navigate(string path)
-		{
+		public void Navigate(string path) =>
 			Navigation.Navigate(new Uri(uriString: path, uriKind: UriKind.Relative));
-		}
 
 		/// <summary>
 		/// リソースを解放します。
@@ -154,12 +152,23 @@ namespace MC.Desktop
 		}
 
 		/// <summary>
-		/// 画面状態が変化した際に呼び出されます。
+		/// 画面のサイズ状態が変化した際に呼び出されます。
 		/// </summary>
 		/// <param name="sender">送信元。</param>
 		/// <param name="e">イベント情報。</param>
-		private void ChangedWindowStateHandler(object sender, EventArgs e) =>
+		private void ChangedWindowStateHandler(object sender, EventArgs e)
+		{
 			DataContext = CurrentData.CopyTo(maximizeCaption: Maximized ? "2" : "1");
+			ChangedActivateHandler(sender, e);
+        }
+
+		/// <summary>
+		/// 画面がアクティブかどうか、状態が変化した際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ChangedActivateHandler(object sender, EventArgs e) =>
+			Topmost = Maximized && IsActive;
 
 		/// <summary>
 		/// 閉じるボタン押下時に呼び出されます。

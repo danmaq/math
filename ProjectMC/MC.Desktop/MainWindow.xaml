@@ -17,7 +17,7 @@
         Activated="ChangedActivateHandler"
         Deactivated="ChangedActivateHandler">
     <Window.Resources>
-        <ResourceDictionary Source="ChromeStyle.xaml" />
+        <ResourceDictionary Source="/ChromeStyle.xaml" />
     </Window.Resources>
     <WindowChrome.WindowChrome>
         <WindowChrome UseAeroCaptionButtons="False"

@@ -79,6 +79,24 @@ namespace MC.Core.State.Game
 						select: () => context.NextState = AreaState.Instance,
 						description: Resources.MENU_MAP_SCHOOL),
 					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						description: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						description: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						description: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						description: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						description: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						description: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
 						select: () => context.NextState = HomeState.Instance,
 						description: Resources.MENU_GENERIC_BACK),
 				};

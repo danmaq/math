@@ -2,8 +2,10 @@
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using MC.Common.State;
+using MC.Common.Utils;
 using MC.Core.Data;
 using MC.Core.Flow;
+using MC.Core.Flow.Selection;
 using MC.Core.Properties;
 
 namespace MC.Core.State.Game
@@ -68,19 +70,18 @@ namespace MC.Core.State.Game
 		/// <returns>選択肢。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context)
 		{
-			var selection =
-				new Selection[]
-				{
-					Selection.Default.CopyTo(
-						select: () => context.NextState = WorldState.Instance,
-						description: Resources.MENU_HOME_WORLD),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = PreferenceState.Instance,
-						description: Resources.MENU_HOME_PREFERENCE),
-					Selection.Default.CopyTo(
-						select: () => context.Terminate(),
-						description: Resources.MENU_HOME_EXIT),
-				};
+			var selection = new Selection[EnumHelper.Length<HomeSelection>()];
+			selection[(int)HomeSelection.World] =
+				Selection.Default.CopyTo(
+					select: () => context.NextState = WorldState.Instance,
+					description: Resources.MENU_HOME_WORLD);
+			selection[(int)HomeSelection.Preference] =
+				Selection.Default.CopyTo(
+					select: () => context.NextState = PreferenceState.Instance,
+					description: Resources.MENU_HOME_PREFERENCE);
+			selection[(int)HomeSelection.Exit] =
+				Selection.Default.CopyTo(
+					select: () => context.Terminate(), description: Resources.MENU_HOME_EXIT);
 			return new ReadOnlyCollection<Selection>(selection);
 		}
 	}

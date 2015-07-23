@@ -79,6 +79,7 @@
     <Compile Include="State\NullState.cs" />
     <Compile Include="Utils\DelegateHelper.cs" />
     <Compile Include="Utils\Disposable.cs" />
+    <Compile Include="Utils\EnumHelper.cs" />
     <Compile Include="Utils\SemaphoreExtension.cs" />
     <Compile Include="Utils\StringHelper.cs" />
   </ItemGroup>

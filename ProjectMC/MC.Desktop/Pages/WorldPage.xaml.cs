@@ -7,14 +7,14 @@ using MC.Core.Flow.Selection;
 namespace MC.Desktop.Pages
 {
 	/// <summary>
-	/// HomePage.xaml の相互作用ロジック
+	/// WorldPage.xaml の相互作用ロジック
 	/// </summary>
-	public partial class HomePage : Page, IInteractivePage
+	public partial class WorldPage : Page, IInteractivePage
 	{
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
-		public HomePage()
+		public WorldPage()
 		{
 			InitializeComponent();
 		}
@@ -38,16 +38,5 @@ namespace MC.Desktop.Pages
 			get;
 			set;
 		}
-
-		/// <summary>
-		/// 通学ボタンが押下された際に呼び出されます。
-		/// </summary>
-		/// <param name="sender">送信元。</param>
-		/// <param name="e">イベント情報。</param>
-		private void ClickedSchoolButtonHandler(object sender, RoutedEventArgs e)
-		{
-			MainWindow.Instance.Navigate(Properties.Resources.PAGE_WORLD);
-			(Selection?.Selections[(int)HomeSelection.World].Select ?? DelegateHelper.EmptyAction)();
-        }
 	}
 }

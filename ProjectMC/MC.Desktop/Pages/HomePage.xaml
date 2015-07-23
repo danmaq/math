@@ -6,25 +6,56 @@
       xmlns:local="clr-namespace:MC.Desktop.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="480" d:DesignWidth="854"
-      Title="HomePage"
-      Background="Silver">
+      Title="HomePage">
 
     <Page.Resources>
-        <BitmapImage x:Key="Town" UriSource="/Res/BG/Town.png" />
-        <BitmapImage x:Key="Pythagoras" UriSource="/Res/Chr/Pythagoras.png" />
+        <BitmapImage x:Key="Town"
+                     UriSource="/Res/BG/Town.png" />
+        <BitmapImage x:Key="Pythagoras"
+                     UriSource="/Res/Chr/Pythagoras.png" />
     </Page.Resources>
     
     <Grid>
-        <Image HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="UniformToFill" Source="{StaticResource Town}" />
-        <Viewbox HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,64,0,0">
-            <Image HorizontalAlignment="Right" Stretch="Fill" Width="480" Height="480" Source="{StaticResource Pythagoras}" />
-        </Viewbox>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="480">
-            <StackPanel.Resources>
+        <Image Source="{StaticResource Town}"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Stretch="UniformToFill" />
+        <Image Source="{StaticResource Pythagoras}"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               Stretch="Uniform" />
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Stretch"
+              MinWidth="480">
+            <Grid.Resources>
                 <ResourceDictionary Source="/presentationframework.AeroLite,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,processorArchitecture=MSIL;component/themes/aerolite.normalcolor.xaml" />
-            </StackPanel.Resources>
-            <Button Content="通学" FontSize="48" Padding="10" Opacity="0.8" />
-            <Button Content="設定" FontSize="48" Padding="10" Opacity="0.8" />
-        </StackPanel>
+            </Grid.Resources>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" MinWidth="480" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1"
+                    Opacity="0.8"
+                    Click="ClickedSchoolButtonHandler">
+                <Viewbox>
+                    <TextBlock Text="通学"
+                               Margin="4" />
+                </Viewbox>
+            </Button>
+            <Button Grid.Row="2"
+                    Opacity="0.8"
+                    IsEnabled="False">
+                <Viewbox>
+                    <TextBlock Text="設定"
+                               Margin="4"
+                               Foreground="Gray" />
+                </Viewbox>
+            </Button>
+        </Grid>
     </Grid>
 </Page>

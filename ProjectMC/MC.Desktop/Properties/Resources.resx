@@ -123,6 +123,9 @@
   <data name="PAGE_LOGO" xml:space="preserve">
     <value>Pages/LogoPage.xaml</value>
   </data>
+  <data name="PAGE_WORLD" xml:space="preserve">
+    <value>Pages/WorldPage.xaml</value>
+  </data>
   <data name="RES_ICON" xml:space="preserve">
     <value>MC.Desktop.Res.MC_1.ico</value>
   </data>

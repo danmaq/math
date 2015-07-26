@@ -61,6 +61,15 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Pages/AreaPage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_AREA {
+            get {
+                return ResourceManager.GetString("PAGE_AREA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pages/HomePage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PAGE_HOME {

@@ -48,6 +48,6 @@ namespace MC.Desktop.Pages
 		{
 			MainWindow.Instance.Navigate(Properties.Resources.PAGE_WORLD);
 			(Selection?.Selections[(int)HomeSelection.World].Select ?? DelegateHelper.EmptyAction)();
-        }
+		}
 	}
 }

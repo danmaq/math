@@ -14,5 +14,5 @@ namespace MC.Desktop.Pages
 		{
 			set;
 		}
-    }
+	}
 }

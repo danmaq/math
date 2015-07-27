@@ -37,24 +37,24 @@ namespace MC.Desktop.Pages
 			set;
 		}
 
-        /// <summary>
-        /// 戻るボタンが押下された際に呼び出されます。
-        /// </summary>
-        /// <param name="sender">送信元。</param>
-        /// <param name="e">イベント情報。</param>
-        private void ClickedBackButtonHandler(object sender, RoutedEventArgs e)
-        {
-            MainWindow.Instance.Navigation.GoBack();
-        }
+		/// <summary>
+		/// 戻るボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedBackButtonHandler(object sender, RoutedEventArgs e)
+		{
+			MainWindow.Instance.Navigation.GoBack();
+		}
 
-        /// <summary>
-        /// ダミーボタンが押下された際に呼び出されます。
-        /// </summary>
-        /// <param name="sender">送信元。</param>
-        /// <param name="e">イベント情報。</param>
-        private void ClickedDummyButtonHandler(object sender, RoutedEventArgs e)
-        {
-            MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
-        }
-    }
+		/// <summary>
+		/// ダミーボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedDummyButtonHandler(object sender, RoutedEventArgs e)
+		{
+			MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
+		}
+	}
 }

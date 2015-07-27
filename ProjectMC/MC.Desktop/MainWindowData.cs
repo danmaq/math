@@ -92,7 +92,7 @@ namespace MC.Desktop
 			var ver = asm.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version;
 			var icon = BitmapFrame.Create(asm.GetManifestResourceStream(Resources.RES_ICON));
 			var titleCaption = Miscs.Format($@"{title} バージョン {ver}");
-            return new MainWindowData().CopyTo(title, icon, titleCaption);
+			return new MainWindowData().CopyTo(title, icon, titleCaption);
 		}
 
 		/// <summary>
@@ -109,7 +109,7 @@ namespace MC.Desktop
 			string title = null,
 			ImageSource icon = null,
 			string titleCaption = null,
-            string minimizeCaption = null,
+			string minimizeCaption = null,
 			string maximizeCaption = null,
 			string closeCaption = null) =>
 			new MainWindowData()

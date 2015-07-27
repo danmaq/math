@@ -26,7 +26,7 @@ namespace MC.Desktop
 			Instance = this;
 			InitializeComponent();
 			DataContext = CurrentData;
-        }
+		}
 
 		/// <summary>
 		/// シングルトン オブジェクト。
@@ -84,7 +84,7 @@ namespace MC.Desktop
 			if (disposing)
 			{
 				ReleaseGameFlow();
-            }
+			}
 		}
 
 		/// <summary>
@@ -114,7 +114,7 @@ namespace MC.Desktop
 					{
 						Close();
 					}
-                };
+				};
 		}
 
 		/// <summary>
@@ -148,7 +148,7 @@ namespace MC.Desktop
 		private void ClosedWindowHandler(object sender, EventArgs e)
 		{
 			ReleaseGameFlow();
-            Instance = null;
+			Instance = null;
 		}
 
 		/// <summary>
@@ -160,7 +160,7 @@ namespace MC.Desktop
 		{
 			DataContext = CurrentData.CopyTo(maximizeCaption: Maximized ? "2" : "1");
 			ChangedActivateHandler(sender, e);
-        }
+		}
 
 		/// <summary>
 		/// 画面がアクティブかどうか、状態が変化した際に呼び出されます。

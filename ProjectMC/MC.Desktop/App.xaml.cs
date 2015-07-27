@@ -58,7 +58,7 @@ namespace MC.Desktop
 					icon: MessageBoxImage.Hand);
 				Shutdown(exitCode: 1);
 			}
-        }
+		}
 
 		/// <summary>
 		/// アプリケーションが終了される際に呼び出されます。

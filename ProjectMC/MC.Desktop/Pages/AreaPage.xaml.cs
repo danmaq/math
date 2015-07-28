@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using MC.Core.Data;
 
@@ -7,8 +8,9 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// AreaPage.xaml の相互作用ロジック
 	/// </summary>
-	public partial class AreaPage : Page
+	partial class AreaPage : Page, IInteractivePage
 	{
+
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
@@ -26,7 +28,13 @@ namespace MC.Desktop.Pages
 			set
 			{
 				Selection = value as RequireSelectArgs;
-				DataContext = Selection;
+				DataContext =
+					new
+					{
+						Selections = Selection.Selections.Skip(1).Select(s => new SelectionData(s)),
+						Back = new SelectionData(Selection.Selections.First()),
+						BackEnabled = true,
+					};
 			}
 		}
 
@@ -56,7 +64,7 @@ namespace MC.Desktop.Pages
 		/// <param name="e">イベント情報。</param>
 		private void ClickedDummyButtonHandler(object sender, RoutedEventArgs e)
 		{
-
+			MainWindow.Instance.Navigation.GoBack();
 		}
 	}
 }

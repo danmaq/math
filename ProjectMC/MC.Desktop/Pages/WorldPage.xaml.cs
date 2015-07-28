@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+﻿using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using MC.Core.Data;
@@ -8,8 +8,9 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// WorldPage.xaml の相互作用ロジック
 	/// </summary>
-	public partial class WorldPage : Page, IInteractivePage
+	partial class WorldPage : Page, IInteractivePage
 	{
+
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
@@ -26,8 +27,18 @@ namespace MC.Desktop.Pages
 			set
 			{
 				Selection = value as RequireSelectArgs;
-				DataContext = Selection;
-				Debug.WriteLine(Selection);
+				DataContext =
+					new
+					{
+						Selections =
+							Selection
+								.Selections
+								.Skip(1)
+								.Select(s => new SelectionData(s))
+								.Reverse(),
+						Back = new SelectionData(Selection.Selections.First()),
+						BackEnabled = true,
+					};
 			}
 		}
 

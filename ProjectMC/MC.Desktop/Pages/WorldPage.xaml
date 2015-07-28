@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MC.Desktop.Pages"
+      xmlns:System="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
       d:DesignHeight="480" d:DesignWidth="854"
       Title="WorldPage"
@@ -34,13 +35,17 @@
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
             <ListBox Grid.Column="2"
+                     Margin="32"
                      Background="Transparent"
                      BorderBrush="Transparent"
                      ItemsSource="{Binding Selections}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <!--- TODO: ダミーボタン -->
-                        <Button Content="{Binding Caption}" Click="ClickedDummyButtonHandler" />
+                        <Button Command="{Binding Action}"
+                                Content="{Binding Caption}"
+                                Click="ClickedDummyButtonHandler">
+                        </Button>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 <ListBox.ItemContainerStyle>
@@ -51,6 +56,8 @@
             </ListBox>
             <Button Grid.Column="0"
                     VerticalAlignment="Top"
+                    IsEnabled="{Binding BackEnabled}"
+                    Command="{Binding Back.Action}"
                     Click="ClickedBackButtonHandler"
                     Style="{DynamicResource WhiteModernButtonStyleKey}">
                 <Viewbox>

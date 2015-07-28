@@ -36,7 +36,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>35</ApplicationRevision>
+    <ApplicationRevision>36</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -170,6 +170,7 @@
       <DependentUpon>LogoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageHelper.cs" />
+    <Compile Include="Pages\SelectionData.cs" />
     <Compile Include="Pages\WorldPage.xaml.cs">
       <DependentUpon>WorldPage.xaml</DependentUpon>
     </Compile>

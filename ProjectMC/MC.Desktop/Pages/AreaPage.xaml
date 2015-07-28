@@ -34,13 +34,16 @@
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
             <ListBox Grid.Column="2"
+                     Margin="32"
                      Background="Transparent"
                      BorderBrush="Transparent"
                      ItemsSource="{Binding Selections}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <!--- TODO: ダミーボタン -->
-                        <Button Content="{Binding Caption}" Click="ClickedDummyButtonHandler" />
+                        <Button Command="{Binding Action}"
+                                Content="{Binding Caption}"
+                                Click="ClickedDummyButtonHandler" />
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 <ListBox.ItemContainerStyle>
@@ -51,6 +54,8 @@
             </ListBox>
             <Button Grid.Column="0"
                     VerticalAlignment="Top"
+                    IsEnabled="{Binding BackEnabled}"
+                    Command="{Binding Back.Action}"
                     Click="ClickedBackButtonHandler"
                     Style="{DynamicResource WhiteModernButtonStyleKey}">
                 <Viewbox>

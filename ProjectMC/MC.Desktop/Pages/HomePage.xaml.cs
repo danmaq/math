@@ -9,7 +9,7 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// HomePage.xaml の相互作用ロジック
 	/// </summary>
-	public partial class HomePage : Page, IInteractivePage
+	partial class HomePage : Page, IInteractivePage
 	{
 		/// <summary>
 		/// コンストラクタ。

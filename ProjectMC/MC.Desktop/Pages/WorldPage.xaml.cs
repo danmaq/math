@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
 using MC.Core.Data;
 
@@ -25,6 +26,8 @@ namespace MC.Desktop.Pages
 			set
 			{
 				Selection = value as RequireSelectArgs;
+				DataContext = Selection;
+				Debug.WriteLine(Selection);
 			}
 		}
 

@@ -74,14 +74,14 @@ namespace MC.Core.State.Game
 			selection[(int)HomeSelection.World] =
 				Selection.Default.CopyTo(
 					select: () => context.NextState = WorldState.Instance,
-					description: Resources.MENU_HOME_WORLD);
+					caption: Resources.MENU_HOME_WORLD);
 			selection[(int)HomeSelection.Preference] =
 				Selection.Default.CopyTo(
 					select: () => context.NextState = PreferenceState.Instance,
-					description: Resources.MENU_HOME_PREFERENCE);
+					caption: Resources.MENU_HOME_PREFERENCE);
 			selection[(int)HomeSelection.Exit] =
 				Selection.Default.CopyTo(
-					select: () => context.Terminate(), description: Resources.MENU_HOME_EXIT);
+					select: () => context.Terminate(), caption: Resources.MENU_HOME_EXIT);
 			return new ReadOnlyCollection<Selection>(selection);
 		}
 	}

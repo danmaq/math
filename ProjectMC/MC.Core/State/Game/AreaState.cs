@@ -77,10 +77,10 @@ namespace MC.Core.State.Game
 				{
 					Selection.Default.CopyTo(
 						select: () => context.NextState = WorldState.Instance,
-						description: Resources.MENU_AREA_TEMP),
+						caption: Resources.MENU_GENERIC_BACK),
 					Selection.Default.CopyTo(
 						select: () => context.NextState = WorldState.Instance,
-						description: Resources.MENU_GENERIC_BACK),
+						caption: Resources.MENU_AREA_TEMP),
 				};
 			return new ReadOnlyCollection<Selection>(selection);
 		}

@@ -45,7 +45,7 @@ namespace MC
 				Func<Selection, int, string> selector =
 					(s, i) =>
 						string.Format(
-							CultureInfo.CurrentCulture, @"{0}: {1}", i + 1, s.Description);
+							CultureInfo.CurrentCulture, @"{0}: {1}", i + 1, s.Caption);
                 selection
 					.Select(selector)
 					.ForEach<string>(Console.WriteLine);

@@ -13,10 +13,22 @@ namespace MC.Core.Data
 
 		/// <summary>既定のデータ。</summary>
 		public static readonly Selection Default =
-			new Selection() { Select = DelegateHelper.EmptyAction, Description = string.Empty };
+			new Selection()
+			{
+				Select = DelegateHelper.EmptyAction,
+				Caption = string.Empty,
+				Description = string.Empty,
+			};
 
 		/// <summary>選択用コールバック。</summary>
 		public Action Select
+		{
+			get;
+			internal set;
+		}
+
+		/// <summary>選択の表題。</summary>
+		public string Caption
 		{
 			get;
 			internal set;
@@ -53,13 +65,16 @@ namespace MC.Core.Data
 			StringHelper.CreateToString(
 				className: nameof(Selection),
 				arguments:
-					new Dictionary<string, object>() { [nameof(Description)] = Description });
+					new Dictionary<string, object>()
+					{
+						[nameof(Caption)] = Caption, [nameof(Description)] = Description,
+					});
 
 		/// <summary>
 		/// ハッシュコードを取得します。
 		/// </summary>
 		/// <returns>ハッシュコード。</returns>
-		public override int GetHashCode() => Select.GetHashCode() ^ Description.GetHashCode();
+		public override int GetHashCode() => Select.GetHashCode() ^ Caption.GetHashCode();
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
@@ -72,23 +87,25 @@ namespace MC.Core.Data
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="others">検証対象の値。</param>
 		/// <returns>値が等しい場合、true。</returns>
 		public bool Equals(Selection others) =>
-			Select == others.Select && Description == others.Description;
+			Select == others.Select && Caption == others.Caption;
 
 		/// <summary>
 		/// データの一部、または全部を改変して複製します。
 		/// </summary>
-		/// <param name="select"></param>
-		/// <param name="description"></param>
+		/// <param name="select">選択用コールバック。</param>
+		/// <param name="caption">表題。</param>
+		/// <param name="description">解説。</param>
 		/// <returns>新しい値。</returns>
 		[SuppressMessage("Microsoft.Design", "CA1026:DefaultParametersShouldNotBeUsed")]
-		public Selection CopyTo(Action select = null, string description = null) =>
+		public Selection CopyTo(
+			Action select = null, string caption = null, string description = null) =>
 			new Selection()
 			{
 				Select = select ?? Select,
-				Description = description ?? Description
+				Caption = caption ?? Caption
 			};
 	}
 }

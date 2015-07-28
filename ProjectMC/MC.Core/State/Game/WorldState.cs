@@ -76,29 +76,29 @@ namespace MC.Core.State.Game
 				new Selection[]
 				{
 					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						description: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
 						select: () => context.NextState = HomeState.Instance,
-						description: Resources.MENU_GENERIC_BACK),
+						caption: Resources.MENU_GENERIC_BACK),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
+					Selection.Default.CopyTo(
+						select: () => context.NextState = AreaState.Instance,
+						caption: Resources.MENU_MAP_SCHOOL),
 				};
 			return new ReadOnlyCollection<Selection>(selection);
 		}

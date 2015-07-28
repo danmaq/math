@@ -26,6 +26,7 @@ namespace MC.Desktop.Pages
 			set
 			{
 				Selection = value as RequireSelectArgs;
+				DataContext = Selection;
 			}
 		}
 

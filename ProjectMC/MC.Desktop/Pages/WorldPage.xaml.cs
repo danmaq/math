@@ -34,7 +34,6 @@ namespace MC.Desktop.Pages
 							Selection
 								.Selections
 								.Skip(1)
-								.Select(s => new SelectionData(s))
 								.Reverse(),
 						Back = new SelectionData(Selection.Selections.First()),
 						BackEnabled = true,
@@ -69,6 +68,22 @@ namespace MC.Desktop.Pages
 		private void ClickedDummyButtonHandler(object sender, RoutedEventArgs e)
 		{
 			MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
+		}
+
+		/// <summary>
+		/// リストボックスの選択に変化が生じた際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ChangedListBoxSelectionHandler(object sender, SelectionChangedEventArgs e)
+		{
+			var listBox = sender as ListBox;
+			if (listBox != null && e.AddedItems.Count > 0)
+			{
+				listBox.SelectedIndex = -1;
+				e.AddedItems.Cast<Selection>().First().Select();
+				MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
+			}
 		}
 	}
 }

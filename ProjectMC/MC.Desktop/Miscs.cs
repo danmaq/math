@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Reflection;
 
 namespace MC.Desktop
@@ -9,14 +8,6 @@ namespace MC.Desktop
 	/// </summary>
 	static class Miscs
 	{
-
-		/// <summary>
-		/// 文字列を整形します。
-		/// </summary>
-		/// <param name="format">整形フォーマット。</param>
-		/// <returns>整形された文字列。</returns>
-		public static string Format(this FormattableString format) =>
-			format.ToString(CultureInfo.CurrentCulture);
 
 		/// <summary>
 		/// 指定したアセンブリに適用されたカスタム属性を取得します。

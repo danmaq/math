@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
 using System.Reflection;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using MC.Common.Utils;
 using MC.Desktop.Properties;
 
 namespace MC.Desktop
@@ -91,8 +94,9 @@ namespace MC.Desktop
 			var title = asm.GetCustomAttribute<AssemblyProductAttribute>()?.Product;
 			var ver = asm.GetCustomAttribute<AssemblyFileVersionAttribute>()?.Version;
 			var icon = BitmapFrame.Create(asm.GetManifestResourceStream(Resources.RES_ICON));
-			var titleCaption = Miscs.Format($@"{title} バージョン {ver}");
-			return new MainWindowData().CopyTo(title, icon, titleCaption);
+			var caption =
+				string.Format(CultureInfo.CurrentCulture, @"{0} バージョン {1}", title, ver);
+			return new MainWindowData().CopyTo(title, icon, caption);
 		}
 
 		/// <summary>
@@ -123,7 +127,18 @@ namespace MC.Desktop
 			};
 
 		public override string ToString() =>
-			Miscs.Format($@"");
+			StringHelper.CreateToString(
+				className: nameof(MainWindowData),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(Title)] = Title,
+						[nameof(TitleCaption)] = TitleCaption,
+						[nameof(MinimizeCaption)] = MinimizeCaption,
+						[nameof(MaximizeCaption)] = MaximizeCaption,
+						[nameof(CloseCaption)] = CloseCaption,
+						[nameof(Icon)] = Icon,
+					});
 
 		/// <summary>
 		/// 現在のインスタンスのコピーである新しいオブジェクトを作成します。

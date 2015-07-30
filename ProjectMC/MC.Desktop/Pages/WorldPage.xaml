@@ -76,6 +76,15 @@
                     </Style>
                 </ListBox.ItemContainerStyle>
             </ListBox>
+
+            <local:BackButton Grid.Column="0"
+                                Grid.Row="1"
+                                VerticalAlignment="Top"
+                                IsEnabled="{Binding BackEnabled}"
+                                Command="{Binding Back.Action}"
+                                Click="ClickedBackButtonHandler">
+            </local:BackButton>
+            <!--
             <Button Grid.Column="0"
                     Grid.Row="1"
                     VerticalAlignment="Top"
@@ -83,18 +92,8 @@
                     Command="{Binding Back.Action}"
                     Click="ClickedBackButtonHandler"
                     Style="{DynamicResource WhiteModernButtonStyleKey}">
-                <Viewbox>
-                    <Canvas Width="512" Height="512" ClipToBounds="True" Margin="192">
-                        <Path Fill="White">
-                            <Path.Data>
-                                <PathGeometry FillRule="Nonzero"
-                                      Figures="M281.5,148L204.5,226 385,226 385,286 204,286 281.5,365 226.5,365 116.5,257.5 226.5,148 281.5,148z" />
-                            </Path.Data>
-                        </Path>
-                        <Ellipse Stroke="White" StrokeThickness="38" Width="493" Height="493" Margin="11" />
-                    </Canvas>
-                </Viewbox>
             </Button>
+            -->
         </Grid>
     </Grid>
 </Page>

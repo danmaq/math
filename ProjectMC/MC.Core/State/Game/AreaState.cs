@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
@@ -72,14 +74,20 @@ namespace MC.Core.State.Game
 		/// <returns>選択肢。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context)
 		{
+			Action back =
+				() =>
+				{
+					context.Container.RemoveService(typeof(Tuple<CollegeMasterData>), true);
+					context.NextState = WorldState.Instance;
+                };
 			var selection =
 				new Selection[]
 				{
 					Selection.Default.CopyTo(
-						select: () => context.NextState = WorldState.Instance,
+						select: back,
 						caption: Resources.MENU_GENERIC_BACK),
 					Selection.Default.CopyTo(
-						select: () => context.NextState = WorldState.Instance,
+						select: back,
 						caption: Resources.MENU_AREA_TEMP),
 				};
 			return new ReadOnlyCollection<Selection>(selection);

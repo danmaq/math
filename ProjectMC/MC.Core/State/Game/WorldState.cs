@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
@@ -72,35 +75,28 @@ namespace MC.Core.State.Game
 		/// <returns>選択肢。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context)
 		{
-			var selection =
-				new Selection[]
-				{
+			var result = new List<Selection>();
+			result.Add(
+				Selection.Default.CopyTo(
+					select: () => context.NextState = HomeState.Instance,
+					caption: Resources.MENU_GENERIC_BACK));
+			
+				Func<CollegeMasterData, Selection> create =
+				m =>
 					Selection.Default.CopyTo(
-						select: () => context.NextState = HomeState.Instance,
-						caption: Resources.MENU_GENERIC_BACK),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-					Selection.Default.CopyTo(
-						select: () => context.NextState = AreaState.Instance,
-						caption: Resources.MENU_MAP_SCHOOL),
-				};
-			return new ReadOnlyCollection<Selection>(selection);
+						caption: m.Name,
+						description: m.Description,
+						select:
+							() =>
+							{
+								context.Container.AddService(Tuple.Create(m));
+								context.NextState = AreaState.Instance;
+							});
+			result.AddRange(
+				from m in MasterCache.CollegeMaster
+				where m.Enabled
+				select create(m));
+			return new ReadOnlyCollection<Selection>(result);
 		}
 	}
 }

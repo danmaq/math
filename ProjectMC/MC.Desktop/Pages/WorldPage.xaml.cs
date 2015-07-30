@@ -33,8 +33,7 @@ namespace MC.Desktop.Pages
 						Selections =
 							Selection
 								.Selections
-								.Skip(1)
-								.Reverse(),
+								.Skip(1),
 						Back = new SelectionData(Selection.Selections.First()),
 						BackEnabled = true,
 					};

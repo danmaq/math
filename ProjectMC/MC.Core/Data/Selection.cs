@@ -105,7 +105,8 @@ namespace MC.Core.Data
 			new Selection()
 			{
 				Select = select ?? Select,
-				Caption = caption ?? Caption
+				Caption = caption ?? Caption,
+				Description = description ?? Description,
 			};
 	}
 }

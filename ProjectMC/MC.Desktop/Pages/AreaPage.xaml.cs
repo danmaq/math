@@ -31,7 +31,7 @@ namespace MC.Desktop.Pages
 				DataContext =
 					new
 					{
-						Selections = Selection.Selections.Skip(1).Select(s => new SelectionData(s)),
+						Selections = Selection.Selections.Skip(1),
 						Back = new SelectionData(Selection.Selections.First()),
 						BackEnabled = true,
 					};
@@ -58,13 +58,19 @@ namespace MC.Desktop.Pages
 		}
 
 		/// <summary>
-		/// ダミーボタンが押下された際に呼び出されます。
+		/// リストボックスの選択に変化が生じた際に呼び出されます。
 		/// </summary>
 		/// <param name="sender">送信元。</param>
 		/// <param name="e">イベント情報。</param>
-		private void ClickedDummyButtonHandler(object sender, RoutedEventArgs e)
+		private void ChangedListBoxSelectionHandler(object sender, SelectionChangedEventArgs e)
 		{
-			MainWindow.Instance.Navigation.GoBack();
+			var listBox = sender as ListBox;
+			if (listBox != null && e.AddedItems.Count > 0)
+			{
+				listBox.SelectedIndex = -1;
+				e.AddedItems.Cast<Selection>().First().Select();
+				MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
+			}
 		}
 	}
 }

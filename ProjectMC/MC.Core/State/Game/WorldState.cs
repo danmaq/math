@@ -32,6 +32,37 @@ namespace MC.Core.State.Game
 		= new WorldState();
 
 		/// <summary>
+		/// 選択肢を取得します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>選択肢。</returns>
+		private static IReadOnlyList<Selection> CreateSelection(IContext context)
+		{
+			var result = new List<Selection>();
+			result.Add(
+				Selection.Default.CopyTo(
+					select: () => context.NextState = HomeState.Instance,
+					caption: Resources.MENU_GENERIC_BACK));
+
+			Func<CollegeMasterData, Selection> create =
+				m =>
+					Selection.Default.CopyTo(
+						caption: m.Name,
+						description: m.Description,
+						select:
+							() =>
+							{
+								context.Container.AddService(Tuple.Create(m));
+								context.NextState = AreaState.Instance;
+							});
+			result.AddRange(
+				from m in MasterCache.CollegeMaster
+				where m.Enabled
+				select create(m));
+			return new ReadOnlyCollection<Selection>(result);
+		}
+
+		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -66,37 +97,6 @@ namespace MC.Core.State.Game
 		public void Teardown(IContext context)
 		{
 			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(WorldState));
-		}
-
-		/// <summary>
-		/// 選択肢を取得します。
-		/// </summary>
-		/// <param name="context">コンテキスト。</param>
-		/// <returns>選択肢。</returns>
-		private static IReadOnlyList<Selection> CreateSelection(IContext context)
-		{
-			var result = new List<Selection>();
-			result.Add(
-				Selection.Default.CopyTo(
-					select: () => context.NextState = HomeState.Instance,
-					caption: Resources.MENU_GENERIC_BACK));
-			
-				Func<CollegeMasterData, Selection> create =
-				m =>
-					Selection.Default.CopyTo(
-						caption: m.Name,
-						description: m.Description,
-						select:
-							() =>
-							{
-								context.Container.AddService(Tuple.Create(m));
-								context.NextState = AreaState.Instance;
-							});
-			result.AddRange(
-				from m in MasterCache.CollegeMaster
-				where m.Enabled
-				select create(m));
-			return new ReadOnlyCollection<Selection>(result);
 		}
 	}
 }

@@ -84,16 +84,6 @@
                                 Command="{Binding Back.Action}"
                                 Click="ClickedBackButtonHandler">
             </local:BackButton>
-            <!--
-            <Button Grid.Column="0"
-                    Grid.Row="1"
-                    VerticalAlignment="Top"
-                    IsEnabled="{Binding BackEnabled}"
-                    Command="{Binding Back.Action}"
-                    Click="ClickedBackButtonHandler"
-                    Style="{DynamicResource WhiteModernButtonStyleKey}">
-            </Button>
-            -->
         </Grid>
     </Grid>
 </Page>

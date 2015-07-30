@@ -22,7 +22,8 @@ namespace MC.Desktop.Pages
 						new UIPropertyMetadata(
 							defaultValue: null,
 							propertyChangedCallback:
-								(d, e) => ((BackButton)d).Command = (ICommand)(e.NewValue)));
+								(d, e) =>
+									((BackButton)d).Button.Command = (ICommand)(e.NewValue)));
 
 		/// <summary>
 		/// ボタンがクリックされた際に発生するイベント。

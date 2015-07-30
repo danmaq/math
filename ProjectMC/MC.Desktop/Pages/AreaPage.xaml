@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="480" d:DesignWidth="854"
       Title="AreaPage"
-      Background="Tomato">
+      Background="Black">
 
     <Page.Resources>
         <ResourceDictionary>
@@ -21,7 +21,7 @@
 
     <Grid>
         <Image Source="{StaticResource Map}"
-               Opacity="0.7"
+               Opacity="0.5"
                HorizontalAlignment="Center"
                VerticalAlignment="Center"
                Stretch="UniformToFill" />
@@ -29,47 +29,59 @@
             <Grid.Resources>
                 <ResourceDictionary Source="/presentationframework.AeroLite,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,processorArchitecture=MSIL;component/themes/aerolite.normalcolor.xaml" />
             </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="3*" />
             </Grid.ColumnDefinitions>
+            <Viewbox Grid.ColumnSpan="2"
+                     Grid.Row="0"
+                     HorizontalAlignment="Left">
+                <TextBlock Foreground="White"
+                           Margin="8,0,0,0"
+                           Text="授業を選択してください。" />
+            </Viewbox>
             <ListBox Grid.Column="2"
-                     Margin="32"
+                     Grid.Row="1"
+                     Margin="4"
                      Background="Transparent"
                      BorderBrush="Transparent"
-                     ItemsSource="{Binding Selections}">
+                     ItemsSource="{Binding Selections}"
+                     SelectionChanged="ChangedListBoxSelectionHandler">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <!--- TODO: ダミーボタン -->
-                        <Button Command="{Binding Action}"
-                                Content="{Binding Caption}"
-                                Click="ClickedDummyButtonHandler" />
+                        <Grid>
+                            <Rectangle Fill="Silver" Opacity="0.8" HorizontalAlignment="Stretch" />
+                            <Viewbox HorizontalAlignment="Left">
+                                <Grid HorizontalAlignment="Left" Height="48" Margin="8">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="32" />
+                                        <RowDefinition Height="16" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontSize="20" Text="{Binding Caption}" />
+                                    <TextBlock Grid.Row="1" HorizontalAlignment="Left" FontSize="12" Text="{Binding Description}" />
+                                </Grid>
+                            </Viewbox>
+                        </Grid>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
                 <ListBox.ItemContainerStyle>
                     <Style TargetType="ListBoxItem">
-                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                        <Setter Property="Height" Value="100" />
                     </Style>
                 </ListBox.ItemContainerStyle>
             </ListBox>
-            <Button Grid.Column="0"
-                    VerticalAlignment="Top"
-                    IsEnabled="{Binding BackEnabled}"
-                    Command="{Binding Back.Action}"
-                    Click="ClickedBackButtonHandler"
-                    Style="{DynamicResource WhiteModernButtonStyleKey}">
-                <Viewbox>
-                    <Canvas Width="512" Height="512" ClipToBounds="True" Margin="192,384,192,192">
-                        <Path Fill="White">
-                            <Path.Data>
-                                <PathGeometry FillRule="Nonzero"
-                                      Figures="M281.5,148L204.5,226 385,226 385,286 204,286 281.5,365 226.5,365 116.5,257.5 226.5,148 281.5,148z" />
-                            </Path.Data>
-                        </Path>
-                        <Ellipse Stroke="White" StrokeThickness="38" Width="493" Height="493" Margin="11" />
-                    </Canvas>
-                </Viewbox>
-            </Button>
+            <local:BackButton Grid.Column="0"
+                              Grid.Row="1"
+                              VerticalAlignment="Top"
+                              IsEnabled="{Binding BackEnabled}"
+                              Command="{Binding Back.Action}"
+                              Click="ClickedBackButtonHandler">
+            </local:BackButton>
         </Grid>
     </Grid>
 </Page>

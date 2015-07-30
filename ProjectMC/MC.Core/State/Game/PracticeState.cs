@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
@@ -45,6 +47,9 @@ namespace MC.Core.State.Game
 		public void Begin(IContext context)
 		{
 			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(PracticeState));
+			// TODO: 強制バックを消して、ロジックを実装する
+			context.Container.RemoveService(typeof(Tuple<SubjectMasterData>), true);
+			context.NextState = context.PreviousState;
 			//var flow = GameFlow.GetService(context);
 		}
 

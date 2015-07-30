@@ -436,13 +436,13 @@
     <value>足し算の概念</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_006" xml:space="preserve">
-    <value>１桁の足し算（繰り上がり無し）</value>
+    <value>１桁の足し算(繰り上がり無し)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_007" xml:space="preserve">
     <value>引き算の概念</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_008" xml:space="preserve">
-    <value>１桁の引き算（繰り下がり無し）</value>
+    <value>１桁の引き算(繰り下がり無し)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_009" xml:space="preserve">
     <value>20までの数</value>
@@ -454,25 +454,25 @@
     <value>桁の考え方</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_012" xml:space="preserve">
-    <value>１桁の足し算（繰り上がり有り）</value>
+    <value>１桁の足し算(繰り上がり有り)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_013" xml:space="preserve">
-    <value>繰り下がりの引き算（１９まで－１桁）</value>
+    <value>繰り下がりの引き算(１９まで－１桁)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_014" xml:space="preserve">
     <value>３つ以上の足し算引き算</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_015" xml:space="preserve">
-    <value>２桁＋１桁の足し算（繰り上がり無し）</value>
+    <value>２桁＋１桁の足し算(繰り上がり無し)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_016" xml:space="preserve">
-    <value>２桁＋１桁の足し算（繰り上がり有り）</value>
+    <value>２桁＋１桁の足し算(繰り上がり有り)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_017" xml:space="preserve">
-    <value>２桁－１桁の引き算（繰り下がり無し）</value>
+    <value>２桁－１桁の引き算(繰り下がり無し)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_018" xml:space="preserve">
-    <value>２桁－１桁の引き算（繰り下がり有り）</value>
+    <value>２桁－１桁の引き算(繰り下がり有り)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_01_019" xml:space="preserve">
     <value>1000までの数</value>
@@ -493,7 +493,7 @@
     <value>九九</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_004" xml:space="preserve">
-    <value>２桁×１桁（繰り上がり無し）</value>
+    <value>２桁×１桁(繰り上がり無し)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_005" xml:space="preserve">
     <value>割り算</value>
@@ -517,7 +517,7 @@
     <value>交換法則、結合法則、分配法則</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_012" xml:space="preserve">
-    <value>2桁＋２桁の足し算（解２桁）</value>
+    <value>2桁＋２桁の足し算(解２桁)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_013" xml:space="preserve">
     <value>３桁以上の足し算</value>
@@ -526,7 +526,7 @@
     <value>二段階繰り上がる足し算</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_015" xml:space="preserve">
-    <value>２桁-２桁の引き算（解２桁）</value>
+    <value>２桁-２桁の引き算(解２桁)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_016" xml:space="preserve">
     <value>３桁以上の引き算</value>
@@ -535,7 +535,7 @@
     <value>二段階繰り下がる引き算</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_018" xml:space="preserve">
-    <value>２桁×１桁（繰り上がり有り)</value>
+    <value>２桁×１桁(繰り上がり有り)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_019" xml:space="preserve">
     <value>二段階繰り上がる掛け算</value>
@@ -544,10 +544,10 @@
     <value>２桁を掛ける掛け算</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_021" xml:space="preserve">
-    <value>２桁÷１桁（繰り下がり無し）</value>
+    <value>２桁÷１桁(繰り下がり無し)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_022" xml:space="preserve">
-    <value>２桁÷１桁（繰り下がり有り）</value>
+    <value>２桁÷１桁(繰り下がり有り)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_02_023" xml:space="preserve">
     <value>２桁で割る割り算</value>
@@ -745,7 +745,7 @@
     <value>逆数</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_010" xml:space="preserve">
-    <value>分数の足し算引き算（分母同じ）</value>
+    <value>分数の足し算引き算(分母同じ)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_011" xml:space="preserve">
     <value>分数の掛け算</value>
@@ -766,10 +766,10 @@
     <value>小数×小数</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_017" xml:space="preserve">
-    <value>小数÷整数（割りきれる）</value>
+    <value>小数÷整数(割りきれる)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_018" xml:space="preserve">
-    <value>小数÷整数（割りきれない）</value>
+    <value>小数÷整数(割りきれない)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_019" xml:space="preserve">
     <value>小数÷小数</value>
@@ -796,7 +796,7 @@
     <value>通分</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_027" xml:space="preserve">
-    <value>分数の足し算引き算（分母違う）</value>
+    <value>分数の足し算引き算(分母違う)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_05_028" xml:space="preserve">
     <value>小数⇔分数の変形</value>
@@ -817,13 +817,13 @@
     <value>小数分数の混合計算</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_06_001" xml:space="preserve">
-    <value>展開図（直方体と立方体）</value>
+    <value>展開図(直方体と立方体)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_06_002" xml:space="preserve">
-    <value>展開図（柱）</value>
+    <value>展開図(柱)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_06_003" xml:space="preserve">
-    <value>展開図（錐）</value>
+    <value>展開図(錐)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_06_004" xml:space="preserve">
     <value>弧、弦</value>
@@ -925,7 +925,7 @@
     <value>平均</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_08_001" xml:space="preserve">
-    <value>文字への代入（数値）</value>
+    <value>文字への代入(数値)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_08_002" xml:space="preserve">
     <value>文字の積の書き方</value>
@@ -955,7 +955,7 @@
     <value>展開公式類</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_08_011" xml:space="preserve">
-    <value>方程式を解く（直感）</value>
+    <value>方程式を解く(直感)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_08_012" xml:space="preserve">
     <value>等式と同値変形</value>
@@ -1009,7 +1009,7 @@
     <value>グラフ上の２点間距離</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_09_006" xml:space="preserve">
-    <value>文字への代入（文字式）</value>
+    <value>文字への代入(文字式)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_09_007" xml:space="preserve">
     <value>連立方程式</value>
@@ -1075,7 +1075,7 @@
     <value>二次関数 平方完成</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_10_005" xml:space="preserve">
-    <value>二次式の解の公式（実数解）</value>
+    <value>二次式の解の公式(実数解)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_10_006" xml:space="preserve">
     <value>判別式と解の数</value>
@@ -1144,7 +1144,7 @@
     <value>ラジアンの定義</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_11_012" xml:space="preserve">
-    <value>基本の三角関数（rad)</value>
+    <value>基本の三角関数(rad)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_11_013" xml:space="preserve">
     <value>三角関数の加法定理</value>
@@ -1357,13 +1357,13 @@
     <value>二次曲線の接線</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_16_007" xml:space="preserve">
-    <value>不等式と領域（直線領域）</value>
+    <value>不等式と領域(直線領域)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_16_008" xml:space="preserve">
-    <value>不等式と領域（円領域）</value>
+    <value>不等式と領域(円領域)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_16_009" xml:space="preserve">
-    <value>不等式と領域（連立不等式）</value>
+    <value>不等式と領域(連立不等式)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_16_010" xml:space="preserve">
     <value>グラフ平行移動の一般化</value>
@@ -1378,7 +1378,7 @@
     <value>定義域、値域</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_16_014" xml:space="preserve">
-    <value>ｆ（ｘ）の意味</value>
+    <value>ｆ(ｘ)の意味</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_16_015" xml:space="preserve">
     <value>合成関数の定義</value>
@@ -1405,7 +1405,7 @@
     <value>共役複素数</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_17_005" xml:space="preserve">
-    <value>二次関数の解の公式（複素数解）</value>
+    <value>二次関数の解の公式(複素数解)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_17_006" xml:space="preserve">
     <value>数の分類</value>
@@ -1573,13 +1573,13 @@
     <value>指数関数 の積分</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_19_012" xml:space="preserve">
-    <value>部分積分（不定積分）</value>
+    <value>部分積分(不定積分)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_19_013" xml:space="preserve">
     <value>定積分</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_19_014" xml:space="preserve">
-    <value>部分積分（定積分）</value>
+    <value>部分積分(定積分)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_19_015" xml:space="preserve">
     <value>置換積分 一次式の関数</value>
@@ -1648,43 +1648,43 @@
     <value>ｔ分布</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_015" xml:space="preserve">
-    <value>母平均の推定（母分散既知）</value>
+    <value>母平均の推定(母分散既知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_016" xml:space="preserve">
-    <value>母平均の推定（母分散未知）</value>
+    <value>母平均の推定(母分散未知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_017" xml:space="preserve">
     <value>母比率の推定</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_018" xml:space="preserve">
-    <value>母分散の推定（母平均既知）</value>
+    <value>母分散の推定(母平均既知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_019" xml:space="preserve">
-    <value>母分散の推定（母平均未知）</value>
+    <value>母分散の推定(母平均未知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_020" xml:space="preserve">
     <value>検定の手順</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_021" xml:space="preserve">
-    <value>母平均の検定（母分散既知）</value>
+    <value>母平均の検定(母分散既知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_022" xml:space="preserve">
-    <value>母平均の検定（母分散未知）</value>
+    <value>母平均の検定(母分散未知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_023" xml:space="preserve">
-    <value>母分散の検定（母平均既知）</value>
+    <value>母分散の検定(母平均既知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_024" xml:space="preserve">
-    <value>母分散の検定（母平均未知）</value>
+    <value>母分散の検定(母平均未知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_025" xml:space="preserve">
     <value>等分散の検定</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_026" xml:space="preserve">
-    <value>等平均の検定（母分散既知）</value>
+    <value>等平均の検定(母分散既知)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_027" xml:space="preserve">
-    <value>等平均の検定（母分散未知だが等しい）</value>
+    <value>等平均の検定(母分散未知だが等しい)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_20_028" xml:space="preserve">
     <value>共分散</value>
@@ -1732,13 +1732,13 @@
     <value>変数分離型微分方程式</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_21_011" xml:space="preserve">
-    <value>同次二階微分方程式（特性方程式２実解）</value>
+    <value>同次二階微分方程式(特性方程式２実解)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_21_012" xml:space="preserve">
-    <value>同次二階微分方程式（特性方程式重解）</value>
+    <value>同次二階微分方程式(特性方程式重解)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_21_013" xml:space="preserve">
-    <value>同次二階微分方程式（特性方程式複素解）</value>
+    <value>同次二階微分方程式(特性方程式複素解)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_21_014" xml:space="preserve">
     <value>非同次微分方程式と特解</value>
@@ -1753,10 +1753,10 @@
     <value>ラプラス変換と微分方程式</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_001" xml:space="preserve">
-    <value>ベクトルの外積（意味）</value>
+    <value>ベクトルの外積(意味)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_002" xml:space="preserve">
-    <value>ベクトルの外積（成分計算）</value>
+    <value>ベクトルの外積(成分計算)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_003" xml:space="preserve">
     <value>スカラー関数</value>
@@ -1765,13 +1765,13 @@
     <value>ベクトル場</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_005" xml:space="preserve">
-    <value>勾配（grad)</value>
+    <value>勾配(grad)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_006" xml:space="preserve">
-    <value>発散（div)</value>
+    <value>発散(div)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_007" xml:space="preserve">
-    <value>回転（rot)</value>
+    <value>回転(rot)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_22_008" xml:space="preserve">
     <value>ナブラ</value>
@@ -1837,7 +1837,7 @@
     <value>随伴行列</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_23_018" xml:space="preserve">
-    <value>正規直交基底（ベクトル）</value>
+    <value>正規直交基底(ベクトル)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_23_019" xml:space="preserve">
     <value>直交行列、ユニタリ行列</value>
@@ -1891,7 +1891,7 @@
     <value>複素ベクトルの内積</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_24_016" xml:space="preserve">
-    <value>フーリエ展開（一定領域）</value>
+    <value>フーリエ展開(一定領域)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_24_017" xml:space="preserve">
     <value>フーリエ変換</value>
@@ -1900,7 +1900,7 @@
     <value>関数の内積</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_24_019" xml:space="preserve">
-    <value>正規直交基底（関数）</value>
+    <value>正規直交基底(関数)</value>
   </data>
   <data name="SUBJECT_DESCRIPTION_24_020" xml:space="preserve">
     <value>汎関数</value>
@@ -1924,13 +1924,13 @@
     <value>足し算の概念</value>
   </data>
   <data name="SUBJECT_NAME_01_006" xml:space="preserve">
-    <value>１桁の足し算（繰り上がり無し）</value>
+    <value>１桁の足し算(繰り上がり無し)</value>
   </data>
   <data name="SUBJECT_NAME_01_007" xml:space="preserve">
     <value>引き算の概念</value>
   </data>
   <data name="SUBJECT_NAME_01_008" xml:space="preserve">
-    <value>１桁の引き算（繰り下がり無し）</value>
+    <value>１桁の引き算(繰り下がり無し)</value>
   </data>
   <data name="SUBJECT_NAME_01_009" xml:space="preserve">
     <value>20までの数</value>
@@ -1942,25 +1942,25 @@
     <value>桁の考え方</value>
   </data>
   <data name="SUBJECT_NAME_01_012" xml:space="preserve">
-    <value>１桁の足し算（繰り上がり有り）</value>
+    <value>１桁の足し算(繰り上がり有り)</value>
   </data>
   <data name="SUBJECT_NAME_01_013" xml:space="preserve">
-    <value>繰り下がりの引き算（１９まで－１桁）</value>
+    <value>繰り下がりの引き算(１９まで－１桁)</value>
   </data>
   <data name="SUBJECT_NAME_01_014" xml:space="preserve">
     <value>３つ以上の足し算引き算</value>
   </data>
   <data name="SUBJECT_NAME_01_015" xml:space="preserve">
-    <value>２桁＋１桁の足し算（繰り上がり無し）</value>
+    <value>２桁＋１桁の足し算(繰り上がり無し)</value>
   </data>
   <data name="SUBJECT_NAME_01_016" xml:space="preserve">
-    <value>２桁＋１桁の足し算（繰り上がり有り）</value>
+    <value>２桁＋１桁の足し算(繰り上がり有り)</value>
   </data>
   <data name="SUBJECT_NAME_01_017" xml:space="preserve">
-    <value>２桁－１桁の引き算（繰り下がり無し）</value>
+    <value>２桁－１桁の引き算(繰り下がり無し)</value>
   </data>
   <data name="SUBJECT_NAME_01_018" xml:space="preserve">
-    <value>２桁－１桁の引き算（繰り下がり有り）</value>
+    <value>２桁－１桁の引き算(繰り下がり有り)</value>
   </data>
   <data name="SUBJECT_NAME_01_019" xml:space="preserve">
     <value>1000までの数</value>
@@ -1981,7 +1981,7 @@
     <value>九九</value>
   </data>
   <data name="SUBJECT_NAME_02_004" xml:space="preserve">
-    <value>２桁×１桁（繰り上がり無し）</value>
+    <value>２桁×１桁(繰り上がり無し)</value>
   </data>
   <data name="SUBJECT_NAME_02_005" xml:space="preserve">
     <value>割り算</value>
@@ -2005,7 +2005,7 @@
     <value>交換法則、結合法則、分配法則</value>
   </data>
   <data name="SUBJECT_NAME_02_012" xml:space="preserve">
-    <value>2桁＋２桁の足し算（解２桁）</value>
+    <value>2桁＋２桁の足し算(解２桁)</value>
   </data>
   <data name="SUBJECT_NAME_02_013" xml:space="preserve">
     <value>３桁以上の足し算</value>
@@ -2014,7 +2014,7 @@
     <value>二段階繰り上がる足し算</value>
   </data>
   <data name="SUBJECT_NAME_02_015" xml:space="preserve">
-    <value>２桁-２桁の引き算（解２桁）</value>
+    <value>２桁-２桁の引き算(解２桁)</value>
   </data>
   <data name="SUBJECT_NAME_02_016" xml:space="preserve">
     <value>３桁以上の引き算</value>
@@ -2023,7 +2023,7 @@
     <value>二段階繰り下がる引き算</value>
   </data>
   <data name="SUBJECT_NAME_02_018" xml:space="preserve">
-    <value>２桁×１桁（繰り上がり有り)</value>
+    <value>２桁×１桁(繰り上がり有り)</value>
   </data>
   <data name="SUBJECT_NAME_02_019" xml:space="preserve">
     <value>二段階繰り上がる掛け算</value>
@@ -2032,10 +2032,10 @@
     <value>２桁を掛ける掛け算</value>
   </data>
   <data name="SUBJECT_NAME_02_021" xml:space="preserve">
-    <value>２桁÷１桁（繰り下がり無し）</value>
+    <value>２桁÷１桁(繰り下がり無し)</value>
   </data>
   <data name="SUBJECT_NAME_02_022" xml:space="preserve">
-    <value>２桁÷１桁（繰り下がり有り）</value>
+    <value>２桁÷１桁(繰り下がり有り)</value>
   </data>
   <data name="SUBJECT_NAME_02_023" xml:space="preserve">
     <value>２桁で割る割り算</value>
@@ -2233,7 +2233,7 @@
     <value>逆数</value>
   </data>
   <data name="SUBJECT_NAME_05_010" xml:space="preserve">
-    <value>分数の足し算引き算（分母同じ）</value>
+    <value>分数の足し算引き算(分母同じ)</value>
   </data>
   <data name="SUBJECT_NAME_05_011" xml:space="preserve">
     <value>分数の掛け算</value>
@@ -2254,10 +2254,10 @@
     <value>小数×小数</value>
   </data>
   <data name="SUBJECT_NAME_05_017" xml:space="preserve">
-    <value>小数÷整数（割りきれる）</value>
+    <value>小数÷整数(割りきれる)</value>
   </data>
   <data name="SUBJECT_NAME_05_018" xml:space="preserve">
-    <value>小数÷整数（割りきれない）</value>
+    <value>小数÷整数(割りきれない)</value>
   </data>
   <data name="SUBJECT_NAME_05_019" xml:space="preserve">
     <value>小数÷小数</value>
@@ -2284,7 +2284,7 @@
     <value>通分</value>
   </data>
   <data name="SUBJECT_NAME_05_027" xml:space="preserve">
-    <value>分数の足し算引き算（分母違う）</value>
+    <value>分数の足し算引き算(分母違う)</value>
   </data>
   <data name="SUBJECT_NAME_05_028" xml:space="preserve">
     <value>小数⇔分数の変形</value>
@@ -2305,13 +2305,13 @@
     <value>小数分数の混合計算</value>
   </data>
   <data name="SUBJECT_NAME_06_001" xml:space="preserve">
-    <value>展開図（直方体と立方体）</value>
+    <value>展開図(直方体と立方体)</value>
   </data>
   <data name="SUBJECT_NAME_06_002" xml:space="preserve">
-    <value>展開図（柱）</value>
+    <value>展開図(柱)</value>
   </data>
   <data name="SUBJECT_NAME_06_003" xml:space="preserve">
-    <value>展開図（錐）</value>
+    <value>展開図(錐)</value>
   </data>
   <data name="SUBJECT_NAME_06_004" xml:space="preserve">
     <value>弧、弦</value>
@@ -2413,7 +2413,7 @@
     <value>平均</value>
   </data>
   <data name="SUBJECT_NAME_08_001" xml:space="preserve">
-    <value>文字への代入（数値）</value>
+    <value>文字への代入(数値)</value>
   </data>
   <data name="SUBJECT_NAME_08_002" xml:space="preserve">
     <value>文字の積の書き方</value>
@@ -2443,7 +2443,7 @@
     <value>展開公式類</value>
   </data>
   <data name="SUBJECT_NAME_08_011" xml:space="preserve">
-    <value>方程式を解く（直感）</value>
+    <value>方程式を解く(直感)</value>
   </data>
   <data name="SUBJECT_NAME_08_012" xml:space="preserve">
     <value>等式と同値変形</value>
@@ -2497,7 +2497,7 @@
     <value>グラフ上の２点間距離</value>
   </data>
   <data name="SUBJECT_NAME_09_006" xml:space="preserve">
-    <value>文字への代入（文字式）</value>
+    <value>文字への代入(文字式)</value>
   </data>
   <data name="SUBJECT_NAME_09_007" xml:space="preserve">
     <value>連立方程式</value>
@@ -2563,7 +2563,7 @@
     <value>二次関数 平方完成</value>
   </data>
   <data name="SUBJECT_NAME_10_005" xml:space="preserve">
-    <value>二次式の解の公式（実数解）</value>
+    <value>二次式の解の公式(実数解)</value>
   </data>
   <data name="SUBJECT_NAME_10_006" xml:space="preserve">
     <value>判別式と解の数</value>
@@ -2632,7 +2632,7 @@
     <value>ラジアンの定義</value>
   </data>
   <data name="SUBJECT_NAME_11_012" xml:space="preserve">
-    <value>基本の三角関数（rad)</value>
+    <value>基本の三角関数(rad)</value>
   </data>
   <data name="SUBJECT_NAME_11_013" xml:space="preserve">
     <value>三角関数の加法定理</value>
@@ -2845,13 +2845,13 @@
     <value>二次曲線の接線</value>
   </data>
   <data name="SUBJECT_NAME_16_007" xml:space="preserve">
-    <value>不等式と領域（直線領域）</value>
+    <value>不等式と領域(直線領域)</value>
   </data>
   <data name="SUBJECT_NAME_16_008" xml:space="preserve">
-    <value>不等式と領域（円領域）</value>
+    <value>不等式と領域(円領域)</value>
   </data>
   <data name="SUBJECT_NAME_16_009" xml:space="preserve">
-    <value>不等式と領域（連立不等式）</value>
+    <value>不等式と領域(連立不等式)</value>
   </data>
   <data name="SUBJECT_NAME_16_010" xml:space="preserve">
     <value>グラフ平行移動の一般化</value>
@@ -2866,7 +2866,7 @@
     <value>定義域、値域</value>
   </data>
   <data name="SUBJECT_NAME_16_014" xml:space="preserve">
-    <value>ｆ（ｘ）の意味</value>
+    <value>ｆ(ｘ)の意味</value>
   </data>
   <data name="SUBJECT_NAME_16_015" xml:space="preserve">
     <value>合成関数の定義</value>
@@ -2893,7 +2893,7 @@
     <value>共役複素数</value>
   </data>
   <data name="SUBJECT_NAME_17_005" xml:space="preserve">
-    <value>二次関数の解の公式（複素数解）</value>
+    <value>二次関数の解の公式(複素数解)</value>
   </data>
   <data name="SUBJECT_NAME_17_006" xml:space="preserve">
     <value>数の分類</value>
@@ -3061,13 +3061,13 @@
     <value>指数関数 の積分</value>
   </data>
   <data name="SUBJECT_NAME_19_012" xml:space="preserve">
-    <value>部分積分（不定積分）</value>
+    <value>部分積分(不定積分)</value>
   </data>
   <data name="SUBJECT_NAME_19_013" xml:space="preserve">
     <value>定積分</value>
   </data>
   <data name="SUBJECT_NAME_19_014" xml:space="preserve">
-    <value>部分積分（定積分）</value>
+    <value>部分積分(定積分)</value>
   </data>
   <data name="SUBJECT_NAME_19_015" xml:space="preserve">
     <value>置換積分 一次式の関数</value>
@@ -3136,43 +3136,43 @@
     <value>ｔ分布</value>
   </data>
   <data name="SUBJECT_NAME_20_015" xml:space="preserve">
-    <value>母平均の推定（母分散既知）</value>
+    <value>母平均の推定(母分散既知)</value>
   </data>
   <data name="SUBJECT_NAME_20_016" xml:space="preserve">
-    <value>母平均の推定（母分散未知）</value>
+    <value>母平均の推定(母分散未知)</value>
   </data>
   <data name="SUBJECT_NAME_20_017" xml:space="preserve">
     <value>母比率の推定</value>
   </data>
   <data name="SUBJECT_NAME_20_018" xml:space="preserve">
-    <value>母分散の推定（母平均既知）</value>
+    <value>母分散の推定(母平均既知)</value>
   </data>
   <data name="SUBJECT_NAME_20_019" xml:space="preserve">
-    <value>母分散の推定（母平均未知）</value>
+    <value>母分散の推定(母平均未知)</value>
   </data>
   <data name="SUBJECT_NAME_20_020" xml:space="preserve">
     <value>検定の手順</value>
   </data>
   <data name="SUBJECT_NAME_20_021" xml:space="preserve">
-    <value>母平均の検定（母分散既知）</value>
+    <value>母平均の検定(母分散既知)</value>
   </data>
   <data name="SUBJECT_NAME_20_022" xml:space="preserve">
-    <value>母平均の検定（母分散未知）</value>
+    <value>母平均の検定(母分散未知)</value>
   </data>
   <data name="SUBJECT_NAME_20_023" xml:space="preserve">
-    <value>母分散の検定（母平均既知）</value>
+    <value>母分散の検定(母平均既知)</value>
   </data>
   <data name="SUBJECT_NAME_20_024" xml:space="preserve">
-    <value>母分散の検定（母平均未知）</value>
+    <value>母分散の検定(母平均未知)</value>
   </data>
   <data name="SUBJECT_NAME_20_025" xml:space="preserve">
     <value>等分散の検定</value>
   </data>
   <data name="SUBJECT_NAME_20_026" xml:space="preserve">
-    <value>等平均の検定（母分散既知）</value>
+    <value>等平均の検定(母分散既知)</value>
   </data>
   <data name="SUBJECT_NAME_20_027" xml:space="preserve">
-    <value>等平均の検定（母分散未知だが等しい）</value>
+    <value>等平均の検定(母分散未知だが等しい)</value>
   </data>
   <data name="SUBJECT_NAME_20_028" xml:space="preserve">
     <value>共分散</value>
@@ -3220,13 +3220,13 @@
     <value>変数分離型微分方程式</value>
   </data>
   <data name="SUBJECT_NAME_21_011" xml:space="preserve">
-    <value>同次二階微分方程式（特性方程式２実解）</value>
+    <value>同次二階微分方程式(特性方程式２実解)</value>
   </data>
   <data name="SUBJECT_NAME_21_012" xml:space="preserve">
-    <value>同次二階微分方程式（特性方程式重解）</value>
+    <value>同次二階微分方程式(特性方程式重解)</value>
   </data>
   <data name="SUBJECT_NAME_21_013" xml:space="preserve">
-    <value>同次二階微分方程式（特性方程式複素解）</value>
+    <value>同次二階微分方程式(特性方程式複素解)</value>
   </data>
   <data name="SUBJECT_NAME_21_014" xml:space="preserve">
     <value>非同次微分方程式と特解</value>
@@ -3241,10 +3241,10 @@
     <value>ラプラス変換と微分方程式</value>
   </data>
   <data name="SUBJECT_NAME_22_001" xml:space="preserve">
-    <value>ベクトルの外積（意味）</value>
+    <value>ベクトルの外積(意味)</value>
   </data>
   <data name="SUBJECT_NAME_22_002" xml:space="preserve">
-    <value>ベクトルの外積（成分計算）</value>
+    <value>ベクトルの外積(成分計算)</value>
   </data>
   <data name="SUBJECT_NAME_22_003" xml:space="preserve">
     <value>スカラー関数</value>
@@ -3253,13 +3253,13 @@
     <value>ベクトル場</value>
   </data>
   <data name="SUBJECT_NAME_22_005" xml:space="preserve">
-    <value>勾配（grad)</value>
+    <value>勾配(grad)</value>
   </data>
   <data name="SUBJECT_NAME_22_006" xml:space="preserve">
-    <value>発散（div)</value>
+    <value>発散(div)</value>
   </data>
   <data name="SUBJECT_NAME_22_007" xml:space="preserve">
-    <value>回転（rot)</value>
+    <value>回転(rot)</value>
   </data>
   <data name="SUBJECT_NAME_22_008" xml:space="preserve">
     <value>ナブラ</value>
@@ -3325,7 +3325,7 @@
     <value>随伴行列</value>
   </data>
   <data name="SUBJECT_NAME_23_018" xml:space="preserve">
-    <value>正規直交基底（ベクトル）</value>
+    <value>正規直交基底(ベクトル)</value>
   </data>
   <data name="SUBJECT_NAME_23_019" xml:space="preserve">
     <value>直交行列、ユニタリ行列</value>
@@ -3379,7 +3379,7 @@
     <value>複素ベクトルの内積</value>
   </data>
   <data name="SUBJECT_NAME_24_016" xml:space="preserve">
-    <value>フーリエ展開（一定領域）</value>
+    <value>フーリエ展開(一定領域)</value>
   </data>
   <data name="SUBJECT_NAME_24_017" xml:space="preserve">
     <value>フーリエ変換</value>
@@ -3388,7 +3388,7 @@
     <value>関数の内積</value>
   </data>
   <data name="SUBJECT_NAME_24_019" xml:space="preserve">
-    <value>正規直交基底（関数）</value>
+    <value>正規直交基底(関数)</value>
   </data>
   <data name="SUBJECT_NAME_24_020" xml:space="preserve">
     <value>汎関数</value>

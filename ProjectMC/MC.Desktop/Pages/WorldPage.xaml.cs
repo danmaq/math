@@ -30,10 +30,7 @@ namespace MC.Desktop.Pages
 				DataContext =
 					new
 					{
-						Selections =
-							Selection
-								.Selections
-								.Skip(1),
+						Selections = Selection.Selections.Skip(1),
 						Back = new SelectionData(Selection.Selections.First()),
 						BackEnabled = true,
 					};
@@ -57,16 +54,6 @@ namespace MC.Desktop.Pages
 		private void ClickedBackButtonHandler(object sender, RoutedEventArgs e)
 		{
 			MainWindow.Instance.Navigation.GoBack();
-		}
-
-		/// <summary>
-		/// ダミーボタンが押下された際に呼び出されます。
-		/// </summary>
-		/// <param name="sender">送信元。</param>
-		/// <param name="e">イベント情報。</param>
-		private void ClickedDummyButtonHandler(object sender, RoutedEventArgs e)
-		{
-			MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
 		}
 
 		/// <summary>

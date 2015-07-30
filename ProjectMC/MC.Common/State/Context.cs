@@ -106,7 +106,7 @@ namespace MC.Common.State
 			if (result != null)
 			{
 				CommitLock = true;
-				result.Teardown(this);
+				CurrentState.Teardown(this);
 				PreviousState = CurrentState;
 				CurrentState = result;
 				NextState = null;

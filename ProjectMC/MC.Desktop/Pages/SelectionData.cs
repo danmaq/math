@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Windows.Input;
 using MC.Common.Utils;
 using MC.Core.Data;
@@ -67,6 +68,7 @@ namespace MC.Desktop.Pages
 		/// <summary>
 		/// 表題を取得します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 		public string Caption
 		{
 			get;
@@ -75,6 +77,7 @@ namespace MC.Desktop.Pages
 		/// <summary>
 		/// 解説文を取得します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 		public string Description
 		{
 			get;
@@ -83,6 +86,7 @@ namespace MC.Desktop.Pages
 		/// <summary>
 		/// 実行されるアクションを取得します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 		public ICommand Action
 		{
 			get;

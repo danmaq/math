@@ -34,8 +34,9 @@ namespace MC.Desktop.Pages
 			/// </summary>
 			public RequireResponseArgs RequireResponseArgs
 			{
-				get;
-				set;
+				set
+				{
+				}
 			}
 		}
 

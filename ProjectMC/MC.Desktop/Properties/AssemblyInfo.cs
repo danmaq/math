@@ -7,11 +7,11 @@ using System.Windows;
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("MATH.SC (仮称) for Windows Desktop")]
+[assembly: AssemblyTitle("ますこれ -MATH SKILL COLLECTION- for Windows Desktop")]
 [assembly: AssemblyDescription("TRIAL VERSION (PRE ALPHA)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("danmaq / DAYS PRODUCTION")]
-[assembly: AssemblyProduct("MATH.SC (仮称)")]
+[assembly: AssemblyProduct("ますこれ")]
 [assembly: AssemblyCopyright("Copyright © 2015 danmaq / DAYS PRODUCTION all rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -52,7 +52,7 @@ using System.Windows;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.2.0.*")]
-[assembly: AssemblyFileVersion("0.2.0.39")]
+[assembly: AssemblyFileVersion("0.2.0.41")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 [assembly: Guid("c5d62caf-a7c0-445f-8fa8-aba6625fba6d")]
 

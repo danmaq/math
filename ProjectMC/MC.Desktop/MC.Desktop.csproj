@@ -30,13 +30,13 @@
     <UpdateUrl>http://lab.danmaq.com/mc/</UpdateUrl>
     <SupportUrl>http://math.sc/</SupportUrl>
     <TargetCulture>ja-JP</TargetCulture>
-    <ProductName>MATH.SC %28仮称%29</ProductName>
+    <ProductName>ますこれ</ProductName>
     <PublisherName>danmaq</PublisherName>
-    <SuiteName>MATH.SC</SuiteName>
+    <SuiteName>ますこれ -MATH SKILL COLLECTION-</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>39</ApplicationRevision>
+    <ApplicationRevision>41</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -234,10 +234,6 @@
     <ProjectReference Include="..\MC.Core\MC.Core.csproj">
       <Project>{9b741fdf-ce9d-4cf2-830c-912692843b60}</Project>
       <Name>MC.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\MC.Game\MC.Game.csproj">
-      <Project>{e7296230-47af-4f6c-a1c2-0ce4e3d8c93c}</Project>
-      <Name>MC.Game</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

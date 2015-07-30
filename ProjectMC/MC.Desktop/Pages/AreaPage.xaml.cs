@@ -69,7 +69,8 @@ namespace MC.Desktop.Pages
 			{
 				listBox.SelectedIndex = -1;
 				e.AddedItems.Cast<Selection>().First().Select();
-				MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
+				MessageBox.Show(@"ここから先まだできてないっ！ ,,•ᴗ•,,", MainWindowData.Default.Title, MessageBoxButton.OK, MessageBoxImage.Exclamation);
+				//MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
 			}
 		}
 	}

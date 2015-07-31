@@ -126,6 +126,9 @@
   <data name="PAGE_LOGO" xml:space="preserve">
     <value>Pages/LogoPage.xaml</value>
   </data>
+  <data name="PAGE_PRACTICE" xml:space="preserve">
+    <value>Pages/PracticePage.xaml</value>
+  </data>
   <data name="PAGE_WORLD" xml:space="preserve">
     <value>Pages/WorldPage.xaml</value>
   </data>

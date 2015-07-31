@@ -52,7 +52,7 @@ using System.Windows;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.2.0.*")]
-[assembly: AssemblyFileVersion("0.2.0.41")]
+[assembly: AssemblyFileVersion("0.2.0.43")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 [assembly: Guid("c5d62caf-a7c0-445f-8fa8-aba6625fba6d")]
 

@@ -88,6 +88,15 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Pages/PracticePage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_PRACTICE {
+            get {
+                return ResourceManager.GetString("PAGE_PRACTICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pages/WorldPage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PAGE_WORLD {

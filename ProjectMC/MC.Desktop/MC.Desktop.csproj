@@ -36,7 +36,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>41</ApplicationRevision>
+    <ApplicationRevision>43</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -155,6 +155,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PracticePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\WorldPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -174,6 +178,9 @@
       <DependentUpon>LogoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\PageHelper.cs" />
+    <Compile Include="Pages\PracticePage.xaml.cs">
+      <DependentUpon>PracticePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SelectionData.cs" />
     <Compile Include="Pages\BackButton.xaml.cs">
       <DependentUpon>BackButton.xaml</DependentUpon>

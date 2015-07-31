@@ -19,7 +19,6 @@ namespace MC.Desktop.Pages
 			InitializeComponent();
 		}
 
-
 		/// <summary>
 		/// ユーザ入力の要求を設定します。
 		/// </summary>
@@ -69,8 +68,7 @@ namespace MC.Desktop.Pages
 			{
 				listBox.SelectedIndex = -1;
 				e.AddedItems.Cast<Selection>().First().Select();
-				MessageBox.Show(@"ここから先まだできてないっ！ ,,•ᴗ•,,", MainWindowData.Default.Title, MessageBoxButton.OK, MessageBoxImage.Exclamation);
-				//MainWindow.Instance.Navigate(Properties.Resources.PAGE_AREA);
+				MainWindow.Instance.Navigate(Properties.Resources.PAGE_PRACTICE);
 			}
 		}
 	}

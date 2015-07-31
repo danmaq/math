@@ -1,0 +1,67 @@
+﻿<Page x:Class="MC.Desktop.Pages.PracticePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MC.Desktop.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="480" d:DesignWidth="854"
+      Title="PracticePage"
+      Background="Black">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/ChromeStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BitmapImage x:Key="Map"
+                         UriSource="/Res/BG/Town.png" />
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="3*" MinWidth="480" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="5*" MinHeight="480" />
+            </Grid.RowDefinitions>
+            <!--- 左部領域。 -->
+            <Grid Grid.Column="0" Grid.Row="1" Background="Silver">
+                
+            </Grid>
+            <!--- 上部領域。 -->
+            <Grid Grid.Column="1" Grid.Row="0" Background="Tomato">
+
+            </Grid>
+            <!--- メイン領域。 -->
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <!--- タイマー。 -->
+                <Grid Grid.Row="0" Background="Blue">
+                    
+                </Grid>
+                <!--- 問題。 -->
+                <Grid Grid.Row="1" Background="White">
+
+                </Grid>
+                <!--- 回答。 -->
+                <Grid Grid.Row="2" Background="Blue">
+
+                </Grid>
+            </Grid>
+        </Grid>
+        <Rectangle Fill="Black" Opacity="0.3" />
+        <Viewbox>
+            <Grid Margin="8">
+                <TextBlock Foreground="White" Opacity="0.3">プラクティス画面は<LineBreak />まだできてないっ！ ,,•ᴗ•,,</TextBlock>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Page>

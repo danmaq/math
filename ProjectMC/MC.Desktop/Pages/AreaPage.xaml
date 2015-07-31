@@ -53,7 +53,7 @@
                      SelectionChanged="ChangedListBoxSelectionHandler">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Grid>
+                        <Grid Margin="2">
                             <Rectangle Fill="Silver" Opacity="0.8" HorizontalAlignment="Stretch" />
                             <Viewbox HorizontalAlignment="Left">
                                 <Grid HorizontalAlignment="Left" Height="48" Margin="8">

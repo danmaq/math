@@ -19,7 +19,15 @@
     </Page.Resources>
 
     <Grid>
+        <Image Source="{StaticResource Map}"
+               Opacity="0.5"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Stretch="UniformToFill" />
         <Grid>
+            <Grid.Resources>
+                <ResourceDictionary Source="/presentationframework.AeroLite,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35,processorArchitecture=MSIL;component/themes/aerolite.normalcolor.xaml" />
+            </Grid.Resources>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition Width="3*" MinWidth="480" />
@@ -29,12 +37,16 @@
                 <RowDefinition Height="5*" MinHeight="480" />
             </Grid.RowDefinitions>
             <!--- 左部領域。 -->
-            <Grid Grid.Column="0" Grid.Row="1" Background="Silver">
-                
+            <Grid Grid.Column="0" Grid.Row="1">
+                <Viewbox>
+                    <TextBlock Foreground="White" Opacity="0.3">この画面まだ<LineBreak />制作中,,•ᴗ•,,</TextBlock>
+                </Viewbox>
             </Grid>
             <!--- 上部領域。 -->
-            <Grid Grid.Column="1" Grid.Row="0" Background="Tomato">
-
+            <Grid Grid.Column="1" Grid.Row="0">
+                <Viewbox>
+                    <TextBlock Foreground="White" Opacity="0.3">この画面まだ制作中,,•ᴗ•,,</TextBlock>
+                </Viewbox>
             </Grid>
             <!--- メイン領域。 -->
             <Grid Grid.Column="1" Grid.Row="1">
@@ -44,24 +56,60 @@
                     <RowDefinition Height="2*" />
                 </Grid.RowDefinitions>
                 <!--- タイマー。 -->
-                <Grid Grid.Row="0" Background="Blue">
-                    
+                <Grid Grid.Row="0">
+                    <ProgressBar Opacity="0.8" IsIndeterminate="True" />
                 </Grid>
                 <!--- 問題。 -->
                 <Grid Grid.Row="1" Background="White">
-
+                    <Grid Margin="8">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition Height="2*" />
+                            <RowDefinition Height="3*" />
+                        </Grid.RowDefinitions>
+                        <Viewbox Grid.Row="0" HorizontalAlignment="Left">
+                            <TextBlock Foreground="#FF404040" Text="Q1" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="1" HorizontalAlignment="Left">
+                            <TextBlock Foreground="#FF404040" Text="こたえはどれだ！？" />
+                        </Viewbox>
+                        <Viewbox Grid.Row="2" HorizontalAlignment="Left">
+                            <TextBlock Foreground="#FF404040" Text="1 + 1 = ?" />
+                        </Viewbox>
+                    </Grid>
                 </Grid>
-                <!--- 回答。 -->
-                <Grid Grid.Row="2" Background="Blue">
-
+                <!--- 選択肢。 -->
+                <Grid Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Grid.Row="0" Opacity="0.8">
+                        <Viewbox>
+                            <TextBlock Text="1" Margin="4" />
+                        </Viewbox>
+                    </Button>
+                    <Button Grid.Column="1" Grid.Row="0" Opacity="0.8">
+                        <Viewbox>
+                            <TextBlock Text="2" Margin="4" />
+                        </Viewbox>
+                    </Button>
+                    <Button Grid.Column="0" Grid.Row="1" Opacity="0.8">
+                        <Viewbox>
+                            <TextBlock Text="3" Margin="4" />
+                        </Viewbox>
+                    </Button>
+                    <Button Grid.Column="1" Grid.Row="1" Opacity="0.8">
+                        <Viewbox>
+                            <TextBlock Text="4" Margin="4" />
+                        </Viewbox>
+                    </Button>
                 </Grid>
             </Grid>
         </Grid>
-        <Rectangle Fill="Black" Opacity="0.3" />
-        <Viewbox>
-            <Grid Margin="8">
-                <TextBlock Foreground="White" Opacity="0.3">プラクティス画面は<LineBreak />まだできてないっ！ ,,•ᴗ•,,</TextBlock>
-            </Grid>
-        </Viewbox>
     </Grid>
 </Page>

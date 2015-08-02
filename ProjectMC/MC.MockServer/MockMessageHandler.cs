@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using MC.Common.Utils;
 using MC.MockServer.Properties;
 
 namespace MC.MockServer
 {
+
 	/// <summary>
 	/// モック サーバ用のメッセージ ハンドラ。
 	/// </summary>
@@ -19,12 +18,8 @@ namespace MC.MockServer
 		/// <summary>並列動作を制限するためのセマフォ。</summary>
 		private static readonly SemaphoreSlim semaphore = new SemaphoreSlim(initialCount: 1);
 
-		/// <summary>API 一覧。</summary>
-		private static readonly Dictionary<string, Func<string, string, object>> Apis =
-			new Dictionary<string, Func<string, string, object>>()
-			{
-				["/v1/master"] = (_, __) => MasterStore.Instance.Export(),
-			};
+		/// <summary>モック サーバの API 呼び出し窓口。</summary>
+		private static readonly MockApi api = new MockApi();
 
 		/// <summary>
 		/// 非同期操作として HTTP 要求を送信します。
@@ -62,7 +57,7 @@ namespace MC.MockServer
 		private static HttpResponseMessage InnerProcess(HttpRequestMessage request)
 		{
 			var result =
-				CallApi(
+				api.CallApi(
 					path: request.RequestUri.AbsolutePath,
 					method: request.Method.Method,
 					content: request.Content?.ReadAsStringAsync().Result);
@@ -72,20 +67,6 @@ namespace MC.MockServer
 			response.ReasonPhrase = Resources.SERVER_NAME;
 			response.RequestMessage = request;
 			return response;
-		}
-
-		/// <summary>
-		/// API を呼び出します。
-		/// </summary>
-		/// <param name="path"></param>
-		/// <param name="method"></param>
-		/// <param name="content"></param>
-		/// <returns></returns>
-		private static Tuple<bool, string> CallApi(string path, string method, string content)
-		{
-			Func<string, string, object> api;
-			var result = Apis.TryGetValue(path, out api);
-			return Tuple.Create(result, result ? StringHelper.ToJson(api(method, content)) : null);
 		}
 	}
 }

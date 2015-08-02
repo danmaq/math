@@ -48,6 +48,8 @@ namespace MC.Core.State.Game
 		{
 			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(PracticeState));
 			// TODO: 強制バックを消して、ロジックを実装する
+			//var college = context.Container.GetService<Tuple<CollegeMasterData>>();
+			//var subject = context.Container.GetService<Tuple<SubjectMasterData>>();
 			context.Container.RemoveService(typeof(Tuple<SubjectMasterData>), true);
 			context.NextState = context.PreviousState;
 			//var flow = GameFlow.GetService(context);

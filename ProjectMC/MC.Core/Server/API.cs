@@ -71,6 +71,12 @@ namespace MC.Core.Server
 			throw new NotImplementedException();
 		}
 
+		public static async Task GetQuestionAsync()
+		{
+			CheckInitialized();
+			throw new NotImplementedException();
+		}
+
 		/// <summary>
 		/// すべてのマスタ データを読み込みます。
 		/// </summary>

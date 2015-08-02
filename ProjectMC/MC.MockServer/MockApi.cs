@@ -6,6 +6,7 @@ using MC.Common.Utils;
 
 namespace MC.MockServer
 {
+	using Question;
 	using API = Func<string, IEnumerable<string>, string, object>;
 	using APIWithoutParams = Func<string, string, object>;
 	using PairedAPIParams = Tuple<string, IEnumerable<string>>;
@@ -21,7 +22,7 @@ namespace MC.MockServer
 			new Dictionary<string, API>()
 			{
 				["/v1/master"] = (m, p, b) => MasterStore.Instance.Export(),
-				["/v1/question"] = (m, p, b) => null,
+				["/v1/question"] = (m, p, b) => QuestionStore.Instance.CreateQuestion(p),
 			};
 
 		/// <summary>

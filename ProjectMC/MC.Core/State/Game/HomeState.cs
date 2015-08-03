@@ -5,7 +5,7 @@ using MC.Common.State;
 using MC.Common.Utils;
 using MC.Core.Data;
 using MC.Core.Flow;
-using MC.Core.Flow.Selection;
+using MC.Core.Flow.Selections;
 using MC.Core.Properties;
 
 namespace MC.Core.State.Game
@@ -70,7 +70,7 @@ namespace MC.Core.State.Game
 		/// <returns>選択肢。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context)
 		{
-			var selection = new Selection[EnumHelper.Length<HomeSelection>()];
+			var selection = new Selection[EnumHelper.Length(typeof(HomeSelection))];
 			selection[(int)HomeSelection.World] =
 				Selection.Default.CopyTo(
 					select: () => context.NextState = WorldState.Instance,

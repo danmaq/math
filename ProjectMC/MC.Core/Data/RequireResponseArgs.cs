@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using MC.Common.Utils;
 
 namespace MC.Core.Data
@@ -29,6 +30,7 @@ namespace MC.Core.Data
 		/// <summary>
 		/// ToString() メソッドに使う、引数一覧を取得します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
 		protected virtual IEnumerable<KeyValuePair<string, object>> Arguments =>
 			new Dictionary<string, object>() {[nameof(Description)] = Description };
 

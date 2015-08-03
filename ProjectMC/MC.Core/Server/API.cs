@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using MC.Common.Data;
 using MC.Common.Utils;
 using MC.Common.Data.Serializable;
+using System.IO;
+using System.Globalization;
 
 namespace MC.Core.Server
 {
@@ -71,10 +74,27 @@ namespace MC.Core.Server
 			throw new NotImplementedException();
 		}
 
-		public static async Task GetQuestionAsync()
+		/// <summary>
+		/// 問題を取得します。
+		/// </summary>
+		/// <param name="college">学園マスタ。</param>
+		/// <param name="subject">教科マスタ。</param>
+		/// <returns>問題一覧。</returns>
+		public static async Task<string> GetQuestionAsync(
+			CollegeMasterData college, SubjectMasterData subject) =>
+			await GetQuestionAsync(collegeId: college.CollegeId, subjectId: subject.SubjectId);
+
+		/// <summary>
+		/// 問題を取得します。
+		/// </summary>
+		/// <param name="collegeId">学園ID。</param>
+		/// <param name="subjectId">教科ID。</param>
+		/// <returns>問題一覧。</returns>
+		public static async Task<string> GetQuestionAsync(int collegeId, int subjectId)
 		{
-			CheckInitialized();
-			throw new NotImplementedException();
+			var path = CreatePath(@"question", collegeId, subjectId);
+            var body = await Request(method: HttpMethod.Get, path: path, content: null);
+			return body;
 		}
 
 		/// <summary>
@@ -83,13 +103,7 @@ namespace MC.Core.Server
 		/// <returns>読み込み完了通知。必ず true を返します。</returns>
 		public static async Task<AllMaster> LoadAllMasterAsync()
 		{
-			CheckInitialized();
-			var response =
-				await
-					client.Request(
-						method: HttpMethod.Get, uri: entryPoint + @"master", content: null);
-			var body = await response.Content.ReadAsStringAsync();
-			response.Dispose();
+            var body = await Request(method: HttpMethod.Get, path: @"master", content: null);
 			return StringHelper.FromJson<AllMaster>(body);
 		}
 
@@ -103,6 +117,37 @@ namespace MC.Core.Server
 			{
 				throw new InvalidOperationException();
 			}
+		}
+
+		/// <summary>
+		/// REST パスを作成します。
+		/// </summary>
+		/// <param name="args">REST パスを構成するパラメータ。</param>
+		/// <returns>REST パス。</returns>
+		private static string CreatePath(params object[] args) =>
+			args
+				.Select(o => o.ToString())
+				.Aggregate(
+					(s, o) => string.Format(CultureInfo.InvariantCulture, @"{0}/{1}", s, o));
+
+		/// <summary>
+		/// HTTPリクエストを非同期で送信します。
+		/// </summary>
+		/// <param name="method">HTTP メソッド。</param>
+		/// <param name="path">API のパス。</param>
+		/// <param name="content">API に渡すボディ。</param>
+		/// <returns>戻り値の生文字列。</returns>
+		private static async Task<string> Request(
+			HttpMethod method, string path, HttpContent content)
+		{
+			CheckInitialized();
+			var uri = entryPoint + path;
+			string body;
+            using (var response = await client.Request(method, uri, content))
+			{
+				body = await response.Content.ReadAsStringAsync();
+			}
+			return body;
 		}
 	}
 }

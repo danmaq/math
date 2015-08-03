@@ -80,6 +80,8 @@ namespace MC.MockServer
 		/// <param name="path">パス。</param>
 		/// <returns>ディレクトリとファイルの組。</returns>
 		private static Tuple<string, string> SplitPath(string path) =>
-			Tuple.Create(item1: Path.GetDirectoryName(path), item2: Path.GetFileName(path));
+			Tuple.Create(
+				item1: Path.GetDirectoryName(path).Replace(oldValue: @"\", newValue: @"/"),
+				item2: Path.GetFileName(path));
 	}
 }

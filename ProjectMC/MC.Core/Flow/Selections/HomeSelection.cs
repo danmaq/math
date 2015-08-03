@@ -1,4 +1,4 @@
-﻿namespace MC.Core.Flow.Selection
+﻿namespace MC.Core.Flow.Selections
 {
 	/// <summary>
 	/// ホーム画面の選択肢定義。

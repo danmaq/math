@@ -64,7 +64,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Question\QuestionGenerator.cs" />
+    <Compile Include="Question\QG01\QG0101.cs" />
+    <Compile Include="Question\IQuestionGenerator.cs" />
+    <Compile Include="Question\QuestionGenerators.cs" />
     <Compile Include="Question\QuestionResources.cs" />
     <Compile Include="Question\QuestionStore.cs" />
   </ItemGroup>

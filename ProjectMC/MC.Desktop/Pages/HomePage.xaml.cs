@@ -2,7 +2,7 @@
 using System.Windows.Controls;
 using MC.Common.Utils;
 using MC.Core.Data;
-using MC.Core.Flow.Selection;
+using MC.Core.Flow.Selections;
 
 namespace MC.Desktop.Pages
 {

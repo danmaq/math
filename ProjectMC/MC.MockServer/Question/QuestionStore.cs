@@ -25,19 +25,20 @@ namespace MC.MockServer.Question
 		{
 			Func<string, int> cast = Convert.ToInt32;
 			var array = args.Select(cast).ToArray();
-			if (array.Length< 2)
+			if (array.Length < 2)
 			{
 				throw
 					new ArgumentException(
 						message: @"引数が足りません。", paramName: nameof(args));
 			}
-			return CreateQuestion(array[0], array[2]);
+			return CreateQuestion(array[0], array[1]);
 		}
 
 		public object CreateQuestion(int collegeId, int SubjectId)
 		{
+
 			Debug.WriteLine("CreateQuestion {0} {1}", collegeId, SubjectId);
-			return null;
+			return 0;
 		}
 	}
 }

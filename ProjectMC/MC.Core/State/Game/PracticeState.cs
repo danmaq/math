@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using MC.Common.Collection;
 using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
-using MC.Core.Flow;
 using MC.Core.Properties;
+using MC.Core.Server;
 
 namespace MC.Core.State.Game
 {
@@ -48,10 +49,9 @@ namespace MC.Core.State.Game
 		{
 			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(PracticeState));
 			// TODO: 強制バックを消して、ロジックを実装する
-			//var college = context.Container.GetService<Tuple<CollegeMasterData>>();
-			//var subject = context.Container.GetService<Tuple<SubjectMasterData>>();
-			context.Container.RemoveService(typeof(Tuple<SubjectMasterData>), true);
-			context.NextState = context.PreviousState;
+			ReadQuestion(context.Container);
+			//context.Container.RemoveService(typeof(Tuple<SubjectMasterData>), true);
+			//context.NextState = context.PreviousState;
 			//var flow = GameFlow.GetService(context);
 		}
 
@@ -72,6 +72,17 @@ namespace MC.Core.State.Game
 		public void Teardown(IContext context)
 		{
 			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(PracticeState));
+		}
+
+		private async void ReadQuestion(ServiceContainer container)
+		{
+			var college = container.GetService<Tuple<CollegeMasterData>>();
+			var subject = container.GetService<Tuple<SubjectMasterData>>();
+			if (college != null && subject != null)
+			{
+				var result = await Api.GetQuestionAsync(college.Item1, subject.Item1);
+				Debug.WriteLine(result);
+			}
 		}
 	}
 }

@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MC.MockServer.Question.QG01;
 
 namespace MC.MockServer.Question
 {
+	/// <summary>
+	/// 問題生成クラス。
+	/// </summary>
 	static class QuestionGenerators
 	{
-		public static Dictionary<int, IQuestionGenerator> Generators
+		/// <summary>
+		/// 問題生成機能一覧。
+		/// </summary>
+		public static IReadOnlyDictionary<int, IQuestionGenerator> Generators
 		{
 			get;
 		}

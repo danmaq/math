@@ -55,6 +55,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="MasterStore.cs" />
     <Compile Include="MockApi.cs" />
     <Compile Include="MockMessageHandler.cs" />

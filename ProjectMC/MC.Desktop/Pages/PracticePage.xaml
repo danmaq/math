@@ -14,7 +14,7 @@
                 <ResourceDictionary Source="/ChromeStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
             <BitmapImage x:Key="Map"
-                         UriSource="/Res/BG/Town.png" />
+                         UriSource="/Res/BG/Map.png" />
         </ResourceDictionary>
     </Page.Resources>
 

@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using MC.Common.Utils;
+using MC.MockServer.Question;
 
 namespace MC.MockServer
 {
-	using Question;
 	using API = Func<string, IEnumerable<string>, string, object>;
 	using APIWithoutParams = Func<string, string, object>;
 	using PairedAPIParams = Tuple<string, IEnumerable<string>>;
@@ -35,8 +35,9 @@ namespace MC.MockServer
 		public Tuple<bool, string> CallApi(string path, string method, string content)
 		{
 			var api = ParsePath(path);
-			var result = api != null;
-			return Tuple.Create(result, result ? StringHelper.ToJson(api(method, content)) : null);
+			var obj = api == null ? null : api(method, content);
+			var result = obj != null;
+			return Tuple.Create(result, result ? StringHelper.ToJson(obj) : null);
 		}
 
 		/// <summary>

@@ -66,5 +66,16 @@ namespace MC.Common.Collection
 		public static IEnumerable<T> GenerateUnique<T>(int count, Func<T> generator) =>
 			Generate(
 				count: count, generator: generator, predicate: (v, l) => l.All(i => !v.Equals(i)));
+
+		/// <summary>
+		/// キーと値のペアを作成します。
+		/// </summary>
+		/// <typeparam name="TKey">キーの型。</typeparam>
+		/// <typeparam name="TValue">値の型。</typeparam>
+		/// <param name="key">キー。</param>
+		/// <param name="value">値。</param>
+		/// <returns>キーと値のペア。</returns>
+		public static KeyValuePair<TKey, TValue> CreatePair<TKey, TValue>(TKey key, TValue value) =>
+			new KeyValuePair<TKey, TValue>(key, value);
 	}
 }

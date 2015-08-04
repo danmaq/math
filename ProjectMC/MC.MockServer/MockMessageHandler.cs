@@ -63,7 +63,7 @@ namespace MC.MockServer
 					content: request.Content?.ReadAsStringAsync().Result);
 			var status = result.Item1 ? HttpStatusCode.OK : HttpStatusCode.BadRequest;
 			var response = new HttpResponseMessage(status);
-			response.Content = new StringContent(result.Item2);
+			response.Content = new StringContent(result.Item2 ?? string.Empty);
 			response.ReasonPhrase = Resources.SERVER_NAME;
 			response.RequestMessage = request;
 			return response;

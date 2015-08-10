@@ -164,6 +164,9 @@
   <data name="MESSAGE_HOME" xml:space="preserve">
     <value>ホーム メニュー</value>
   </data>
+  <data name="MESSAGE_PRACTICE_START" xml:space="preserve">
+    <value>プラクティスを開始します。</value>
+  </data>
   <data name="MESSAGE_PREFERENCE" xml:space="preserve">
     <value>設定項目はありません。</value>
   </data>

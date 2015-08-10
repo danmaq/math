@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
-using MC.Common.Collection;
-using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Properties;
-using MC.Core.Server;
+using MC.Core.State.Practice;
 
 namespace MC.Core.State.Game
 {
@@ -16,15 +14,6 @@ namespace MC.Core.State.Game
 	/// </summary>
 	class PracticeState : IState
 	{
-
-		private class Director
-		{
-			public IEnumerable<IReadOnlyList<Selection>> Collection
-			{
-				get;
-				set;
-			}
-		}
 
 		/// <summary>
 		/// コンストラクタ。
@@ -44,15 +33,16 @@ namespace MC.Core.State.Game
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		[SuppressMessage("Microsoft.Reliability", "CA2000:スコープを失う前にオブジェクトを破棄")]
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Begin(IContext context)
 		{
 			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(PracticeState));
-			// TODO: 強制バックを消して、ロジックを実装する
-			ReadQuestion(context.Container);
-			//context.Container.RemoveService(typeof(Tuple<SubjectMasterData>), true);
-			//context.NextState = context.PreviousState;
-			//var flow = GameFlow.GetService(context);
+
+			var director =
+				context.Container.AddService<IContext>(new Context());
+			director.Container.AddService(Tuple.Create(context));
+			director.NextState = InitializeState.Instance;	// コンテナを登録してから、状態を設定する必要がある
 		}
 
 		/// <summary>
@@ -62,7 +52,14 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Execute(IContext context)
 		{
-		}
+			var director = context.Container.GetService<IContext>();
+			director.Execute();
+			if (director.IsTerminated())
+			{
+				context.NextState = null;
+				// TODO: プラクティス終了
+			}
+        }
 
 		/// <summary>
 		/// 他の状態に移行する直前に呼び出されます。
@@ -71,18 +68,8 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Teardown(IContext context)
 		{
+			context.Container.RemoveService(serviceType: typeof(IContext), dispose: true);
 			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(PracticeState));
-		}
-
-		private async void ReadQuestion(ServiceContainer container)
-		{
-			var college = container.GetService<Tuple<CollegeMasterData>>();
-			var subject = container.GetService<Tuple<SubjectMasterData>>();
-			if (college != null && subject != null)
-			{
-				var result = await Api.GetQuestionAsync(college.Item1, subject.Item1);
-				Debug.WriteLine(result);
-			}
 		}
 	}
 }

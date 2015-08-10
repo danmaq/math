@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 using MC.Common.Data;
 using MC.Common.Utils;
 using MC.Common.Data.Serializable;
-using System.IO;
 using System.Globalization;
+
+using QData = System.Collections.Generic.KeyValuePair<int, MC.Common.Data.QuestionData>;
 
 namespace MC.Core.Server
 {
+
 	/// <summary>
 	/// 各種API。
 	/// </summary>
@@ -80,7 +82,7 @@ namespace MC.Core.Server
 		/// <param name="college">学園マスタ。</param>
 		/// <param name="subject">教科マスタ。</param>
 		/// <returns>問題一覧。</returns>
-		public static async Task<string> GetQuestionAsync(
+		public static async Task<QData[]> GetQuestionAsync(
 			CollegeMasterData college, SubjectMasterData subject) =>
 			await GetQuestionAsync(collegeId: college.CollegeId, subjectId: subject.SubjectId);
 
@@ -90,11 +92,11 @@ namespace MC.Core.Server
 		/// <param name="collegeId">学園ID。</param>
 		/// <param name="subjectId">教科ID。</param>
 		/// <returns>問題一覧。</returns>
-		public static async Task<string> GetQuestionAsync(int collegeId, int subjectId)
+		public static async Task<QData[]> GetQuestionAsync(int collegeId, int subjectId)
 		{
 			var path = CreatePath(@"question", collegeId, subjectId);
             var body = await Request(method: HttpMethod.Get, path: path, content: null);
-			return body;
+			return StringHelper.FromJson<QData[]>(body);
 		}
 
 		/// <summary>

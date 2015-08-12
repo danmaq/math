@@ -68,7 +68,7 @@ namespace MC.Core.State.Game
 		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public void Teardown(IContext context)
 		{
-			context.Container.RemoveService(serviceType: typeof(IContext), dispose: true);
+			context.Container.RemoveService(typeof(IContext));
 			Debug.WriteLine(Resources.DEBUG_TERMINATED, nameof(PracticeState));
 		}
 	}

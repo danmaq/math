@@ -10,14 +10,28 @@ namespace MC.Core.Data
 	public sealed class RequireSelectArgs : RequireResponseArgs
 	{
 
-		/// <summary>選択肢を取得します。</summary>
+		/// <summary>
+		/// 追加の解説文を取得します。
+		/// </summary>
+		public string AdditionalDesctiption
+		{
+			get;
+			internal set;
+		}
+		= string.Empty;
+
+		/// <summary>
+		/// 選択肢を取得します。
+		/// </summary>
 		public IReadOnlyList<Selection> Selections
 		{
 			get;
 			internal set;
 		}
 
-		/// <summary>有効時間を取得します。</summary>
+		/// <summary>
+		/// 有効時間を取得します。
+		/// </summary>
 		public int Expires
 		{
 			get;
@@ -40,6 +54,7 @@ namespace MC.Core.Data
 			new Dictionary<string, object>()
 			{
 				[nameof(Description)] = Description,
+				[nameof(AdditionalDesctiption)] = AdditionalDesctiption,
 				[nameof(Expires)] = Expires,
 				[nameof(Selections)] = Selections.ToStringCollection(),
 			};

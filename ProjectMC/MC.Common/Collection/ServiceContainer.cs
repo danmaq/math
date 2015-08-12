@@ -42,6 +42,16 @@ namespace MC.Common.Collection
 		/// サービスを削除します。
 		/// </summary>
 		/// <param name="serviceType">サービスの型。</param>
+		/// <returns>サービスを削除できた場合、true。</returns>
+		public bool RemoveService(Type serviceType)
+		{
+			return RemoveService(serviceType: serviceType, dispose: true);
+        }
+
+		/// <summary>
+		/// サービスを削除します。
+		/// </summary>
+		/// <param name="serviceType">サービスの型。</param>
 		/// <param name="dispose">自動的に Dispose するかどうか。</param>
 		/// <returns>サービスを削除できた場合、true。</returns>
 		public bool RemoveService(Type serviceType, bool dispose)

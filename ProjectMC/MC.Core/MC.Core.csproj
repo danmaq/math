@@ -87,6 +87,7 @@
     <Compile Include="State\Game\PreferenceState.cs" />
     <Compile Include="State\Game\TitleState.cs" />
     <Compile Include="State\Game\WorldState.cs" />
+    <Compile Include="State\Practice\CountDownState.cs" />
     <Compile Include="State\Practice\InitializeState.cs" />
     <Compile Include="State\Practice\PracticeStateBase.cs" />
     <Compile Include="Utils\MutexManager.cs" />

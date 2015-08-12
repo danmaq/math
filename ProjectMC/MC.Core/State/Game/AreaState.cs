@@ -38,10 +38,11 @@ namespace MC.Core.State.Game
 		/// <returns>選択肢。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context)
 		{
+			// TODO: 長すぎる
 			Action back =
 				() =>
 				{
-					context.Container.RemoveService(typeof(Tuple<CollegeMasterData>), true);
+					context.Container.RemoveService(typeof(Tuple<CollegeMasterData>));
 					context.NextState = WorldState.Instance;
 				};
 			var result = new List<Selection>();

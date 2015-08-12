@@ -19,6 +19,42 @@ namespace MC.Core.State.Practice
 	/// </summary>
 	sealed class InitializeState : PracticeStateBase
 	{
+
+		/// <summary>
+		/// この状態専用のストレージ データ。
+		/// </summary>
+		private sealed class LocalContainer : LocalContainerBase
+		{
+
+			/// <summary>
+			/// ダウンロードが完了したかどうかを取得、または設定します。
+			/// </summary>
+			public bool Downloaded
+			{
+				get;
+				set;
+			}
+
+			/// <summary>
+			/// 確認を送信済みかどうかを取得、または設定します。
+			/// </summary>
+			public bool SendedConfirm
+			{
+				get;
+				set;
+			}
+
+			/// <summary>
+			/// カウントダウン待機が完了したかどうかを取得します。
+			/// </summary>
+			public bool Expired => (DateTime.Now - Created).Seconds >= 3;
+
+			/// <summary>
+			/// 確認を送信すべきかどうかを取得します。
+			/// </summary>
+			public bool CanSendConfirm => Downloaded && Expired && !SendedConfirm;
+        }
+
 		/// <summary>
 		/// コンストラクタ。
 		/// </summary>
@@ -34,6 +70,11 @@ namespace MC.Core.State.Practice
 		= new InitializeState();
 
 		/// <summary>
+		/// ローカル コンテナを生成します。
+		/// </summary>
+		protected override LocalContainerBase NewLocalContainer => new LocalContainer();
+
+		/// <summary>
 		/// プロンプトを表示部へ送信します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -44,8 +85,7 @@ namespace MC.Core.State.Practice
 				new RequireAlertArgs()
 				{
 					Description = Resources.MESSAGE_PRACTICE_START,
-					Response = () => context.NextState = null,
-					// TODO: 次の状態
+					Response = () => context.NextState = CountDownState.Instance,
 				};
 			flow.DispatchRequireResponse(args);
 			Debug.WriteLine(@"Initialize Completed");
@@ -62,6 +102,21 @@ namespace MC.Core.State.Practice
         }
 
 		/// <summary>
+		/// 状態が実行された際に呼び出されます。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		public override void Execute(IContext context)
+		{
+			base.Execute(context);
+			var data = GetLocalContainer<LocalContainer>(context);
+            if (data.CanSendConfirm)
+			{
+				Prompt(context);
+				data.SendedConfirm = true;
+			}
+		}
+
+		/// <summary>
 		/// 問題一覧をコンテナに配置します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -69,7 +124,7 @@ namespace MC.Core.State.Practice
 		{
 			var rootContainer = GetMainContext(context).Container;
             context.Container.AddService(await ReadQuestion(rootContainer));
-			Prompt(context);
+			GetLocalContainer<LocalContainer>(context).Downloaded = true;
 		}
 
 		/// <summary>

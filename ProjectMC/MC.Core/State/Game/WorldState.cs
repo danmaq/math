@@ -38,6 +38,7 @@ namespace MC.Core.State.Game
 		/// <returns>選択肢。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context)
 		{
+			// TODO: 長すぎる
 			var result = new List<Selection>();
 			result.Add(
 				Selection.Default.CopyTo(

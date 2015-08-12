@@ -58,6 +58,18 @@ namespace MC.Core.Data
 		public static bool operator !=(Selection valueA, Selection valueB) => !valueA.Equals(valueB);
 
 		/// <summary>
+		/// 回答文字列とIDから選択肢データを作成します。
+		/// </summary>
+		/// <param name="caption">回答文字列。</param>
+		/// <param name="id">ID。</param>
+		/// <param name="idCallback">選択された際に呼び出されるコールバック。</param>
+		/// <returns>選択肢データ。</returns>
+		public static Selection Create(string caption, int id, Action<int> idCallback) =>
+			Default.CopyTo(
+				caption: caption,
+				select: () => idCallback(id));
+
+		/// <summary>
 		/// 値の文字列表現を取得します。
 		/// </summary>
 		/// <returns>値の文字列表現。</returns>

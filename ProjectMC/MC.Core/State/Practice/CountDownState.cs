@@ -80,22 +80,30 @@ namespace MC.Core.State.Practice
 			Debug.WriteLine(@"Initialize Completed");
 		}
 
-		private static IReadOnlyList<Selection> CreateSelection(IContext context)
-		{
-			Action<int> action =
-				i =>
-				{
-					context.Container.AddService(Tuple.Create(i));
-					// TODO: 選択後のオプションを設定する
-				};
-			return
-				new List<Selection>(
-					GetLocalContainer<LocalContainer>(context)
-						.Question
-						.Answers
-						.Select(
-							(s, i) => Selection.Create(s, i, action)));
-		}
+		/// <summary>
+		/// 選択肢リストを作成します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>選択肢リスト。</returns>
+		private static IReadOnlyList<Selection> CreateSelection(IContext context) =>
+			new List<Selection>(
+				GetLocalContainer<LocalContainer>(context)
+					.Question
+					.Answers
+					.Select(
+						(s, i) => Selection.Create(s, i, CreateSelectedCallback(context))));
+
+		/// <summary>
+		/// 選択肢用コールバックを作成します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>選択肢用コールバック。</returns>
+		private static Action<int> CreateSelectedCallback(IContext context) =>
+			i =>
+			{
+				context.Container.AddService(Tuple.Create(i));
+				// TODO: 選択後のオプションを設定する
+			};
 
 		/// <summary>
 		/// この状態に移行された直後に呼び出されます。

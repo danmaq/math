@@ -12,7 +12,7 @@ namespace MC.Desktop
 	/// <summary>
 	/// MainWindow.xaml の相互作用ロジック
 	/// </summary>
-	partial class MainWindow : Window, IDisposable
+	partial class MainWindow : Window, IDisposable, IPageContainer
 	{
 
 		/// <summary>ゲームフロー管理オブジェクト。</summary>
@@ -69,13 +69,6 @@ namespace MC.Desktop
 		}
 
 		/// <summary>
-		/// ページ遷移を行います。
-		/// </summary>
-		/// <param name="path">XAML へのパス。</param>
-		public void Navigate(string path) =>
-			Navigation.Navigate(new Uri(uriString: path, uriKind: UriKind.Relative));
-
-		/// <summary>
 		/// リソースを解放します。
 		/// </summary>
 		/// <param name="disposing">マネージド リソースも解放するかどうか。</param>
@@ -124,7 +117,7 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void FrameLoadedHandler(object sender, RoutedEventArgs e)
 		{
-			Navigate(Properties.Resources.PAGE_LOGO);
+			this.Navigate(Properties.Resources.PAGE_LOGO);
 			gameFlow = new GameFlow();
 			gameFlow.RequireResponse += GameRequireResponseHandler;
 			CompositionTarget.Rendering += CreateGameLoopHandler(gameFlow.Run());

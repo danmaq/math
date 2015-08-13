@@ -48,6 +48,14 @@ namespace MC.Core.State.Practice
 			context?.Container.GetService<LocalContainerBase>() as T;
 
 		/// <summary>
+		/// プラクティス画面共通データを取得します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>プラクティス画面共通データ。</returns>
+		protected static PracticeData GetPracticeData(IContext context) =>
+			context?.Container.GetService<PracticeData>();
+
+		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>

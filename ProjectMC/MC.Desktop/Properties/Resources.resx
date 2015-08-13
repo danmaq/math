@@ -129,6 +129,9 @@
   <data name="PAGE_PRACTICE" xml:space="preserve">
     <value>Pages/PracticePage.xaml</value>
   </data>
+  <data name="PAGE_PRACTICE_COUNT" xml:space="preserve">
+    <value>Pages/Practice/CountDownPage.xaml</value>
+  </data>
   <data name="PAGE_WORLD" xml:space="preserve">
     <value>Pages/WorldPage.xaml</value>
   </data>

@@ -1,4 +1,5 @@
-﻿using MC.Core.Data;
+﻿using System;
+using MC.Core.Data;
 
 namespace MC.Desktop.Pages
 {
@@ -43,9 +44,17 @@ namespace MC.Desktop.Pages
 		/// <summary>
 		/// インタラクティブなページを取得します。
 		/// </summary>
-		/// <param name="mainWindow">メイン ウィンドウ。</param>
+		/// <param name="pageContainer">ページ コンテナ。</param>
 		/// <returns>インタラクティブなページ。</returns>
-		public static IInteractivePage GetInteractive(this MainWindow mainWindow) =>
-			(mainWindow?.Navigation.Content as IInteractivePage) ?? DummyPage.Instance;
+		public static IInteractivePage GetInteractive(this IPageContainer pageContainer) =>
+			(pageContainer?.Navigation.Content as IInteractivePage) ?? DummyPage.Instance;
+
+		/// <summary>
+		/// ページ遷移を行います。
+		/// </summary>
+		/// <param name="pageContainer">ページ コンテナ。</param>
+		/// <param name="path">XAML へのパス。</param>
+		public static void Navigate(this IPageContainer pageContainer, string path) =>
+			pageContainer.Navigation.Navigate(new Uri(uriString: path, uriKind: UriKind.Relative));
 	}
 }

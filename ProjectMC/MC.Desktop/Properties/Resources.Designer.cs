@@ -97,6 +97,15 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Pages/Practice/CountDownPage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_PRACTICE_COUNT {
+            get {
+                return ResourceManager.GetString("PAGE_PRACTICE_COUNT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pages/WorldPage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PAGE_WORLD {

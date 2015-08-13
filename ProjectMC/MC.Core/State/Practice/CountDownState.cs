@@ -2,14 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using MC.Common.Collection;
 using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Flow;
-using MC.Core.Properties;
-using MC.Core.Server;
 
 namespace MC.Core.State.Practice
 {
@@ -44,7 +40,6 @@ namespace MC.Core.State.Practice
 				set;
 			}
 		}
-
 
 		/// <summary>
 		/// コンストラクタ。
@@ -101,8 +96,8 @@ namespace MC.Core.State.Practice
 		private static Action<int> CreateSelectedCallback(IContext context) =>
 			i =>
 			{
-				context.Container.AddService(Tuple.Create(i));
-				// TODO: 選択後のオプションを設定する
+				GetPracticeData(context).Answer = i;
+				context.NextState = JudgeState.Instance;
 			};
 
 		/// <summary>

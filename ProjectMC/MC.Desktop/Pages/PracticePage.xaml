@@ -57,7 +57,7 @@
                 </Grid.RowDefinitions>
                 <!--- タイマー。 -->
                 <Grid Grid.Row="0">
-                    <ProgressBar Opacity="0.8" IsIndeterminate="True" />
+                    <ProgressBar Opacity="0.8" />
                 </Grid>
                 <!--- 問題。 -->
                 <Grid Grid.Row="1" Background="White">
@@ -111,5 +111,9 @@
                 </Grid>
             </Grid>
         </Grid>
+        <!--- オーバーラップされる表示。 -->
+        <Frame Name="Overlap"
+               NavigationUIVisibility="Hidden"
+               Loaded="LoadedOverlapFrameHandler"/>
     </Grid>
 </Page>

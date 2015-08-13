@@ -98,6 +98,7 @@ namespace MC.Core.State.Practice
 		public override void Begin(IContext context)
 		{
 			base.Begin(context);
+			context.Container.AddService(new PracticeData());
 			DeployQuestion(context);
         }
 

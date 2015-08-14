@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using MC.Common.Collection;
 using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
@@ -75,6 +74,14 @@ namespace MC.Core.State.Practice
 		protected override LocalContainerBase NewLocalContainer => new LocalContainer();
 
 		/// <summary>
+		/// ローカル コンテナを取得します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>ローカル コンテナ。</returns>
+		private static LocalContainer GetLocalContainer(IContext context) =>
+			GetLocalContainer<LocalContainer>(context);
+
+		/// <summary>
 		/// プロンプトを表示部へ送信します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -99,7 +106,7 @@ namespace MC.Core.State.Practice
 		{
 			base.Begin(context);
 			context.Container.AddService(new PracticeData());
-			DeployQuestion(context);
+			PeekQuestionAsync(context);
         }
 
 		/// <summary>
@@ -109,7 +116,7 @@ namespace MC.Core.State.Practice
 		public override void Execute(IContext context)
 		{
 			base.Execute(context);
-			var data = GetLocalContainer<LocalContainer>(context);
+			var data = GetLocalContainer(context);
             if (data.CanSendConfirm)
 			{
 				Prompt(context);
@@ -121,33 +128,28 @@ namespace MC.Core.State.Practice
 		/// 問題一覧をコンテナに配置します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
-		private async void DeployQuestion(IContext context)
+		private async void PeekQuestionAsync(IContext context)
 		{
 			var rootContainer = GetMainContext(context).Container;
-            context.Container.AddService(await ReadQuestion(rootContainer));
-			GetLocalContainer<LocalContainer>(context).Downloaded = true;
+			var college = rootContainer.GetService<Tuple<CollegeMasterData>>();
+			var subject = rootContainer.GetService<Tuple<SubjectMasterData>>();
+			context.Container.AddService(
+				await GetQuestionAsync(college: college.Item1, subject: subject.Item1));
+			GetLocalContainer(context).Downloaded = true;
 		}
 
 		/// <summary>
 		/// 問題一覧を読み込みます。
 		/// </summary>
-		/// <param name="container">ルート コンテナ。</param>
+		/// <param name="college">学園マスタ。</param>
+		/// <param name="subject">教科マスタ。</param>
 		/// <returns>問題一覧。</returns>
-		private async Task<IDictionary<int, QuestionData>> ReadQuestion(
-			ServiceContainer container)
+		private async Task<IDictionary<int, QuestionData>> GetQuestionAsync(
+			CollegeMasterData college, SubjectMasterData subject)
 		{
-			var college = container.GetService<Tuple<CollegeMasterData>>();
-			var subject = container.GetService<Tuple<SubjectMasterData>>();
-			if (college == null || subject == null)
-			{
-				throw new InvalidOperationException();
-			}
-			else
-			{
-				var result = await Api.GetQuestionAsync(college.Item1, subject.Item1);
-				return result.ToDictionary(
-					keySelector: p => p.Key, elementSelector: p => p.Value);
-			}
+			var result = await Api.GetQuestionAsync(college, subject);
+			return result.ToDictionary(
+				keySelector: p => p.Key, elementSelector: p => p.Value);
 		}
 	}
 }

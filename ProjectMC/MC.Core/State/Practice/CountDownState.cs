@@ -61,6 +61,14 @@ namespace MC.Core.State.Practice
 		protected override LocalContainerBase NewLocalContainer => new LocalContainer();
 
 		/// <summary>
+		/// ローカル コンテナを取得します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		/// <returns>ローカル コンテナ。</returns>
+		private static LocalContainer GetLocalContainer(IContext context) =>
+			GetLocalContainer<LocalContainer>(context);
+
+		/// <summary>
 		/// プロンプトを表示部へ送信します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -87,7 +95,7 @@ namespace MC.Core.State.Practice
 		/// <returns>選択肢リスト。</returns>
 		private static IReadOnlyList<Selection> CreateSelection(IContext context) =>
 			new List<Selection>(
-				GetLocalContainer<LocalContainer>(context)
+				GetLocalContainer(context)
 					.Question
 					.Answers
 					.Select(
@@ -113,27 +121,18 @@ namespace MC.Core.State.Practice
 		{
 			base.Begin(context);
 			var dic = context.Container.GetService<IDictionary<int, QuestionData>>();
-			var kv = dic.First();
-			try
+			if (dic.Any())
 			{
-				var container = GetLocalContainer<LocalContainer>(context);
+				var kv = dic.First();
+				var container = GetLocalContainer(context);
 				container.ID = kv.Key;
 				container.Question = kv.Value;
 				Prompt(context);
             }
-			catch
+			else
 			{
 				// TODO: 空の状態
 			}
         }
-
-		/// <summary>
-		/// 状態が実行された際に呼び出されます。
-		/// </summary>
-		/// <param name="context">コンテキスト。</param>
-		public override void Execute(IContext context)
-		{
-			base.Execute(context);
-		}
 	}
 }

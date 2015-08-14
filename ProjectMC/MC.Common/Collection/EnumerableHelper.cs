@@ -16,12 +16,12 @@ namespace MC.Common.Collection
 		/// </summary>
 		/// <typeparam name="T">値の型。</typeparam>
 		/// <param name="count">件数。</param>
-		/// <param name="generator">値を生成する関数。</param>
-		/// <param name="predicate">値を検証する関数。</param>
+		/// <param name="generator">値を生成する関数。引数にはこれまで作成された値の個数が格納されます。</param>
+		/// <param name="predicate">値を検証する関数。引数には値とこれまで作成された値一覧が格納されます。</param>
 		/// <returns>値の一覧を生成するシーケンス。</returns>
 		/// <exception cref="ArgumentNullException">各関数が null である場合。</exception>
 		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-		public static IEnumerable<T> Generate<T>(int count, Func<T> generator, Func<T, IEnumerable<T>, bool> predicate)
+		public static IEnumerable<T> Generate<T>(int count, Func<int, T> generator, Func<T, IEnumerable<T>, bool> predicate)
 		{
 			if (generator == null)
 			{
@@ -34,7 +34,7 @@ namespace MC.Common.Collection
 			var result = new List<T>(count);
 			while (result.Count < count)
 			{
-				var value = generator();
+				var value = generator(result.Count);
 				if (predicate(value, result))
 				{
 					result.Add(value);
@@ -51,7 +51,7 @@ namespace MC.Common.Collection
 		/// <param name="generator">値を生成する関数。</param>
 		/// <returns>値の一覧を生成するシーケンス。</returns>
 		/// <exception cref="ArgumentNullException">各関数が null である場合。</exception>
-		public static IEnumerable<T> Generate<T>(int count, Func<T> generator) =>
+		public static IEnumerable<T> Generate<T>(int count, Func<int, T> generator) =>
 			Generate(count: count, generator: generator, predicate: (_, __) => true);
 
 		/// <summary>
@@ -63,7 +63,7 @@ namespace MC.Common.Collection
 		/// <param name="generator">値を生成する関数。</param>
 		/// <returns>値の一覧を生成するシーケンス。</returns>
 		/// <exception cref="ArgumentNullException">各関数が null である場合。</exception>
-		public static IEnumerable<T> GenerateUnique<T>(int count, Func<T> generator) =>
+		public static IEnumerable<T> GenerateUnique<T>(int count, Func<int, T> generator) =>
 			Generate(
 				count: count, generator: generator, predicate: (v, l) => l.All(i => !v.Equals(i)));
 

@@ -82,12 +82,22 @@ namespace MC.MockServer.Question.QG01
 				throw new ArgumentOutOfRangeException(nameof(selection));
 			}
 			var list = QuestionResource.Selection0101;
-			var answers =
-				EnumerableHelper
-					.GenerateUnique(count: selection, generator: () => random.Next(0, list.Count))
-					.Select(v => Tuple.Create(v, list[v].GetRandomItem()))
-					.ToArray();
-			var answer = random.Next(0, selection);
+			var answers = (
+				from v in
+					EnumerableHelper
+						.Generate(
+							count: selection,
+							generator: i => random.Next(0, i == 0 ? 10 : list.Count),
+							predicate: (v, l) => l.All(i => !v.Equals(i)))
+				orderby random.Next()
+				select Tuple.Create(v, list[v].GetRandomItem())).ToArray();
+			var answer =
+				answers
+					.Select((t, i) => Tuple.Create(t.Item1, i))
+					.Where(t => t.Item1 < 10)
+					.OrderBy(_ => random.Next())
+					.First()
+					.Item2;
 			var data =
 				new QuestionData()
 				{

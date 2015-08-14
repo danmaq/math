@@ -32,7 +32,7 @@ namespace MC.Core.State.Game
 		{
 			Debug.WriteLine(Resources.DEBUG_STARTED, nameof(LoginState));
 			Api.Initialize();
-			MasterCache.DownloadAllMaster(Api.LoadAllMasterAsync);
+			MasterCache.DownloadAllMasterAsync(Api.LoadAllMasterAsync);
 		}
 
 		/// <summary>

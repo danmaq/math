@@ -16,7 +16,7 @@ namespace MC.Common.Data
 		/// すべてのマスタを読み込みます。
 		/// </summary>
 		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-		public static async void DownloadAllMaster(Func<Task<AllMaster>> getMasterAsync)
+		public static async void DownloadAllMasterAsync(Func<Task<AllMaster>> getMasterAsync)
 		{
 			var all = await getMasterAsync();
 			CollegeMaster = all.College.Select(c => CollegeMasterData.Import(c)).ToArray();

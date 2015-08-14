@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using MC.Common.Data;
-using MC.Common.Utils;
 using MC.Common.Data.Serializable;
-using System.Globalization;
+using MC.Common.Utils;
 
 using QData = System.Collections.Generic.KeyValuePair<int, MC.Common.Data.QuestionData>;
 
@@ -148,7 +149,9 @@ namespace MC.Core.Server
 			string body;
             using (var response = await client.Request(method, uri, content))
 			{
+				Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Request: {0}", uri));
 				body = await response.Content.ReadAsStringAsync();
+				Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Response: {0}", body));
 			}
 			return body;
 		}

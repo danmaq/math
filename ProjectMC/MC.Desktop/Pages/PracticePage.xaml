@@ -38,15 +38,9 @@
             </Grid.RowDefinitions>
             <!--- 左部領域。 -->
             <Grid Grid.Column="0" Grid.Row="1">
-                <Viewbox>
-                    <TextBlock Foreground="White" Opacity="0.3">この画面まだ<LineBreak />制作中,,•ᴗ•,,</TextBlock>
-                </Viewbox>
             </Grid>
             <!--- 上部領域。 -->
             <Grid Grid.Column="1" Grid.Row="0">
-                <Viewbox>
-                    <TextBlock Foreground="White" Opacity="0.3">この画面まだ制作中,,•ᴗ•,,</TextBlock>
-                </Viewbox>
             </Grid>
             <!--- メイン領域。 -->
             <Grid Grid.Column="1" Grid.Row="1">

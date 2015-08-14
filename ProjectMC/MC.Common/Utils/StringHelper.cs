@@ -16,6 +16,27 @@ namespace MC.Common.Utils
 	public static class StringHelper
 	{
 		/// <summary>
+		/// HTTPクエリ文字列を作成します。
+		/// </summary>
+		/// <param name="uri">URI。</param>
+		/// <param name="arguments">パラメータ一覧。</param>
+		/// <returns>HTTPクエリ文字列。</returns>
+		public static string CreateQuery(
+			string uri, IEnumerable<KeyValuePair<string, object>> arguments) =>
+			string.Format(CultureInfo.InvariantCulture, @"{0}?{1}", uri, CreateQuery(arguments));
+
+		/// <summary>
+		/// HTTPクエリ文字列を作成します。
+		/// </summary>
+		/// <param name="arguments">パラメータ一覧。</param>
+		/// <returns>HTTPクエリ文字列。</returns>
+		public static string CreateQuery(IEnumerable<KeyValuePair<string, object>> arguments) =>
+			string.Join(
+				"&",
+				arguments.Select(
+					p => string.Format(CultureInfo.InvariantCulture, @"{0}={1}", p.Key, p.Value)));
+
+		/// <summary>
 		/// <c>ToString()</c> メソッド用の文字列を生成します。
 		/// </summary>
 		/// <param name="className">クラス名。</param>

@@ -1,5 +1,4 @@
 ﻿using System.Windows.Controls;
-using MC.Common.Utils;
 using MC.Core.Data;
 
 namespace MC.Desktop.Pages.Practice
@@ -25,8 +24,10 @@ namespace MC.Desktop.Pages.Practice
 		{
 			set
 			{
-				((value as RequireAlertArgs)?.Response ?? DelegateHelper.EmptyAction)();
-				NavigationService.Navigate(new Page());
+				if (value is RequireAlertArgs)
+				{
+					NavigationService.Navigate(new SingleResultPage((RequireAlertArgs)value));
+				}
 			}
 		}
 	}

@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Navigation;
+using System.Windows.Threading;
+using MC.Common.Utils;
 using MC.Core.Data;
 
 namespace MC.Desktop.Pages
@@ -65,5 +68,39 @@ namespace MC.Desktop.Pages
 		/// <param name="path">XAML へのパス。</param>
 		public static void NavigateUri(this NavigationService navigation, string path) =>
 			navigation.Navigate(new Uri(uriString: path, uriKind: UriKind.Relative));
-	}
+
+		/// <summary>
+		/// ページ遷移を行います。
+		/// </summary>
+		/// <param name="navigation">ナビゲーション サービス。</param>
+		/// <param name="path">XAML へのパス。</param>
+		/// <param name="arguments">引数一覧。</param>
+		public static void NavigateUri(
+			this NavigationService navigation,
+			string path,
+			IEnumerable<KeyValuePair<string, object>> arguments) =>
+			navigation.Navigate(
+				new Uri(
+					uriString: StringHelper.CreateQuery(path, arguments),
+					uriKind: UriKind.Relative));
+
+		/// <summary>
+		/// DispatcherTimer クラスを使用して、コールバックを一定時間遅延して呼び出します。
+		/// </summary>
+		/// <param name="callback">コールバック。</param>
+		/// <param name="delay">遅延時間。</param>
+		/// <returns>遅延実行キャンセル用関数。</returns>
+		public static Action DelayCallUsingDispatcherTimer(Action callback, TimeSpan delay)
+		{
+			var timer = new DispatcherTimer() { Interval = delay };
+			timer.Tick +=
+				(_, __) =>
+				{
+					timer.Stop();
+					callback();
+				};
+			timer.Start();
+			return timer.Stop;
+		}
+    }
 }

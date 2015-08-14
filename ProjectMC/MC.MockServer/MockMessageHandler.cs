@@ -21,6 +21,9 @@ namespace MC.MockServer
 		/// <summary>モック サーバの API 呼び出し窓口。</summary>
 		private static readonly MockApi api = new MockApi();
 
+		/// <summary>擬似乱数ジェネレータ。</summary>
+		private static readonly Random rnd = new Random();
+
 		/// <summary>
 		/// 非同期操作として HTTP 要求を送信します。
 		/// </summary>
@@ -39,7 +42,8 @@ namespace MC.MockServer
 			await semaphore.WaitAsync();
             try
 			{
-				await Task.Delay(TimeSpan.FromMilliseconds(500));
+				var ms = TimeSpan.FromMilliseconds(rnd.Next(minValue: 200, maxValue: 500));
+                await Task.Delay(ms);
 				return InnerProcess(request);
 			}
 			finally

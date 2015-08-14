@@ -72,7 +72,7 @@ namespace MC.MockServer
 			{
 				var splited = SplitPath(path);
 				path = splited.Item1;
-				param.Add(splited.Item2);
+				param.Insert(index: 0, item: splited.Item2);
 				yield return new PairedAPIParams(item1: path, item2: param);
 			}
 		}

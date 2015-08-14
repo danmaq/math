@@ -8,6 +8,9 @@ using QandA = System.Tuple<MC.Common.Data.QuestionData, int>;
 namespace MC.MockServer.Question
 {
 
+	/// <summary>
+	/// 問題のキャッシュ。
+	/// </summary>
 	sealed class QuestionStore
 	{
 

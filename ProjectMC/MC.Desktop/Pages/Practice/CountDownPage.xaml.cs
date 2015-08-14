@@ -46,7 +46,7 @@ namespace MC.Desktop.Pages.Practice
 		public CountDownPage()
 		{
 			InitializeComponent();
-			dispatcherTimer.Interval = new TimeSpan(hours: 0, minutes: 0, seconds: 1);
+			dispatcherTimer.Interval = TimeSpan.FromSeconds(1);
 			dispatcherTimer.Tick += TickTimerHandler;
 			dispatcherTimer.Start();
 			DataContext = data;
@@ -60,8 +60,9 @@ namespace MC.Desktop.Pages.Practice
 			set
 			{
 				((value as RequireAlertArgs)?.Response ?? DelegateHelper.EmptyAction)();
+				dispatcherTimer.Stop();
 				NavigationService.Navigate(new Page());
-			}
+            }
 		}
 
 		/// <summary>

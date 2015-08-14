@@ -150,6 +150,9 @@
   <data name="PAGE_PRACTICE_COUNT" xml:space="preserve">
     <value>Pages/Practice/CountDownPage.xaml</value>
   </data>
+  <data name="PAGE_PRACTICE_SINGLERESULT" xml:space="preserve">
+    <value>Pages/Practice/SingleResult.xaml</value>
+  </data>
   <data name="PAGE_PRACTICE_WAIT" xml:space="preserve">
     <value>Pages/Practice/WaitPage.xaml</value>
   </data>

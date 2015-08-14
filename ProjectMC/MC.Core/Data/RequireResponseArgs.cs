@@ -11,12 +11,23 @@ namespace MC.Core.Data
 	public abstract class RequireResponseArgs : EventArgs
 	{
 
-		/// <summary>解説文書を取得、または設定します。</summary>
-		public string Description
+		/// <summary>レスポンスを要求する文章文字列を取得、または設定します。</summary>
+		public string Caption
 		{
 			get;
 			internal set;
 		}
+		= string.Empty;
+
+		/// <summary>
+		/// 追加の解説文を取得します。
+		/// </summary>
+		public string Desctiption
+		{
+			get;
+			internal set;
+		}
+		= string.Empty;
 
 		/// <summary>
 		/// ToString() メソッドに使う、クラス名を取得します。
@@ -32,7 +43,11 @@ namespace MC.Core.Data
 		/// </summary>
 		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
 		protected virtual IEnumerable<KeyValuePair<string, object>> Arguments =>
-			new Dictionary<string, object>() {[nameof(Description)] = Description };
+			new Dictionary<string, object>()
+			{
+				[nameof(Caption)] = Caption,
+				[nameof(Desctiption)] = Desctiption,
+			};
 
 		/// <summary>
 		/// 文字列情報を取得します。

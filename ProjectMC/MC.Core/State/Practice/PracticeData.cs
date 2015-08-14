@@ -12,7 +12,7 @@ namespace MC.Core.State.Practice
 	sealed class PracticeData
 	{
 		/// <summary>
-		/// 回答番号。
+		/// 回答番号を取得、または設定します。
 		/// </summary>
 		public int Answer
 		{
@@ -20,5 +20,22 @@ namespace MC.Core.State.Practice
 			set;
 		}
 
+		/// <summary>
+		/// 問題数を取得、または設定します。
+		/// </summary>
+		public int Length
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// 問題数を取得、または設定します。
+		/// </summary>
+		public int CorrectCount
+		{
+			get;
+			set;
+		}
 	}
 }

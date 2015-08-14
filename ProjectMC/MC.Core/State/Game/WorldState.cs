@@ -75,7 +75,7 @@ namespace MC.Core.State.Game
 			var args =
 				new RequireSelectArgs()
 				{
-					Description = Resources.MESSAGE_WORLD,
+					Caption = Resources.MESSAGE_WORLD,
 					Selections = CreateSelection(context)
 				};
 			flow.DispatchRequireResponse(args);

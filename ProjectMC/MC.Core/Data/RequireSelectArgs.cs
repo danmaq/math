@@ -11,16 +11,6 @@ namespace MC.Core.Data
 	{
 
 		/// <summary>
-		/// 追加の解説文を取得します。
-		/// </summary>
-		public string AdditionalDesctiption
-		{
-			get;
-			internal set;
-		}
-		= string.Empty;
-
-		/// <summary>
 		/// 選択肢を取得します。
 		/// </summary>
 		public IReadOnlyList<Selection> Selections
@@ -53,8 +43,8 @@ namespace MC.Core.Data
 		protected override IEnumerable<KeyValuePair<string, object>> Arguments =>
 			new Dictionary<string, object>()
 			{
-				[nameof(Description)] = Description,
-				[nameof(AdditionalDesctiption)] = AdditionalDesctiption,
+				[nameof(Caption)] = Caption,
+				[nameof(Desctiption)] = Desctiption,
 				[nameof(Expires)] = Expires,
 				[nameof(Selections)] = Selections.ToStringCollection(),
 			};

@@ -79,8 +79,8 @@ namespace MC.Desktop.Pages
 			DataContext =
 				new PracticeBindingData()
 				{
-					Caption = value.Description,
-					Description = value.AdditionalDesctiption,
+					Caption = value.Caption,
+					Description = value.Desctiption,
 					Number = 1,
 					Interactive = allowInteractive,
 					Answer1 = value.Selections[0].Caption,

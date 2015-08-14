@@ -40,7 +40,7 @@ namespace MC.Core.State.Game
 			var args =
 				new RequireSelectArgs()
 				{
-					Description = Resources.MESSAGE_HOME,
+					Caption = Resources.MESSAGE_HOME,
 					Selections = CreateSelection(context)
 				};
 			flow.DispatchRequireResponse(args);

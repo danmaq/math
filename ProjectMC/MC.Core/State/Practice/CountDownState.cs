@@ -79,8 +79,8 @@ namespace MC.Core.State.Practice
 			var args =
 				new RequireSelectArgs
 				{
-					Description = container.Question.Caption,
-					AdditionalDesctiption = container.Question.Description,
+					Caption = container.Question.Caption,
+					Desctiption = container.Question.Description,
 					Expires = container.Question.Expires,
 					Selections = CreateSelection(context),
 				};

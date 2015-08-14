@@ -91,7 +91,7 @@ namespace MC.Core.State.Practice
 			var args =
 				new RequireAlertArgs()
 				{
-					Description = Resources.MESSAGE_PRACTICE_START,
+					Caption = Resources.MESSAGE_PRACTICE_START,
 					Response = () => context.NextState = CountDownState.Instance,
 				};
 			flow.DispatchRequireResponse(args);

@@ -22,7 +22,7 @@ namespace MC
 		/// <param name="args">イベント情報。</param>
 		public void Prompt(RequireResponseArgs args)
 		{
-			Console.WriteLine(args.Description);
+			Console.WriteLine(args.Caption);
 			Prompt(args as RequireAlertArgs);
 			Prompt(args as RequireSelectArgs);
 			Prompt(args as RequireTextArgs);

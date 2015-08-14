@@ -40,7 +40,7 @@ namespace MC.Core.State.Practice
 			/// <summary>
 			/// 正解かどうかを取得、または設定します。
 			/// </summary>
-			public bool Confirm
+			public bool Correct
 			{
 				get;
 				set;
@@ -128,7 +128,7 @@ namespace MC.Core.State.Practice
 			var args =
 				new RequireAlertArgs()
 				{
-					Description = localContainer.Confirm.ToString(),
+					Caption = localContainer.Correct.ToString(),
 					Response = () => context.NextState = CountDownState.Instance,
 				};
 			flow.DispatchRequireResponse(args);
@@ -142,7 +142,7 @@ namespace MC.Core.State.Practice
 		/// <param name="answer">回答番号。</param>
 		private async void PeekAnswerAsync(LocalContainer container, int key, int answer)
 		{
-			container.Confirm = await Api.TellAnswerAsync(key, answer);
+			container.Correct = await Api.TellAnswerAsync(key, answer);
 			container.Connected = true;
 		}
 	}

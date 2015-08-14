@@ -36,7 +36,7 @@ namespace MC.Core.State.Game
 			var args =
 				new RequireAlertArgs()
 				{
-					Description = Resources.MESSAGE_PREFERENCE,
+					Caption = Resources.MESSAGE_PREFERENCE,
 					Response = () => context.NextState = HomeState.Instance
 				};
 			flow.DispatchRequireResponse(args);

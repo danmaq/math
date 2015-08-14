@@ -18,7 +18,7 @@ namespace MC.Desktop.Pages.Practice
 			/// <summary>
 			/// 正解かどうかを取得、および設定します。
 			/// </summary>
-			public bool Confirm
+			public bool Correct
 			{
 				get;
 				set;
@@ -27,7 +27,7 @@ namespace MC.Desktop.Pages.Practice
 			/// <summary>
 			/// 結果を取得します。
 			/// </summary>
-			public string Result => Confirm ? @"○" : @"×";
+			public string Result => Correct ? @"○" : @"×";
 		}
 
 		/// <summary>
@@ -42,7 +42,7 @@ namespace MC.Desktop.Pages.Practice
 			{
 				throw new ArgumentNullException(nameof(prompt));
 			}
-			DataContext = new BindingData() { Confirm = Convert.ToBoolean(prompt.Description) };
+			DataContext = new BindingData() { Correct = Convert.ToBoolean(prompt.Caption) };
 			Action callback =
 				() =>
 				{

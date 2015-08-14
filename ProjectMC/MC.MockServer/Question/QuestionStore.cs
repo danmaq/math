@@ -67,5 +67,17 @@ namespace MC.MockServer.Question
 			return
 				Question.Select(p => EnumerableHelper.CreatePair(p.Key, p.Value.Item1)).ToArray();
 		}
+
+		/// <summary>
+		/// 回答の判定を行います。
+		/// </summary>
+		/// <param name="qid">問題ID。</param>
+		/// <param name="answer">回答。</param>
+		/// <returns>回答が正解である場合、true。</returns>
+		public bool JudgeQuestion(int qid, int answer)
+		{
+			QandA qa;
+			return Question.TryGetValue(key: qid, value: out qa) && qa.Item2 == answer;
+        }
 	}
 }

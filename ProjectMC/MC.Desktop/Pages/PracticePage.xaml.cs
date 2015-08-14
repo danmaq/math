@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using MC.Core.Data;
+using MC.Desktop.Pages.Practice;
 
 namespace MC.Desktop.Pages
 {
@@ -23,6 +24,7 @@ namespace MC.Desktop.Pages
 		public PracticePage()
 		{
 			InitializeComponent();
+			DataContext = new PracticeBindingData();
 		}
 
 		/// <summary>
@@ -41,9 +43,20 @@ namespace MC.Desktop.Pages
 		{
 			set
 			{
-				if (value != null)
+				if (value != null && value.Selections.Count >= 4)
 				{
-					
+					DataContext = null;
+					DataContext =
+						new PracticeBindingData()
+						{
+							Caption = value.Description,
+							Description = value.AdditionalDesctiption,
+							Number = 1,
+							Answer1 = value.Selections[0].Caption,
+							Answer2 = value.Selections[1].Caption,
+							Answer3 = value.Selections[2].Caption,
+							Answer4 = value.Selections[3].Caption,
+						};
 					Debug.WriteLine(value);
 				}
 			}

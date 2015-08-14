@@ -1,8 +1,6 @@
-﻿using System;
+﻿using MC.Common.Utils;
+using MC.Desktop.Properties;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MC.Desktop.Pages.Practice
 {
@@ -34,6 +32,7 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= Resources.MSG_PRACTICE_CAPTION;
 
 		/// <summary>
 		/// 問題の解説文を取得、および設定します。
@@ -43,6 +42,7 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= Resources.MSG_PRACTICE_DESCRIPTION;
 
 		/// <summary>
 		/// 問題の回答を取得、および設定します。
@@ -52,6 +52,7 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= Resources.MSG_PRACTICE_ANSWER1;
 
 		/// <summary>
 		/// 問題の回答を取得、および設定します。
@@ -61,6 +62,7 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= Resources.MSG_PRACTICE_ANSWER2;
 
 		/// <summary>
 		/// 問題の回答を取得、および設定します。
@@ -70,6 +72,7 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= Resources.MSG_PRACTICE_ANSWER3;
 
 		/// <summary>
 		/// 問題の回答を取得、および設定します。
@@ -79,5 +82,21 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= Resources.MSG_PRACTICE_ANSWER4;
+
+		public override string ToString() =>
+			StringHelper.CreateToString(
+				className: nameof(PracticeBindingData),
+				arguments:
+					new Dictionary<string, object>()
+					{
+						[nameof(Number)] = Number,
+						[nameof(Caption)] = Caption,
+						[nameof(Description)] = Description,
+						[nameof(Answer1)] = Answer1,
+						[nameof(Answer2)] = Answer2,
+						[nameof(Answer3)] = Answer3,
+						[nameof(Answer4)] = Answer4,
+					});
 	}
 }

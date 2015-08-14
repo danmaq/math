@@ -61,6 +61,60 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   回答1 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PRACTICE_ANSWER1 {
+            get {
+                return ResourceManager.GetString("MSG_PRACTICE_ANSWER1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   回答2 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PRACTICE_ANSWER2 {
+            get {
+                return ResourceManager.GetString("MSG_PRACTICE_ANSWER2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   回答3 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PRACTICE_ANSWER3 {
+            get {
+                return ResourceManager.GetString("MSG_PRACTICE_ANSWER3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   回答4 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PRACTICE_ANSWER4 {
+            get {
+                return ResourceManager.GetString("MSG_PRACTICE_ANSWER4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   ここに問題が に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PRACTICE_CAPTION {
+            get {
+                return ResourceManager.GetString("MSG_PRACTICE_CAPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   表示されます に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PRACTICE_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("MSG_PRACTICE_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pages/AreaPage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PAGE_AREA {

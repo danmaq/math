@@ -68,13 +68,13 @@
                             <RowDefinition Height="3*" />
                         </Grid.RowDefinitions>
                         <Viewbox Grid.Row="0" HorizontalAlignment="Left">
-                            <TextBlock Foreground="#FF404040" Text="Q1" />
+                            <TextBlock Foreground="#FF404040" Text="{Binding StringedNumber}" />
                         </Viewbox>
                         <Viewbox Grid.Row="1" HorizontalAlignment="Left">
-                            <TextBlock Foreground="#FF404040" Text="問題はここに" />
+                            <TextBlock Foreground="#FF404040" Text="{Binding Caption}" />
                         </Viewbox>
                         <Viewbox Grid.Row="2" HorizontalAlignment="Left">
-                            <TextBlock Foreground="#FF404040" Text="表示されます！" />
+                            <TextBlock Foreground="#FF404040" Text="{Binding Description}" />
                         </Viewbox>
                     </Grid>
                 </Grid>
@@ -90,22 +90,22 @@
                     </Grid.RowDefinitions>
                     <Button Grid.Column="0" Grid.Row="0" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="回答1" Margin="4" />
+                            <TextBlock Text="{Binding Answer1}" Margin="4" />
                         </Viewbox>
                     </Button>
                     <Button Grid.Column="1" Grid.Row="0" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="回答2" Margin="4" />
+                            <TextBlock Text="{Binding Answer2}" Margin="4" />
                         </Viewbox>
                     </Button>
                     <Button Grid.Column="0" Grid.Row="1" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="回答3" Margin="4" />
+                            <TextBlock Text="{Binding Answer3}" Margin="4" />
                         </Viewbox>
                     </Button>
                     <Button Grid.Column="1" Grid.Row="1" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="回答4" Margin="4" />
+                            <TextBlock Text="{Binding Answer4}" Margin="4" />
                         </Viewbox>
                     </Button>
                 </Grid>

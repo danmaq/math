@@ -189,6 +189,7 @@
     <Compile Include="Pages\Practice\CountDownPage.xaml.cs">
       <DependentUpon>CountDownPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Practice\PracticeBindingData.cs" />
     <Compile Include="Pages\SelectionData.cs" />
     <Compile Include="Pages\BackButton.xaml.cs">
       <DependentUpon>BackButton.xaml</DependentUpon>

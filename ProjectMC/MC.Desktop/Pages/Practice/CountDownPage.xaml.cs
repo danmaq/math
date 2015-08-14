@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Windows.Controls;
 using System.Windows.Threading;
 using MC.Common.Data;
+using MC.Common.Utils;
 using MC.Core.Data;
 
 namespace MC.Desktop.Pages.Practice
@@ -70,6 +71,7 @@ namespace MC.Desktop.Pages.Practice
 		{
 			set
 			{
+				((value as RequireAlertArgs)?.Response ?? DelegateHelper.EmptyAction)();
 				NavigationService.Navigate(new Page());
 			}
 		}

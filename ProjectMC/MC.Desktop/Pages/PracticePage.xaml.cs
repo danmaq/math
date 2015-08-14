@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System.Diagnostics;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using MC.Core.Data;
@@ -32,6 +33,19 @@ namespace MC.Desktop.Pages
 			set
 			{
 				this.GetInteractive().RequireResponseArgs = value;
+				RequireSelectArgs = value as RequireSelectArgs;
+            }
+		}
+
+		private RequireSelectArgs RequireSelectArgs
+		{
+			set
+			{
+				if (value != null)
+				{
+					
+					Debug.WriteLine(value);
+				}
 			}
 		}
 

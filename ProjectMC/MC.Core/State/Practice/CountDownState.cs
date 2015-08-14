@@ -56,6 +56,11 @@ namespace MC.Core.State.Practice
 		= new CountDownState();
 
 		/// <summary>
+		/// ローカル コンテナを生成します。
+		/// </summary>
+		protected override LocalContainerBase NewLocalContainer => new LocalContainer();
+
+		/// <summary>
 		/// プロンプトを表示部へ送信します。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -72,7 +77,7 @@ namespace MC.Core.State.Practice
 					Selections = CreateSelection(context),
 				};
 			flow.DispatchRequireResponse(args);
-			Debug.WriteLine(@"Initialize Completed");
+			Debug.WriteLine(@"Question!");
 		}
 
 		/// <summary>

@@ -71,10 +71,10 @@
                             <TextBlock Foreground="#FF404040" Text="Q1" />
                         </Viewbox>
                         <Viewbox Grid.Row="1" HorizontalAlignment="Left">
-                            <TextBlock Foreground="#FF404040" Text="こたえはどれだ！？" />
+                            <TextBlock Foreground="#FF404040" Text="問題はここに" />
                         </Viewbox>
                         <Viewbox Grid.Row="2" HorizontalAlignment="Left">
-                            <TextBlock Foreground="#FF404040" Text="1 + 1 = ?" />
+                            <TextBlock Foreground="#FF404040" Text="表示されます！" />
                         </Viewbox>
                     </Grid>
                 </Grid>
@@ -90,22 +90,22 @@
                     </Grid.RowDefinitions>
                     <Button Grid.Column="0" Grid.Row="0" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="1" Margin="4" />
+                            <TextBlock Text="回答1" Margin="4" />
                         </Viewbox>
                     </Button>
                     <Button Grid.Column="1" Grid.Row="0" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="2" Margin="4" />
+                            <TextBlock Text="回答2" Margin="4" />
                         </Viewbox>
                     </Button>
                     <Button Grid.Column="0" Grid.Row="1" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="3" Margin="4" />
+                            <TextBlock Text="回答3" Margin="4" />
                         </Viewbox>
                     </Button>
                     <Button Grid.Column="1" Grid.Row="1" Opacity="0.8">
                         <Viewbox>
-                            <TextBlock Text="4" Margin="4" />
+                            <TextBlock Text="回答4" Margin="4" />
                         </Viewbox>
                     </Button>
                 </Grid>

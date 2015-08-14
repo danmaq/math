@@ -8,7 +8,7 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// UserControl1.xaml の相互作用ロジック
 	/// </summary>
-	public partial class BackButton : UserControl
+	sealed partial class BackButton : UserControl
 	{
 		/// <summary>
 		/// 依存プロパティの定義。

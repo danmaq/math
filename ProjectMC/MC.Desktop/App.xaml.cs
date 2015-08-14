@@ -8,12 +8,20 @@ namespace MC.Desktop
 	/// <summary>
 	/// App.xaml の相互作用ロジック
 	/// </summary>
-	partial class App : Application, IDisposable
+	sealed partial class App : Application, IDisposable
 	{
 		/// <summary>
 		/// ミューテックス管理クラス。
 		/// </summary>
 		private MutexManager mutex;
+
+		/// <summary>
+		/// デストラクタ。
+		/// </summary>
+		~App()
+		{
+			Dispose(disposing: false);
+		}
 
 		/// <summary>
 		/// リソースを解放します。
@@ -28,7 +36,7 @@ namespace MC.Desktop
 		/// リソースを解放します。
 		/// </summary>
 		/// <param name="disposing">マネージド リソースも解放するかどうか。</param>
-		protected virtual void Dispose(bool disposing)
+		private void Dispose(bool disposing)
 		{
 			if (disposing)
 			{

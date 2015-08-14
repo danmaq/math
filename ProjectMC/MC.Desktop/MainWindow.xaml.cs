@@ -12,7 +12,7 @@ namespace MC.Desktop
 	/// <summary>
 	/// MainWindow.xaml の相互作用ロジック
 	/// </summary>
-	partial class MainWindow : Window, IDisposable, IPageContainer
+	sealed partial class MainWindow : Window, IDisposable, IPageContainer
 	{
 
 		/// <summary>ゲームフロー管理オブジェクト。</summary>
@@ -26,6 +26,14 @@ namespace MC.Desktop
 			Instance = this;
 			InitializeComponent();
 			DataContext = CurrentData;
+		}
+
+		/// <summary>
+		/// デストラクタ。
+		/// </summary>
+		~MainWindow()
+		{
+			Dispose(disposing: false);
 		}
 
 		/// <summary>
@@ -72,7 +80,7 @@ namespace MC.Desktop
 		/// リソースを解放します。
 		/// </summary>
 		/// <param name="disposing">マネージド リソースも解放するかどうか。</param>
-		protected virtual void Dispose(bool disposing)
+		private void Dispose(bool disposing)
 		{
 			if (disposing)
 			{
@@ -117,7 +125,7 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void FrameLoadedHandler(object sender, RoutedEventArgs e)
 		{
-			this.Navigate(Properties.Resources.PAGE_LOGO);
+			this.NavigateUri(Properties.Resources.PAGE_LOGO);
 			gameFlow = new GameFlow();
 			gameFlow.RequireResponse += GameRequireResponseHandler;
 			CompositionTarget.Rendering += CreateGameLoopHandler(gameFlow.Run());

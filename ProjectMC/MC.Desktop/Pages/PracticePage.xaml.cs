@@ -8,7 +8,7 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// PracticePage.xaml の相互作用ロジック
 	/// </summary>
-	public partial class PracticePage : Page, IInteractivePage, IPageContainer
+	sealed partial class PracticePage : Page, IInteractivePage, IPageContainer
 	{
 
 		/// <summary>
@@ -42,7 +42,7 @@ namespace MC.Desktop.Pages
 		/// <param name="e">イベント情報。</param>
 		private void LoadedOverlapFrameHandler(object sender, RoutedEventArgs e)
 		{
-			this.Navigate(Properties.Resources.PAGE_PRACTICE_COUNT);
+			this.NavigateUri(Properties.Resources.PAGE_PRACTICE_COUNT);
         }
 	}
 }

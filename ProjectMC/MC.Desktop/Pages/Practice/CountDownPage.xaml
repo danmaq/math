@@ -10,6 +10,6 @@
       Background="White" Opacity="0.7">
 
     <Viewbox>
-        <TextBlock Text="3" Margin="4" />
+        <TextBlock Text="{Binding CountDown}" Margin="4" />
     </Viewbox>
 </Page>

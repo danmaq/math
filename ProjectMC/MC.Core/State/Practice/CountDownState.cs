@@ -11,7 +11,7 @@ namespace MC.Core.State.Practice
 {
 
 	/// <summary>
-	/// プラクティス開始前カウントダウン待機の状態。
+	/// 問題攻略中カウントダウンの状態。
 	/// </summary>
 	sealed class CountDownState : PracticeStateBase
 	{

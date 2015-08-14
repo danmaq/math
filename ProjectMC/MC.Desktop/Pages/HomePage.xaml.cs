@@ -9,7 +9,7 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// HomePage.xaml の相互作用ロジック
 	/// </summary>
-	partial class HomePage : Page, IInteractivePage
+	sealed partial class HomePage : Page, IInteractivePage
 	{
 		/// <summary>
 		/// コンストラクタ。
@@ -46,7 +46,7 @@ namespace MC.Desktop.Pages
 		/// <param name="e">イベント情報。</param>
 		private void ClickedSchoolButtonHandler(object sender, RoutedEventArgs e)
 		{
-			MainWindow.Instance.Navigate(Properties.Resources.PAGE_WORLD);
+			NavigationService.NavigateUri(Properties.Resources.PAGE_WORLD);
 			(Selection?.Selections[(int)HomeSelection.World].Select ?? DelegateHelper.EmptyAction)();
 		}
 	}

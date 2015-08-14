@@ -6,7 +6,7 @@ namespace MC.Desktop.Pages
 	/// <summary>
 	/// LogoPage.xaml の相互作用ロジック
 	/// </summary>
-	partial class LogoPage : Page, IInteractivePage
+	sealed partial class LogoPage : Page, IInteractivePage
 	{
 		/// <summary>
 		/// コンストラクタ。
@@ -26,7 +26,7 @@ namespace MC.Desktop.Pages
 				var alert = value as RequireAlertArgs;
 				if (alert != null)
 				{
-					MainWindow.Instance.Navigate(Properties.Resources.PAGE_HOME);
+					NavigationService.NavigateUri(Properties.Resources.PAGE_HOME);
 					alert.Response();
 				}
 			}

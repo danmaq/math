@@ -47,7 +47,7 @@ namespace MC.Core.State.Practice
 			/// <summary>
 			/// カウントダウン待機が完了したかどうかを取得します。
 			/// </summary>
-			public bool Expired => (DateTime.Now - Created).Seconds >= 3;
+			public bool Expired => (DateTime.Now - Created).Seconds >= Constants.PreCountDown;
 
 			/// <summary>
 			/// 確認を送信すべきかどうかを取得します。

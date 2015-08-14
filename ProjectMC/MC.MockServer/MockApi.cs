@@ -5,11 +5,12 @@ using System.Linq;
 using MC.Common.Utils;
 using MC.MockServer.Question;
 
+using API = System.Func<string, System.Collections.Generic.IEnumerable<string>, string, object>;
+using APIWithoutParams = System.Func<string, string, object>;
+using PairedAPIParams = System.Tuple<string, System.Collections.Generic.IEnumerable<string>>;
+
 namespace MC.MockServer
 {
-	using API = Func<string, IEnumerable<string>, string, object>;
-	using APIWithoutParams = Func<string, string, object>;
-	using PairedAPIParams = Tuple<string, IEnumerable<string>>;
 
 	/// <summary>
 	/// モック サーバの API 呼び出し窓口。
@@ -21,8 +22,9 @@ namespace MC.MockServer
 		private readonly Dictionary<string, API> Apis =
 			new Dictionary<string, API>()
 			{
-				["/v1/master"] = (m, p, b) => MasterStore.Instance.Export(),
-				["/v1/question"] = (m, p, b) => QuestionStore.Instance.CreateQuestion(p),
+				[@"/v1/master"] = (m, p, b) => MasterStore.Instance.Export(),
+				[@"/v1/question"] = (m, p, b) => QuestionStore.Instance.CreateQuestion(p),
+				[@"/v1/answer"] = (m, p, b) => QuestionStore.Instance.JudgeQuestion(p),
 			};
 
 		/// <summary>
@@ -71,7 +73,7 @@ namespace MC.MockServer
 				var splited = SplitPath(path);
 				path = splited.Item1;
 				param.Add(splited.Item2);
-				yield return Tuple.Create<string, IEnumerable<string>>(item1: path, item2: param);
+				yield return new PairedAPIParams(item1: path, item2: param);
 			}
 		}
 

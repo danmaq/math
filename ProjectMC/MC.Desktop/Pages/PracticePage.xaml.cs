@@ -67,6 +67,7 @@ namespace MC.Desktop.Pages
 		{
 			RequireSelectArgs.Selections[index].Select();
 			ApplySelectionData(allowInteractive: false);
+			this.NavigateUri(Properties.Resources.PAGE_PRACTICE_WAIT);
 		}
 
 		/// <summary>

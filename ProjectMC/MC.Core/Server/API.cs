@@ -65,18 +65,6 @@ namespace MC.Core.Server
 		}
 
 		/// <summary>
-		/// ユーザ情報を取得します。
-		/// </summary>
-		/// <param name="id">ユーザID。</param>
-		/// <returns>ユーザ情報。</returns>
-		/// <exception cref="InvalidOperationException">初期化されていない場合。</exception>
-		public static async Task<UserData> GetUserAsync(int id)
-		{
-			CheckInitialized();
-			throw new NotImplementedException();
-		}
-
-		/// <summary>
 		/// 問題を取得します。
 		/// </summary>
 		/// <param name="college">学園マスタ。</param>
@@ -97,6 +85,19 @@ namespace MC.Core.Server
 			var path = CreatePath(@"question", collegeId, subjectId);
             var body = await Request(method: HttpMethod.Get, path: path, content: null);
 			return StringHelper.FromJson<QData[]>(body);
+		}
+
+		/// <summary>
+		/// 回答を問い合わせます。
+		/// </summary>
+		/// <param name="questionId">問題ワンタイムID。</param>
+		/// <param name="answer">回答。</param>
+		/// <returns>正解である場合、true。</returns>
+		public static async Task<bool> TellAnswer(int questionId, int answer)
+		{
+			var path = CreatePath(@"answer", questionId, answer);
+			var body = await Request(method: HttpMethod.Post, path: path, content: null);
+			return StringHelper.FromJson<bool>(body);
 		}
 
 		/// <summary>

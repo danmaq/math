@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using MC.Common.Collection;
-using MC.Common.Data;
+
+using QandA = System.Tuple<MC.Common.Data.QuestionData, int>;
 
 namespace MC.MockServer.Question
 {
-	using QandA = Tuple<QuestionData, int>;
 
 	sealed class QuestionStore
 	{
@@ -37,6 +37,7 @@ namespace MC.MockServer.Question
 		/// </summary>
 		/// <param name="args">引数一覧。</param>
 		/// <returns>問題一覧。</returns>
+		/// <exception cref="ArgumentException">引数が足りない場合。</exception>
 		public object CreateQuestion(IEnumerable<string> args)
 		{
 			Func<string, int> cast = Convert.ToInt32;
@@ -67,6 +68,25 @@ namespace MC.MockServer.Question
 			return
 				Question.Select(p => EnumerableHelper.CreatePair(p.Key, p.Value.Item1)).ToArray();
 		}
+
+		/// <summary>
+		/// 回答の判定を行います。
+		/// </summary>
+		/// <param name="args">引数一覧。</param>
+		/// <returns>回答が正解である場合、true。</returns>
+		/// <exception cref="ArgumentException">引数が足りない場合。</exception>
+		public bool JudgeQuestion(IEnumerable<string> args)
+		{
+			Func<string, int> cast = Convert.ToInt32;
+			var array = args.Select(cast).ToArray();
+			if (array.Length < 2)
+			{
+				throw
+					new ArgumentException(
+						message: @"引数が足りません。", paramName: nameof(args));
+			}
+			return JudgeQuestion(qid: array[0], answer: array[1]);
+        }
 
 		/// <summary>
 		/// 回答の判定を行います。

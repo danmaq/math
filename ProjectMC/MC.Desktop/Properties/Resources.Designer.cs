@@ -160,6 +160,15 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Pages/Practice/WaitPage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_PRACTICE_WAIT {
+            get {
+                return ResourceManager.GetString("PAGE_PRACTICE_WAIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Pages/WorldPage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string PAGE_WORLD {

@@ -53,18 +53,6 @@ namespace MC.Desktop.Pages.Practice
         }
 
 		/// <summary>
-		/// タイマによって毎秒呼び出されます。
-		/// </summary>
-		/// <param name="sender">送信元。</param>
-		/// <param name="e">イベント情報。</param>
-		private void TickTimerHandler(object sender, EventArgs e)
-		{
-			data.CountDownValue = Math.Max(0, data.CountDownValue - 1);
-			DataContext = null;
-			DataContext = data;
-		}
-
-		/// <summary>
 		/// ユーザ入力の要求を取得、設定します。
 		/// </summary>
 		public RequireResponseArgs RequireResponseArgs
@@ -74,6 +62,18 @@ namespace MC.Desktop.Pages.Practice
 				((value as RequireAlertArgs)?.Response ?? DelegateHelper.EmptyAction)();
 				NavigationService.Navigate(new Page());
 			}
+		}
+
+		/// <summary>
+		/// タイマによって毎秒呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void TickTimerHandler(object sender, EventArgs e)
+		{
+			data.CountDownValue = Math.Max(0, data.CountDownValue - 1);
+			DataContext = null;
+			DataContext = data;
 		}
 	}
 }

@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using MC.Core.Data;
@@ -12,6 +11,8 @@ namespace MC.Desktop.Pages
 	/// </summary>
 	sealed partial class PracticePage : Page, IInteractivePage, IPageContainer
 	{
+		/// <summary>選択肢データ。</summary>
+		private RequireSelectArgs requireSelectArgs;
 
 		/// <summary>
 		/// ページのナビゲーション サービスを取得します。
@@ -39,27 +40,53 @@ namespace MC.Desktop.Pages
             }
 		}
 
+		/// <summary>
+		/// 選択肢データを取得、または設定します。
+		/// </summary>
 		private RequireSelectArgs RequireSelectArgs
 		{
+			get
+			{
+				return requireSelectArgs;
+			}
 			set
 			{
-				if (value != null && value.Selections.Count >= 4)
+				requireSelectArgs = value;
+                if (value != null && value.Selections.Count >= 4)
 				{
-					DataContext = null;
-					DataContext =
-						new PracticeBindingData()
-						{
-							Caption = value.Description,
-							Description = value.AdditionalDesctiption,
-							Number = 1,
-							Answer1 = value.Selections[0].Caption,
-							Answer2 = value.Selections[1].Caption,
-							Answer3 = value.Selections[2].Caption,
-							Answer4 = value.Selections[3].Caption,
-						};
-					Debug.WriteLine(value);
+					ApplySelectionData(allowInteractive: true);
 				}
 			}
+		}
+
+		/// <summary>
+		/// 強制的に選択します。
+		/// </summary>
+		/// <param name="index">選択番号。</param>
+		public void Select(int index)
+		{
+			RequireSelectArgs.Selections[index].Select();
+			ApplySelectionData(allowInteractive: false);
+		}
+
+		/// <summary>
+		/// 選択肢データを表示に適用します。
+		/// </summary>
+		private void ApplySelectionData(bool allowInteractive)
+		{
+			var value = requireSelectArgs;
+			DataContext =
+				new PracticeBindingData()
+				{
+					Caption = value.Description,
+					Description = value.AdditionalDesctiption,
+					Number = 1,
+					Interactive = allowInteractive,
+					Answer1 = value.Selections[0].Caption,
+					Answer2 = value.Selections[1].Caption,
+					Answer3 = value.Selections[2].Caption,
+					Answer4 = value.Selections[3].Caption,
+				};
 		}
 
 		/// <summary>
@@ -71,5 +98,33 @@ namespace MC.Desktop.Pages
 		{
 			this.NavigateUri(Properties.Resources.PAGE_PRACTICE_COUNT);
         }
+
+		/// <summary>
+		/// 回答ボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedAnser1ButtonHandler(object sender, RoutedEventArgs e) => Select(0);
+
+		/// <summary>
+		/// 回答ボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedAnser2ButtonHandler(object sender, RoutedEventArgs e) => Select(1);
+
+		/// <summary>
+		/// 回答ボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedAnser3ButtonHandler(object sender, RoutedEventArgs e) => Select(2);
+
+		/// <summary>
+		/// 回答ボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedAnser4ButtonHandler(object sender, RoutedEventArgs e) => Select(3);
 	}
 }

@@ -36,6 +36,7 @@ namespace MC.Core.State.Practice
 			var dic = context.Container.GetService<IDictionary<int, QuestionData>>();
 			var key = dic.First().Key;
 			var ans = GetPracticeData(context).Answer;
+			Debug.WriteLine(ans);
         }
 	}
 }

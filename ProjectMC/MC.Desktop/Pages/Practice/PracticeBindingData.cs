@@ -11,6 +11,15 @@ namespace MC.Desktop.Pages.Practice
 	{
 
 		/// <summary>
+		/// インタラクティブな操作を受け付けるかどうかを取得、または設定します。
+		/// </summary>
+		public bool Interactive
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
 		/// 問題番号を取得、および設定します。
 		/// </summary>
 		public int Number
@@ -18,6 +27,7 @@ namespace MC.Desktop.Pages.Practice
 			get;
 			set;
 		}
+		= 1;
 
 		/// <summary>
 		/// 文字列化した問題番号を取得します。

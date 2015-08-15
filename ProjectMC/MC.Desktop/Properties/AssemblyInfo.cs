@@ -11,7 +11,7 @@ using System.Windows;
 [assembly: AssemblyDescription("TRIAL VERSION (PRE ALPHA)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("danmaq / DAYS PRODUCTION")]
-[assembly: AssemblyProduct("ますこれ")]
+[assembly: AssemblyProduct("ますこれ 体験版")]
 [assembly: AssemblyCopyright("Copyright © 2015 danmaq / DAYS PRODUCTION all rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -54,6 +54,6 @@ using System.Windows;
 [assembly: AssemblyVersion("0.2.0.*")]
 [assembly: AssemblyFileVersion("0.2.0.70")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
-[assembly: Guid("c5d62caf-a7c0-445f-8fa8-aba6625fba6d")]
+[assembly: Guid("67F0F911-D0DC-4B73-A663-37E710F43300")]
 
 [assembly: CLSCompliant(false)]

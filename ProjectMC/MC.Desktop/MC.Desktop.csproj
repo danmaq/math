@@ -8,7 +8,7 @@
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MC.Desktop</RootNamespace>
-    <AssemblyName>MC.Desktop</AssemblyName>
+    <AssemblyName>MC.Desktop.TRIAL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -16,7 +16,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
     <IsWebBootstrapper>true</IsWebBootstrapper>
-    <PublishUrl>ftp://danmaq00001%40danmaq.com/sub/lab/mc/</PublishUrl>
+    <PublishUrl>ftp://danmaq00001%40danmaq.com/math/www/update/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
@@ -26,18 +26,18 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>http://lab.danmaq.com/mc/</InstallUrl>
-    <UpdateUrl>http://lab.danmaq.com/mc/</UpdateUrl>
+    <InstallUrl>http://math.sc/update/</InstallUrl>
+    <UpdateUrl>http://math.sc/update/</UpdateUrl>
     <SupportUrl>http://math.sc/</SupportUrl>
     <TargetCulture>ja-JP</TargetCulture>
-    <ProductName>ますこれ</ProductName>
+    <ProductName>ますこれ 体験版</ProductName>
     <PublisherName>danmaq</PublisherName>
-    <SuiteName>ますこれ -MATH SKILL COLLECTION-</SuiteName>
-    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <SuiteName>ますこれ -MATH SKILL COLLECTION- %28体験版%29</SuiteName>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>70</ApplicationRevision>
-    <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
+    <ApplicationVersion>0.2.0.70</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -52,7 +52,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\MC.Desktop.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\MC.Desktop.TRIAL.xml</DocumentationFile>
     <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
@@ -64,8 +64,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MC.Desktop.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\MC.Desktop.TRIAL.xml</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>MC.Desktop.App</StartupObject>

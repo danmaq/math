@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
@@ -85,7 +86,11 @@ namespace MC.Core.Server
 		{
 			var path = CreatePath(@"question", collegeId, subjectId);
             var body = await RequestAsync(method: HttpMethod.Get, path: path, content: null);
-			return StringHelper.FromJson<QData[]>(body);
+			return
+				StringHelper
+					.FromJson<KeyValuePair<int, Question>[]>(body)
+					.Select(p => new QData(p.Key, QuestionData.Import(p.Value)))
+					.ToArray();
 		}
 
 		/// <summary>
@@ -94,11 +99,11 @@ namespace MC.Core.Server
 		/// <param name="questionId">問題ワンタイムID。</param>
 		/// <param name="answer">回答。</param>
 		/// <returns>正解である場合、true。</returns>
-		public static async Task<bool> TellAnswerAsync(int questionId, int answer)
+		public static async Task<Tuple<bool, int>> TellAnswerAsync(int questionId, int answer)
 		{
 			var path = CreatePath(@"answer", questionId, answer);
 			var body = await RequestAsync(method: HttpMethod.Post, path: path, content: null);
-			return StringHelper.FromJson<bool>(body);
+			return StringHelper.FromJson<Tuple<bool, int>>(body);
 		}
 
 		/// <summary>

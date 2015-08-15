@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using MC.Common.Collection;
 
+using QPair = System.Collections.Generic.KeyValuePair<int, MC.Common.Data.Serializable.Question>;
 using QandA = System.Tuple<MC.Common.Data.QuestionData, int>;
 
 namespace MC.MockServer.Question
@@ -41,7 +42,7 @@ namespace MC.MockServer.Question
 		/// <param name="args">引数一覧。</param>
 		/// <returns>問題一覧。</returns>
 		/// <exception cref="ArgumentException">引数が足りない場合。</exception>
-		public object CreateQuestion(IEnumerable<string> args)
+		public IEnumerable<QPair> CreateQuestion(IEnumerable<string> args)
 		{
 			Func<string, int> cast = Convert.ToInt32;
 			var array = args.Select(cast).ToArray();
@@ -60,7 +61,7 @@ namespace MC.MockServer.Question
 		/// </summary>
 		/// <param name="SubjectId">教科ID。</param>
 		/// <returns>問題一覧。</returns>
-		public object CreateQuestion(int SubjectId)
+		public IEnumerable<QPair> CreateQuestion(int SubjectId)
 		{
 			IQuestionGenerator gen;
 			if (!QuestionGenerators.Generators.TryGetValue(SubjectId, out gen))
@@ -69,7 +70,9 @@ namespace MC.MockServer.Question
 			}
 			Question = gen.Create(4, SubjectId == 101 ? 5 : 10).ToDictionary(q => random.Next());
 			return
-				Question.Select(p => EnumerableHelper.CreatePair(p.Key, p.Value.Item1)).ToArray();
+				Question
+					.Select(p => EnumerableHelper.CreatePair(p.Key, p.Value.Item1.Export()))
+					.ToArray();
 		}
 
 		/// <summary>
@@ -78,7 +81,7 @@ namespace MC.MockServer.Question
 		/// <param name="args">引数一覧。</param>
 		/// <returns>回答が正解である場合、true。</returns>
 		/// <exception cref="ArgumentException">引数が足りない場合。</exception>
-		public bool JudgeQuestion(IEnumerable<string> args)
+		public Tuple<bool, int> JudgeQuestion(IEnumerable<string> args)
 		{
 			Func<string, int> cast = Convert.ToInt32;
 			var array = args.Select(cast).ToArray();
@@ -97,10 +100,12 @@ namespace MC.MockServer.Question
 		/// <param name="qid">問題ID。</param>
 		/// <param name="answer">回答。</param>
 		/// <returns>回答が正解である場合、true。</returns>
-		public bool JudgeQuestion(int qid, int answer)
+		public Tuple<bool, int> JudgeQuestion(int qid, int answer)
 		{
 			QandA qa;
-			return Question.TryGetValue(key: qid, value: out qa) && qa.Item2 == answer;
+			return
+				Tuple.Create(
+					Question.TryGetValue(key: qid, value: out qa) && qa.Item2 == answer, qa.Item2);
         }
 	}
 }

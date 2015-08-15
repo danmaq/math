@@ -11,7 +11,7 @@ namespace MC.Common.Data.Serializable
 	public struct TryAndClear : IEquatable<TryAndClear>
 	{
 		/// <summary>
-		/// 挑戦回数を取得および設定します。
+		/// 挑戦回数を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public int Tryed
@@ -21,7 +21,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 攻略回数を取得および設定します。
+		/// 攻略回数を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public int Cleard

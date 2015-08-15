@@ -16,7 +16,7 @@ namespace MC.Common.Data.Serializable
 	{
 
 		/// <summary>
-		/// 教科 ID を取得します。
+		/// 教科 ID を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public int SubjectId
@@ -26,7 +26,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 教科名を取得します。
+		/// 教科名を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public string Name
@@ -36,7 +36,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 解説を取得します。
+		/// 解説を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public string Description
@@ -46,7 +46,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 有効かどうかを取得します。
+		/// 有効かどうかを取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public bool Enabled
@@ -56,7 +56,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 所属学園 ID を取得します。
+		/// 所属学園 ID を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public int CollegeId
@@ -66,7 +66,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 必要教科 ID を取得および設定します。
+		/// 必要教科 ID を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]

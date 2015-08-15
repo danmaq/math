@@ -6,10 +6,10 @@ using MC.Common.Collection;
 using MC.Common.Data;
 using MC.MockServer.Properties;
 
+using QandA = System.Tuple<MC.Common.Data.QuestionData, int>;
+
 namespace MC.MockServer.Question.QG01
 {
-
-	using QandA = Tuple<QuestionData, int>;
 
 	/// <summary>
 	/// ステージ 1-1 用、問題生成クラス。
@@ -99,7 +99,7 @@ namespace MC.MockServer.Question.QG01
 					.First()
 					.Item2;
 			var data =
-				new QuestionData()
+				new Common.Data.QuestionData()
 				{
 					UniqueId = random.Next(),
 					Caption = question,

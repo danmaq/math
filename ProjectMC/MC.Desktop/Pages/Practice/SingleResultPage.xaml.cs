@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using MC.Core.Data;
@@ -16,7 +17,7 @@ namespace MC.Desktop.Pages.Practice
 		private class BindingData
 		{
 			/// <summary>
-			/// 正解かどうかを取得、および設定します。
+			/// 正解かどうかを取得、または設定します。
 			/// </summary>
 			public bool Correct
 			{
@@ -25,9 +26,24 @@ namespace MC.Desktop.Pages.Practice
 			}
 
 			/// <summary>
+			/// 正解を取得、または設定します。
+			/// </summary>
+			public string Answer
+			{
+				get;
+				set;
+			}
+			= @"越後製菓";
+
+			/// <summary>
 			/// 結果を取得します。
 			/// </summary>
-			public string Result => Correct ? @"○" : @"×";
+			public string Result =>
+				string.Format(
+					CultureInfo.CurrentUICulture,
+					@"{0} 正解は: {1}",
+					Correct ? @"○" : @"×",
+					Answer);
 		}
 
 		/// <summary>
@@ -42,7 +58,12 @@ namespace MC.Desktop.Pages.Practice
 			{
 				throw new ArgumentNullException(nameof(prompt));
 			}
-			DataContext = new BindingData() { Correct = Convert.ToBoolean(prompt.Caption) };
+			DataContext =
+				new BindingData()
+				{
+					Correct = Convert.ToBoolean(prompt.Caption),
+					Answer = prompt.Desctiption,
+				};
 			Action callback =
 				() =>
 				{

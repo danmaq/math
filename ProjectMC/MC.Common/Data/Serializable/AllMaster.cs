@@ -15,7 +15,7 @@ namespace MC.Common.Data.Serializable
 	public struct AllMaster : IEquatable<AllMaster>
 	{
 		/// <summary>
-		/// 学園一覧を取得および設定します。
+		/// 学園一覧を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
@@ -26,7 +26,7 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 教科一覧を取得および設定します。
+		/// 教科一覧を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]

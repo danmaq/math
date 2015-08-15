@@ -133,9 +133,10 @@ namespace MC.Core.State.Practice
 			var rootContainer = GetMainContext(context).Container;
 			var college = rootContainer.GetService<Tuple<CollegeMasterData>>();
 			var subject = rootContainer.GetService<Tuple<SubjectMasterData>>();
-			context.Container.AddService(
-				await GetQuestionAsync(college: college.Item1, subject: subject.Item1));
+			var dic = await GetQuestionAsync(college: college.Item1, subject: subject.Item1);
+            context.Container.AddService(dic);
 			GetLocalContainer(context).Downloaded = true;
+			GetPracticeData(context).Length = dic.Count;
 		}
 
 		/// <summary>

@@ -8,34 +8,36 @@ using MC.Common.Utils;
 
 namespace MC.Common.Data.Serializable
 {
+
 	/// <summary>
-	/// エクスポート可能な学園マスタの単票データ。
+	/// エクスポート可能な問題データ。
 	/// </summary>
 	[DataContract]
-	public struct College : IEquatable<College>
+	public struct Question : IEquatable<Question>
 	{
+
 		/// <summary>
-		/// 学園 ID を取得、または設定します。
+		/// 問題管理番号を取得、または設定します。
 		/// </summary>
 		[DataMember]
-		public int CollegeId
+		public int UniqueId
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 教科名を取得、または設定します。
+		/// 問題を取得、または設定します。
 		/// </summary>
 		[DataMember]
-		public string Name
+		public string Caption
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 解説を取得、または設定します。
+		/// 問題を取得、または設定します。
 		/// </summary>
 		[DataMember]
 		public string Description
@@ -45,21 +47,21 @@ namespace MC.Common.Data.Serializable
 		}
 
 		/// <summary>
-		/// 有効かどうかを取得、または設定します。
+		/// 回答一覧を取得、または設定します。
 		/// </summary>
 		[DataMember]
-		public bool Enabled
+		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
+		public string[] Answers
 		{
 			get;
 			set;
 		}
 
 		/// <summary>
-		/// 必要教科 ID を取得、または設定します。
+		/// 有効期限を取得、または設定します。
 		/// </summary>
 		[DataMember]
-		[SuppressMessage("Microsoft.Performance", "CA1819:PropertiesShouldNotReturnArrays")]
-		public int[] RequireSubjects
+		public int Expires
 		{
 			get;
 			set;
@@ -71,7 +73,7 @@ namespace MC.Common.Data.Serializable
 		/// <param name="valueA">値。</param>
 		/// <param name="valueB">値。</param>
 		/// <returns>値同士が等しい場合、true。</returns>
-		public static bool operator ==(College valueA, College valueB) =>
+		public static bool operator ==(Question valueA, Question valueB) =>
 			valueA.Equals(valueB);
 
 		/// <summary>
@@ -80,7 +82,7 @@ namespace MC.Common.Data.Serializable
 		/// <param name="valueA">値。</param>
 		/// <param name="valueB">値。</param>
 		/// <returns>値同士が等しくない場合、true。</returns>
-		public static bool operator !=(College valueA, College valueB) =>
+		public static bool operator !=(Question valueA, Question valueB) =>
 			!valueA.Equals(valueB);
 
 		/// <summary>
@@ -89,15 +91,14 @@ namespace MC.Common.Data.Serializable
 		/// <returns>値の文字列表現。</returns>
 		public override string ToString() =>
 			StringHelper.CreateToString(
-				className: nameof(College),
+				className: nameof(Question),
 				arguments:
 					new Dictionary<string, object>()
 					{
-						[nameof(CollegeId)] = CollegeId,
-						[nameof(Name)] = Name,
+						[nameof(Caption)] = Caption,
 						[nameof(Description)] = Description,
-						[nameof(Enabled)] = Enabled,
-						[nameof(RequireSubjects)] = RequireSubjects.ToStringCollection(),
+						[nameof(Expires)] = Expires,
+						[nameof(Answers)] = Answers.ToStringCollection(),
 					});
 
 		/// <summary>
@@ -105,11 +106,10 @@ namespace MC.Common.Data.Serializable
 		/// </summary>
 		/// <returns>ハッシュコード。</returns>
 		public override int GetHashCode() =>
-			CollegeId.GetHashCode() ^
-			Name.GetHashCode() ^
+			Caption.GetHashCode() ^
 			Description.GetHashCode() ^
-			Enabled.GetHashCode() ^
-			RequireSubjects.Aggregate(seed: 0, func: (a, s) => a ^ s.GetHashCode());
+			Expires.GetHashCode() ^
+			Answers.Aggregate(seed: 0, func: (a, s) => a ^ s.GetHashCode());
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
@@ -117,18 +117,17 @@ namespace MC.Common.Data.Serializable
 		/// <param name="obj">検証対象の値。</param>
 		/// <returns>値が等しい場合、true。</returns>
 		public override bool Equals(object obj) =>
-			obj is College ? Equals((College)(obj)) : false;
+			obj is Question ? Equals((Question)(obj)) : false;
 
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="other"></param>
+		/// <param name="others"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(College other) =>
-			CollegeId == other.CollegeId &&
-			Name == other.Name &&
-			Description == other.Description &&
-			Enabled == other.Enabled &&
-			RequireSubjects.SequenceEqual(other.RequireSubjects);
+		public bool Equals(Question others) =>
+			Caption == others.Caption &&
+			Description == others.Description &&
+			Expires == others.Expires &&
+			Answers.SequenceEqual(others.Answers);
 	}
 }

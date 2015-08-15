@@ -20,6 +20,15 @@ namespace MC.Core.State.Practice
 		private sealed class LocalContainer : LocalContainerBase
 		{
 			/// <summary>
+			/// 解答を取得、または設定します。
+			/// </summary>
+			public string TrueAnswer
+			{
+				get;
+				set;
+			}
+
+			/// <summary>
 			/// 通知が完了したかどうかを取得、または設定します。
 			/// </summary>
 			public bool Notified
@@ -97,7 +106,8 @@ namespace MC.Core.State.Practice
 			PeekAnswerAsync(
 				container: GetLocalContainer(context),
 				key: GetDictionary(context).First().Key,
-				answer: GetPracticeData(context).Answer);
+				answer: GetPracticeData(context).Answer,
+				answers: GetDictionary(context).First().Value.Answers);
         }
 
 		/// <summary>
@@ -111,7 +121,9 @@ namespace MC.Core.State.Practice
 			if (localContainer.ShouldNotify)
 			{
 				Prompt(context);
-				var dic = GetDictionary(context);
+				GetPracticeData(context).CorrectCount +=
+					GetLocalContainer(context).Correct ? 1 : 0;
+                var dic = GetDictionary(context);
 				dic.Remove(dic.First().Key);
 				localContainer.Notified = true;
 			}
@@ -129,6 +141,7 @@ namespace MC.Core.State.Practice
 				new RequireAlertArgs()
 				{
 					Caption = localContainer.Correct.ToString(),
+					Desctiption = localContainer.TrueAnswer,
 					Response = () => context.NextState = CountDownState.Instance,
 				};
 			flow.DispatchRequireResponse(args);
@@ -140,10 +153,14 @@ namespace MC.Core.State.Practice
 		/// <param name="container">ローカル ストレージ。</param>
 		/// <param name="key">問題のワンタイムID。</param>
 		/// <param name="answer">回答番号。</param>
-		private async void PeekAnswerAsync(LocalContainer container, int key, int answer)
+		/// <param name="answers">解答一覧。</param>
+		private async void PeekAnswerAsync(
+			LocalContainer container, int key, int answer, IReadOnlyList<string> answers)
 		{
-			container.Correct = await Api.TellAnswerAsync(key, answer);
-			container.Connected = true;
+			var truelyAnswer = await Api.TellAnswerAsync(key, answer);
+			container.Correct = truelyAnswer.Item1;
+			container.TrueAnswer = answers[truelyAnswer.Item2];
+            container.Connected = true;
 		}
 	}
 }

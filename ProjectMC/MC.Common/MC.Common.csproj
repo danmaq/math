@@ -65,6 +65,7 @@
     <Compile Include="Data\QuestionData.cs" />
     <Compile Include="Data\Serializable\AllMaster.cs" />
     <Compile Include="Data\Serializable\College.cs" />
+    <Compile Include="Data\Serializable\Question.cs" />
     <Compile Include="Data\Serializable\Subject.cs" />
     <Compile Include="Data\Serializable\TryAndClear.cs" />
     <Compile Include="Data\Serializable\User.cs" />

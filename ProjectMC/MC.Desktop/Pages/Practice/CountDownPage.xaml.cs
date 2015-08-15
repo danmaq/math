@@ -19,7 +19,7 @@ namespace MC.Desktop.Pages.Practice
 		private class BindingData
 		{
 			/// <summary>
-			/// カウントダウンを取得、および設定します。
+			/// カウントダウンを取得、または設定します。
 			/// </summary>
 			public int CountDownValue
 			{

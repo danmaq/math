@@ -20,7 +20,7 @@ namespace MC.Desktop.Pages.Practice
 		}
 
 		/// <summary>
-		/// 問題番号を取得、および設定します。
+		/// 問題番号を取得、または設定します。
 		/// </summary>
 		public int Number
 		{
@@ -35,7 +35,7 @@ namespace MC.Desktop.Pages.Practice
 		public string StringedNumber => string.Format(@"Q{0}", Number);
 
 		/// <summary>
-		/// 問題文を取得、および設定します。
+		/// 問題文を取得、または設定します。
 		/// </summary>
 		public string Caption
 		{
@@ -45,7 +45,7 @@ namespace MC.Desktop.Pages.Practice
 		= Resources.MSG_PRACTICE_CAPTION;
 
 		/// <summary>
-		/// 問題の解説文を取得、および設定します。
+		/// 問題の解説文を取得、または設定します。
 		/// </summary>
 		public string Description
 		{
@@ -55,7 +55,7 @@ namespace MC.Desktop.Pages.Practice
 		= Resources.MSG_PRACTICE_DESCRIPTION;
 
 		/// <summary>
-		/// 問題の回答を取得、および設定します。
+		/// 問題の回答を取得、または設定します。
 		/// </summary>
 		public string Answer1
 		{
@@ -65,7 +65,7 @@ namespace MC.Desktop.Pages.Practice
 		= Resources.MSG_PRACTICE_ANSWER1;
 
 		/// <summary>
-		/// 問題の回答を取得、および設定します。
+		/// 問題の回答を取得、または設定します。
 		/// </summary>
 		public string Answer2
 		{
@@ -75,7 +75,7 @@ namespace MC.Desktop.Pages.Practice
 		= Resources.MSG_PRACTICE_ANSWER2;
 
 		/// <summary>
-		/// 問題の回答を取得、および設定します。
+		/// 問題の回答を取得、または設定します。
 		/// </summary>
 		public string Answer3
 		{
@@ -85,7 +85,7 @@ namespace MC.Desktop.Pages.Practice
 		= Resources.MSG_PRACTICE_ANSWER3;
 
 		/// <summary>
-		/// 問題の回答を取得、および設定します。
+		/// 問題の回答を取得、または設定します。
 		/// </summary>
 		public string Answer4
 		{

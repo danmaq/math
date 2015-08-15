@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using MC.Common.Collection;
+using MC.Common.Data.Serializable;
 using MC.Common.Utils;
 
 namespace MC.Common.Data
@@ -42,7 +43,7 @@ namespace MC.Common.Data
 		/// <summary>
 		/// 回答一覧。
 		/// </summary>
-		public IEnumerable<string> Answers
+		public IReadOnlyList<string> Answers
 		{
 			get;
 			set;
@@ -74,6 +75,35 @@ namespace MC.Common.Data
 		/// <returns>値同士が等しくない場合、true。</returns>
 		public static bool operator !=(QuestionData valueA, QuestionData valueB) =>
 			!valueA.Equals(valueB);
+
+		/// <summary>
+		/// 値をインポートして、データを構成します。
+		/// </summary>
+		/// <param name="value">値。</param>
+		/// <returns>データ。</returns>
+		public static QuestionData Import(Question value) =>
+			new QuestionData()
+			{
+				UniqueId = value.UniqueId,
+				Caption = value.Caption,
+				Description = value.Description,
+				Answers = value.Answers,
+				Expires = value.Expires
+			};
+
+		/// <summary>
+		/// 値をエクスポートします。
+		/// </summary>
+		/// <returns>エクスポートされた値。</returns>
+		public Question Export() =>
+			new Question()
+			{
+				UniqueId = UniqueId,
+				Caption = Caption,
+				Description = Description,
+				Answers = Answers.ToArray(),
+				Expires = Expires
+			};
 
 		/// <summary>
 		/// 値の文字列表現を取得します。

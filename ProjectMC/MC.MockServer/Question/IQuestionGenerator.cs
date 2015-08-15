@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using MC.Common.Data;
+﻿using System.Collections.Generic;
+
+using QandA = System.Tuple<MC.Common.Data.QuestionData, int>;
 
 namespace MC.MockServer.Question
 {
-
-	using QandA = Tuple<QuestionData, int>;
 
 	/// <summary>
 	/// 問題生成のための定義。

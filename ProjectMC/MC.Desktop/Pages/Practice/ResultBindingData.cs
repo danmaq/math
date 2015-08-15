@@ -59,7 +59,7 @@ namespace MC.Desktop.Pages.Practice
 		/// </summary>
 		public string StringedCorrect =>
 			string.Format(
-				CultureInfo.CurrentUICulture, Resources.MSG_CORRECT_COUNT, Correct, Length);
+				CultureInfo.CurrentUICulture, Resources.MSG_CORRECT_COUNT, Length, Correct);
 
 		/// <summary>
 		/// 正答率を0～1の間で取得します。

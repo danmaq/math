@@ -70,6 +70,7 @@
     <Compile Include="Question\QuestionGenerators.cs" />
     <Compile Include="Question\QuestionResources.cs" />
     <Compile Include="Question\QuestionStore.cs" />
+    <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MC.Common\MC.Common.csproj">

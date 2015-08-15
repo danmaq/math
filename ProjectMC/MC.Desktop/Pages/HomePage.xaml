@@ -39,6 +39,19 @@
                 <RowDefinition Height="1*" />
                 <RowDefinition Height="1*" />
             </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Grid.Row="0">
+                <Canvas ClipToBounds="True" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+                    <Path Fill="#CCCCCCCC" Stroke="#CC000000" StrokeThickness="8" StrokeMiterLimit="4">
+                        <Path.Data>
+                            <PathGeometry FillRule="Nonzero"
+                                          Figures="M24,64.5C24,39.8313,39.8313,24,64.5,24L416.5,24C441.1687,24,457,39.8313,457,64.5L457,170C457,194.6687,441.1687,210.5,416.5,210.5L417,244 317,210.5 64.5,210.5C39.8313,210.5,24,194.6687,24,170L24,64.5z" />
+                        </Path.Data>
+                    </Path>
+                </Canvas>
+                <Viewbox>
+                    <TextBlock x:Name="Balloon" Text="まだ試作版だけど楽しんでいってね！" Margin="16, 0, 16, 28" />
+                </Viewbox>
+            </Grid>
             <Button Grid.Row="1"
                     Opacity="0.8"
                     Cursor="Hand"

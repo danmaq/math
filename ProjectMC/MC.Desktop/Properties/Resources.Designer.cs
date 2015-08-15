@@ -61,7 +61,25 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
-        ///   正答数 {0} / {1} 問題数 に類似しているローカライズされた文字列を検索します。
+        ///   c.xml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FILE_CLIENT {
+            get {
+                return ResourceManager.GetString("FILE_CLIENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   s.xml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string FILE_SERVER {
+            get {
+                return ResourceManager.GetString("FILE_SERVER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   {0} 問中 {1} 問正解 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MSG_CORRECT_COUNT {
             get {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -73,16 +74,30 @@ namespace MC.Common.Data.IO
 		/// <returns>非同期操作用オブジェクト。</returns>
 		private async Task LoadAsync()
 		{
+			// TODO: 長すぎる
 			if (body == null)
 			{
 				Func<Dictionary<string, string>> load =
 					() =>
 					{
-						var serializer = new XmlSerializer(typeof(Dictionary<string, string>));
+						var serializer =
+							new XmlSerializer(typeof(SerializablePair<string, string>[]));
 						using (var stream = IODelegate.ReadStream)
 						{
-							return (Dictionary<string, string>)serializer.Deserialize(stream);
-						}
+							try
+							{
+								var kvlist =
+									(SerializablePair <string, string>[])serializer.Deserialize(
+										stream);
+								return
+									kvlist.ToDictionary(
+										keySelector: p => p.Key, elementSelector: p => p.Value);
+							}
+							catch
+							{
+								return new Dictionary<string, string>();
+							}
+                        }
 					};
 				body = await semaphore.RunActionWaitAsync(load);
 			}
@@ -97,10 +112,12 @@ namespace MC.Common.Data.IO
 			Action save =
 				() =>
 				{
-					var serializer = new XmlSerializer(typeof(Dictionary<string, string>));
+					var array = body.Select(p => SerializablePair.Create(p)).ToArray();
+					var serializer =
+						new XmlSerializer(typeof(SerializablePair<string, string>[]));
 					using (var stream = IODelegate.WriteStream)
 					{
-						serializer.Serialize(stream: stream, o: body);
+                        serializer.Serialize(stream: stream, o: array);
 					}
 				};
 			await semaphore.RunActionWaitAsync(save);

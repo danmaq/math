@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FILE_CLIENT" xml:space="preserve">
+    <value>c.xml</value>
+  </data>
+  <data name="FILE_SERVER" xml:space="preserve">
+    <value>s.xml</value>
+  </data>
   <data name="MSG_CORRECT_COUNT" xml:space="preserve">
-    <value>正答数 {0} / {1} 問題数</value>
+    <value>{0} 問中 {1} 問正解</value>
   </data>
   <data name="MSG_FAILED" xml:space="preserve">
     <value>不合格</value>

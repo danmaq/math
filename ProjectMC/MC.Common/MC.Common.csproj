@@ -61,6 +61,8 @@
     <Compile Include="Data\EventArgs.cs" />
     <Compile Include="Data\IO\EmptyIO.cs" />
     <Compile Include="Data\IO\IIOWrapper.cs" />
+    <Compile Include="Data\IO\SerializableAttribute.cs" />
+    <Compile Include="Data\IO\SerializablePair.cs" />
     <Compile Include="Data\MasterCache.cs" />
     <Compile Include="Data\QuestionData.cs" />
     <Compile Include="Data\Serializable\AllMaster.cs" />

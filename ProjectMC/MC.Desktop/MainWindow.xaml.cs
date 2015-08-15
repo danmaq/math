@@ -3,6 +3,7 @@ using System.Collections;
 using System.Windows;
 using System.Windows.Media;
 using System.Windows.Navigation;
+using MC.Common.Data;
 using MC.Core.Data;
 using MC.Core.Flow;
 using MC.Desktop.Pages;
@@ -126,6 +127,10 @@ namespace MC.Desktop
 		private void FrameLoadedHandler(object sender, RoutedEventArgs e)
 		{
 			this.NavigateUri(Properties.Resources.PAGE_LOADING);
+			VolatileMasterCache.ClientSaveData.IODelegate =
+				new IOWrapper(Properties.Resources.FILE_CLIENT);
+			VolatileMasterCache.ServerSaveData.IODelegate =
+				new IOWrapper(Properties.Resources.FILE_SERVER);
 			gameFlow = new GameFlow();
 			gameFlow.RequireResponse += GameRequireResponseHandler;
 			CompositionTarget.Rendering += CreateGameLoopHandler(gameFlow.Run());

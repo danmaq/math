@@ -36,7 +36,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>62</ApplicationRevision>
+    <ApplicationRevision>63</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -159,6 +159,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PracticeResultPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Practice\CountDownPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -193,6 +197,9 @@
     <Compile Include="Pages\PageHelper.cs" />
     <Compile Include="Pages\PracticePage.xaml.cs">
       <DependentUpon>PracticePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PracticeResultPage.xaml.cs">
+      <DependentUpon>PracticeResultPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Practice\CountDownPage.xaml.cs">
       <DependentUpon>CountDownPage.xaml</DependentUpon>

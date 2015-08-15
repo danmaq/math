@@ -37,6 +37,11 @@ namespace MC.Desktop.Pages
 			{
 				this.GetInteractive().RequireResponseArgs = value;
 				RequireSelectArgs = value as RequireSelectArgs;
+				var practiceData = value?.AdditionalData as PracticeData;
+				if (practiceData.Cleard)
+				{
+					NavigationService.Navigate(new PracticeResultPage(value as RequireAlertArgs));
+				}
             }
 		}
 

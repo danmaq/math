@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using MC.Common.Data;
 using MC.Common.State;
 using MC.Core.Data;
 using MC.Core.Properties;
@@ -56,8 +57,8 @@ namespace MC.Core.State.Game
 			director.Execute();
 			if (director.IsTerminated())
 			{
-				context.NextState = null;
-				// TODO: プラクティス終了
+				context.Container.RemoveService(typeof(Tuple<SubjectMasterData>));
+				context.NextState = AreaState.Instance;
 			}
         }
 

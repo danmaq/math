@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using MC.Common.Data;
 using MC.Common.Utils;
 
 namespace MC.Core.Data
@@ -8,15 +9,6 @@ namespace MC.Core.Data
 	/// </summary>
 	public sealed class PracticeData
 	{
-		/// <summary>
-		/// 回答番号を取得、または設定します。
-		/// </summary>
-		internal int Answer
-		{
-			get;
-			set;
-		}
-
 		/// <summary>
 		/// 問題数を取得、または設定します。
 		/// </summary>
@@ -30,6 +22,31 @@ namespace MC.Core.Data
 		/// 問題数を取得、または設定します。
 		/// </summary>
 		public int CorrectCount
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// 正解の可否問わず全問突破したかどうかを取得、または設定します。
+		/// </summary>
+		public bool Cleard
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
+		/// 合格したかどうかを取得、または設定します。
+		/// </summary>
+		// TODO: 判定はモックサーバ側で行う！
+		public bool Passed =>
+			Cleard && (CorrectCount / (float)Length) > Constants.PracticeThreshold;
+
+		/// <summary>
+		/// 回答番号を取得、または設定します。
+		/// </summary>
+		internal int Answer
 		{
 			get;
 			set;

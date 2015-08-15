@@ -57,11 +57,11 @@ namespace MC.Desktop.Pages.Practice
 		/// <exception cref="ArgumentNullException">引数が null である場合。</exception>
 		public SingleResultPage(RequireAlertArgs prompt)
 		{
-			InitializeComponent();
 			if (prompt == null)
 			{
 				throw new ArgumentNullException(nameof(prompt));
 			}
+			InitializeComponent();
 			var correct =
 				Convert.ToBoolean(value: prompt.Caption, provider: CultureInfo.InvariantCulture);
             DataContext =

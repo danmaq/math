@@ -34,12 +34,14 @@ namespace MC.Core.State.Practice
 		public override void Begin(IContext context)
 		{
 			base.Begin(context);
-			var flow = GameFlow.GetService(GetMainContext(context));
+			var practiceData = GetPracticeData(context);
+			practiceData.Cleard = true;
+            var flow = GameFlow.GetService(GetMainContext(context));
 			var args =
 				new RequireAlertArgs()
 				{
 					Caption = Resources.MESSAGE_PRACTICE_ENDED,
-					AdditionalData = GetPracticeData(context),
+					AdditionalData = practiceData,
 					Response = () => context.Terminate(),
 				};
 			flow.DispatchRequireResponse(args);

@@ -61,6 +61,33 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
+        ///   正答数 {0} / {1} 問題数 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_CORRECT_COUNT {
+            get {
+                return ResourceManager.GetString("MSG_CORRECT_COUNT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   不合格 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_FAILED {
+            get {
+                return ResourceManager.GetString("MSG_FAILED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   合格 に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MSG_PASSED {
+            get {
+                return ResourceManager.GetString("MSG_PASSED", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   回答1 に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MSG_PRACTICE_ANSWER1 {
@@ -174,6 +201,15 @@ namespace MC.Desktop.Properties {
         internal static string PAGE_PRACTICE_WAIT {
             get {
                 return ResourceManager.GetString("PAGE_PRACTICE_WAIT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Pages/PreferencePage.xaml に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string PAGE_PREFERENCE {
+            get {
+                return ResourceManager.GetString("PAGE_PREFERENCE", resourceCulture);
             }
         }
         

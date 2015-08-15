@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Diagnostics.CodeAnalysis;
-using System.Globalization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 using MC.Core.Data;
+using MC.Desktop.Pages.Practice;
 
 namespace MC.Desktop.Pages
 {
@@ -29,6 +28,15 @@ namespace MC.Desktop.Pages
 			}
 			InitializeComponent();
 			requireAlertArgs = prompt;
+			var practiceData = prompt?.AdditionalData as PracticeData;
+			DataContext =
+				new ResultBindingData()
+				{
+					Length = practiceData.Length,
+					Correct = practiceData.CorrectCount,
+					Passed = practiceData.Passed,
+					SubjectMasterData = practiceData.SubjectMasterData,
+				};
         }
 
 		/// <summary>

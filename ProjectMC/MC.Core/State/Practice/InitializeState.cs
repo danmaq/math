@@ -137,7 +137,9 @@ namespace MC.Core.State.Practice
 			var dic = await GetQuestionAsync(college: college.Item1, subject: subject.Item1);
             context.Container.AddService(dic);
 			GetLocalContainer(context).Downloaded = true;
-			GetPracticeData(context).Length = dic.Count;
+			var practiceData = GetPracticeData(context);
+			practiceData.SubjectMasterData = subject.Item1;
+            practiceData.Length = dic.Count;
 		}
 
 		/// <summary>

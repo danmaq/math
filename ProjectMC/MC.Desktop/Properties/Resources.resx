@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MSG_CORRECT_COUNT" xml:space="preserve">
+    <value>正答数 {0} / {1} 問題数</value>
+  </data>
+  <data name="MSG_FAILED" xml:space="preserve">
+    <value>不合格</value>
+  </data>
+  <data name="MSG_PASSED" xml:space="preserve">
+    <value>合格</value>
+  </data>
   <data name="MSG_PRACTICE_ANSWER1" xml:space="preserve">
     <value>回答1</value>
   </data>
@@ -155,6 +164,9 @@
   </data>
   <data name="PAGE_PRACTICE_WAIT" xml:space="preserve">
     <value>Pages/Practice/WaitPage.xaml</value>
+  </data>
+  <data name="PAGE_PREFERENCE" xml:space="preserve">
+    <value>Pages/PreferencePage.xaml</value>
   </data>
   <data name="PAGE_WORLD" xml:space="preserve">
     <value>Pages/WorldPage.xaml</value>

@@ -36,7 +36,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>63</ApplicationRevision>
+    <ApplicationRevision>65</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -175,6 +175,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\PreferencePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\WorldPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -205,11 +209,15 @@
       <DependentUpon>CountDownPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Practice\PracticeBindingData.cs" />
+    <Compile Include="Pages\Practice\ResultBindingData.cs" />
     <Compile Include="Pages\Practice\SingleResultPage.xaml.cs">
       <DependentUpon>SingleResultPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Practice\WaitPage.xaml.cs">
       <DependentUpon>WaitPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\PreferencePage.xaml.cs">
+      <DependentUpon>PreferencePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\SelectionData.cs" />
     <Compile Include="Pages\BackButton.xaml.cs">
@@ -289,6 +297,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Res\BG\Map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\BG\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Res\Chr\Fibonacci.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,8 @@
-﻿using MC.Common.Utils;
-using MC.Desktop.Properties;
-using System.Collections.Generic;
-using System.Globalization;
+﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using MC.Common.Utils;
+using MC.Desktop.Properties;
 
 namespace MC.Desktop.Pages.Practice
 {

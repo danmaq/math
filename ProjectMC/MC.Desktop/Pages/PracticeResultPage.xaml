@@ -42,7 +42,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
-                    <RowDefinition Height="3*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="2*" />
                     <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                 <Viewbox Grid.Row="0">
@@ -57,13 +58,16 @@
                         <Viewbox Grid.Column="0">
                             <TextBlock Text="正解率" Foreground="White" Margin="2" />
                         </Viewbox>
-                        <ProgressBar Grid.Column="1" Value="100" />
+                        <ProgressBar Grid.Column="1" Value="{Binding Path=CorrectPercentage, Mode=OneWay}" />
                     </Grid>
                 </Viewbox>
                 <Viewbox Grid.Row="2">
-                    <TextBlock Text="合格！" Margin="4" Foreground="White" />
+                    <TextBlock Text="{Binding Path=StringedCorrect, Mode=OneWay}" Margin="4" Foreground="White" />
                 </Viewbox>
-                <Button Grid.Row="3" Opacity="0.8" Click="ClickedDoneButton">
+                <Viewbox Grid.Row="3">
+                    <TextBlock Text="{Binding Path=StringedPassed, Mode=OneWay}" Margin="4" Foreground="White" />
+                </Viewbox>
+                <Button Grid.Row="4" Opacity="0.8" Click="ClickedDoneButton">
                     <Viewbox>
                         <TextBlock Text="OK" Margin="2" />
                     </Viewbox>

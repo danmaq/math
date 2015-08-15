@@ -50,7 +50,7 @@
                      Margin="4"
                      Background="Transparent"
                      BorderBrush="Transparent"
-                     ItemsSource="{Binding Selections}"
+                     ItemsSource="{Binding Path=Selections}"
                      SelectionChanged="ChangedListBoxSelectionHandler">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -62,8 +62,8 @@
                                         <RowDefinition Height="32" />
                                         <RowDefinition Height="16" />
                                     </Grid.RowDefinitions>
-                                    <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontSize="24" Text="{Binding Caption}" />
-                                    <TextBlock Grid.Row="1" HorizontalAlignment="Left" FontSize="12" Text="{Binding Description}" />
+                                    <TextBlock Grid.Row="0" HorizontalAlignment="Left" FontSize="24" Text="{Binding Path=Caption}" />
+                                    <TextBlock Grid.Row="1" HorizontalAlignment="Left" FontSize="12" Text="{Binding Path=Description}" />
                                 </Grid>
                             </Viewbox>
                         </Grid>
@@ -80,8 +80,8 @@
             <local:BackButton Grid.Column="0"
                                 Grid.Row="1"
                                 VerticalAlignment="Top"
-                                IsEnabled="{Binding BackEnabled}"
-                                Command="{Binding Back.Action}"
+                                IsEnabled="{Binding Path=BackEnabled}"
+                                Command="{Binding Path=Back.Action}"
                                 Click="ClickedBackButtonHandler">
             </local:BackButton>
         </Grid>

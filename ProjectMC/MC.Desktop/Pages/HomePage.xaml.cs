@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
 using MC.Common.Utils;
 using MC.Core.Data;
@@ -40,6 +41,14 @@ namespace MC.Desktop.Pages
 		}
 
 		/// <summary>
+		/// 選択肢のためのコールバックを取得します。
+		/// </summary>
+		/// <param name="selection">選択肢。</param>
+		/// <returns>コールバック。選択肢が存在しない場合、ダミーのコールバック。</returns>
+		private Action GetSelect(HomeSelection selection) =>
+			Selection?.Selections[(int)selection].Select ?? DelegateHelper.EmptyAction;
+
+		/// <summary>
 		/// 通学ボタンが押下された際に呼び出されます。
 		/// </summary>
 		/// <param name="sender">送信元。</param>
@@ -47,7 +56,18 @@ namespace MC.Desktop.Pages
 		private void ClickedSchoolButtonHandler(object sender, RoutedEventArgs e)
 		{
 			NavigationService.NavigateUri(Properties.Resources.PAGE_WORLD);
-			(Selection?.Selections[(int)HomeSelection.World].Select ?? DelegateHelper.EmptyAction)();
+			GetSelect(HomeSelection.World)();
+		}
+
+		/// <summary>
+		/// 設定ボタンが押下された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender">送信元。</param>
+		/// <param name="e">イベント情報。</param>
+		private void ClickedPreferenceButtonHandler(object sender, RoutedEventArgs e)
+		{
+			NavigationService.NavigateUri(Properties.Resources.PAGE_PREFERENCE);
+			GetSelect(HomeSelection.Preference)();
 		}
 	}
 }

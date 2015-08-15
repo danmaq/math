@@ -10,6 +10,15 @@ namespace MC.Core.Data
 	public sealed class PracticeData
 	{
 		/// <summary>
+		/// 教科マスタを取得、または設定します。
+		/// </summary>
+		public SubjectMasterData SubjectMasterData
+		{
+			get;
+			set;
+		}
+
+		/// <summary>
 		/// 問題数を取得、または設定します。
 		/// </summary>
 		public int Length
@@ -64,6 +73,9 @@ namespace MC.Core.Data
 					{
 						[nameof(Length)] = Length,
 						[nameof(CorrectCount)] = CorrectCount,
+						[nameof(Cleard)] = Cleard,
+						[nameof(Passed)] = Passed,
+						[nameof(SubjectMasterData)] = SubjectMasterData,
 					});
 	}
 }

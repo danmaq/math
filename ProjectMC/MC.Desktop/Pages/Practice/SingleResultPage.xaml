@@ -15,7 +15,7 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="{Binding Result}" />
+            <TextBlock Grid.Row="0" Text="{Binding Path=Result}" />
             <ProgressBar Grid.Row="1" Value="100" Width="100" Height="10"/>
         </Grid>
     </Viewbox>

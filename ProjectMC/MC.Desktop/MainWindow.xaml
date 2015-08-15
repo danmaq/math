@@ -10,8 +10,8 @@
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Background="White"
-        Title="{Binding Title}"
-        Icon="{Binding Icon}"
+        Title="{Binding Path=Title}"
+        Icon="{Binding Path=Icon}"
         StateChanged="ChangedWindowStateHandler"
         Closed="ClosedWindowHandler"
         Activated="ChangedActivateHandler"
@@ -43,7 +43,7 @@
                     Margin="5"
                     HorizontalAlignment="Left"
                     VerticalAlignment="Top">
-            <TextBlock Text="{Binding TitleCaption}" FontSize="16" Opacity="0.3" />
+            <TextBlock Text="{Binding Path=TitleCaption}" FontSize="16" Opacity="0.3" />
         </StackPanel>
         <!--- キャプション バー。 -->
         <StackPanel Orientation="Horizontal"
@@ -51,15 +51,15 @@
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top">
             <!--- 最小化ボタン。 -->
-            <Button Content="{Binding MinimizeCaption}"
+            <Button Content="{Binding Path=MinimizeCaption}"
                     Style="{DynamicResource CaptionButtonStyleKey}"
                     Click="ClickedMinimizeButtonHandler" />
             <!--- 最大化ボタン。 -->
-            <Button Content="{Binding MaximizeCaption}"
+            <Button Content="{Binding Path=MaximizeCaption}"
                     Style="{DynamicResource CaptionButtonStyleKey}"
                     Click="ClickedMaximizeButtonHandler" />
             <!--- 閉じるボタン。 -->
-            <Button Content="{Binding CloseCaption}"
+            <Button Content="{Binding Path=CloseCaption}"
                     Style="{DynamicResource CaptionButtonStyleKey}"
                     Click="ClickedCloseButtonHandler" />
         </StackPanel>

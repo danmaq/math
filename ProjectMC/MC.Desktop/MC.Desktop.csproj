@@ -36,7 +36,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>67</ApplicationRevision>
+    <ApplicationRevision>68</ApplicationRevision>
     <ApplicationVersion>0.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -135,6 +135,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="IOWrapper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

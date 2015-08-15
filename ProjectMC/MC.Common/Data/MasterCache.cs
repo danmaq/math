@@ -13,18 +13,6 @@ namespace MC.Common.Data
 	public static class MasterCache
 	{
 		/// <summary>
-		/// すべてのマスタを読み込みます。
-		/// </summary>
-		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
-		public static async void DownloadAllMasterAsync(Func<Task<AllMaster>> getMasterAsync)
-		{
-			var all = await getMasterAsync();
-			CollegeMaster = all.College.Select(c => CollegeMasterData.Import(c)).ToArray();
-			SubjectMaster = all.Subject.Select(s => SubjectMasterData.Import(s)).ToArray();
-			Ready = true;
-		}
-
-		/// <summary>
 		/// 学園マスタを取得します。
 		/// </summary>
 		public static IReadOnlyCollection<CollegeMasterData> CollegeMaster
@@ -49,6 +37,18 @@ namespace MC.Common.Data
 		{
 			get;
 			private set;
+		}
+
+		/// <summary>
+		/// すべてのマスタを読み込みます。
+		/// </summary>
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
+		public static async void DownloadAllMasterAsync(Func<Task<AllMaster>> getMasterAsync)
+		{
+			var all = await getMasterAsync();
+			CollegeMaster = all.College.Select(c => CollegeMasterData.Import(c)).ToArray();
+			SubjectMaster = all.Subject.Select(s => SubjectMasterData.Import(s)).ToArray();
+			Ready = true;
 		}
 	}
 }

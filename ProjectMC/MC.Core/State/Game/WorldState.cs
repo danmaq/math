@@ -58,7 +58,7 @@ namespace MC.Core.State.Game
 							});
 			result.AddRange(
 				from m in MasterCache.CollegeMaster
-				where m.Enabled
+				where m.Enabled && VolatileMasterCache.UserData.Admission.Any(c => c == m)
 				select create(m));
 			return new ReadOnlyCollection<Selection>(result);
 		}

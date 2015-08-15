@@ -71,6 +71,7 @@
     <Compile Include="Data\Serializable\User.cs" />
     <Compile Include="Data\SubjectMasterData.cs" />
     <Compile Include="Data\UserData.cs" />
+    <Compile Include="Data\VolatileMasterCache.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="State\Context.cs" />

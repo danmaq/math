@@ -21,7 +21,7 @@ namespace MC.Common.Data
 				UserId = new Random().Next(),
 				Name = @"danmaq",
 				Comment = @"ぬるぽ",
-				Admission = new List<CollegeMasterData>(),
+				Admission = new List<CollegeMasterData>() { 0 },
 				Tryed = new Dictionary<SubjectMasterData, TryAndClear>(),
 			};
 

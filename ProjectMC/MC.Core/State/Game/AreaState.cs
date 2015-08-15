@@ -64,9 +64,13 @@ namespace MC.Core.State.Game
 									context.Container.AddService(Tuple.Create(m));
 									context.NextState = PracticeState.Instance;
 								});
+				var user = VolatileMasterCache.UserData;
 				result.AddRange(
 					from s in MasterCache.SubjectMaster
-					where s.College == college.Item1
+					let r = s.Requires
+					where
+						s.College == college.Item1 &&
+						(!r.Any() || r.Any(m => user.Tryed.Any(p => p.Key == m)))
 					select create(s));
 			}
 			return new ReadOnlyCollection<Selection>(result);

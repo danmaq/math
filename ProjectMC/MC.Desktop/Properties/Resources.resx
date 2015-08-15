@@ -150,8 +150,8 @@
   <data name="PAGE_HOME" xml:space="preserve">
     <value>Pages/HomePage.xaml</value>
   </data>
-  <data name="PAGE_LOGO" xml:space="preserve">
-    <value>Pages/LogoPage.xaml</value>
+  <data name="PAGE_LOADING" xml:space="preserve">
+    <value>Pages/LoadingPage.xaml</value>
   </data>
   <data name="PAGE_PRACTICE" xml:space="preserve">
     <value>Pages/PracticePage.xaml</value>

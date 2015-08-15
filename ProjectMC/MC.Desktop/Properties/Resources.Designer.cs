@@ -160,11 +160,11 @@ namespace MC.Desktop.Properties {
         }
         
         /// <summary>
-        ///   Pages/LogoPage.xaml に類似しているローカライズされた文字列を検索します。
+        ///   Pages/LoadingPage.xaml に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        internal static string PAGE_LOGO {
+        internal static string PAGE_LOADING {
             get {
-                return ResourceManager.GetString("PAGE_LOGO", resourceCulture);
+                return ResourceManager.GetString("PAGE_LOADING", resourceCulture);
             }
         }
         

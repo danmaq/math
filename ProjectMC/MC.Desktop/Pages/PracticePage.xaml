@@ -85,6 +85,7 @@
                     <Button Grid.Column="0"
                             Grid.Row="0"
                             Opacity="0.8"
+                            Cursor="Hand"
                             IsEnabled="{Binding Path=Interactive}"
                             Click="ClickedAnser1ButtonHandler">
                         <Viewbox>
@@ -94,6 +95,7 @@
                     <Button Grid.Column="1"
                             Grid.Row="0"
                             Opacity="0.8"
+                            Cursor="Hand"
                             IsEnabled="{Binding Path=Interactive}"
                             Click="ClickedAnser2ButtonHandler">
                         <Viewbox>
@@ -103,6 +105,7 @@
                     <Button Grid.Column="0"
                             Grid.Row="1"
                             Opacity="0.8"
+                            Cursor="Hand"
                             IsEnabled="{Binding Path=Interactive}"
                             Click="ClickedAnser3ButtonHandler">
                         <Viewbox>
@@ -112,6 +115,7 @@
                     <Button Grid.Column="1"
                             Grid.Row="1"
                             Opacity="0.8"
+                            Cursor="Hand"
                             IsEnabled="{Binding Path=Interactive}"
                             Click="ClickedAnser4ButtonHandler">
                         <Viewbox>

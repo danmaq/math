@@ -114,6 +114,6 @@
                 </Grid>
             </Viewbox>
         </Grid>
-        <Button Opacity="0" Click="ClickedBackButtonHandler" />
+        <Button Cursor="Hand" Opacity="0" Click="ClickedBackButtonHandler" />
     </Grid>
 </Page>

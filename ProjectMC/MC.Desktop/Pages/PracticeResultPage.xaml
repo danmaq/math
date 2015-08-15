@@ -67,7 +67,7 @@
                 <Viewbox Grid.Row="3">
                     <TextBlock Text="{Binding Path=StringedPassed, Mode=OneWay}" Margin="4" Foreground="White" />
                 </Viewbox>
-                <Button Grid.Row="4" Opacity="0.8" Click="ClickedDoneButton">
+                <Button Grid.Row="4" Opacity="0.8" Cursor="Hand" Click="ClickedDoneButton">
                     <Viewbox>
                         <TextBlock Text="OK" Margin="2" />
                     </Viewbox>

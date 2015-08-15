@@ -125,7 +125,7 @@ namespace MC.Desktop
 		/// <param name="e">イベント情報。</param>
 		private void FrameLoadedHandler(object sender, RoutedEventArgs e)
 		{
-			this.NavigateUri(Properties.Resources.PAGE_LOGO);
+			this.NavigateUri(Properties.Resources.PAGE_LOADING);
 			gameFlow = new GameFlow();
 			gameFlow.RequireResponse += GameRequireResponseHandler;
 			CompositionTarget.Rendering += CreateGameLoopHandler(gameFlow.Run());

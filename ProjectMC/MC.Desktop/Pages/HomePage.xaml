@@ -41,6 +41,7 @@
             </Grid.RowDefinitions>
             <Button Grid.Row="1"
                     Opacity="0.8"
+                    Cursor="Hand"
                     Click="ClickedSchoolButtonHandler">
                 <Viewbox>
                     <TextBlock Text="通学"
@@ -49,6 +50,7 @@
             </Button>
             <Button Grid.Row="2"
                     Opacity="0.8"
+                    Cursor="Hand"
                     Click="ClickedPreferenceButtonHandler">
                 <Viewbox>
                     <TextBlock Text="クレジット"

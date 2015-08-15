@@ -33,11 +33,11 @@
     <ProductName>ますこれ 体験版</ProductName>
     <PublisherName>danmaq</PublisherName>
     <SuiteName>ますこれ -MATH SKILL COLLECTION- %28体験版%29</SuiteName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>70</ApplicationRevision>
-    <ApplicationVersion>0.2.0.70</ApplicationVersion>
+    <ApplicationRevision>71</ApplicationRevision>
+    <ApplicationVersion>0.2.0.71</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>

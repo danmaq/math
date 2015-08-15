@@ -30,6 +30,16 @@ namespace MC.Core.Data
 		= string.Empty;
 
 		/// <summary>
+		/// 付加的なデータ。
+		/// </summary>
+		public object AdditionalData
+		{
+			get;
+			internal set;
+		}
+		= new object();
+
+		/// <summary>
 		/// ToString() メソッドに使う、クラス名を取得します。
 		/// </summary>
 		protected virtual string ClassName
@@ -47,6 +57,7 @@ namespace MC.Core.Data
 			{
 				[nameof(Caption)] = Caption,
 				[nameof(Desctiption)] = Desctiption,
+				[nameof(AdditionalData)] = AdditionalData,
 			};
 
 		/// <summary>

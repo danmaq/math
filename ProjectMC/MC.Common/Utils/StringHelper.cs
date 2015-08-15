@@ -18,18 +18,20 @@ namespace MC.Common.Utils
 		/// <summary>
 		/// HTTPクエリ文字列を作成します。
 		/// </summary>
-		/// <param name="uri">URI。</param>
+		/// <param name="path">パス。</param>
 		/// <param name="arguments">パラメータ一覧。</param>
 		/// <returns>HTTPクエリ文字列。</returns>
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
 		public static string CreateQuery(
-			string uri, IEnumerable<KeyValuePair<string, object>> arguments) =>
-			string.Format(CultureInfo.InvariantCulture, @"{0}?{1}", uri, CreateQuery(arguments));
+			string path, IEnumerable<KeyValuePair<string, object>> arguments) =>
+			string.Format(CultureInfo.InvariantCulture, @"{0}?{1}", path, CreateQuery(arguments));
 
 		/// <summary>
 		/// HTTPクエリ文字列を作成します。
 		/// </summary>
 		/// <param name="arguments">パラメータ一覧。</param>
 		/// <returns>HTTPクエリ文字列。</returns>
+		[SuppressMessage("Microsoft.Design", "CA1006:DoNotNestGenericTypesInMemberSignatures")]
 		public static string CreateQuery(IEnumerable<KeyValuePair<string, object>> arguments) =>
 			string.Join(
 				"&",

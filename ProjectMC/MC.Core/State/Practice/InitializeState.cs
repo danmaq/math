@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
 using MC.Common.Data;
@@ -92,16 +92,17 @@ namespace MC.Core.State.Practice
 				new RequireAlertArgs()
 				{
 					Caption = Resources.MESSAGE_PRACTICE_START,
+					AdditionalData = GetPracticeData(context),
 					Response = () => context.NextState = CountDownState.Instance,
 				};
 			flow.DispatchRequireResponse(args);
-			Debug.WriteLine(@"Initialize Completed");
 		}
 
 		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public override void Begin(IContext context)
 		{
 			base.Begin(context);

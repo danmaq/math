@@ -24,9 +24,10 @@ namespace MC.Desktop.Pages.Practice
 		{
 			set
 			{
-				if (value is RequireAlertArgs)
+				var alert = value as RequireAlertArgs;
+				if (alert != null)
 				{
-					NavigationService.Navigate(new SingleResultPage((RequireAlertArgs)value));
+					NavigationService.Navigate(new SingleResultPage(alert));
 				}
 			}
 		}

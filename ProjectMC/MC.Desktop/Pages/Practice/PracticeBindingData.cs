@@ -1,6 +1,8 @@
 ﻿using MC.Common.Utils;
 using MC.Desktop.Properties;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Diagnostics.CodeAnalysis;
 
 namespace MC.Desktop.Pages.Practice
 {
@@ -13,6 +15,7 @@ namespace MC.Desktop.Pages.Practice
 		/// <summary>
 		/// インタラクティブな操作を受け付けるかどうかを取得、または設定します。
 		/// </summary>
+		[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 		public bool Interactive
 		{
 			get;
@@ -32,7 +35,8 @@ namespace MC.Desktop.Pages.Practice
 		/// <summary>
 		/// 文字列化した問題番号を取得します。
 		/// </summary>
-		public string StringedNumber => string.Format(@"Q{0}", Number);
+		[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+		public string StringedNumber => string.Format(CultureInfo.CurrentUICulture, @"Q.{0}", Number);
 
 		/// <summary>
 		/// 問題文を取得、または設定します。

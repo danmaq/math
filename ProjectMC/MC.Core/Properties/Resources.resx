@@ -140,9 +140,6 @@
   <data name="FILE_DATA" xml:space="preserve">
     <value>RESULT</value>
   </data>
-  <data name="MENU_AREA_TEMP" xml:space="preserve">
-    <value>もののかぞえかた</value>
-  </data>
   <data name="MENU_GENERIC_BACK" xml:space="preserve">
     <value>戻る</value>
   </data>
@@ -155,14 +152,14 @@
   <data name="MENU_HOME_WORLD" xml:space="preserve">
     <value>通学</value>
   </data>
-  <data name="MENU_MAP_SCHOOL" xml:space="preserve">
-    <value>学園A(仮)</value>
-  </data>
   <data name="MESSAGE_AREA" xml:space="preserve">
     <value>受ける授業を選択してください</value>
   </data>
   <data name="MESSAGE_HOME" xml:space="preserve">
     <value>ホーム メニュー</value>
+  </data>
+  <data name="MESSAGE_PRACTICE_ENDED" xml:space="preserve">
+    <value>プラクティス終了！</value>
   </data>
   <data name="MESSAGE_PRACTICE_START" xml:space="preserve">
     <value>プラクティスを開始します。</value>

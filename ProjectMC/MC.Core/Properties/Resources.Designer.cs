@@ -125,15 +125,6 @@ namespace MC.Core.Properties {
         }
         
         /// <summary>
-        ///   もののかぞえかた に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string MENU_AREA_TEMP {
-            get {
-                return ResourceManager.GetString("MENU_AREA_TEMP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   戻る に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MENU_GENERIC_BACK {
@@ -170,15 +161,6 @@ namespace MC.Core.Properties {
         }
         
         /// <summary>
-        ///   学園A(仮) に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        internal static string MENU_MAP_SCHOOL {
-            get {
-                return ResourceManager.GetString("MENU_MAP_SCHOOL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   受ける授業を選択してください に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string MESSAGE_AREA {
@@ -193,6 +175,15 @@ namespace MC.Core.Properties {
         internal static string MESSAGE_HOME {
             get {
                 return ResourceManager.GetString("MESSAGE_HOME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   プラクティス終了！ に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string MESSAGE_PRACTICE_ENDED {
+            get {
+                return ResourceManager.GetString("MESSAGE_PRACTICE_ENDED", resourceCulture);
             }
         }
         

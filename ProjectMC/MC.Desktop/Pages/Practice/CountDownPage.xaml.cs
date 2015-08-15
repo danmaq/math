@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Windows.Controls;
 using System.Windows.Threading;
@@ -31,7 +32,9 @@ namespace MC.Desktop.Pages.Practice
 			/// <summary>
 			/// カウントダウン文字列を取得します。
 			/// </summary>
-			public string CountDown => CountDownValue.ToString(CultureInfo.CurrentUICulture);
+			[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+			public string CountDown =>
+				CountDownValue.ToString(provider: CultureInfo.CurrentCulture);
 		}
 
 		/// <summary>タイマー。</summary>

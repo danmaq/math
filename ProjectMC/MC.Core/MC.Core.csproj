@@ -63,7 +63,6 @@
     <Compile Include="Data\RequireResponseArgs.cs" />
     <Compile Include="Data\RequireSelectArgs.cs" />
     <Compile Include="Data\RequireTextArgs.cs" />
-    <Compile Include="Data\ScreenStatus.cs" />
     <Compile Include="Data\Selection.cs" />
     <Compile Include="Flow\EmptyGameFlow.cs" />
     <Compile Include="Flow\GameFlow.cs" />
@@ -90,8 +89,9 @@
     <Compile Include="State\Practice\CountDownState.cs" />
     <Compile Include="State\Practice\InitializeState.cs" />
     <Compile Include="State\Practice\JudgeState.cs" />
-    <Compile Include="State\Practice\PracticeData.cs" />
+    <Compile Include="Data\PracticeData.cs" />
     <Compile Include="State\Practice\PracticeStateBase.cs" />
+    <Compile Include="State\Practice\ResultState.cs" />
     <Compile Include="Utils\MutexManager.cs" />
   </ItemGroup>
   <ItemGroup>

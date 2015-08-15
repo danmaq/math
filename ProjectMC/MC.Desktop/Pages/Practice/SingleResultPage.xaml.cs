@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Windows.Controls;
 using System.Windows.Navigation;
@@ -19,6 +20,7 @@ namespace MC.Desktop.Pages.Practice
 			/// <summary>
 			/// 正解かどうかを取得、または設定します。
 			/// </summary>
+			[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 			public bool Correct
 			{
 				get;
@@ -28,6 +30,7 @@ namespace MC.Desktop.Pages.Practice
 			/// <summary>
 			/// 正解を取得、または設定します。
 			/// </summary>
+			[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 			public string Answer
 			{
 				get;
@@ -38,6 +41,7 @@ namespace MC.Desktop.Pages.Practice
 			/// <summary>
 			/// 結果を取得します。
 			/// </summary>
+			[SuppressMessage("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
 			public string Result =>
 				string.Format(
 					CultureInfo.CurrentUICulture,
@@ -58,10 +62,12 @@ namespace MC.Desktop.Pages.Practice
 			{
 				throw new ArgumentNullException(nameof(prompt));
 			}
-			DataContext =
+			var correct =
+				Convert.ToBoolean(value: prompt.Caption, provider: CultureInfo.InvariantCulture);
+            DataContext =
 				new BindingData()
 				{
-					Correct = Convert.ToBoolean(prompt.Caption),
+					Correct = correct,
 					Answer = prompt.Desctiption,
 				};
 			Action callback =
@@ -70,7 +76,8 @@ namespace MC.Desktop.Pages.Practice
 					prompt.Response();
 					NavigationService.Navigate(new Page());
 				};
-			PageHelper.DelayCallUsingDispatcherTimer(callback, TimeSpan.FromMilliseconds(1000));
+			var delay = TimeSpan.FromMilliseconds(1000);
+            PageHelper.DelayCallUsingDispatcherTimer(callback, delay);
 		}
 	}
 }

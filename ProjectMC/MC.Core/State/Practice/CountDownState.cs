@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using MC.Common.Data;
 using MC.Common.State;
@@ -21,16 +21,6 @@ namespace MC.Core.State.Practice
 		/// </summary>
 		private sealed class LocalContainer : LocalContainerBase
 		{
-			/// <summary>
-			/// 問題のワンタイムIDを取得または設定します。
-			/// </summary>
-			public int ID
-			{
-				get;
-				set;
-			}
-			= int.MinValue;
-
 			/// <summary>
 			/// 問題情報を取得または設定します。
 			/// </summary>
@@ -74,18 +64,18 @@ namespace MC.Core.State.Practice
 		/// <param name="context">コンテキスト。</param>
 		private static void Prompt(IContext context)
 		{
-			var container = GetLocalContainer<LocalContainer>(context);
 			var flow = GameFlow.GetService(GetMainContext(context));
-			var args =
-				new RequireSelectArgs
+			var question = GetLocalContainer<LocalContainer>(context).Question;
+            var args =
+				new RequireSelectArgs()
 				{
-					Caption = container.Question.Caption,
-					Desctiption = container.Question.Description,
-					Expires = container.Question.Expires,
+					Caption = question.Caption,
+					Desctiption = question.Description,
+					AdditionalData = GetPracticeData(context),
 					Selections = CreateSelection(context),
+					Expires = question.Expires,
 				};
 			flow.DispatchRequireResponse(args);
-			Debug.WriteLine(@"Question!");
 		}
 
 		/// <summary>
@@ -117,6 +107,7 @@ namespace MC.Core.State.Practice
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
+		[SuppressMessage("Microsoft.Design", "CA1062:パブリック メソッドの引数の検証", MessageId = "0")]
 		public override void Begin(IContext context)
 		{
 			base.Begin(context);
@@ -125,13 +116,12 @@ namespace MC.Core.State.Practice
 			{
 				var kv = dic.First();
 				var container = GetLocalContainer(context);
-				container.ID = kv.Key;
 				container.Question = kv.Value;
 				Prompt(context);
             }
 			else
 			{
-				// TODO: 空の状態
+				context.NextState = ResultState.Instance;
 			}
         }
 	}

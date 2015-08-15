@@ -97,6 +97,25 @@ namespace MC.Core.State.Practice
 			GetLocalContainer<LocalContainer>(context);
 
 		/// <summary>
+		/// プロンプトを表示部へ送信します。
+		/// </summary>
+		/// <param name="context">コンテキスト。</param>
+		private static void Prompt(IContext context)
+		{
+			var localContainer = GetLocalContainer(context);
+			var flow = GameFlow.GetService(GetMainContext(context));
+			var args =
+				new RequireAlertArgs()
+				{
+					Caption = localContainer.Correct.ToString(),
+					Desctiption = localContainer.TrueAnswer,
+					AdditionalData = GetPracticeData(context),
+					Response = () => context.NextState = CountDownState.Instance,
+				};
+			flow.DispatchRequireResponse(args);
+		}
+
+		/// <summary>
 		/// この状態に移行された直後に呼び出されます。
 		/// </summary>
 		/// <param name="context">コンテキスト。</param>
@@ -127,24 +146,6 @@ namespace MC.Core.State.Practice
 				dic.Remove(dic.First().Key);
 				localContainer.Notified = true;
 			}
-		}
-
-		/// <summary>
-		/// プロンプトを表示部へ送信します。
-		/// </summary>
-		/// <param name="context">コンテキスト。</param>
-		private void Prompt(IContext context)
-		{
-			var localContainer = GetLocalContainer(context);
-            var flow = GameFlow.GetService(GetMainContext(context));
-			var args =
-				new RequireAlertArgs()
-				{
-					Caption = localContainer.Correct.ToString(),
-					Desctiption = localContainer.TrueAnswer,
-					Response = () => context.NextState = CountDownState.Instance,
-				};
-			flow.DispatchRequireResponse(args);
 		}
 
 		/// <summary>

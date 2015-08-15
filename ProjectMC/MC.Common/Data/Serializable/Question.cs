@@ -122,12 +122,12 @@ namespace MC.Common.Data.Serializable
 		/// <summary>
 		/// 値が等しいかどうかを検証します。
 		/// </summary>
-		/// <param name="others"></param>
+		/// <param name="other"></param>
 		/// <returns>値が等しい場合、true。</returns>
-		public bool Equals(Question others) =>
-			Caption == others.Caption &&
-			Description == others.Description &&
-			Expires == others.Expires &&
-			Answers.SequenceEqual(others.Answers);
+		public bool Equals(Question other) =>
+			Caption == other.Caption &&
+			Description == other.Description &&
+			Expires == other.Expires &&
+			Answers.SequenceEqual(other.Answers);
 	}
 }

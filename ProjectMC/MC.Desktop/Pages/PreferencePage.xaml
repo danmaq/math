@@ -29,8 +29,8 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="2*" />
+                <RowDefinition Height="3*" />
+                <RowDefinition Height="4*" />
             </Grid.RowDefinitions>
             <!-- 左上エリア。 -->
             <Viewbox Grid.Row="0">
@@ -70,17 +70,19 @@
                 </StackPanel>
             </Viewbox>
             <!-- 左下エリア。 -->
+            <Rectangle Grid.RowSpan="2" Fill="Black" Opacity="0.2" />
             <Viewbox Grid.Row="1">
-                <Grid Width="128" Margin="2">
+                <Grid Width="448" Height="256" Margin="0, 1">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="2*" />
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
-                        <RowDefinition />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="3*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="3*" />
                     </Grid.RowDefinitions>
                     <Grid.Effect>
                         <DropShadowEffect ShadowDepth="0.5"
@@ -89,27 +91,26 @@
                                           Opacity="1"
                                           BlurRadius="1" />
                     </Grid.Effect>
-                    <TextBlock Grid.Column="0"
-                               Grid.Row="0"
-                               Foreground="White">Producer /<LineBreak />Programmer</TextBlock>
-                    <TextBlock Grid.Column="1"
-                               Grid.Row="0"
-                               VerticalAlignment="Center"
-                               Text="Mc"
-                               Foreground="White" />
-                    <TextBlock Grid.Column="0"
-                               Grid.Row="1"
-                               Text="Illustrator"
-                               Foreground="White" />
-                    <TextBlock Grid.Column="1"
-                               Grid.Row="1"
-                               Text="Rido"
-                               Foreground="White" />
+                    <Viewbox Grid.Column="0" Grid.Row="0">
+                        <TextBlock Foreground="White">Producer &amp;<LineBreak />Programmer</TextBlock>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" Grid.Row="0" HorizontalAlignment="Left">
+                        <TextBlock Foreground="White" Text="Mc" />
+                    </Viewbox>
+                    <Viewbox Grid.Column="0" Grid.Row="1">
+                        <TextBlock Foreground="White">Illustrator<LineBreak />(BG &amp; Character)</TextBlock>
+                    </Viewbox>
+                    <Viewbox Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left">
+                        <TextBlock Foreground="White" Text="Rido" />
+                    </Viewbox>
                     <Viewbox Grid.ColumnSpan="2" Grid.Row="2">
                         <TextBlock Foreground="Yellow">現在のライセンスで、体験版の最終アップデートまでお楽しみいただけます。<LineBreak />新しいアップデートはアプリ起動時に自動で配信されます。</TextBlock>
                     </Viewbox>
                     <Viewbox Grid.ColumnSpan="2" Grid.Row="3">
-                        <TextBlock Grid.ColumnSpan="2" Grid.Row="3" Foreground="White" Text="画面をタップすると前の画面に戻ります。" />
+                        <TextBlock Foreground="White">このアプリでは、住職様(nm18907057)が提唱する<LineBreak />「数学スキルツリー」の仕組みを使用しています。。</TextBlock>
+                    </Viewbox>
+                    <Viewbox Grid.ColumnSpan="2" Grid.Row="4">
+                        <TextBlock Foreground="White" Text="画面をタップすると前の画面に戻ります。" />
                     </Viewbox>
                 </Grid>
             </Viewbox>

@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Windows;
+using System.Windows.Threading;
+using MC.Common.Utils;
 using MC.Core.Utils;
 
 namespace MC.Desktop
@@ -85,6 +88,17 @@ namespace MC.Desktop
 				mutex.Dispose();
 				mutex = null;
 			}
+		}
+
+		/// <summary>
+		/// 例外が捕捉された際に呼び出されます。
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		private void CaughtUnhandleExceptionHandler(object sender, DispatcherUnhandledExceptionEventArgs e)
+		{
+			Debug.WriteLine(@"Detected Exception");
+			Debug.WriteLine(e.Exception.ToStringAll());
 		}
 	}
 }

@@ -98,5 +98,15 @@ namespace MC.Common.Utils
 			}
 			return data;
 		}
+
+		/// <summary>
+		/// 内部例外を含めて、すべての診断用例外情報を取得します。
+		/// </summary>
+		/// <param name="e">例外。</param>
+		/// <returns>例外情報文字列。</returns>
+		public static string ToStringAll(this Exception e) =>
+			e == null ?
+			string.Empty :
+			string.Format(CultureInfo.CurrentCulture, @"{0}\n{1}", e.InnerException.ToStringAll(), e);
 	}
 }

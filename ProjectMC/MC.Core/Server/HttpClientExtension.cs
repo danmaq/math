@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using MC.Common.Data;
 
 namespace MC.Core.Server
 {
@@ -23,7 +24,7 @@ namespace MC.Core.Server
 		/// <paramref name="client"/> または <paramref name="uri"/> が null である場合。
 		/// </exception>
 		public static Task<HttpResponseMessage> Request(
-			this HttpClient client, HttpMethod method, string uri, HttpContent content)
+			this HttpClient client, HttpMethodType method, string uri, HttpContent content)
 		{
 			if (client == null)
 			{
@@ -35,13 +36,13 @@ namespace MC.Core.Server
 			}
 			switch (method)
 			{
-				case HttpMethod.Get:
+				case HttpMethodType.Get:
 					return client.GetAsync(uri);
-				case HttpMethod.Post:
+				case HttpMethodType.Post:
 					return client.PostAsync(requestUri: uri, content: content);
-				case HttpMethod.Put:
+				case HttpMethodType.Put:
 					return client.PutAsync(requestUri: uri, content: content);
-				case HttpMethod.Delete:
+				case HttpMethodType.Delete:
 					return client.DeleteAsync(uri);
 				default:
 					throw new ArgumentOutOfRangeException(nameof(method));

@@ -261,6 +261,9 @@
   <data name="COLLEGE_24_NAME" xml:space="preserve">
     <value>学園X</value>
   </data>
+  <data name="KEY_USER" xml:space="preserve">
+    <value>user</value>
+  </data>
   <data name="NUM0_0" xml:space="preserve">
     <value>れい</value>
   </data>

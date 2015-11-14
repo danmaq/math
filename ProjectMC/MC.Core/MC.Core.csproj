@@ -32,7 +32,7 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;MOCK_SERVER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\MC.Core.XML</DocumentationFile>
@@ -79,7 +79,6 @@
     </Compile>
     <Compile Include="Server\Api.cs" />
     <Compile Include="Server\HttpClientExtension.cs" />
-    <Compile Include="Server\HttpMethod.cs" />
     <Compile Include="State\Game\AreaState.cs" />
     <Compile Include="State\Game\HomeState.cs" />
     <Compile Include="State\Game\LoginState.cs" />

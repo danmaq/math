@@ -22,6 +22,7 @@ namespace MC.MockServer
 		private readonly Dictionary<string, API> Apis =
 			new Dictionary<string, API>()
 			{
+				[@"/v1/user"] = UserManager.Instance.Facade,
 				[@"/v1/master"] = (m, p, b) => MasterStore.Instance.Export(),
 				[@"/v1/question"] = (m, p, b) => QuestionStore.Instance.CreateQuestion(p),
 				[@"/v1/answer"] = (m, p, b) => QuestionStore.Instance.JudgeQuestion(p),

@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("0.1.*")]
-[assembly: AssemblyFileVersion("0.1.1.1")]
+[assembly: AssemblyFileVersion("0.1.2.2")]
 
 [assembly: CLSCompliant(true)]
 [assembly: ComVisible(false)]

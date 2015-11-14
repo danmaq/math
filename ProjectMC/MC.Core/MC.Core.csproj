@@ -80,7 +80,6 @@
     </Compile>
     <Compile Include="Server\Api.cs" />
     <Compile Include="Server\HttpClientExtension.cs" />
-    <Compile Include="Server\HttpMethod.cs" />
     <Compile Include="State\Game\AreaState.cs" />
     <Compile Include="State\Game\HomeState.cs" />
     <Compile Include="State\Game\LoginState.cs" />

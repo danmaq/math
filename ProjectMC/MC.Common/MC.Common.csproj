@@ -55,6 +55,7 @@
     <Compile Include="Collection\KeyValuePair.cs" />
     <Compile Include="Collection\MasterExtension.cs" />
     <Compile Include="Collection\ServiceContainer.cs" />
+    <Compile Include="Data\HttpMethodType.cs" />
     <Compile Include="Data\IO\AutoSerializeDictionary.cs" />
     <Compile Include="Data\CardMasterData.cs" />
     <Compile Include="Data\CollegeMasterData.cs" />

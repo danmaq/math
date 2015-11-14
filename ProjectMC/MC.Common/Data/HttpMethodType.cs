@@ -1,10 +1,10 @@
-﻿namespace MC.Core.Server
+﻿namespace MC.Common.Data
 {
 	/// <summary>
 	/// HTTP メソッドの列挙体。
 	/// </summary>
-	enum HttpMethod
-    {
+	public enum HttpMethodType
+	{
 
 		/// <summary>GET メソッド。</summary>
 		Get,
@@ -17,5 +17,5 @@
 
 		/// <summary>DELETE メソッド。</summary>
 		Delete,
-    }
+	}
 }

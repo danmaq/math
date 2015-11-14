@@ -85,7 +85,7 @@ namespace MC.Core.Server
 		public static async Task<QData[]> GetQuestionAsync(int collegeId, int subjectId)
 		{
 			var path = CreatePath(@"question", collegeId, subjectId);
-            var body = await RequestAsync(method: HttpMethod.Get, path: path, content: null);
+            var body = await RequestAsync(method: HttpMethodType.Get, path: path, content: null);
 			return
 				StringHelper
 					.FromJson<KeyValuePair<int, Question>[]>(body)
@@ -102,7 +102,7 @@ namespace MC.Core.Server
 		public static async Task<Tuple<bool, int>> TellAnswerAsync(int questionId, int answer)
 		{
 			var path = CreatePath(@"answer", questionId, answer);
-			var body = await RequestAsync(method: HttpMethod.Post, path: path, content: null);
+			var body = await RequestAsync(method: HttpMethodType.Post, path: path, content: null);
 			return StringHelper.FromJson<Tuple<bool, int>>(body);
 		}
 
@@ -112,7 +112,7 @@ namespace MC.Core.Server
 		/// <returns>読み込み完了通知。必ず true を返します。</returns>
 		public static async Task<AllMaster> LoadAllMasterAsync()
 		{
-            var body = await RequestAsync(method: HttpMethod.Get, path: @"master", content: null);
+            var body = await RequestAsync(method: HttpMethodType.Get, path: @"master", content: null);
 			return StringHelper.FromJson<AllMaster>(body);
 		}
 
@@ -147,7 +147,7 @@ namespace MC.Core.Server
 		/// <param name="content">API に渡すボディ。</param>
 		/// <returns>戻り値の生文字列。</returns>
 		private static async Task<string> RequestAsync(
-			HttpMethod method, string path, HttpContent content)
+			HttpMethodType method, string path, HttpContent content)
 		{
 			CheckInitialized();
 			var uri = entryPoint + path;

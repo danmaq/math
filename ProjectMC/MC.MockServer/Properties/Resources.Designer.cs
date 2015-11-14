@@ -494,6 +494,15 @@ namespace MC.MockServer.Properties {
         }
         
         /// <summary>
+        ///   user に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string KEY_USER {
+            get {
+                return ResourceManager.GetString("KEY_USER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   れい に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string NUM0_0 {

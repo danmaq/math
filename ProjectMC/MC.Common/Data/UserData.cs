@@ -183,8 +183,8 @@ namespace MC.Common.Data
 					UserId = userid ?? UserId,
 					Name = name ?? Name,
 					Comment = comment ?? Comment,
+					Admission = Admission.Select(i => new CollegeMasterData(i)).ToList(),
 				};
-			((List<CollegeMasterData>)result.Admission).AddRange(Admission);
 			result.Tryed = new Dictionary<SubjectMasterData, TryAndClear>(Tryed);
 			return result;
 		}

@@ -5,9 +5,10 @@ using System.Linq;
 using MC.Common.Utils;
 using MC.MockServer.Question;
 
-using API = System.Func<string, System.Collections.Generic.IEnumerable<string>, string, object>;
-using APIWithoutParams = System.Func<string, string, object>;
+using API = System.Func<MC.Common.Data.HttpMethodType, System.Collections.Generic.IEnumerable<string>, string, object>;
+using APIWithoutParams = System.Func<MC.Common.Data.HttpMethodType, string, object>;
 using PairedAPIParams = System.Tuple<string, System.Collections.Generic.IEnumerable<string>>;
+using MC.Common.Data;
 
 namespace MC.MockServer
 {
@@ -32,12 +33,13 @@ namespace MC.MockServer
 		/// API を呼び出します。
 		/// </summary>
 		/// <param name="path">API へのパス。</param>
-		/// <param name="method">HTTP メソッド。</param>
+		/// <param name="methodName">HTTP メソッド。</param>
 		/// <param name="content">ボディ。</param>
 		/// <returns>API の戻り値。</returns>
-		public Tuple<bool, string> CallApi(string path, string method, string content)
+		public Tuple<bool, string> CallApi(string path, string methodName, string content)
 		{
 			var api = ParsePath(path);
+			var method = EnumHelper.Parse<HttpMethodType>(methodName);
 			var obj = api == null ? null : api(method, content);
 			var result = obj != null;
 			return Tuple.Create(result, result ? StringHelper.ToJson(obj) : null);

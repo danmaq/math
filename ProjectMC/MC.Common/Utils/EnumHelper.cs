@@ -23,5 +23,16 @@ namespace MC.Common.Utils
 		/// <returns>列挙体の最大値。</returns>
 		/// <exception cref="ArgumentException"><paramref name="type"/> が列挙体でない場合。</exception>
 		public static int Length(Type type) => Enum.GetValues(type).Length;
+
+		/// <summary>
+		/// 大文字小文字を無視して列挙体をパースします。
+		/// </summary>
+		/// <typeparam name="T">列挙体の型。</typeparam>
+		/// <returns>パースされた列挙体。</returns>
+		/// <exception cref="ArgumentException"><typeparamref name="T"/> が列挙体でない場合。</exception>
+		public static T Parse<T>(string name) where T : struct =>
+			(T)Enum.Parse(
+				typeof(T),
+				Enum.GetNames(typeof(T)).First(s => s.ToLower() == name.ToLower()));
 	}
 }

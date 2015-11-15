@@ -63,7 +63,7 @@ namespace MC.MockServer
 			var result =
 				api.CallApi(
 					path: request.RequestUri.AbsolutePath,
-					method: request.Method.Method,
+					methodName: request.Method.Method,
 					content: request.Content?.ReadAsStringAsync().Result);
 			var status = result.Item1 ? HttpStatusCode.OK : HttpStatusCode.BadRequest;
 			var response = new HttpResponseMessage(status);

@@ -67,6 +67,36 @@ namespace MC.Core.Server
 		}
 
 		/// <summary>
+		/// ユーザ情報を取得します。
+		/// </summary>
+		/// <param name="userId">ユーザID。nullを設定するとユーザを作成します。</param>
+		/// <returns>ユーザ情報。</returns>
+		public static async Task<UserData> GetUserData(string userId = null) =>
+			await (userId == null ? CreateUserData() : GetUserData(long.Parse(userId)));
+
+		/// <summary>
+		/// ユーザ情報を取得します。
+		/// </summary>
+		/// <param name="userId">ユーザID。</param>
+		/// <returns>ユーザ情報。</returns>
+		public static async Task<UserData> GetUserData(long userId)
+		{
+			var path = CreatePath(@"user", userId);
+			var body = await RequestAsync(method: HttpMethodType.Get, path: path);
+			return UserData.Import(StringHelper.FromJson<User>(body));
+		}
+
+		/// <summary>
+		/// ユーザ情報を作成します。
+		/// </summary>
+		/// <returns>ユーザ情報。</returns>
+		public static async Task<UserData> CreateUserData()
+		{
+			var body = await RequestAsync(method: HttpMethodType.Put, path: @"user");
+			return UserData.Import(StringHelper.FromJson<User>(body));
+		}
+
+		/// <summary>
 		/// 問題を取得します。
 		/// </summary>
 		/// <param name="college">学園マスタ。</param>
@@ -102,7 +132,7 @@ namespace MC.Core.Server
 		public static async Task<Tuple<bool, int>> TellAnswerAsync(int questionId, int answer)
 		{
 			var path = CreatePath(@"answer", questionId, answer);
-			var body = await RequestAsync(method: HttpMethodType.Post, path: path, content: null);
+			var body = await RequestAsync(method: HttpMethodType.Post, path: path);
 			return StringHelper.FromJson<Tuple<bool, int>>(body);
 		}
 
@@ -112,7 +142,7 @@ namespace MC.Core.Server
 		/// <returns>読み込み完了通知。必ず true を返します。</returns>
 		public static async Task<AllMaster> LoadAllMasterAsync()
 		{
-            var body = await RequestAsync(method: HttpMethodType.Get, path: @"master", content: null);
+            var body = await RequestAsync(method: HttpMethodType.Get, path: @"master");
 			return StringHelper.FromJson<AllMaster>(body);
 		}
 
@@ -147,7 +177,7 @@ namespace MC.Core.Server
 		/// <param name="content">API に渡すボディ。</param>
 		/// <returns>戻り値の生文字列。</returns>
 		private static async Task<string> RequestAsync(
-			HttpMethodType method, string path, HttpContent content)
+			HttpMethodType method, string path, HttpContent content = null)
 		{
 			CheckInitialized();
 			var uri = entryPoint + path;

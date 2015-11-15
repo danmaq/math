@@ -69,12 +69,8 @@ namespace MC.Core.State.Game
 		{
 			var mgr = VolatileMasterCache.ClientSaveData;
             var key = ClientStorageKeys.UserId.ToString();
-            var uid = await mgr.ReadAsync(key);
-			var userid = uid == null ? new Random().Next() : Convert.ToInt32(uid);
-			if (uid == null)
-			{
-				mgr.WriteAsync(key: key, value: userid.ToString(CultureInfo.InvariantCulture));
-			}
+            var user = await Api.GetUserData(await mgr.ReadAsync(key));
+			mgr.WriteAsync(key: key, value: user.UserId.ToString(CultureInfo.InvariantCulture));
 		}
 	}
 }

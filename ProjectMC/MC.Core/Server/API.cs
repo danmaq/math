@@ -5,6 +5,8 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Threading.Tasks;
 using MC.Common.Data;
 using MC.Common.Data.Serializable;
@@ -83,7 +85,10 @@ namespace MC.Core.Server
 		{
 			var path = CreatePath(@"user", userId);
 			var body = await RequestAsync(method: HttpMethodType.Get, path: path);
-			return UserData.Import(StringHelper.FromJson<User>(body));
+			var user = UserData.Import(StringHelper.FromJson<User>(body));
+			client.DefaultRequestHeaders.Authorization =
+				CreateBasicAuthHeader(id: user.UserId.ToString(), password: string.Empty);
+            return user;
 		}
 
 		/// <summary>
@@ -159,6 +164,20 @@ namespace MC.Core.Server
 		}
 
 		/// <summary>
+		/// BASIC認証用のヘッダを生成します。
+		/// </summary>
+		/// <param name="id">ID。</param>
+		/// <param name="password">パスワード。</param>
+		/// <returns>BASIC認証用ヘッダ。</returns>
+		private static AuthenticationHeaderValue CreateBasicAuthHeader(
+			string id, string password)
+		{
+			var idpw = string.Format(@"{0}:{1}", id, password);
+			var parameter = Convert.ToBase64String(Encoding.UTF8.GetBytes(idpw));
+			return new AuthenticationHeaderValue(scheme: @"Basic", parameter: parameter);
+		}
+
+		/// <summary>
 		/// REST パスを作成します。
 		/// </summary>
 		/// <param name="args">REST パスを構成するパラメータ。</param>
@@ -184,6 +203,14 @@ namespace MC.Core.Server
 			string body;
             using (var response = await client.Request(method, uri, content))
 			{
+				if (client.DefaultRequestHeaders.Authorization != null)
+				{
+					var bytes =
+						Convert.FromBase64String(
+							client.DefaultRequestHeaders.Authorization.Parameter);
+                    var idpw = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
+					Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Auth: {0}", idpw));
+				}
 				Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Request: {0}", uri));
 				body = await response.Content.ReadAsStringAsync();
 				Debug.WriteLine(string.Format(CultureInfo.CurrentCulture, "Response: {0}", body));

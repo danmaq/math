@@ -5,6 +5,7 @@ using MC.Common.Data;
 using MC.Common.Data.Serializable;
 using MC.Common.Utils;
 using MC.MockServer.Properties;
+using System.Globalization;
 
 namespace MC.MockServer
 {
@@ -38,6 +39,26 @@ namespace MC.MockServer
 		= UserData.Default;
 
 		/// <summary>
+		/// ユーザ情報一覧を全件取得します。
+		/// </summary>
+		/// <returns>ユーザ情報一覧。</returns>
+		private static User[] GetAllUsers()
+		{
+			var json = VolatileMasterCache.ServerSaveData.ReadAsync(Resources.KEY_USER).Result;
+			return json == null ? new User[0] : StringHelper.FromJson<User[]>(json);
+		}
+
+		/// <summary>
+		/// ユーザ一覧をテーブルに上書きします。
+		/// </summary>
+		/// <param name="users">ユーザ一覧。</param>
+		private static void WriteAllUsers(IEnumerable<User> users)
+		{
+			var json = StringHelper.ToJson(users.ToArray());
+			VolatileMasterCache.ServerSaveData.WriteAsync(key: Resources.KEY_USER, value: json);
+		}
+
+		/// <summary>
 		/// HTTPからの要求を処理します。
 		/// </summary>
 		/// <param name="method">HTTPメソッド。</param>
@@ -49,7 +70,7 @@ namespace MC.MockServer
 			switch (method)
 			{
 				case HttpMethodType.Get:
-					User = LoadUserData(long.Parse(args.First()));
+					User = LoadUserData(long.Parse(args.First(), CultureInfo.InvariantCulture));
 					break;
 				case HttpMethodType.Post:
 					break;
@@ -101,25 +122,5 @@ namespace MC.MockServer
 			while (users.Any(u => id == u.UserId));
 			return id;
 		}
-
-		/// <summary>
-		/// ユーザ情報一覧を全件取得します。
-		/// </summary>
-		/// <returns>ユーザ情報一覧。</returns>
-		private User[] GetAllUsers()
-		{
-			var json = VolatileMasterCache.ServerSaveData.ReadAsync(Resources.KEY_USER).Result;
-			return json == null ? new User[0] : StringHelper.FromJson<User[]>(json);
-		}
-
-		/// <summary>
-		/// ユーザ一覧をテーブルに上書きします。
-		/// </summary>
-		/// <param name="users">ユーザ一覧。</param>
-		private void WriteAllUsers(IEnumerable<User> users)
-		{
-			var json = StringHelper.ToJson(users.ToArray());
-			VolatileMasterCache.ServerSaveData.WriteAsync(key: Resources.KEY_USER, value: json);
-        }
 	}
 }

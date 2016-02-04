@@ -1,5 +1,7 @@
 /ProjectMC/*.sln.ide
 /ProjectMC/*.suo
+/ProjectMC/*.opensdf
+/ProjectMC/*.sdf
 /ProjectMC/.vs/*
 /ProjectMC/TestResults
 /ProjectMC/Content/Thumbs.db
